@@ -1,0 +1,9 @@
+a3f79869c5eef273f7cb95471e925e78  lib/systemd/system/minissdpd.service
+e05acde7ecdf3f1790610f6b9a3d6a41  usr/lib/minissdpd/minissdpd-systemd-wrapper
+ff460a487ccc8d7f23b4d9404c30db32  usr/sbin/minissdpd
+e6601905f939427bc0a09979de494f66  usr/share/doc/minissdpd/changelog.Debian.gz
+8751500369e4511149a4f4d4cd9f5069  usr/share/doc/minissdpd/changelog.gz
+ad108f84ad3b6b6d838f4c0e695f1df9  usr/share/doc/minissdpd/copyright
+65987ab5c31ad9d06e00ba5ec88da68a  usr/share/lintian/overrides/minissdpd
+8d889ede93eeedc4d23a1da946e144e6  usr/share/man/man1/minissdpd.1.gz
+2180413c54fddc74c350878961d52869  usr/share/minissdpd/minissdpd.default

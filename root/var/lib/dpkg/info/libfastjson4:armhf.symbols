@@ -1,12 +1,10 @@
 libfastjson.so.4 libfastjson4 #MINVER#
-* Build-Depends-Package: libfastjson-dev
  fjson_global_do_case_sensitive_comparison@Base 0.99.7
  fjson_global_set_printbuf_initial_size@Base 0.99.3
  fjson_hex_chars@Base 0.99.3
  fjson_number_chars@Base 0.99.3
  fjson_object_array_add@Base 0.99.3
  fjson_object_array_bsearch@Base 0.99.3
- fjson_object_array_del_idx@Base 0.99.9
  fjson_object_array_get_idx@Base 0.99.3
  fjson_object_array_length@Base 0.99.3
  fjson_object_array_put_idx@Base 0.99.3
@@ -26,7 +24,6 @@ libfastjson.so.4 libfastjson4 #MINVER#
  fjson_object_get_string@Base 0.99.3
  fjson_object_get_string_len@Base 0.99.3
  fjson_object_get_type@Base 0.99.3
- fjson_object_get_uint@Base 0.99.9
  fjson_object_is_type@Base 0.99.3
  fjson_object_iter_begin@Base 0.99.3
  fjson_object_iter_end@Base 0.99.3

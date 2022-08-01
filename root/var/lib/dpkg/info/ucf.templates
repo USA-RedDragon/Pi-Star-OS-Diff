@@ -30,7 +30,6 @@ Choices-de.UTF-8: Version des Paketbetreuers installieren, aktuell lokal install
 Choices-es.UTF-8: instalar la versión del responsable del paquete, conservar la versión local actualmente instalada, mostrar las diferencias entre las versiones, mostrar las diferencias entre las versiones lado a lado, comparar a tres bandas las versiones disponibles, hacer una fusión a tres bandas de las versiones disponibles, ejecutar un nuevo intérprete para analizar la situación
 Choices-fr.UTF-8: Installer la version du responsable du paquet, Garder la version actuellement installée, Montrer les différences entre les versions, Montrer côte à côte les différences entre les versions, Montrer les différences entre les trois versions du fichier, Fusionner les différences entre les trois versions du fichier, Lancer un shell pour examiner la situation
 Choices-ja.UTF-8: パッケージメンテナのバージョンをインストール, 現在インストールされているローカルバージョンを保持, バージョン間の差異を表示, バージョン間の差異を並行表示, 利用可能なバージョン間の 3 ウェイ差分を表示, 利用可能なバージョン間の 3 ウェイマージを実行, 状況を検討するための新しいシェルを起動
-Choices-nl.UTF-8: installeer de versie van de pakketbeheerder, behoud de huidige versie\, welke lokaal geïnstalleerd is, toon de verschillen tussen de versies, toon zij-aan-zij de verschillen tussen de versies, toon de verschillen via een 3-wegsvergelijking tussen beschikbare versies, maak een 3-wegssamenvoeging tussen beschikbare versies, start een nieuwe shell om de situatie te onderzoeken
 Choices-pt.UTF-8: instalar a versão do criador do pacote, manter a versão actualmente instalada, mostrar a diferença entre as versões, mostrar uma diferença lado-a-lado entre as versões, mostrar uma diferença em 3 vias entre as versões disponíveis, faz uma fusão de 3-vias entre as versões disponíveis, iniciar uma nova consola para examinar a situação
 Choices-pt_BR.UTF-8: instalar a versão do mantenedor do pacote, manter a versão local atualmente instalada, exibir as diferenças entre as versões, exibir as diferenças entre as versões lado-a-lado, exibir as diferenças entre as 3 versões disponíveis, juntar as 3 versões disponíveis, iniciar um novo shell para examinar a situação
 Choices-ru.UTF-8: установить версию из пакета, сохранить установленную локальную версию, показать различия между версиями, показать различия между версиями параллельно, показать 3-x стороннее различие между доступными версиями, показать 3-x стороннее слияние между доступными версиями, запустить новую оболочку для прояснения ситуации
@@ -84,7 +83,7 @@ Choices-fr.UTF-8: Installer la version du responsable du paquet, Garder la versi
 Choices-gl.UTF-8: instalar a versión do mantenedor do paquete, conservar a versión local instalada actualmente, mostrar as diferenzas entre as versións, mostrar unha comparación entre as versións, iniciar unha shell para examinar a situación
 Choices-it.UTF-8: installare la versione del manutentore del pacchetto, mantenere la propria versione attualmente installata, mostrare le differenze tra le versioni, mostrare affiancate le differenze tra le versioni, eseguire una nuova shell per esaminare la situazione
 Choices-ja.UTF-8: パッケージメンテナのバージョンをインストール, 現在インストールされているローカルバージョンを保持, バージョン間の差異を表示, バージョン間の差異を並行表示, 状況を検討するための新しいシェルを起動
-Choices-nl.UTF-8: installeer de versie van de pakketbeheerder, behoud de huidige versie\, welke lokaal geïnstalleerd is, toon de verschillen tussen de versies, toon zij-aan-zij de verschillen tussen de versies, start een nieuwe shell om de situatie te onderzoeken
+Choices-nl.UTF-8: installeer de versie van de pakketbeheerder, behoud de reeds geïnstalleerde versie, toon de verschillen tussen de versies, toon de verschillende versies zij-aan-zij, start een nieuwe shell om de situatie te onderzoeken
 Choices-pl.UTF-8: zainstalowanie wersji przygotowanej przez opiekuna pakietu, zachowanie lokalnie zainstalowanej wersji, pokazanie różnic pomiędzy wersjami, pokazanie różnic - obok siebie - pomiędzy wersjami, uruchomienie powłoki w celu zbadania sytuacji
 Choices-pt.UTF-8: instalar a versão do criador do pacote, manter a versão actualmente instalada, mostrar a diferença entre as versões, mostrar uma diferença lado-a-lado entre as versões, iniciar uma nova consola para examinar a situação
 Choices-pt_BR.UTF-8: instalar a versão do mantenedor do pacote, manter a versão local atualmente instalada, exibir as diferenças entre as versões, exibir as diferenças entre as versões lado-a-lado, iniciar um novo shell para examinar a situação
@@ -107,8 +106,6 @@ Description-fr.UTF-8: Action souhaitée pour le fichier de configuration modifi�
  ${BASENAME} : Une nouvelle version (${NEW}) du fichier de configuration ${FILE} est disponible mais la version actuellement utilisée a été modifiée localement.
 Description-ja.UTF-8: 変更された設定ファイル ${BASENAME} について何を行いたいですか?
  ${BASENAME}: 設定ファイル ${FILE} の新しいバージョン  (${NEW}) が利用可能ですが、現在インストールされているバージョンは、ローカルで変更されています。
-Description-nl.UTF-8: Wat wilt u met het aangepaste configuratiebestand ${BASENAME} doen?
- ${BASENAME}: Een nieuwe versie (${NEW}) van het configuratiebestand ${FILE} is beschikbaar, maar de momenteel geïnstalleerde versie is lokaal gewijzigd.
 Description-pt.UTF-8: O que deseja fazer acerca do ficheiro de configuração modificado ${BASENAME}?
  ${BASENAME}: Está disponível uma nova versão (${NEW}) do ficheiro de configuração ${FILE}, mas a versão actualmente instalada foi modificada localmente.
 Description-pt_BR.UTF-8: O que você quer fazer sobre o arquivo de configuração modificado ${BASENAME}?
@@ -142,7 +139,7 @@ Description-it.UTF-8: Differenze riga per riga tra le versioni
  ${DIFF}
 Description-ja.UTF-8: バージョン間の行ごとの差異
  ${DIFF}
-Description-nl.UTF-8: De verschillen tussen de versies, regel per regel
+Description-nl.UTF-8: Toon de verschillen tussen de versies
  ${DIFF}
 Description-pl.UTF-8: Różnice pomiędzy wersjami - wiersz po wierszu
  ${DIFF}
@@ -211,8 +208,8 @@ Description-ja.UTF-8: 3 ウェイマージ中に競合を発見しました
  3 ウェイマージ中に競合を発見しました! `${dest_file}' を編集して手動でそれらを整理してください。
  .
  ファイル `${dest_file}.${ERR_SUFFIX}' に設定ファイルのマージに失敗した記録が保持されています。
-Description-nl.UTF-8: Tegenstrijdigheden gevonden in de driewegssamenvoeging
- Tegenstrijdigheden gevonden tijdens de driewegssamenvoeging! Wijzig alstublieft `${dest_file}` handmatig om dit op te lossen.
+Description-nl.UTF-8: Tegenstrijdigheden gevonden in de drievoudige samenvoeging
+ Tegenstrijdigheden gevonden tijdens de drievoudige samenvoeging! Wijzig alstublieft `${dest_file}` handmatig om dit op te lossen.
  .
  Het bestand `${dest_file}.${ERR_SUFFIX}' bevat een verslag van de mislukte samenvoeging van het configuratiebestand.
 Description-pl.UTF-8: Znaleziono konflikt podczas scalania pomiędzy trzema wersjami

@@ -20,7 +20,7 @@ case "$1" in
     ;;
 esac
 
-# Automatically added by dh_installdeb/13.2
+# Automatically added by dh_installdeb/12.1.1
 dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/harbour 1:2.8-5\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/lilypond 1:2.8-5\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/_subversion 1:2.8-5\~ -- "$@"

@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libpopt.so.0.0.1
+/usr/lib/arm-linux-gnueabihf/libpopt.so.0.0.0
 /usr/share
 /usr/share/doc
 /usr/share/doc/libpopt0

@@ -10,6 +10,7 @@
 /usr/lib/systemd/user
 /usr/lib/systemd/user/dirmngr.service
 /usr/lib/systemd/user/dirmngr.socket
+/usr/lib/systemd/user/sockets.target.wants
 /usr/share
 /usr/share/doc
 /usr/share/doc/dirmngr
@@ -30,3 +31,4 @@
 /usr/share/man/man1/dirmngr-client.1.gz
 /usr/share/man/man8
 /usr/share/man/man8/dirmngr.8.gz
+/usr/lib/systemd/user/sockets.target.wants/dirmngr.socket

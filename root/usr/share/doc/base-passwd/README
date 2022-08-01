@@ -53,7 +53,6 @@ Reserved uids:
     64060 | nova              | OpenStack Compute
     64061 | cinder            | OpenStack Block Storage
     64062 | glance            | OpenStack Image
-    64065 | gnocchi           | Gnocchi - Metric as a Service
 
 Reserved gids:
     gid   | name              | description
@@ -78,9 +77,8 @@ Reserved gids:
     64060 | nova              | OpenStack Compute
     64061 | cinder            | OpenStack Block Storage
     64062 | glance            | OpenStack Image
-    64065 | gnocchi           | Gnocchi - Metric as a Service
 
-(Next uid/gid allocation: 64070.)
+(Next uid/gid allocation: 64065.)
 
 You *may not* use any uids or gids in the 60000-64999 range without *first*
 requesting an allocation from base-passwd@packages.debian.org and waiting

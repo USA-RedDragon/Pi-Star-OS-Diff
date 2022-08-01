@@ -378,7 +378,6 @@ libX11.so.6 libx11-6 #MINVER#
  XSetICFocus@Base 0
  XSetICValues@Base 0
  XSetIMValues@Base 0
- XSetIOErrorExitHandler@Base 2:1.7.0
  XSetIOErrorHandler@Base 0
  XSetIconName@Base 0
  XSetIconSizes@Base 0
@@ -794,7 +793,6 @@ libX11.so.6 libx11-6 #MINVER#
  _XCreateMutex_fn@Base 0
  _XDefaultError@Base 0
  _XDefaultIOError@Base 0
- _XDefaultIOErrorExit@Base 2:1.7.0
  _XDefaultOpenIM@Base 0 1
  _XDefaultOpenOM@Base 0 1
  _XDefaultWireError@Base 0
@@ -1073,8 +1071,10 @@ libX11.so.6 libx11-6 #MINVER#
  _XimXTransFreeConnInfo@Base 0 1
  _XimXTransGetConnectionNumber@Base 0 1
  _XimXTransGetHostname@Base 0 1
+ _XimXTransGetMyAddr@Base 0 1
  _XimXTransGetPeerAddr@Base 0 1
  _XimXTransIsLocal@Base 0 1
+ _XimXTransOpenCLTSClient@Base 0 1
  _XimXTransOpenCOTSClient@Base 0 1
  _XimXTransRead@Base 0 1
  _XimXTransReadv@Base 0 1
@@ -1225,7 +1225,6 @@ libX11.so.6 libx11-6 #MINVER#
  _Xwcsncpy@Base 0 1
  _Xwcstombs@Base 0 1
  _Xwctomb@Base 0
- _conv_lock@Base 2:1.7.0
  _qfree@Base 0 1
  read_EncodingInfo@Base 0 1
  xlocaledir@Base 0 1

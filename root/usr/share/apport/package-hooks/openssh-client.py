@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 '''apport hook for openssh-client
 
 (c) 2010 Canonical Ltd.
@@ -10,12 +12,7 @@ option) any later version.  See http://www.gnu.org/copyleft/gpl.html for
 the full text of the license.
 '''
 
-from apport.hookutils import (
-    attach_conffiles,
-    attach_related_packages,
-    command_output,
-)
-
+from apport.hookutils import *
 
 def add_info(report, ui):
     response = ui.yesno("The contents of your /etc/ssh/ssh_config file "
@@ -24,10 +21,10 @@ def add_info(report, ui):
                         "information.  Do you want to include it in your "
                         "bug report?")
 
-    if response == None:  # user cancelled
+    if response == None: # user cancelled
         raise StopIteration
 
-    elif response:
+    elif response == True:
         attach_conffiles(report, 'openssh-client')
 
     attach_related_packages(report,

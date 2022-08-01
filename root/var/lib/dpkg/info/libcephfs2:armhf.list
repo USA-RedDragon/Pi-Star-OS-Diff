@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libcephfs.so.2.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libcephfs2
+/usr/share/doc/libcephfs2/changelog.Debian.gz
+/usr/share/doc/libcephfs2/copyright
+/usr/lib/arm-linux-gnueabihf/libcephfs.so.2

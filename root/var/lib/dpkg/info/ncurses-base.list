@@ -40,9 +40,6 @@
 /lib/terminfo/s/screen-w
 /lib/terminfo/s/screen.xterm-256color
 /lib/terminfo/s/sun
-/lib/terminfo/t
-/lib/terminfo/t/tmux
-/lib/terminfo/t/tmux-256color
 /lib/terminfo/v
 /lib/terminfo/v/vt100
 /lib/terminfo/v/vt102

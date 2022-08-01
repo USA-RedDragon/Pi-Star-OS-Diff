@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libxml2.so.2.9.10
+/usr/lib/arm-linux-gnueabihf/libxml2.so.2.9.4
 /usr/share
 /usr/share/doc
 /usr/share/doc/libxml2

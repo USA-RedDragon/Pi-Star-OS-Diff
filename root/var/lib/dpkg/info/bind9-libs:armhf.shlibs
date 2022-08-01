@@ -1,7 +1,0 @@
-libbind9 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)
-libdns 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)
-libirs 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)
-libisc 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)
-libisccc 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)
-libisccfg 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)
-libns 9.16.27-Raspbian bind9-libs (>= 1:9.16.27)

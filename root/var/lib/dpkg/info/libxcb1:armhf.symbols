@@ -626,8 +626,6 @@ libxcb.so.1 libxcb1 #MINVER#
  xcb_timecoord_next@Base 0
  xcb_timestamp_end@Base 0
  xcb_timestamp_next@Base 0
- xcb_total_read@Base 1.14
- xcb_total_written@Base 1.14
  xcb_translate_coordinates@Base 0
  xcb_translate_coordinates_reply@Base 0
  xcb_translate_coordinates_unchecked@Base 0

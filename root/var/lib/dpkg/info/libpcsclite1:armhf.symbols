@@ -1,5 +1,4 @@
 libpcsclite.so.1 libpcsclite1 #MINVER#
-* Build-Depends-Package: libpcsclite-dev
  SCardBeginTransaction@Base 1.0.0
  SCardCancel@Base 1.0.0
  SCardConnect@Base 1.0.0

@@ -1,0 +1,20 @@
+#########################################################
+#							#
+# DCS_Hosts.txt - Overrides				#
+# Written by Andy Taylor (MW0MWZ) for Pi-Star		#
+# Based on some excellent advice from John Fields	#
+#							#
+#########################################################
+#							#
+# Add your over-ride lines below, following the example	#
+# please make sure that lines are tab delimited and NOT	#
+# space delimited.					#
+#							#
+# Adding a capital L to the end of the line will force	#
+# the entry in this file to override any duplicates in	#
+# the Pi-Star host files.				#
+#							#
+#########################################################
+# Reflector	IP/Hostname Lock			#
+#########################################################
+#DCS000		1.2.3.4	L

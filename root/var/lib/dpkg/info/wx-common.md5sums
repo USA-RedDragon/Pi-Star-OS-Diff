@@ -1,0 +1,12 @@
+9f7e5bab857411e9d192c8027ea086e1  usr/bin/wxrc
+ad81e814c6b49f96c1fc58ac1425ddd9  usr/share/aclocal/wxwin.m4
+4fe990d9876566d1a187bb0cdaa849a0  usr/share/bakefile/presets/wx.bkl
+75231ef9a484fcb584e107324952962d  usr/share/bakefile/presets/wx_presets.py
+1a312a1a8af32c3cac7ce7af5b81dacc  usr/share/bakefile/presets/wx_unix.bkl
+f1d9081b622410179114c727e6b5154a  usr/share/bakefile/presets/wx_win32.bkl
+46122f1ca38f5e9434c01a6570283c4e  usr/share/bakefile/presets/wx_xrc.bkl
+d93840fa97d13a77ec825152d2096e95  usr/share/doc/wx-common/changelog.Debian.gz
+762933a34647465ae21c4d07861b22ce  usr/share/doc/wx-common/changelog.gz
+36997f684dbaf997602e62a926b2e326  usr/share/doc/wx-common/copyright
+70ac71a12494b5613e7aae8a1c4d56ca  usr/share/man/man1/wx-config.1.gz
+991de5cfd56b600cd6d707d364e99404  usr/share/man/man1/wxrc-tools.1.gz

@@ -2,22 +2,20 @@
 
 set -e
 
-PROGRAM=$(dpkg-divert --truename /bin/ping)
-
 if [ "$1" = configure ]; then
-    # If we have setcap installed, try setting cap_net_raw+ep,
+    # If we have setcap is installed, try setting cap_net_raw+ep,
     # which allows us to install our binaries without the setuid
     # bit.
     if command -v setcap > /dev/null; then
-        if setcap cap_net_raw+ep $PROGRAM; then
-            chmod u-s $PROGRAM
+        if setcap cap_net_raw+ep /bin/ping; then
+            chmod u-s /bin/ping
         else
-            echo "Setcap failed on $PROGRAM, falling back to setuid" >&2
-            chmod u+s $PROGRAM
+            echo "Setcap failed on /bin/ping, falling back to setuid" >&2
+            chmod u+s /bin/ping
         fi
     else
         echo "Setcap is not installed, falling back to setuid" >&2
-        chmod u+s $PROGRAM
+        chmod u+s /bin/ping
     fi
 fi
 

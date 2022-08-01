@@ -1,6 +1,6 @@
-## Syntax highlighting for PHP.
+## Here is an example for PHP.
 
-syntax php "\.(php[23457s~]?|phtml|ctp)$"
+syntax php "\.ph(p[23457s~]?|tml)$"
 magic "PHP script"
 comment "//"
 

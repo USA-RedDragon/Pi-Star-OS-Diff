@@ -8,23 +8,6 @@ Copyright:
  2007-2008 Jon Loeliger, Freescale Semiconductor, Inc.
  2011 The Chromium OS Authors.
  2007 Gerald Van Baren, Custom IDEAS, vanbaren@cideas.com
- 2016 Free Electrons
- 2016 Konsulko Inc.
- 2016 NextThing Co
- 2017 Konsulko Group Inc. All rights reserved.
- 2008 Kumar Gala, Freescale Semiconductor, Inc.
- 2009-2012 David Gibson, IBM Corporation.
- 2012 Kim Phillips, Freescale Semiconductor.
- 2012 NVIDIA CORPORATION.
- 2013-2017 Google, Inc
- 2014 David Gibson <david@gibson.dropbear.id.au>
- 2018 AKASHI Takahiro, Linaro Limited
- 2018 David Gibson
- 2018 David Gibson, IBM Corporation.
- 2018 David Gibson, Red Hat Inc.
- 2018 embedded brains GmbH
- Arm Holdings.  2017
- Linaro, Ltd. 2018
 License: GPL-2+
 
 Files: debian/*
@@ -37,9 +20,6 @@ Copyright:
  2006-2012 David Gibson, IBM Corporation.
  2012 Kim Phillips, Freescale Semiconductor.
  2014 David Gibson <david@gibson.dropbear.id.au>
- 2016 Free Electrons
- 2016 NextThing Co.
- 2018 embedded brains GmbH
 License: GPL-2+ or BSD-2-clause
 
 Files: tests/*
@@ -55,45 +35,10 @@ Copyright:
  2008 Kumar Gala, Freescale Semiconductor, Inc.
 License: LGPL-2.1+
 
-Files:
- tests/overlay_bad_fixup_path_empty_prop.dts
- tests/overlay_bad_fixup_empty_index.dts
- tests/overlay_overlay.dts
- tests/overlay_bad_fixup_path_prop.dts
- tests/overlay_overlay_bypath.dts
- tests/overlay_overlay_nosugar.dts
- tests/overlay_overlay_manual_fixups.dts
- tests/overlay_overlay_local_merge.dts
- tests/overlay_bad_fixup_empty.dts
- tests/overlay_base.dts
- tests/dumptrees.c
- tests/overlay_bad_fixup_base.dtsi
- tests/overlay_bad_fixup_bad_index.dts
- tests/overlay_bad_fixup_path_only.dts
- tests/overlay_overlay_simple.dts
- tests/overlay_overlay_no_fixups.dts
- tests/overlay_bad_fixup_index_trailing.dts
- tests/overlay_bad_fixup_path_only_sep.dts
- tests/overlay_base_manual_symbols.dts
- tests/overlay_bad_fixup_path_empty_prop.dts
- tests/overlay_bad_fixup_empty_index.dts
- tests/overlay_overlay.dts
- tests/overlay_bad_fixup_path_prop.dts
- tests/overlay_overlay_bypath.dts
- tests/overlay_overlay_nosugar.dts
- tests/overlay_overlay_manual_fixups.dts
+Files: tests/dumptrees.c
 Copyright:
  David Gibson <dwg@au1.ibm.com>, IBM Corporation.  2006.
- 2016 Free Electrons
- 2016 Konsulko Inc.
- 2016 NextThing Co
 License: GPL-2+
- 
-Files:
- tests/pylibfdt_tests.py
-Copyright:
- 2017 Google, Inc. (Written by Simon Glass <sjg@chromium.org>)
-License: GPL-2+ or BSD-2-clause
 
 License: GPL-2+
  This program is free software; you can redistribute it

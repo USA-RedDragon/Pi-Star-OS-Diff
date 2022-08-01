@@ -19,8 +19,9 @@ package Dpkg::Compression;
 use strict;
 use warnings;
 
-our $VERSION = '2.00';
+our $VERSION = '1.02';
 our @EXPORT = qw(
+    $compression_re_file_ext
     compression_is_supported
     compression_get_list
     compression_get_property
@@ -97,11 +98,14 @@ if ($Config{cf_by} eq 'Debian Project') {
     push @{$COMP->{gzip}->{comp_prog}}, '--rsyncable';
 }
 
-my $default_compression = 'xz';
-my $default_compression_level = undef;
+# XXX: Backwards compatibility, stop exporting on VERSION 2.00.
+## no critic (Variables::ProhibitPackageVars)
+our $default_compression = 'xz';
+our $default_compression_level = undef;
 
 my $regex = join '|', map { $_->{file_ext} } values %$COMP;
-my $compression_re_file_ext = qr/(?:$regex)/;
+our $compression_re_file_ext = qr/(?:$regex)/;
+## use critic
 
 =head1 FUNCTIONS
 
@@ -245,11 +249,6 @@ sub compression_is_valid_level {
 =back
 
 =head1 CHANGES
-
-=head2 Version 2.00 (dpkg 1.20.0)
-
-Hide variables: $default_compression, $default_compression_level
-and $compression_re_file_ext.
 
 =head2 Version 1.02 (dpkg 1.17.2)
 

@@ -33,8 +33,6 @@
 
     <method name="Free"/>
 
-    <method name="Start"/>
-
     <signal name="ItemNew">
       <arg name="interface" type="i"/>
       <arg name="protocol" type="i"/>

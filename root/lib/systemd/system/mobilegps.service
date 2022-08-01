@@ -1,0 +1,12 @@
+[Unit]
+Description=Pi-Star MobileGPS Service
+After=syslog.target network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/sbin/mobilegps.service start
+ExecStop=/usr/local/sbin/mobilegps.service stop
+ExecReload=/usr/local/sbin/mobilegps.service restart
+
+[Install]
+WantedBy=multi-user.target

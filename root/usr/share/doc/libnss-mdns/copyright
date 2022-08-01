@@ -1,6 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://github.com/lathiat/nss-mdns/releases
-Upstream-Name: nss-mdns
 
 Files: *
 Copyright:

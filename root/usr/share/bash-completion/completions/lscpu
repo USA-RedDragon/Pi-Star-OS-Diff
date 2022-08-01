@@ -30,8 +30,6 @@ _lscpu_module()
 		-*)
 			OPTS_ALL="--all
 				--online
-				--bytes
-				--caches
 				--offline
 				--json
 				--extended=

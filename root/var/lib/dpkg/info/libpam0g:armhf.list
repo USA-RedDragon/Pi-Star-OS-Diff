@@ -1,7 +1,7 @@
 /.
 /lib
 /lib/arm-linux-gnueabihf
-/lib/arm-linux-gnueabihf/libpam.so.0.85.1
+/lib/arm-linux-gnueabihf/libpam.so.0.84.2
 /lib/arm-linux-gnueabihf/libpam_misc.so.0.82.1
 /lib/arm-linux-gnueabihf/libpamc.so.0.82.1
 /usr

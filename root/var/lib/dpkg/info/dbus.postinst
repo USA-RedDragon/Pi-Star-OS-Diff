@@ -64,10 +64,6 @@ if [ "$1" = configure ] && [ -n "$2" ]; then
         # (used by unattended-upgrades etc.)
         touch /var/run/reboot-required || true
 
-        if ! grep -Fqsx dbus /run/reboot-required.pkgs; then
-            echo dbus >> /run/reboot-required.pkgs || true
-        fi
-
         # same thing for the older update-notifier interface
         [ -x /usr/share/update-notifier/notify-reboot-required ] && \
             /usr/share/update-notifier/notify-reboot-required || true
@@ -86,7 +82,7 @@ if [ "$1" = configure ] && [ -n "$2" ]; then
     done
 fi
 
-# Automatically added by dh_installsystemd/13.3.3
+# Automatically added by dh_installsystemd/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# In case this system is running systemd, we need to ensure that all
 	# necessary tmpfiles (if any) are created before starting.
@@ -95,23 +91,15 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installdeb/13.3.3
+# Automatically added by dh_installdeb/12.1.1
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/session.conf 1.10.0-4\~ dbus -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.conf 1.10.0-4\~ dbus -- "$@"
 # End automatically added section
-# Automatically added by dh_installinit/13.3.3
+# Automatically added by dh_installinit/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	if [ -x "/etc/init.d/dbus" ]; then
 		update-rc.d dbus defaults >/dev/null
-		invoke-rc.d --skip-systemd-native dbus start || exit 1
-	fi
-fi
-# End automatically added section
-# Automatically added by dh_installsystemd/13.3.3
-if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
-	if [ -d /run/systemd/system ]; then
-		systemctl --system daemon-reload >/dev/null || true
-		deb-systemd-invoke start 'dbus.service' 'dbus.socket' >/dev/null || true
+		invoke-rc.d dbus start || exit 1
 	fi
 fi
 # End automatically added section

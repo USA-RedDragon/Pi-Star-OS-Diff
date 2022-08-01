@@ -1,4 +1,5 @@
-e7e109606c1e2f211a572aff6a752a1b  usr/lib/arm-linux-gnueabihf/libxtables.so.12.4.0
-374ebb5ef26d0e9a4c52cba108c42645  usr/share/doc/libxtables12/NEWS.Debian.gz
-8e39b57eb79d64d8022db314f9a67401  usr/share/doc/libxtables12/changelog.Debian.gz
-b4f9b68cfc5f8a5c3290db3fd0984df1  usr/share/doc/libxtables12/copyright
+4753db3fdd1532d53b1cb4f8f5bff5b2  usr/lib/arm-linux-gnueabihf/libxtables.so.12.2.0
+a3d57106100059a79311f055a0c57b2e  usr/share/doc/libxtables12/NEWS.Debian.gz
+78c228ef13d109f6b5cefc0e69d80014  usr/share/doc/libxtables12/changelog.Debian.gz
+5cc9bbe87900f16358e8bbfc9f5fc88d  usr/share/doc/libxtables12/changelog.gz
+450cf3b8e9e5bfdbe7442db8a46b10c4  usr/share/doc/libxtables12/copyright

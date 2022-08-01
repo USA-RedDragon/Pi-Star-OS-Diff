@@ -24,6 +24,7 @@
 /usr
 /usr/bin
 /usr/bin/bccmd
+/usr/bin/bdaddr
 /usr/bin/bluemoon
 /usr/bin/bluetoothctl
 /usr/bin/btattach
@@ -41,9 +42,9 @@
 /usr/bin/rctest
 /usr/bin/rfcomm
 /usr/bin/sdptool
-/usr/libexec
-/usr/libexec/bluetooth
-/usr/libexec/bluetooth/bluetoothd
+/usr/lib
+/usr/lib/bluetooth
+/usr/lib/bluetooth/bluetoothd
 /usr/sbin
 /usr/share
 /usr/share/dbus-1
@@ -80,7 +81,4 @@
 /usr/share/man/man1/sdptool.1.gz
 /usr/share/man/man8
 /usr/share/man/man8/bluetoothd.8.gz
-/usr/share/zsh
-/usr/share/zsh/site-functions
-/usr/share/zsh/site-functions/_bluetoothctl
 /usr/sbin/bluetoothd

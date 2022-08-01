@@ -1,4 +1,4 @@
-#  SPDX-License-Identifier: LGPL-2.1-or-later
+#  SPDX-License-Identifier: LGPL-2.1+
 #
 #  This file is part of systemd.
 #
@@ -8,7 +8,7 @@
 #  (at your option) any later version.
 
 [Unit]
-Description=Main User Target
+Description=Default
 Documentation=man:systemd.special(7)
 Requires=basic.target
 After=basic.target

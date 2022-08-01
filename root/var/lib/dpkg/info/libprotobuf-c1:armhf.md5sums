@@ -1,5 +1,5 @@
-fbded0cf2fd9bb72d9890acc043f96d9  usr/lib/arm-linux-gnueabihf/libprotobuf-c.so.1.0.0
-1bb4a31f2316bcd1714f1b80ec79d987  usr/share/doc/libprotobuf-c1/changelog.Debian.armhf.gz
-4c4ae0c1e6a31f4f8c88a5fbfc121760  usr/share/doc/libprotobuf-c1/changelog.Debian.gz
-4d4288c9ba5ce84b3141b6201358a8a9  usr/share/doc/libprotobuf-c1/changelog.gz
-44f42f088e7b3b89f7f9e5f41269de84  usr/share/doc/libprotobuf-c1/copyright
+4a63ef3acb97c8bbcb1e5bf789439d05  usr/lib/arm-linux-gnueabihf/libprotobuf-c.so.1.0.0
+1edf38ad3640415e9c32c9bd870dd3b0  usr/share/doc/libprotobuf-c1/changelog.Debian.armhf.gz
+6b2edc98130bd248eddefc1a0006987d  usr/share/doc/libprotobuf-c1/changelog.Debian.gz
+4ea5d5937a1941c8b83d032afb9295ea  usr/share/doc/libprotobuf-c1/changelog.gz
+ffa3018eb42fa5ee205307e220069c88  usr/share/doc/libprotobuf-c1/copyright

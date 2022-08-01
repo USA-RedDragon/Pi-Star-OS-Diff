@@ -3,7 +3,7 @@
         "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <!--
-  SPDX-License-Identifier: LGPL-2.1-or-later
+  SPDX-License-Identifier: LGPL-2.1+
 
   This file is part of systemd.
 

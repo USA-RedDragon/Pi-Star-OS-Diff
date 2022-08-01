@@ -1,5 +1,4 @@
-7ebdbae5a628e39deb216c6c2dbe246d  usr/lib/arm-linux-gnueabihf/libpipeline.so.1.5.3
-f0055c4c7f279b582c60d15ae3d21968  usr/share/doc/libpipeline1/NEWS.gz
-d730ca9b1dd04e7dc16ff9d1f20ef65e  usr/share/doc/libpipeline1/changelog.Debian.gz
-04b4b2c59ccb5d4a0c839ddd9cebf471  usr/share/doc/libpipeline1/changelog.gz
-3f6cd45bc1542df229141174fe154a61  usr/share/doc/libpipeline1/copyright
+ea229ab69f4614f14270c3144a5ff569  usr/lib/arm-linux-gnueabihf/libpipeline.so.1.5.1
+b7d05cff4bf09112835fe4c1e74b6620  usr/share/doc/libpipeline1/changelog.Debian.gz
+d8682d91fd9b06c10b78f5be456dc219  usr/share/doc/libpipeline1/changelog.gz
+25ced867dc8dc95f8f98effaa722d01e  usr/share/doc/libpipeline1/copyright

@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: popt
-Upstream-Contact: rpm-maint@lists.rpm.org
-Source: https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/
+Upstream-Contact: Jeff Johnson <jbj@rpm5.org>
+Source: http://rpm5.org/files/popt/
 Comment:
  popt was originally written by Erik Troan when he was with RedHat. It's
  now maintained as part of Fedora.

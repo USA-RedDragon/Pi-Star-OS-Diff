@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libassuan.so.0.8.3
+/usr/lib/arm-linux-gnueabihf/libassuan.so.0.8.2
 /usr/share
 /usr/share/doc
 /usr/share/doc/libassuan0

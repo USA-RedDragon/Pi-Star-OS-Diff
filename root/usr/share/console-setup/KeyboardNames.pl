@@ -80,6 +80,7 @@ package KeyboardNames;
     'Genius KB-19e NB' => 'geniuskb19e',
     'Genius KKB-2050HS' => 'geniuskkb2050hs',
     'Gyration' => 'gyration',
+    'HTC Dream' => 'htcdream',
     'Happy Hacking' => 'hhk',
     'Happy Hacking for Mac' => 'macintosh_hhk',
     'Hewlett-Packard Internet' => 'hpi6',
@@ -95,6 +96,7 @@ package KeyboardNames;
     'Hewlett-Packard Pavilion dv5' => 'hpdv5',
     'Hewlett-Packard nx9020' => 'hpnx9020',
     'Honeywell Euroboard' => 'honeywell_euroboard',
+    'Htc Dream phone' => 'htcdream',
     'IBM Rapid Access' => 'rapidaccess',
     'IBM Rapid Access II' => 'rapidaccess2',
     'IBM Space Saver' => 'ibm_spacesaver',
@@ -144,7 +146,6 @@ package KeyboardNames;
     'Microsoft Natural Pro/Internet Pro' => 'microsoftpro',
     'Microsoft Natural Wireless Ergonomic 7000' => 'microsoft7000',
     'Microsoft Office Keyboard' => 'microsoftoffice',
-    'Microsoft Surface' => 'microsoftsurface',
     'Microsoft Wireless Multimedia 1.0A' => 'microsoftmult',
     'NEC SK-1300' => 'sk1300',
     'NEC SK-2500' => 'sk2500',
@@ -248,8 +249,7 @@ package KeyboardNames;
     'Hungarian' => 'hu',
     'Icelandic' => 'is',
     'Indian' => 'in',
-    'Indonesian (Arab Melayu, phonetic)' => 'id',
-    'Indonesian (Javanese)' => 'jv',
+    'Indonesian (Jawi)' => 'id',
     'Iraqi' => 'iq',
     'Irish' => 'ie',
     'Italian' => 'it',
@@ -309,7 +309,6 @@ package KeyboardNames;
     },
     'al' => {
 	'Albanian (Plisi)' => 'plisi',
-	'Albanian (Veqilharxhi)' => 'veqilharxhi',
     },
     'am' => {
 	'Armenian (alt. eastern)' => 'eastern-alt',
@@ -404,20 +403,12 @@ package KeyboardNames;
     },
     'cn' => {
 	'Hanyu Pinyin (altgr)' => 'altgr-pinyin',
-	'Mongolian (Bichig)' => 'mon_trad',
-	'Mongolian Galik' => 'mon_trad_galik',
-	'Mongolian Manchu' => 'mon_trad_manchu',
-	'Mongolian Manchu Galik' => 'mon_manchu_galik',
-	'Mongolian Todo' => 'mon_trad_todo',
-	'Mongolian Todo Galik' => 'mon_todo_galik',
-	'Mongolian Xibe' => 'mon_trad_xibe',
 	'Tibetan' => 'tib',
 	'Tibetan (with ASCII numerals)' => 'tib_asciinum',
 	'Uyghur' => 'ug',
     },
     'cz' => {
 	'Czech (QWERTY)' => 'qwerty',
-	'Czech (QWERTY, Macintosh)' => 'qwerty-mac',
 	'Czech (QWERTY, extended backslash)' => 'qwerty_bksl',
 	'Czech (UCW, only accented letters)' => 'ucw',
 	'Czech (US, Dvorak, UCW support)' => 'dvorak-ucw',
@@ -483,10 +474,8 @@ package KeyboardNames;
 	'Faroese (no dead keys)' => 'nodeadkeys',
     },
     'fr' => {
-	'French (AFNOR standardized AZERTY)' => 'afnor',
 	'French (AZERTY)' => 'azerty',
 	'French (Bepo, ergonomic, Dvorak way)' => 'bepo',
-	'French (Bepo, ergonomic, Dvorak way, AFNOR)' => 'bepo_afnor',
 	'French (Bepo, ergonomic, Dvorak way, Latin-9 only)' => 'bepo_latin9',
 	'French (Breton)' => 'bre',
 	'French (Dvorak)' => 'dvorak',
@@ -563,9 +552,6 @@ package KeyboardNames;
 	'Hungarian (no dead keys)' => 'nodeadkeys',
 	'Hungarian (standard)' => 'standard',
     },
-    'id' => {
-	'Indonesian (Arab Melayu, ext. phonetic)' => 'phoneticx',
-    },
     'ie' => {
 	'CloGaelach' => 'CloGaelach',
 	'Irish (UnicodeExpert)' => 'UnicodeExpert',
@@ -634,7 +620,6 @@ package KeyboardNames;
 	'Icelandic (with Sun dead keys)' => 'Sundeadkeys',
     },
     'it' => {
-	'Friulian (Italy)' => 'fur',
 	'Georgian (Italy)' => 'geo',
 	'Italian (IBM 142)' => 'ibm',
 	'Italian (Macintosh)' => 'mac',
@@ -688,7 +673,6 @@ package KeyboardNames;
 	'Lithuanian (LEKPa)' => 'lekpa',
 	'Lithuanian (US, with Lithuanian letters)' => 'us',
 	'Lithuanian (standard)' => 'std',
-	'Samogitian' => 'sgs',
     },
     'lv' => {
 	'Latvian (F)' => 'fkey',
@@ -731,8 +715,6 @@ package KeyboardNames;
 	'Burmese Zawgyi' => 'zawgyi',
     },
     'mt' => {
-	'Maltese (UK layout with AltGr overrides)' => 'alt-gb',
-	'Maltese (US layout with AltGr overrides)' => 'alt-us',
 	'Maltese (with US layout)' => 'us',
     },
     'my' => {
@@ -909,7 +891,6 @@ package KeyboardNames;
 	'English (Dvorak, left-handed)' => 'dvorak-l',
 	'English (Dvorak, right-handed)' => 'dvorak-r',
 	'English (Macintosh)' => 'mac',
-	'English (Norman)' => 'norman',
 	'English (US, alt. intl.)' => 'alt-intl',
 	'English (US, euro on 5)' => 'euro',
 	'English (US, intl., with dead keys)' => 'intl',

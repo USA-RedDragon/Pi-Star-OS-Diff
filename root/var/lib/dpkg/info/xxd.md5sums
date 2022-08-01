@@ -1,8 +1,7 @@
-32ce11d321f9540e7ad8150d351e6532  usr/bin/xxd
+5864dcc1d24ae5057243ea9222940b05  usr/bin/xxd
 251c75666e30e95a83be1eb1f2f614d0  usr/share/doc/xxd/NEWS.Debian.gz
-a95339044efd70423ffe92a4d1d6ecc1  usr/share/doc/xxd/changelog.Debian.gz
-1dc9356b84c20c365b2642ea9b79acee  usr/share/doc/xxd/changelog.gz
-40370ce9e3c7c0b9a4baabbc022d7206  usr/share/doc/xxd/copyright
+2d57d25e24bcf122e48e8604341ad8b4  usr/share/doc/xxd/changelog.Debian.gz
+2ba9e261c495e1b1d0b84cd549009602  usr/share/doc/xxd/copyright
 ef844eb6839fda3a3e9c32b0e43ae4da  usr/share/man/fr/man1/xxd.1.gz
 fd822b23c4fd619b08cf695a5c266724  usr/share/man/it/man1/xxd.1.gz
 8fbe8e124ab42a3fb7140e5fcf46d5ab  usr/share/man/ja/man1/xxd.1.gz

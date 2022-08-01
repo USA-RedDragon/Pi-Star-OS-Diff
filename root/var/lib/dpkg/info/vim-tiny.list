@@ -20,9 +20,9 @@
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/vim-tiny
 /usr/share/vim
-/usr/share/vim/vim82
-/usr/share/vim/vim82/doc
-/usr/share/vim/vim82/doc/README.Debian
-/usr/share/vim/vim82/doc/help.txt
-/usr/share/vim/vim82/doc/tags
+/usr/share/vim/vim81
+/usr/share/vim/vim81/doc
+/usr/share/vim/vim81/doc/README.Debian
+/usr/share/vim/vim81/doc/help.txt
+/usr/share/vim/vim81/doc/tags
 /usr/share/vim/vimrc.tiny

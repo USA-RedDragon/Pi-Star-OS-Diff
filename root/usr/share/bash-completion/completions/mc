@@ -6,24 +6,30 @@ _mc()
     _init_completion -s || return
 
     case $prev in
-        --edit | --view | --ftplog | --printwd | -!(-*)[evlP])
+        -e|--edit|-v|--view|-l|--ftplog|-P|--printwd)
             _filedir
             return
             ;;
-        --help | --help-* | --version | --colors | --debuglevel | -!(-*)[hVCD])
+        -C|--colors|-D|--debuglevel)
+            # argument required but no completions available
+            return
+            ;;
+        -h|--help|--help-*|-V|--version)
+            # all other arguments are noop with these
             return
             ;;
     esac
 
     $split && return
 
-    if [[ $cur == -* ]]; then
-        COMPREPLY=($(compgen -W '$(_parse_help "$1" --help-all)' -- "$cur"))
-        [[ ${COMPREPLY-} == *= ]] && compopt -o nospace
+    if [[ "$cur" == -* ]]; then
+        COMPREPLY=( $( compgen -W '$( _parse_help "$1" --help-all )' \
+            -- "$cur" ) )
+        [[ $COMPREPLY == *= ]] && compopt -o nospace
     else
         _filedir -d
     fi
 } &&
-    complete -F _mc mc
+complete -F _mc mc
 
 # ex: filetype=sh

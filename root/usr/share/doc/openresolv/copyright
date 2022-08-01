@@ -1,17 +1,16 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: openresolv
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: resolvconf
 Upstream-Contact: Roy Marples <roy@marples.name>
-Source: https://roy.marples.name/projects/openresolv
+Source: http://roy.marples.name/projects/openresolv/home
 
 Files: *
-Copyright: 2007-2020 Roy Marples <roy@marples.name>
+Copyright: 2007-2016 Roy Marples <roy@marples.name>
 License: BSD-2-clause
 
 Files: debian/*
 Copyright: 2010-2012 Roy Marples <roy@marples.name>
            2015-2016 Herbert Parentes Fortes Neto <hpfn@ig.com.br>
-           2016      Jose dos Santos Junior <j.s.junior@live.com>
-           2020      Fabio Augusto De Muzio Tobich <ftobich@gmail.com>
+		2016 Jose dos Santos Junior <j.s.junior@live.com>
 License: BSD-2-clause
 
 License: BSD-2-clause

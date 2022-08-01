@@ -1,5 +1,5 @@
 libfontconfig.so.1 libfontconfig1 #MINVER#
-* Build-Depends-Package: libfontconfig-dev
+* Build-Depends-Package: libfontconfig1-dev
  FcAtomicCreate@Base 2.12.6
  FcAtomicDeleteNew@Base 2.12.6
  FcAtomicDestroy@Base 2.12.6

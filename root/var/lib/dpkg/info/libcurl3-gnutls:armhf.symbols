@@ -1,5 +1,4 @@
 libcurl-gnutls.so.4 libcurl3-gnutls #MINVER#
-* Build-Depends-Package: libcurl4-gnutls-dev
  CURL_GNUTLS_3@CURL_GNUTLS_3 7.16.2
  HIDDEN@HIDDEN 7.16.2
  curl_easy_cleanup@CURL_GNUTLS_3 7.16.2
@@ -7,9 +6,6 @@ libcurl-gnutls.so.4 libcurl3-gnutls #MINVER#
  curl_easy_escape@CURL_GNUTLS_3 7.16.2
  curl_easy_getinfo@CURL_GNUTLS_3 7.16.2
  curl_easy_init@CURL_GNUTLS_3 7.16.2
- curl_easy_option_by_id@CURL_GNUTLS_3 7.74.0
- curl_easy_option_by_name@CURL_GNUTLS_3 7.74.0
- curl_easy_option_next@CURL_GNUTLS_3 7.74.0
  curl_easy_pause@CURL_GNUTLS_3 7.18.0
  curl_easy_perform@CURL_GNUTLS_3 7.16.2
  curl_easy_recv@CURL_GNUTLS_3 7.18.2
@@ -55,7 +51,6 @@ libcurl-gnutls.so.4 libcurl3-gnutls #MINVER#
  curl_multi_info_read@CURL_GNUTLS_3 7.16.2
  curl_multi_init@CURL_GNUTLS_3 7.16.2
  curl_multi_perform@CURL_GNUTLS_3 7.16.2
- curl_multi_poll@CURL_GNUTLS_3 7.66.0
  curl_multi_remove_handle@CURL_GNUTLS_3 7.16.2
  curl_multi_setopt@CURL_GNUTLS_3 7.16.2
  curl_multi_socket@CURL_GNUTLS_3 7.16.2
@@ -64,7 +59,6 @@ libcurl-gnutls.so.4 libcurl3-gnutls #MINVER#
  curl_multi_strerror@CURL_GNUTLS_3 7.16.2
  curl_multi_timeout@CURL_GNUTLS_3 7.16.2
  curl_multi_wait@CURL_GNUTLS_3 7.28.0
- curl_multi_wakeup@CURL_GNUTLS_3 7.68.0
  curl_mvaprintf@CURL_GNUTLS_3 7.16.2
  curl_mvfprintf@CURL_GNUTLS_3 7.16.2
  curl_mvprintf@CURL_GNUTLS_3 7.16.2

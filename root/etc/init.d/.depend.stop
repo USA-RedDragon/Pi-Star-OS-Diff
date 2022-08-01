@@ -1,0 +1,10 @@
+TARGETS = exim4 hostapd samba-ad-dc minissdpd shellinabox dhcpcd fake-hwclock nmbd unattended-upgrades php7.0-fpm udev smbd rng-tools nginx haveged bluetooth avahi-daemon plymouth urandom brightness alsa-utils dnsmasq sendsigs rsyslog umountnfs.sh nfs-common rpcbind networking umountfs umountroot halt reboot
+dnsmasq: exim4 nginx
+sendsigs: dnsmasq samba-ad-dc minissdpd exim4 smbd rng-tools shellinabox dhcpcd nginx plymouth hostapd bluetooth nmbd haveged avahi-daemon alsa-utils unattended-upgrades php7.0-fpm
+rsyslog: sendsigs dnsmasq exim4
+umountnfs.sh: rsyslog sendsigs dnsmasq samba-ad-dc minissdpd exim4 smbd rng-tools shellinabox dhcpcd nginx plymouth hostapd bluetooth nmbd haveged avahi-daemon alsa-utils unattended-upgrades php7.0-fpm
+networking: rpcbind umountnfs.sh dnsmasq samba-ad-dc minissdpd exim4 smbd shellinabox nginx nmbd php7.0-fpm
+umountfs: networking rpcbind umountnfs.sh dnsmasq samba-ad-dc minissdpd exim4 smbd rng-tools shellinabox dhcpcd nginx plymouth hostapd brightness bluetooth nmbd urandom haveged avahi-daemon alsa-utils unattended-upgrades php7.0-fpm
+umountroot: umountfs fake-hwclock udev
+halt: umountroot
+reboot: umountroot

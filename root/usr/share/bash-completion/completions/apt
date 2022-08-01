@@ -39,7 +39,7 @@ _apt()
         "list"
         "search"
         "show" "showsrc"
-        "install" "remove" "purge" "autoremove" "autopurge"
+        "install" "remove" "purge" "autoremove"
         "update"
         "upgrade" "full-upgrade" "dist-upgrade"
         "edit-sources"

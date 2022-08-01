@@ -69,7 +69,6 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_create_collation16@Base 3.5.9
  sqlite3_create_collation@Base 3.5.9
  sqlite3_create_collation_v2@Base 3.5.9
- sqlite3_create_filename@Base 3.32.0
  sqlite3_create_function16@Base 3.5.9
  sqlite3_create_function@Base 3.5.9
  sqlite3_create_function_v2@Base 3.7.3
@@ -78,7 +77,6 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_create_window_function@Base 3.25.0
  sqlite3_data_count@Base 3.5.9
  sqlite3_data_directory@Base 3.7.13
- sqlite3_database_file_object@Base 3.32.0
  sqlite3_db_cacheflush@Base 3.10.0
  sqlite3_db_config@Base 3.6.1
  sqlite3_db_filename@Base 3.7.10
@@ -88,7 +86,6 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_db_release_memory@Base 3.7.10
  sqlite3_db_status@Base 3.6.1
  sqlite3_declare_vtab@Base 3.5.9
- sqlite3_drop_modules@Base 3.30.0
  sqlite3_enable_load_extension@Base 3.5.9
  sqlite3_enable_shared_cache@Base 3.5.9
  sqlite3_errcode@Base 3.5.9
@@ -101,12 +98,8 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_extended_errcode@Base 3.6.5
  sqlite3_extended_result_codes@Base 3.5.9
  sqlite3_file_control@Base 3.5.9
- sqlite3_filename_database@Base 3.31.1
- sqlite3_filename_journal@Base 3.31.1
- sqlite3_filename_wal@Base 3.31.1
  sqlite3_finalize@Base 3.5.9
  sqlite3_free@Base 3.5.9
- sqlite3_free_filename@Base 3.32.0
  sqlite3_free_table@Base 3.5.9
  sqlite3_fts3_may_be_corrupt@Base 3.27.1
  sqlite3_fts5_may_be_corrupt@Base 3.19.2
@@ -114,7 +107,6 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_get_auxdata@Base 3.5.9
  sqlite3_get_table@Base 3.5.9
  sqlite3_global_recover@Base 3.5.9
- sqlite3_hard_heap_limit64@Base 3.30.1+fossil191229
  sqlite3_initialize@Base 3.6.0
  sqlite3_interrupt@Base 3.5.9
  sqlite3_keyword_check@Base 3.24.0
@@ -202,7 +194,6 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_status@Base 3.6.0
  sqlite3_step@Base 3.5.9
  sqlite3_stmt_busy@Base 3.7.10
- sqlite3_stmt_isexplain@Base 3.29.0
  sqlite3_stmt_readonly@Base 3.7.4
  sqlite3_stmt_status@Base 3.6.4
  sqlite3_str_append@Base 3.24.0
@@ -230,13 +221,10 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_trace@Base 3.5.9
  sqlite3_trace_v2@Base 3.14.0
  sqlite3_transfer_bindings@Base 3.5.9
- sqlite3_txn_state@Base 3.34.0
  sqlite3_unlock_notify@Base 3.6.12
- sqlite3_unsupported_selecttrace@Base 3.33.0
  sqlite3_update_hook@Base 3.5.9
  sqlite3_uri_boolean@Base 3.7.10
  sqlite3_uri_int64@Base 3.7.10
- sqlite3_uri_key@Base 3.31.1
  sqlite3_uri_parameter@Base 3.7.7
  sqlite3_user_data@Base 3.5.9
  sqlite3_value_blob@Base 3.5.9
@@ -245,7 +233,6 @@ libsqlite3.so.0 libsqlite3-0 #MINVER#
  sqlite3_value_double@Base 3.5.9
  sqlite3_value_dup@Base 3.8.11
  sqlite3_value_free@Base 3.8.11
- sqlite3_value_frombind@Base 3.29.0
  sqlite3_value_int64@Base 3.5.9
  sqlite3_value_int@Base 3.5.9
  sqlite3_value_nochange@Base 3.22.0

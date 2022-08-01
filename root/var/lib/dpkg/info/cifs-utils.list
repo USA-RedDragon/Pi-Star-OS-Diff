@@ -15,8 +15,6 @@
 /usr/bin/cifscreds
 /usr/bin/getcifsacl
 /usr/bin/setcifsacl
-/usr/bin/smb2-quota
-/usr/bin/smbinfo
 /usr/include
 /usr/include/cifsidmap.h
 /usr/lib
@@ -27,9 +25,6 @@
 /usr/sbin/cifs.idmap
 /usr/sbin/cifs.upcall
 /usr/share
-/usr/share/bash-completion
-/usr/share/bash-completion/completions
-/usr/share/bash-completion/completions/smbinfo
 /usr/share/doc
 /usr/share/doc/cifs-utils
 /usr/share/doc/cifs-utils/changelog.Debian.gz
@@ -43,13 +38,9 @@
 /usr/share/man/man1/cifscreds.1.gz
 /usr/share/man/man1/getcifsacl.1.gz
 /usr/share/man/man1/setcifsacl.1.gz
-/usr/share/man/man1/smb2-quota.1.gz
-/usr/share/man/man1/smbinfo.1.gz
 /usr/share/man/man8
 /usr/share/man/man8/cifs.idmap.8.gz
 /usr/share/man/man8/cifs.upcall.8.gz
 /usr/share/man/man8/idmapwb.8.gz
 /usr/share/man/man8/mount.cifs.8.gz
 /usr/share/man/man8/pam_cifscreds.8.gz
-/sbin/mount.smb3
-/usr/share/man/man8/mount.smb3.8.gz

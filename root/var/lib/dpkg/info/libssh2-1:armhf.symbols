@@ -1,13 +1,10 @@
 libssh2.so.1 libssh2-1 #MINVER#
-* Build-Depends-Package: libssh2-1-dev
  libssh2_agent_connect@Base 1.2.3
  libssh2_agent_disconnect@Base 1.2.3
  libssh2_agent_free@Base 1.2.3
  libssh2_agent_get_identity@Base 1.2.3
- libssh2_agent_get_identity_path@Base 1.9.0
  libssh2_agent_init@Base 1.2.3
  libssh2_agent_list_identities@Base 1.2.3
- libssh2_agent_set_identity_path@Base 1.9.0
  libssh2_agent_userauth@Base 1.2.3
  libssh2_banner_set@Base 1.0
  libssh2_base64_decode@Base 1.0

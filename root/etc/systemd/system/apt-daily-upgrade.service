@@ -1,0 +1,15 @@
+[Unit]
+Description=Daily apt upgrade and clean activities
+Documentation=man:apt(8)
+ConditionACPower=true
+After=apt-daily.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/mount -o remount,rw /
+ExecStartPre=/bin/mount -o remount,rw /boot
+ExecStart=/usr/lib/apt/apt.systemd.daily install
+KillMode=process
+TimeoutStopSec=900
+ExecStartPost=/bin/mount -o remount,ro /
+ExecStartPost=/bin/mount -o remount,ro /boot

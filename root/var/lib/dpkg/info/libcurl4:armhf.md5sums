@@ -1,5 +1,5 @@
-b58742f25c69fb7d84626e2b147b1464  usr/lib/arm-linux-gnueabihf/libcurl.so.4.7.0
+983b3df14761701986f2d7078d64170b  usr/lib/arm-linux-gnueabihf/libcurl.so.4.5.0
 5f67ab850d7e46a9e730e66884b300c7  usr/share/doc/libcurl4/NEWS.Debian.gz
-36afbbf272811ff4e4744b3baa89ed2a  usr/share/doc/libcurl4/changelog.Debian.gz
-422d2c3da7ede7e88007fad1ed48fddb  usr/share/doc/libcurl4/changelog.gz
-e78a25b5b39c2476a1fa5800f5b1c185  usr/share/doc/libcurl4/copyright
+7a9f2b9fdaba94f321e68f8b7befe4b8  usr/share/doc/libcurl4/changelog.Debian.gz
+39da2434c839b9c94179bca61738d18b  usr/share/doc/libcurl4/changelog.gz
+5a2a3376ed6fd7f4b8f84b6c1ec33dbf  usr/share/doc/libcurl4/copyright

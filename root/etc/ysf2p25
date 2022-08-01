@@ -1,0 +1,42 @@
+[Info]
+RXFrequency=438800000
+TXFrequency=438800000
+Description=Country, UK
+
+[YSF Network]
+Callsign=M1ABC
+Suffix=ND
+DstAddress=127.0.0.1
+DstPort=42000
+LocalAddress=127.0.0.1
+LocalPort=42015
+EnableWiresX=1
+WiresXMakeUpper=1
+DT1=1,34,97,95,43,3,17,0,0,0
+DT2=0,0,0,0,108,32,28,32,3,8
+Daemon=1
+Debug=0
+
+[P25 Network]
+Id=1234567
+StartupDstId=10100
+LocalAddress=127.0.0.1
+LocalPort=32010
+DstAddress=127.0.0.1
+DstPort=42020
+TGListFile=/usr/local/etc/TGList_P25.txt
+Debug=0
+
+[DMR Id Lookup]
+File=/usr/local/etc/DMRIds.dat
+Time=24
+
+[Log]
+DisplayLevel=0
+FileLevel=0
+FilePath=/var/log/pi-star
+FileRoot=YSF2P25
+
+[Enabled]
+Enabled=0
+

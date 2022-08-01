@@ -1,7 +1,4 @@
 libjansson.so.4 libjansson4 #MINVER#
-* Build-Depends-Package: libjansson-dev
- jansson_version_cmp@Base 2.13.1
- jansson_version_str@Base 2.13.1
  json_array@Base 2.0.1
  json_array_append_new@Base 2.0.1
  json_array_clear@Base 2.0.1
@@ -52,7 +49,6 @@ libjansson.so.4 libjansson4 #MINVER#
  json_object_update@Base 2.0.1
  json_object_update_existing@Base 2.3
  json_object_update_missing@Base 2.3
- json_object_update_recursive@Base 2.13.1
  json_pack@Base 2.0.1
  json_pack_ex@Base 2.0.1
  json_real@Base 2.0.1

@@ -1,40 +1,22 @@
-Default configuration for /etc/nsswitch.conf
---------------------------------------------
+Packages automagically modifies /etc/nsswitch.conf
+--------------------------------------------------
 
-On first installation of libnss-mdns, /etc/nsswitch.conf is modified
-for the upstream-recommended configuration, which usually looks like:
+Previously the base-files package shipped /etc/nsswitch.conf and specified:
+
+    hosts:          files dns mdns
+
+However, due to bug#351990, this is no longer the case. /etc/nsswitch.conf
+is now generated post-installation. Upon installation of nss-mdns, if the
+strings 'mdns', 'mdns_minimal', 'mdns4', 'mdns4_minimal', 'mdns6' or
+'mdns6_minimal' appear on the hosts line, your /etc/nsswitch.conf file
+will not be updated, otherwise it will updated to match the upstream
+recommended configuration which usually looks like:
 
     hosts:          files mdns4_minimal [NOTFOUND=return] dns
 
-If you also have systemd's libnss-resolve enabled, mDNS resolution will
-be configured to occur before that (higher priority):
 
-    hosts:          files mdns4_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns
-
-If any of the strings 'mdns', 'mdns_minimal', 'mdns4', 'mdns4_minimal',
-'mdns6' or 'mdns6_minimal' appear on the hosts line, your
-/etc/nsswitch.conf file will not be modified.
-
-
-Enabling IPv6 name resolution
+Other possible configurations
 -----------------------------
-
-Sites where IPv6 is extensively used might prefer to replace mdns4_minimal
-with mdns_minimal, like this:
-
-    hosts:          files mdns_minimal [NOTFOUND=return] dns
-
-This works well for modern software that uses getaddrinfo() with address
-family AF_UNSPEC. However, some programs implement IPv6 support by
-making an IPv6-only name resolution attempt (with AF_INET6), then falling
-back to IPv4-only (AF_INET) if that fails. Failed mDNS name resolution
-attempts take several seconds, so this configuration will make those
-programs slow when contacting IPv4-only hosts in the .local zone. See
-<https://github.com/lathiat/nss-mdns/issues/62> for more information.
-
-
-Falling back to mDNS for names outside .local
----------------------------------------------
 
 In versions older than 0.10-4 we used this configuration:
 
@@ -51,9 +33,13 @@ to reinstate mdns4, they can do so.
 Sites with a .local DNS zone
 ----------------------------
 
-Making nss-mdns authoritative for .local breaks resolution
-on networks where .local is a real domain name. To work
-around this, nss-mdns implements the heuristic described in
-<https://support.apple.com/en-us/HT201275>: it looks up the SOA record
-for the .local zone, and disables itself automatically if that record
-is found.
+Making nss-mdns authoritative for .local breaks resolution on networks
+where .local is a real domain name.  To workaround this, avahi-daemon
+should be restarted when the DNS settings change (for example via
+resolvconf and dhclient hooks) and disable itself when a SOA for the
+.local zone is found.  This is not currently implemented at the time of
+writing, but should soon be.
+
+See also this excellent summary on the upstream website:
+    <http://avahi.org/wiki/AvahiAndUnicastDotLocal>
+

@@ -1,10 +1,22 @@
-This repository contains the source code for the ARM side libraries used on Raspberry Pi.
-These typically are installed in /opt/vc/lib and includes source for the ARM side code to interface to:
-EGL, mmal, GLESv2, vcos, openmaxil, vchiq_arm, bcm_host, WFC, OpenVG.
+This repository contains pre-compiled binaries of the current Raspberry Pi 
+kernel and modules, userspace libraries, and bootloader/GPU firmware.
 
-Use buildme to build. It requires cmake to be installed and an ARM cross compiler. For 32-bit cross compilation it is set up to use this one:
-https://github.com/raspberrypi/tools/tree/master/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian
+A rough guide to this repository and the licences covering its contents is 
+below (check the appropriate directories for more specific licence details):
 
-Whilst 64-bit userspace is not officially supported, some of the libraries will work for it. To cross compile, install gcc-aarch64-linux-gnu and g++-aarch64-linux-gnu first. For both native and cross compiles, add the option ```--aarch64``` to the buildme command.
-
-Note that this repository does not contain the source for the edidparser and vcdbg binaries due to licensing restrictions.
+* boot:
+    * start*.elf, fixup*.dat and bootcode.bin are the GPU firmwares and
+    bootloader. Their licence is described in `boot/LICENCE.broadcom`.
+    * The kernel.img files are builds of the [Linux kernel](https://github.com/raspberrypi/linux), released under the GPL
+    (see `boot/COPYING.linux`)
+    * The dtbs, overlays and associated README are built from Linux kernel
+    sources, released under the GPL (see `boot/COPYING.linux`)
+* debug: pre-built modules for the kernel_debug.img (`boot/COPYING.linux`)
+* documentation/ilcomponents: OpenMax IL documentation (`boot/LICENCE.broadcom`)
+* extra: System.map files for the provided kernel builds (`boot/COPYING.linux`),
+  and dt-blob.dts (`boot/LICENCE.broadcom`)
+* hardfp/opt/vc: [userspace](https://github.com/raspberrypi/userland) VideoCore libraries built for the armv6 hardfp ABI
+  (`hardfp/opt/vc/LICENCE`)
+* modules: pre-built modules for kernel.img (`boot/COPYING.linux`)
+* opt/vc: includes [userspace](https://github.com/raspberrypi/userland) libraries for the VideoCore - EGL/GLES/OpenVG 
+  etc. (`opt/vc/LICENCE`)

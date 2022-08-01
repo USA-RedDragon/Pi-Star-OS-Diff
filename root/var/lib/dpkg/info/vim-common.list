@@ -69,9 +69,14 @@
 /usr/share/man/ru/man1
 /usr/share/man/ru/man1/vim.1.gz
 /usr/share/man/ru/man1/vimdiff.1.gz
+/usr/share/pixmaps
+/usr/share/pixmaps/gvim.svg
+/usr/share/pixmaps/vim-16.xpm
+/usr/share/pixmaps/vim-32.xpm
+/usr/share/pixmaps/vim-48.xpm
 /usr/share/vim
-/usr/share/vim/vim82
-/usr/share/vim/vim82/debian.vim
+/usr/share/vim/vim81
+/usr/share/vim/vim81/debian.vim
 /var
 /var/lib
 /var/lib/vim

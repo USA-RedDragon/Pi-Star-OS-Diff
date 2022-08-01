@@ -1,4 +1,4 @@
-58e26f2be1a10cf8b783e9fd4673a408  usr/share/doc/cpp/README.Debian
-4c99785715c40f8cfa34c8dc22017477  usr/share/doc/cpp/changelog.gz
-48ec1c434f8957203a04e1538f63daee  usr/share/doc/cpp/copyright
-1401a21a8cffaa1940f18ad760c8389d  usr/share/lintian/overrides/cpp
+0062a4d096e442d94e8cad159488bf86  usr/share/doc/cpp/README.Debian
+d4a58e5bcf4fdc2dea837935d97cd953  usr/share/doc/cpp/changelog.Debian.gz
+cdda17f31f221cd51b47a9022d5af678  usr/share/doc/cpp/copyright
+7d7f934470613236385970b7f4a5366e  usr/share/lintian/overrides/cpp

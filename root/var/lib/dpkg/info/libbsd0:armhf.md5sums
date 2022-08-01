@@ -1,4 +1,4 @@
-0f02763e54a75b8634570d5a2d1d9d3b  usr/lib/arm-linux-gnueabihf/libbsd.so.0.11.3
-3b622ce913495035667e85d4fe81b83a  usr/share/doc/libbsd0/changelog.Debian.gz
-31a0ae2e1e5d24440351cde824ce92c1  usr/share/doc/libbsd0/changelog.gz
-adf6172075bcc5837e33a8a688eb7e22  usr/share/doc/libbsd0/copyright
+ddbaabf79885a3020b62b7878eb3261e  usr/lib/arm-linux-gnueabihf/libbsd.so.0.9.1
+dbf1496f34708944ccccea3781201fcc  usr/share/doc/libbsd0/changelog.Debian.gz
+d8aaf27551b38c2c751fe1578713c233  usr/share/doc/libbsd0/changelog.gz
+b552602fda69e34c753d26de383f33c5  usr/share/doc/libbsd0/copyright

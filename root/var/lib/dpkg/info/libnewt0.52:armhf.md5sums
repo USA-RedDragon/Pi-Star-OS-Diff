@@ -1,7 +1,6 @@
-121cdba9af65422207beea20bfc40b4a  usr/lib/arm-linux-gnueabihf/libnewt.so.0.52.21
-42844c6cae71f17cab7946cc738c0c27  usr/share/doc/libnewt0.52/changelog.Debian.armhf.gz
-99c67ab39951b8dd5483397c2c3103d4  usr/share/doc/libnewt0.52/changelog.Debian.gz
-79ffe71119600e24bf8bdbcf745b0e69  usr/share/doc/libnewt0.52/changelog.gz
+8c2ef24ebb8e2cc28ae01b31d2eca7d9  usr/lib/arm-linux-gnueabihf/libnewt.so.0.52.20
+73b23a2bd6eb89fb019e2164cb7c2847  usr/share/doc/libnewt0.52/changelog.Debian.gz
+951aa3895ce2c7caff10acf880849c2b  usr/share/doc/libnewt0.52/changelog.gz
 28e0723bd9e4ce7a7a08cf21b2c58f34  usr/share/doc/libnewt0.52/copyright
 ee084e9e30dea483e9811a459c79033e  usr/share/locale/ar/LC_MESSAGES/newt.mo
 de6c12edcdb0665486095b11973a515f  usr/share/locale/as/LC_MESSAGES/newt.mo
@@ -44,7 +43,7 @@ ddbcd1df19d9c96bfea840fcee5fbe14  usr/share/locale/ka/LC_MESSAGES/newt.mo
 99efa1e10170c10bf6f106ee41dbb876  usr/share/locale/kn/LC_MESSAGES/newt.mo
 b1bac6db70955101b8de3c3a01a1be0d  usr/share/locale/ko/LC_MESSAGES/newt.mo
 a4ead6ad80e2f05ae08bf329e9070a14  usr/share/locale/ku/LC_MESSAGES/newt.mo
-007ebb49361a72327369678df6e3d42d  usr/share/locale/lt/LC_MESSAGES/newt.mo
+8e47df8a2be8b52401a1c5535b0bec06  usr/share/locale/lt/LC_MESSAGES/newt.mo
 abd10ebc34bf76c29244bdd362907676  usr/share/locale/lv/LC_MESSAGES/newt.mo
 e9f1f2aa79647bb44e603ca01a2bfb73  usr/share/locale/mg/LC_MESSAGES/newt.mo
 21ce88200b2b8d990cb58b95794afa42  usr/share/locale/mk/LC_MESSAGES/newt.mo

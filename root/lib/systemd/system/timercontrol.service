@@ -1,0 +1,12 @@
+[Unit]
+Description=Timercontrol (ircDDBGateway) Radio Servce
+After=syslog.target network.target ircddbgateway.timer
+
+[Service]
+Type=forking
+ExecStart=/usr/local/sbin/timercontrol.service start
+ExecStop=/usr/local/sbin/timercontrol.service stop
+ExecReload=/usr/local/sbin/timercontrol.service restart
+
+[Install]
+WantedBy=multi-user.target

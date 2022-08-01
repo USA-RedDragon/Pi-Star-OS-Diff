@@ -4,9 +4,9 @@ ret="$?"
 
 # Prevent recursive loops, where these values are set to this script
 p="$(which sensible-editor)"
-[ -n "$EDITOR" ] && [ "$(which $EDITOR || true)" = "$p" ] && EDITOR=
-[ -n "$VISUAL" ] && [ "$(which $VISUAL || true)" = "$p" ] && VISUAL=
-[ -n "$SELECTED_EDITOR" ] && [ "$(which $SELECTED_EDITOR || true)" = "$p" ] && SELECTED_EDITOR=
+[ "$(which $EDITOR || true)" = "$p" ] && EDITOR=
+[ "$(which $VISUAL || true)" = "$p" ] && VISUAL=
+[ "$(which $SELECTED_EDITOR || true)" = "$p" ] && SELECTED_EDITOR=
 
 if [ -n "$VISUAL" ]; then
 	${VISUAL} "$@"

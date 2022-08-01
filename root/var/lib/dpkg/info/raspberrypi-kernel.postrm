@@ -8,41 +8,41 @@ if [ -f /etc/default/raspberrypi-kernel ]; then
 
 fi
 if [ -d "/etc/kernel/postrm.d" ]; then
-  run-parts -v --report --exit-on-error --arg=5.15.32+ --arg=/boot/kernel.img /etc/kernel/postrm.d
-  run-parts -v --report --exit-on-error --arg=5.15.32-v7+ --arg=/boot/kernel7.img /etc/kernel/postrm.d
-  run-parts -v --report --exit-on-error --arg=5.15.32-v7l+ --arg=/boot/kernel7l.img /etc/kernel/postrm.d
-  run-parts -v --report --exit-on-error --arg=5.15.32-v8+ --arg=/boot/kernel8.img /etc/kernel/postrm.d
+  run-parts -v --report --exit-on-error --arg=5.10.63+ --arg=/boot/kernel.img /etc/kernel/postrm.d
+  run-parts -v --report --exit-on-error --arg=5.10.63-v7+ --arg=/boot/kernel7.img /etc/kernel/postrm.d
+  run-parts -v --report --exit-on-error --arg=5.10.63-v7l+ --arg=/boot/kernel7l.img /etc/kernel/postrm.d
+  run-parts -v --report --exit-on-error --arg=5.10.63-v8+ --arg=/boot/kernel8.img /etc/kernel/postrm.d
 fi
-if [ -d "/etc/kernel/postrm.d/5.15.32+" ]; then
-  run-parts -v --report --exit-on-error --arg=5.15.32+ --arg=/boot/kernel.img /etc/kernel/postrm.d/5.15.32+
+if [ -d "/etc/kernel/postrm.d/5.10.63+" ]; then
+  run-parts -v --report --exit-on-error --arg=5.10.63+ --arg=/boot/kernel.img /etc/kernel/postrm.d/5.10.63+
 fi
-if [ -d "/etc/kernel/postrm.d/5.15.32-v7+" ]; then
-  run-parts -v --report --exit-on-error --arg=5.15.32-v7+ --arg=/boot/kernel7.img /etc/kernel/postrm.d/5.15.32-v7+
+if [ -d "/etc/kernel/postrm.d/5.10.63-v7+" ]; then
+  run-parts -v --report --exit-on-error --arg=5.10.63-v7+ --arg=/boot/kernel7.img /etc/kernel/postrm.d/5.10.63-v7+
 fi
-if [ -d "/etc/kernel/postrm.d/5.15.32-v7l+" ]; then
-  run-parts -v --report --exit-on-error --arg=5.15.32-v7l+ --arg=/boot/kernel7l.img /etc/kernel/postrm.d/5.15.32-v7l+
+if [ -d "/etc/kernel/postrm.d/5.10.63-v7l+" ]; then
+  run-parts -v --report --exit-on-error --arg=5.10.63-v7l+ --arg=/boot/kernel7l.img /etc/kernel/postrm.d/5.10.63-v7l+
 fi
-if [ -d "/etc/kernel/postrm.d/5.15.32-v8+" ]; then
-  run-parts -v --report --exit-on-error --arg=5.15.32-v8+ --arg=/boot/kernel8.img /etc/kernel/postrm.d/5.15.32-v8+
+if [ -d "/etc/kernel/postrm.d/5.10.63-v8+" ]; then
+  run-parts -v --report --exit-on-error --arg=5.10.63-v8+ --arg=/boot/kernel8.img /etc/kernel/postrm.d/5.10.63-v8+
 fi
-# Automatically added by dh_installmodules/13.3.4
-if [ -e /boot/System.map-5.15.32-v8+ ]; then
-	depmod -a -F /boot/System.map-5.15.32-v8+ 5.15.32-v8+ || true
-fi
-# End automatically added section
-# Automatically added by dh_installmodules/13.3.4
-if [ -e /boot/System.map-5.15.32-v7l+ ]; then
-	depmod -a -F /boot/System.map-5.15.32-v7l+ 5.15.32-v7l+ || true
+# Automatically added by dh_installmodules/13.2~bpo10+1
+if [ -e /boot/System.map-5.10.63-v8+ ]; then
+	depmod -a -F /boot/System.map-5.10.63-v8+ 5.10.63-v8+ || true
 fi
 # End automatically added section
-# Automatically added by dh_installmodules/13.3.4
-if [ -e /boot/System.map-5.15.32-v7+ ]; then
-	depmod -a -F /boot/System.map-5.15.32-v7+ 5.15.32-v7+ || true
+# Automatically added by dh_installmodules/13.2~bpo10+1
+if [ -e /boot/System.map-5.10.63-v7l+ ]; then
+	depmod -a -F /boot/System.map-5.10.63-v7l+ 5.10.63-v7l+ || true
 fi
 # End automatically added section
-# Automatically added by dh_installmodules/13.3.4
-if [ -e /boot/System.map-5.15.32+ ]; then
-	depmod -a -F /boot/System.map-5.15.32+ 5.15.32+ || true
+# Automatically added by dh_installmodules/13.2~bpo10+1
+if [ -e /boot/System.map-5.10.63-v7+ ]; then
+	depmod -a -F /boot/System.map-5.10.63-v7+ 5.10.63-v7+ || true
+fi
+# End automatically added section
+# Automatically added by dh_installmodules/13.2~bpo10+1
+if [ -e /boot/System.map-5.10.63+ ]; then
+	depmod -a -F /boot/System.map-5.10.63+ 5.10.63+ || true
 fi
 # End automatically added section
 

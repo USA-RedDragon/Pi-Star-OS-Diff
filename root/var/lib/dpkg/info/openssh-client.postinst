@@ -2,6 +2,7 @@
 set -e
 
 action="$1"
+oldversion="$2"
 
 umask 022
 
@@ -39,7 +40,7 @@ if [ "$action" = configure ]; then
 	set_ssh_agent_permissions
 fi
 
-# Automatically added by dh_installdeb/13.3.4
+# Automatically added by dh_installdeb/13.2~bpo10+1
 dpkg-maintscript-helper rm_conffile /etc/ssh/moduli 1:7.9p1-8~ -- "$@"
 # End automatically added section
 

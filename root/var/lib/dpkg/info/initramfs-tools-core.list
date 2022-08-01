@@ -66,3 +66,6 @@
 /usr/share/man/man8/lsinitramfs.8.gz
 /usr/share/man/man8/mkinitramfs.8.gz
 /usr/share/man/man8/unmkinitramfs.8.gz
+/var
+/var/lib
+/var/lib/initramfs-tools

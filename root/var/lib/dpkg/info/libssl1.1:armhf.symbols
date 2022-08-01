@@ -1248,7 +1248,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  EC_KEY_check_key@OPENSSL_1_1_0 1.1.0
  EC_KEY_clear_flags@OPENSSL_1_1_0 1.1.0
  EC_KEY_copy@OPENSSL_1_1_0 1.1.0
- EC_KEY_decoded_from_explicit_params@OPENSSL_1_1_1h 1.1.1h
  EC_KEY_dup@OPENSSL_1_1_0 1.1.0
  EC_KEY_free@OPENSSL_1_1_0 1.1.0
  EC_KEY_generate_key@OPENSSL_1_1_0 1.1.0
@@ -1788,8 +1787,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  EVP_PKEY_meth_get_decrypt@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_get_derive@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_get_digest_custom@OPENSSL_1_1_1 1.1.1
- EVP_PKEY_meth_get_digestsign@OPENSSL_1_1_1e 1.1.1e
- EVP_PKEY_meth_get_digestverify@OPENSSL_1_1_1e 1.1.1e
  EVP_PKEY_meth_get_encrypt@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_get_init@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_get_keygen@OPENSSL_1_1_0 1.1.0
@@ -1810,8 +1807,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  EVP_PKEY_meth_set_decrypt@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_set_derive@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_set_digest_custom@OPENSSL_1_1_1 1.1.1
- EVP_PKEY_meth_set_digestsign@OPENSSL_1_1_1e 1.1.1e
- EVP_PKEY_meth_set_digestverify@OPENSSL_1_1_1e 1.1.1e
  EVP_PKEY_meth_set_encrypt@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_set_init@OPENSSL_1_1_0 1.1.0
  EVP_PKEY_meth_set_keygen@OPENSSL_1_1_0 1.1.0
@@ -2330,8 +2325,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  OPENSSL_1_1_1b@OPENSSL_1_1_1b 1.1.1b
  OPENSSL_1_1_1c@OPENSSL_1_1_1c 1.1.1c
  OPENSSL_1_1_1d@OPENSSL_1_1_1d 1.1.1d
- OPENSSL_1_1_1e@OPENSSL_1_1_1e 1.1.1e
- OPENSSL_1_1_1h@OPENSSL_1_1_1h 1.1.1h
  OPENSSL_DIR_end@OPENSSL_1_1_0 1.1.0
  OPENSSL_DIR_read@OPENSSL_1_1_0 1.1.0
  OPENSSL_INIT_free@OPENSSL_1_1_0 1.1.0
@@ -2898,7 +2891,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  RSA_get0_multi_prime_factors@OPENSSL_1_1_1 1.1.1
  RSA_get0_n@OPENSSL_1_1_1 1.1.1
  RSA_get0_p@OPENSSL_1_1_1 1.1.1
- RSA_get0_pss_params@OPENSSL_1_1_1e 1.1.1e
  RSA_get0_q@OPENSSL_1_1_1 1.1.1
  RSA_get_default_method@OPENSSL_1_1_0 1.1.0
  RSA_get_ex_data@OPENSSL_1_1_0 1.1.0
@@ -3360,7 +3352,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  X509V3_string_free@OPENSSL_1_1_0 1.1.0
  X509_ALGORS_it@OPENSSL_1_1_0 1.1.0
  X509_ALGOR_cmp@OPENSSL_1_1_0 1.1.0
- X509_ALGOR_copy@OPENSSL_1_1_1h 1.1.1h
  X509_ALGOR_dup@OPENSSL_1_1_0 1.1.0
  X509_ALGOR_free@OPENSSL_1_1_0 1.1.0
  X509_ALGOR_get0@OPENSSL_1_1_0 1.1.0
@@ -3593,8 +3584,6 @@ libcrypto.so.1.1 libssl1.1 #MINVER#
  X509_REQ_print@OPENSSL_1_1_0 1.1.0
  X509_REQ_print_ex@OPENSSL_1_1_0 1.1.0
  X509_REQ_print_fp@OPENSSL_1_1_0 1.1.0
- X509_REQ_set0_signature@OPENSSL_1_1_1h 1.1.1h
- X509_REQ_set1_signature_algo@OPENSSL_1_1_1h 1.1.1h
  X509_REQ_set_extension_nids@OPENSSL_1_1_0 1.1.0
  X509_REQ_set_pubkey@OPENSSL_1_1_0 1.1.0
  X509_REQ_set_subject_name@OPENSSL_1_1_0 1.1.0

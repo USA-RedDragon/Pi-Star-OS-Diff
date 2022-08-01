@@ -1,0 +1,12 @@
+/lib/udev/rules.d/75-persistent-net-generator.rules
+/lib/udev/rules.d/75-persistent-net-generator.rules.distrib
+:
+/usr/share/man/man1/sh.1.gz
+/usr/share/man/man1/sh.distrib.1.gz
+dash
+/bin/sh
+/bin/sh.distrib
+dash
+/boot/LICENCE.broadcom
+/usr/share/rpikernelhack/LICENCE.broadcom
+rpikernelhack

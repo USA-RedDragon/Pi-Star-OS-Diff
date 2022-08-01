@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libavahi-core.so.7.1.0
+/usr/lib/arm-linux-gnueabihf/libavahi-core.so.7.0.2
 /usr/share
 /usr/share/doc
 /usr/share/doc/libavahi-core7

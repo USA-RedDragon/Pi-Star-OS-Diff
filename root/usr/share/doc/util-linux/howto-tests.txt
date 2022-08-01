@@ -5,13 +5,9 @@
  It's expected that for each invasive change or important bugfix you will
  include a test to your patch.
 
- Compile binaries, libs, extra test programs and run the basic tests:
+ Compile tests & run basic tests:
 
 	$ make check
-
- Compile extra test programs only:
-
-	$ make check-programs
 
  Note that the configure option --disable-static disables many of libmount and
  libblkid unit tests.
@@ -19,11 +15,11 @@
  Run all tests including tests that require root permissions:
 
 	# cd tests
-	# ./run.sh [options, see --help]
+	# ./run.sh [--verbose] [--memcheck]
 
 	Alternatively using sudo and make:
 
-	$ make check-programs
+	$ make check TS_COMMAND="true"
 	$ sudo -E make check TS_OPTS="--parallel=1"
 
  note that as root you have to manually remove output and diff directories
@@ -35,17 +31,12 @@
 
  Run subset of tests:
 
-	$ cd tests
 	$ ./run.sh <test_directory-name>
 
         for example:
 
               $ ./run.sh blkid
               $ ./run.sh libmount
-
-        or individual test script, for example:
-
-	      $ ./ts/cal/year
 
  The tests is possible to exclude by ./run.sh --exclude=<list>  where the
  <list> is blank separated test names in format "testdir/testname", for example:
@@ -113,7 +104,7 @@ TS_OPT_testdir_[testscript_]memcheck="<yes|no>"
     Run certain tests with valgrind. Similar usage like TS_OPT_*_fake above.
 
 
-External services
+External services 
 -----------------
 
 Travis CI - automatically executed for all github commits.
@@ -125,14 +116,22 @@ Travis CI - automatically executed for all github commits.
     We require "sudo" to install additional stuff and to run the tests with
     UID=0, it means that tests are executed on travis "legacy infrastructure".
 
-lgtm CI - automatically executed security code analysis
 
-    URL: https://lgtm.com/projects/g/karelzak/util-linux/
+Drone.io - automatically executed for all github commits.
 
-Coverity Scan
+    URL: https://drone.io/github.com/karelzak/util-linux
 
-    URL: https://scan.coverity.com/projects/karelzak-util-linux
+    The drone.io does not use any in-tree config file (like travis-ci), the
+    currently used configuration (maintained by Drone.io web UI):
 
-Fossies codespell report
-
-    URL: https://fossies.org/linux/test/util-linux-master.tar.gz/codespell.html
+	MAKE_CHECK="root"
+	MAKE_CHECK_OPTS="--skip-loopdevs --exclude=mount/move"
+	source ./.travis-functions.sh
+	travis_install_script || exit
+	travis_before_script || exit
+	ret=0
+	travis_script || ret=$?
+	travis_after_script
+	exit $ret  
+	
+    yes, it shares the setup functions with travis-ci.

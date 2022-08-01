@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libcurl-gnutls.so.4.7.0
+/usr/lib/arm-linux-gnueabihf/libcurl-gnutls.so.4.5.0
 /usr/share
 /usr/share/doc
 /usr/share/doc/libcurl3-gnutls

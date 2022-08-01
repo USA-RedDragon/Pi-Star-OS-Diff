@@ -19,54 +19,81 @@ kfreebsd_compare_versions () {
     test $verA -$2 $verB
 }
 
-if [ "$type" != abort-upgrade -a -z "$DPKG_ROOT" ]
-then
-    # Check if the debconf module is available and usable
-    USE_DEBCONF=
-    if [ "$DEBIAN_HAS_FRONTEND" ]; then
-        # Debconf is already loaded, so we already checked if the frontend
-        # is usable or not
-        USE_DEBCONF=1
-    elif [ -f /usr/share/debconf/confmodule ]; then
-        # cdebconf has a working fallback mechanism in case dialog
-        # is not usable, so do not try to do anything smart here
-        if [ "$DEBCONF_USE_CDEBCONF" ] ; then
-            USE_DEBCONF=1
-        # debconf requires perl
-        elif perl -e "" 2>/dev/null ; then
-            # Check that the selected frontend will work
-            if [ -n "$DEBIAN_FRONTEND" ] ; then
-                frontend="$DEBIAN_FRONTEND"
-            else
-                # Query the frontend without first sourcing the confmodule to avoid
-                # losing control of the tty. This snippet must not be copied blindly.
-                frontend="$(echo 'GET debconf/frontend' | debconf-communicate | sed '/^0 /!d;s/^0 //')"
-                frontend="${frontend:-Dialog}"
-            fi
-            frontend=`echo $frontend | tr '[:upper:]' '[:lower:]'`
-            case "$frontend" in
-            dialog)
-                # debconf uses whiptail by default unless dialog is available and
-                # $DEBCONF_FORCE_DIALOG is set
-                if [ -x "$(which whiptail)" ] && ! ( [ -n "$DEBCONF_FORCE_DIALOG" ] && [ -x "$(which dialog)" ] ); then
-                    frontend=whiptail
-                fi
-                # Only enable debconf if the whiptail/dialog are not available
-                # (in which case debconf has a fallback mechanism) or usable
-                if ! [ -x "$(which $frontend)" ] || $frontend --version > /dev/null 2>&1 ; then
-                    USE_DEBCONF=1
-                fi
-                ;;
-            *)
-                 # For now assume that all other frontends are fine
-                 USE_DEBCONF=1
-                ;;
-            esac
-        fi
-    fi
+# Sanity check.
+# If there are versions of glibc outside of the normal installation
+# location (/lib, /lib64, etc.) then things may break very badly
+# as soon as ld.so is replaced by a new version.  This check is not
+# foolproof, but it's pretty accurate.  This script ignores libraries
+# with different sonames, and libraries incompatible with the 
+# to-be-installed ld.so.
+check_dir () {
+    msg=$1
+    dir=$2
 
-    # Load debconf module if available and usable
-    if [ "$USE_DEBCONF" ]; then
+    # Follow symlinks
+    dir=$(readlink -e $dir || true)
+
+    # Ignore inexistent directories
+    if ! test -d "$dir" ; then
+        return
+    fi
+  
+    # Detect possible candidates
+    files=$(ls $dir | egrep '^(ld|lib(d|c|m|pthread|rt|dl))-2.*.so' 2>/dev/null || true)
+    if test -z "$files" ; then
+        return
+    fi
+  
+    for file in $files ; do
+        lib=$dir/$file
+
+        # Skip if it is a symlink (as installed by lsb-core)
+        if test -L "$lib" ; then
+            continue
+        fi
+
+        # Skip if it is the currently dynamic loader
+        if test "$lib" = "$ldfile" ; then
+            continue
+        fi
+
+        # See if the found libraries are compatible with the system ld.so;
+        # if they aren't, they'll be ignored. Check e_ident, e_type (which
+        # will just be ET_DYN), and e_machine. If a match is found, there
+        # is a risk of breakage.
+        libbytes=`head -c 20 $lib | od -c`
+        if test "$ldbytes" != "$libbytes" ; then 
+          continue
+        fi
+
+        # Binaries owned packages are considered to do the right thing
+        # First try a quick lookup which should catch all cases on a 
+        # normal system
+        if echo $libcfiles | grep -q "[ ^]$lib[ $]" ; then 
+            continue
+        fi
+
+        # Slower lookup to confirm
+        if dpkg-query -S "$lib" >/dev/null 2>&1 ; then
+            continue
+        fi
+
+        # Output an error message and exit
+        echo
+        echo "A copy of the C library was found $msg:"
+        echo "  '$lib'"
+        echo "It is not safe to upgrade the C library in this situation;"
+        echo "please remove that copy of the C library or get it out of"
+        echo "'$dir' and try again."
+        echo
+        exit 1
+    done
+}
+
+if [ "$type" != abort-upgrade ]
+then
+    # Load debconf module if available
+    if [ -f /usr/share/debconf/confmodule ] ; then
         . /usr/share/debconf/confmodule
     fi
 
@@ -116,7 +143,7 @@ then
 
         # sanity checking for the appropriate kernel on each architecture.
         kernel_ver=`uname -r`
-        case ${DPKG_MAINTSCRIPT_ARCH} in
+        case ${DPKG_MAINTSCRIPT_ARCH:-$(dpkg --print-architecture)} in
             *)
                 # The GNU libc requires a >= 3.2 kernel, found in wheezy
                 kernel_ver_min=3.2
@@ -126,7 +153,7 @@ then
 
         if linux_compare_versions "$kernel_ver" lt $kernel_ver_min
         then
-            if [ "$USE_DEBCONF" ]
+            if [ -f /usr/share/debconf/confmodule ]
             then
                 db_version 2.0
                 db_fset glibc/kernel-too-old seen false
@@ -146,7 +173,7 @@ then
 
         if linux_compare_versions "$kernel_ver" lt $kernel_ver_rec
         then
-            if [ "$USE_DEBCONF" ]
+            if [ -f /usr/share/debconf/confmodule ]
             then
                 db_version 2.0
                 db_fset glibc/kernel-not-supported seen false
@@ -169,7 +196,7 @@ then
         kernel_ver_min=8.3
         if kfreebsd_compare_versions "$kernel_ver" lt $kernel_ver_min
         then
-            if [ "$USE_DEBCONF" ]
+            if [ -f /usr/share/debconf/confmodule ]
             then
                 db_version 2.0
                 db_version 2.0
@@ -190,13 +217,61 @@ then
     fi
 fi
 
-if [ "$type" = upgrade -a -z "$DPKG_ROOT" ]
+if [ "$type" = upgrade ]
 then
+    # Try to detect copies of the libc library in the various places
+    # the dynamic linker uses.
+    ldfile=$(readlink -m /lib/ld-linux-armhf.so.3)
+    if test -f "$file"; then
+        ldbytes=$(head -c 20 /lib/ld-linux-armhf.so.3 | od -c)
+    else
+        # If the symlink to the dynamic linker is dangling or missing, set
+        # ldbytes to an empty string, the test below will fail and all the
+        # libraries found will be ignored.
+        ldbytes=""
+    fi
+    libcfiles=$(dpkg-query -L ${DPKG_MAINTSCRIPT_PACKAGE}:${DPKG_MAINTSCRIPT_ARCH} 2>/dev/null)
+
+    dirs="/lib/arm-linux-gnueabihf /lib /lib/tls /lib32 /lib64 /usr/local/lib /usr/local/lib32 /usr/local/lib64"
+    for dir in $dirs ; do
+        check_dir "in an unexpected directory" $dir
+    done
+
+    if test -n "$LD_LIBRARY_PATH"; then
+        dirs=$(echo $LD_LIBRARY_PATH | sed 's/:/ /g')
+        for dir in $dirs ; do
+            check_dir "via LD_LIBRARY_PATH" $dir
+        done
+    fi
+
+    if test -e /etc/ld.so.conf; then
+        dirs=$(echo $(cat /etc/ld.so.conf))
+        if test -n "$dirs" ; then
+            for dir in $dirs ; do
+                check_dir "via /etc/ld.so.conf" $dir
+            done
+        fi
+    fi
+
+    if [ -e /lib/tls/i686/cmov/libc.so.6 ] || [ -e /lib/i686/cmov/libc.so.6 ] ; then
+        status_i686=$(dpkg -s libc6-i686 2>/dev/null | grep ^Status: | sed -e 's/^Status: \(.*\) \(.*\) \(.*\)/\3/g')
+        status_xen=$(dpkg -s libc6-xen 2>/dev/null | grep ^Status: | sed -e 's/^Status: \(.*\) \(.*\) \(.*\)/\3/g')
+        if ([ -z "$status_i686" ] || [ "$status_i686" = "not-installed" ] || [ "$status_i686" = "config-files" ]) && \
+             ([ -z "$status_xen" ] || [ "$status_xen" = "not-installed" ] || [ "$status_xen" = "config-files" ]); then
+            echo
+            echo "A non-dpkg owned copy of the libc6-i686 package was found."
+            echo "It is not safe to upgrade the C library in this situation;"
+            echo "please remove that copy of the C library and try again."
+            echo
+            exit 1
+        fi
+    fi
+
     if [ -n "$preversion" ] && [ -x "$(which ischroot)" ] && ! ischroot; then
 	# NSS authentication trouble guard
-	if dpkg --compare-versions "$preversion" lt 2.31; then
+	if dpkg --compare-versions "$preversion" lt 2.28; then
 	    if pidof xscreensaver xlockmore >/dev/null; then
-		if [ "$USE_DEBCONF" ] ; then
+		if [ -f /usr/share/debconf/confmodule ] ; then
 		    db_version 2.0
 		    db_reset glibc/disable-screensaver
 		    db_input critical glibc/disable-screensaver || true
@@ -225,12 +300,8 @@ then
 	    check="kdm postgresql xdm"
 	    # NSS services check:
 	    	    echo -n "Checking for services that may need to be restarted..."
-	    # Only get the ones that are installed, of the same architecture
-	    # as libc (or arch all) and configured. Restart openssh-server even
-	    # if only half-configured to continue accepting new connections
-	    # during the upgrade.
-	    check=$(dpkg-query -W -f='${binary:Package} ${Status} ${Architecture}\n' $check 2> /dev/null | \
-			grep -E "(^openssh-server .* unpacked|installed) (all|${DPKG_MAINTSCRIPT_ARCH})$" | sed 's/[: ].*//')
+	    # Only get the ones that are installed, and configured
+	    check=$(dpkg -s $check 2> /dev/null | egrep '^Package:|^Status:' | awk '{if ($1 ~ /^Package:/) { package=$2 } else if ($0 ~ /^Status: .* installed$/) { print package }}')
 	    # some init scripts don't match the package names
 	    check=$(echo $check | \
 		    sed -e's/\bapache2.2-common\b/apache2/g' \
@@ -240,7 +311,6 @@ then
 			-e's/\blpr\b/lpd/g' \
 			-e's/\blpr-ppd\b/lpd-ppd/g' \
 			-e's/\bmysql-server\b/mysql/g' \
-			-e's/\bopenssh-server\b/ssh/g' \
 			-e's/\bsasl2-bin\b/saslauthd/g' \
 			-e's/\bsamba\b/smbd/g' \
 			-e's/\bpostgresql-common\b/postgresql/g' \
@@ -257,7 +327,7 @@ then
 	    done
 
 	    if [ -n "$services" ]; then 
-		if [ "$USE_DEBCONF" ] ; then
+		if [ -f /usr/share/debconf/confmodule ] ; then
 	            db_version 2.0
 		    db_reset glibc/upgrade
 		    db_subst glibc/upgrade services $services
@@ -304,7 +374,7 @@ then
 	            exit 1
 		fi
 	    fi
-	fi # end upgrading and $preversion lt 2.31
+	fi # end upgrading and $preversion lt 2.28
     fi # Upgrading
 
     # This will keep us from using hwcap libs (optimized) during an
@@ -315,12 +385,12 @@ fi
 
 
 if [ -n "$preversion" ]; then
-    if dpkg --compare-versions "$preversion" lt 2.31; then
+    if dpkg --compare-versions "$preversion" lt 2.28; then
        # unconditionally wipe ld.so.cache on major version upgrades; this
        # makes those upgrades a bit slower, but is less error-prone than
        # hoping we notice every time the cache format is changed upstream
-       rm -f "$DPKG_ROOT/etc/ld.so.cache"
-       rm -f "$DPKG_ROOT/var/cache/ldconfig/aux-cache"
+       rm -f /etc/ld.so.cache
+       rm -f /var/cache/ldconfig/aux-cache
     fi
 fi
 

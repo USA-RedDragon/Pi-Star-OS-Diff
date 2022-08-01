@@ -2,7 +2,6 @@
 /etc
 /etc/ssh
 /etc/ssh/ssh_config
-/etc/ssh/ssh_config.d
 /usr
 /usr/bin
 /usr/bin/scp
@@ -19,7 +18,6 @@
 /usr/lib/openssh/agent-launch
 /usr/lib/openssh/ssh-keysign
 /usr/lib/openssh/ssh-pkcs11-helper
-/usr/lib/openssh/ssh-sk-helper
 /usr/lib/systemd
 /usr/lib/systemd/user
 /usr/lib/systemd/user/graphical-session-pre.target.wants
@@ -30,13 +28,13 @@
 /usr/share/apport/package-hooks/openssh-client.py
 /usr/share/doc
 /usr/share/doc/openssh-client
+/usr/share/doc/openssh-client/ChangeLog.gssapi
 /usr/share/doc/openssh-client/NEWS.Debian.gz
 /usr/share/doc/openssh-client/OVERVIEW.gz
 /usr/share/doc/openssh-client/README
 /usr/share/doc/openssh-client/README.Debian.gz
 /usr/share/doc/openssh-client/README.dns
 /usr/share/doc/openssh-client/README.tun.gz
-/usr/share/doc/openssh-client/changelog.Debian.armhf.gz
 /usr/share/doc/openssh-client/changelog.Debian.gz
 /usr/share/doc/openssh-client/changelog.gz
 /usr/share/doc/openssh-client/copyright
@@ -60,7 +58,6 @@
 /usr/share/man/man8
 /usr/share/man/man8/ssh-keysign.8.gz
 /usr/share/man/man8/ssh-pkcs11-helper.8.gz
-/usr/share/man/man8/ssh-sk-helper.8.gz
 /usr/bin/slogin
 /usr/lib/systemd/user/graphical-session-pre.target.wants/ssh-agent.service
 /usr/share/man/man1/slogin.1.gz

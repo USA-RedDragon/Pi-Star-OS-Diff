@@ -1,5 +1,5 @@
 ld-linux-armhf.so.3 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __libc_enable_secure@GLIBC_PRIVATE 0 1
@@ -33,20 +33,20 @@ ld-linux-armhf.so.3 libc6 #MINVER#
  malloc@GLIBC_2.4 2.4
  realloc@GLIBC_2.4 2.4
 libBrokenLocale.so.1 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  __ctype_get_mb_cur_max@GLIBC_2.4 2.4
 libSegFault.so libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
 libanl.so.1 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  gai_cancel@GLIBC_2.4 2.4
  gai_error@GLIBC_2.4 2.4
  gai_suspend@GLIBC_2.4 2.4
  getaddrinfo_a@GLIBC_2.4 2.4
 libc.so.6 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.10@GLIBC_2.10 2.10
  GLIBC_2.11@GLIBC_2.11 2.11
  GLIBC_2.12@GLIBC_2.12 2.12
@@ -63,8 +63,6 @@ libc.so.6 libc6 #MINVER#
  GLIBC_2.26@GLIBC_2.26 2.26
  GLIBC_2.27@GLIBC_2.27 2.27
  GLIBC_2.28@GLIBC_2.28 2.28
- GLIBC_2.29@GLIBC_2.29 2.29
- GLIBC_2.30@GLIBC_2.30 2.30
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_2.5@GLIBC_2.5 2.5
  GLIBC_2.6@GLIBC_2.6 2.6
@@ -223,7 +221,11 @@ libc.so.6 libc6 #MINVER#
  __call_tls_dtors@GLIBC_PRIVATE 0 1
  __check_rhosts_file@GLIBC_2.4 2.4
  __chk_fail@GLIBC_2.4 2.4
+ __clock_getcpuclockid@GLIBC_PRIVATE 0 1
+ __clock_getres@GLIBC_PRIVATE 0 1
  __clock_gettime@GLIBC_PRIVATE 0 1
+ __clock_nanosleep@GLIBC_PRIVATE 0 1
+ __clock_settime@GLIBC_PRIVATE 0 1
  __clone@GLIBC_2.4 2.4
  __close@GLIBC_2.4 2.4
  __close_nocancel@GLIBC_PRIVATE 0 1
@@ -292,12 +294,9 @@ libc.so.6 libc6 #MINVER#
  __fxstatat64@GLIBC_2.4 2.4
  __fxstatat@GLIBC_2.4 2.4
  __gai_sigqueue@GLIBC_PRIVATE 0 1
- __gconv_create_spec@GLIBC_PRIVATE 0 1
- __gconv_destroy_spec@GLIBC_PRIVATE 0 1
  __gconv_get_alias_db@GLIBC_PRIVATE 0 1
  __gconv_get_cache@GLIBC_PRIVATE 0 1
  __gconv_get_modules_db@GLIBC_PRIVATE 0 1
- __gconv_open@GLIBC_PRIVATE 0 1
  __gconv_transliterate@GLIBC_PRIVATE 0 1
  __getauxval@GLIBC_2.16 2.16
  __getcwd_chk@GLIBC_2.4 2.4
@@ -433,6 +432,7 @@ libc.so.6 libc6 #MINVER#
  __libc_system@GLIBC_PRIVATE 0 1
  __libc_thread_freeres@GLIBC_PRIVATE 0 1
  __libc_valloc@GLIBC_2.4 2.4
+ __libc_vfork@GLIBC_PRIVATE 0 1
  __longjmp_chk@GLIBC_2.11 2.11
  __lseek@GLIBC_2.4 2.4
  __lxstat64@GLIBC_2.4 2.4
@@ -460,11 +460,11 @@ libc.so.6 libc6 #MINVER#
  __mprotect@GLIBC_PRIVATE 0 1
  __munmap@GLIBC_PRIVATE 0 1
  __nanosleep@GLIBC_2.4 2.4
+ __nanosleep_nocancel@GLIBC_PRIVATE 0 1
  __netlink_assert_response@GLIBC_PRIVATE 0 1
  __newlocale@GLIBC_2.4 2.4
  __nl_langinfo_l@GLIBC_2.4 2.4
  __nss_configure_lookup@GLIBC_2.4 2.4
- __nss_database_lookup2@GLIBC_PRIVATE 0 1
  __nss_database_lookup@GLIBC_2.4 2.4
  __nss_disable_nscd@GLIBC_PRIVATE 0 1
  __nss_group_lookup2@GLIBC_PRIVATE 0 1
@@ -492,6 +492,7 @@ libc.so.6 libc6 #MINVER#
  __openat64_2@GLIBC_2.7 2.7
  __openat_2@GLIBC_2.7 2.7
  __overflow@GLIBC_2.4 2.4
+ __pause_nocancel@GLIBC_PRIVATE 0 1
  __pipe@GLIBC_2.4 2.4
  __poll@GLIBC_2.4 2.4
  __poll_chk@GLIBC_2.16 2.16
@@ -499,7 +500,6 @@ libc.so.6 libc6 #MINVER#
  __ppoll_chk@GLIBC_2.16 2.16
  __pread64@GLIBC_2.4 2.4
  __pread64_chk@GLIBC_2.4 2.4
- __pread64_nocancel@GLIBC_PRIVATE 0 1
  __pread_chk@GLIBC_2.4 2.4
  __printf_chk@GLIBC_2.4 2.4
  __printf_fp@GLIBC_2.4 2.4
@@ -638,13 +638,13 @@ libc.so.6 libc6 #MINVER#
  __tsearch@GLIBC_PRIVATE 0 1
  __ttyname_r_chk@GLIBC_2.4 2.4
  __twalk@GLIBC_PRIVATE 0 1
- __twalk_r@GLIBC_PRIVATE 0 1
  __tzname@GLIBC_2.4 2.4
  __uflow@GLIBC_2.4 2.4
  __underflow@GLIBC_2.4 2.4
  __uselocale@GLIBC_2.4 2.4
  __vasprintf_chk@GLIBC_2.8 2.8
  __vdprintf_chk@GLIBC_2.8 2.8
+ __vdso_clock_gettime@GLIBC_PRIVATE 0 1
  __vfork@GLIBC_2.4 2.4
  __vfprintf_chk@GLIBC_2.4 2.4
  __vfscanf@GLIBC_2.4 2.4
@@ -863,15 +863,10 @@ libc.so.6 libc6 #MINVER#
  clock@GLIBC_2.4 2.4
  clock_adjtime@GLIBC_2.14 2.14
  clock_getcpuclockid@GLIBC_2.17 2.17
- clock_getcpuclockid@GLIBC_2.4 2.4
  clock_getres@GLIBC_2.17 2.17
- clock_getres@GLIBC_2.4 2.4
  clock_gettime@GLIBC_2.17 2.17
- clock_gettime@GLIBC_2.4 2.4
  clock_nanosleep@GLIBC_2.17 2.17
- clock_nanosleep@GLIBC_2.4 2.4
  clock_settime@GLIBC_2.17 2.17
- clock_settime@GLIBC_2.4 2.4
  clone@GLIBC_2.4 2.4
  close@GLIBC_2.4 2.4
  closedir@GLIBC_2.4 2.4
@@ -1124,13 +1119,11 @@ libc.so.6 libc6 #MINVER#
  getchar@GLIBC_2.4 2.4
  getchar_unlocked@GLIBC_2.4 2.4
  getcontext@GLIBC_2.4 2.13-31
- getcpu@GLIBC_2.29 2.29
  getcwd@GLIBC_2.4 2.4
  getdate@GLIBC_2.4 2.4
  getdate_err@GLIBC_2.4 2.4
  getdate_r@GLIBC_2.4 2.4
  getdelim@GLIBC_2.4 2.4
- getdents64@GLIBC_2.30 2.30
  getdirentries64@GLIBC_2.4 2.4
  getdirentries@GLIBC_2.4 2.4
  getdomainname@GLIBC_2.4 2.4
@@ -1243,7 +1236,6 @@ libc.so.6 libc6 #MINVER#
  getspnam_r@GLIBC_2.4 2.4
  getsubopt@GLIBC_2.4 2.4
  gettext@GLIBC_2.4 2.4
- gettid@GLIBC_2.30 2.30
  gettimeofday@GLIBC_2.4 2.4
  getttyent@GLIBC_2.4 2.4
  getttynam@GLIBC_2.4 2.4
@@ -1624,10 +1616,8 @@ libc.so.6 libc6 #MINVER#
  posix_openpt@GLIBC_2.4 2.4
  posix_spawn@GLIBC_2.15 2.15
  posix_spawn@GLIBC_2.4 2.4
- posix_spawn_file_actions_addchdir_np@GLIBC_2.29 2.29
  posix_spawn_file_actions_addclose@GLIBC_2.4 2.4
  posix_spawn_file_actions_adddup2@GLIBC_2.4 2.4
- posix_spawn_file_actions_addfchdir_np@GLIBC_2.29 2.29
  posix_spawn_file_actions_addopen@GLIBC_2.4 2.4
  posix_spawn_file_actions_destroy@GLIBC_2.4 2.4
  posix_spawn_file_actions_init@GLIBC_2.4 2.4
@@ -2108,7 +2098,6 @@ libc.so.6 libc6 #MINVER#
  tempnam@GLIBC_2.4 2.4
  textdomain@GLIBC_2.4 2.4
  tfind@GLIBC_2.4 2.4
- tgkill@GLIBC_2.30 2.30
  thrd_current@GLIBC_2.28 2.28
  thrd_equal@GLIBC_2.28 2.28
  thrd_sleep@GLIBC_2.28 2.28
@@ -2145,7 +2134,6 @@ libc.so.6 libc6 #MINVER#
  ttyname_r@GLIBC_2.4 2.4
  ttyslot@GLIBC_2.4 2.4
  twalk@GLIBC_2.4 2.4
- twalk_r@GLIBC_2.30 2.30
  tzname@GLIBC_2.4 2.4
  tzset@GLIBC_2.4 2.4
  ualarm@GLIBC_2.4 2.4
@@ -2360,8 +2348,18 @@ libc.so.6 libc6 #MINVER#
  xencrypt@GLIBC_2.4 2.4
  xprt_register@GLIBC_2.4 2.4
  xprt_unregister@GLIBC_2.4 2.4
+libcrypt.so.1 libc6 #MINVER#
+| libc6 (>> 2.28), libc6 (<< 2.29)
+ GLIBC_2.4@GLIBC_2.4 2.4
+ crypt@GLIBC_2.4 2.4
+ crypt_r@GLIBC_2.4 2.4
+ encrypt@GLIBC_2.4 2.4
+ encrypt_r@GLIBC_2.4 2.4
+ fcrypt@GLIBC_2.4 2.4
+ setkey@GLIBC_2.4 2.4
+ setkey_r@GLIBC_2.4 2.4
 libdl.so.2 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __libdl_freeres@GLIBC_PRIVATE 0 1
@@ -2376,7 +2374,7 @@ libdl.so.2 libc6 #MINVER#
  dlsym@GLIBC_2.4 2.4
  dlvsym@GLIBC_2.4 2.4
 libm.so.6 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.15@GLIBC_2.15 2.15
  GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_2.23@GLIBC_2.23 2.23
@@ -2384,8 +2382,6 @@ libm.so.6 libc6 #MINVER#
  GLIBC_2.25@GLIBC_2.25 2.25
  GLIBC_2.27@GLIBC_2.27 2.27
  GLIBC_2.28@GLIBC_2.28 2.28
- GLIBC_2.29@GLIBC_2.29 2.29
- GLIBC_2.31@GLIBC_2.31 2.31
  GLIBC_2.4@GLIBC_2.4 2.4
  _LIB_VERSION@GLIBC_2.4 2.4
  __acos_finite@GLIBC_2.15 2.15
@@ -2698,7 +2694,6 @@ libm.so.6 libc6 #MINVER#
  exp10f64@GLIBC_2.27 2.27
  exp10f@GLIBC_2.4 2.4
  exp10l@GLIBC_2.4 2.4
- exp2@GLIBC_2.29 2.29
  exp2@GLIBC_2.4 2.4
  exp2f32@GLIBC_2.27 2.27
  exp2f32x@GLIBC_2.27 2.27
@@ -2706,7 +2701,6 @@ libm.so.6 libc6 #MINVER#
  exp2f@GLIBC_2.27 2.27
  exp2f@GLIBC_2.4 2.4
  exp2l@GLIBC_2.4 2.4
- exp@GLIBC_2.29 2.29
  exp@GLIBC_2.4 2.4
  expf32@GLIBC_2.27 2.27
  expf32x@GLIBC_2.27 2.27
@@ -2923,7 +2917,6 @@ libm.so.6 libc6 #MINVER#
  log1pf64@GLIBC_2.27 2.27
  log1pf@GLIBC_2.4 2.4
  log1pl@GLIBC_2.4 2.4
- log2@GLIBC_2.29 2.29
  log2@GLIBC_2.4 2.4
  log2f32@GLIBC_2.27 2.27
  log2f32x@GLIBC_2.27 2.27
@@ -2931,7 +2924,6 @@ libm.so.6 libc6 #MINVER#
  log2f@GLIBC_2.27 2.27
  log2f@GLIBC_2.4 2.4
  log2l@GLIBC_2.4 2.4
- log@GLIBC_2.29 2.29
  log@GLIBC_2.4 2.4
  logb@GLIBC_2.4 2.4
  logbf32@GLIBC_2.27 2.27
@@ -3000,7 +2992,6 @@ libm.so.6 libc6 #MINVER#
  pow10@GLIBC_2.4 2.4
  pow10f@GLIBC_2.4 2.4
  pow10l@GLIBC_2.4 2.4
- pow@GLIBC_2.29 2.29
  pow@GLIBC_2.4 2.4
  powf32@GLIBC_2.27 2.27
  powf32x@GLIBC_2.27 2.27
@@ -3112,29 +3103,17 @@ libm.so.6 libc6 #MINVER#
  tgammaf@GLIBC_2.4 2.4
  tgammal@GLIBC_2.4 2.4
  totalorder@GLIBC_2.25 2.25
- totalorder@GLIBC_2.31 2.31
  totalorderf32@GLIBC_2.27 2.27
- totalorderf32@GLIBC_2.31 2.31
  totalorderf32x@GLIBC_2.27 2.27
- totalorderf32x@GLIBC_2.31 2.31
  totalorderf64@GLIBC_2.27 2.27
- totalorderf64@GLIBC_2.31 2.31
  totalorderf@GLIBC_2.25 2.25
- totalorderf@GLIBC_2.31 2.31
  totalorderl@GLIBC_2.25 2.25
- totalorderl@GLIBC_2.31 2.31
  totalordermag@GLIBC_2.25 2.25
- totalordermag@GLIBC_2.31 2.31
  totalordermagf32@GLIBC_2.27 2.27
- totalordermagf32@GLIBC_2.31 2.31
  totalordermagf32x@GLIBC_2.27 2.27
- totalordermagf32x@GLIBC_2.31 2.31
  totalordermagf64@GLIBC_2.27 2.27
- totalordermagf64@GLIBC_2.31 2.31
  totalordermagf@GLIBC_2.25 2.25
- totalordermagf@GLIBC_2.31 2.31
  totalordermagl@GLIBC_2.25 2.25
- totalordermagl@GLIBC_2.31 2.31
  trunc@GLIBC_2.4 2.4
  truncf32@GLIBC_2.27 2.27
  truncf32x@GLIBC_2.27 2.27
@@ -3172,7 +3151,7 @@ libm.so.6 libc6 #MINVER#
  ynf@GLIBC_2.4 2.4
  ynl@GLIBC_2.4 2.4
 libmemusage.so libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  calloc@Base 2.3.6
  free@Base 2.3.6
  malloc@Base 2.3.6
@@ -3182,7 +3161,7 @@ libmemusage.so libc6 #MINVER#
  munmap@Base 2.3.6
  realloc@Base 2.3.6
 libnsl.so.1 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __create_ib_request@GLIBC_PRIVATE 0 1
@@ -3201,6 +3180,7 @@ libnsl.so.1 libc6 #MINVER#
  __nisbind_next@GLIBC_2.4 2.4
  __prepare_niscall@GLIBC_PRIVATE 0 1
  __yp_check@GLIBC_2.4 2.4
+ _nsl_default_nss@GLIBC_PRIVATE 0 1
  _xdr_ib_request@GLIBC_PRIVATE 0 1
  _xdr_nis_result@GLIBC_PRIVATE 0 1
  nis_add@GLIBC_2.4 2.4
@@ -3313,7 +3293,7 @@ libnsl.so.1 libc6 #MINVER#
  yperr_string@GLIBC_2.4 2.4
  ypprot_err@GLIBC_2.4 2.4
 libnss_compat.so.2 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_compat_endgrent@GLIBC_PRIVATE 0 1
  _nss_compat_endpwent@GLIBC_PRIVATE 0 1
@@ -3331,7 +3311,7 @@ libnss_compat.so.2 libc6 #MINVER#
  _nss_compat_setpwent@GLIBC_PRIVATE 0 1
  _nss_compat_setspent@GLIBC_PRIVATE 0 1
 libnss_dns.so.2 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_dns_getcanonname_r@GLIBC_PRIVATE 0 1
  _nss_dns_gethostbyaddr2_r@GLIBC_PRIVATE 0 1
@@ -3343,7 +3323,7 @@ libnss_dns.so.2 libc6 #MINVER#
  _nss_dns_getnetbyaddr_r@GLIBC_PRIVATE 0 1
  _nss_dns_getnetbyname_r@GLIBC_PRIVATE 0 1
 libnss_files.so.2 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_files_endaliasent@GLIBC_PRIVATE 0 1
  _nss_files_endetherent@GLIBC_PRIVATE 0 1
@@ -3414,7 +3394,7 @@ libnss_files.so.2 libc6 #MINVER#
  _nss_files_setspent@GLIBC_PRIVATE 0 1
  _nss_netgroup_parseline@GLIBC_PRIVATE 0 1
 libnss_hesiod.so.2 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_hesiod_endgrent@GLIBC_PRIVATE 0 1
  _nss_hesiod_endprotoent@GLIBC_PRIVATE 0 1
@@ -3433,18 +3413,135 @@ libnss_hesiod.so.2 libc6 #MINVER#
  _nss_hesiod_setprotoent@GLIBC_PRIVATE 0 1
  _nss_hesiod_setpwent@GLIBC_PRIVATE 0 1
  _nss_hesiod_setservent@GLIBC_PRIVATE 0 1
+libnss_nis.so.2 libc6 #MINVER#
+| libc6 (>> 2.28), libc6 (<< 2.29)
+ GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
+ _nss_nis_endaliasent@GLIBC_PRIVATE 0 1
+ _nss_nis_endetherent@GLIBC_PRIVATE 0 1
+ _nss_nis_endgrent@GLIBC_PRIVATE 0 1
+ _nss_nis_endhostent@GLIBC_PRIVATE 0 1
+ _nss_nis_endnetent@GLIBC_PRIVATE 0 1
+ _nss_nis_endnetgrent@GLIBC_PRIVATE 0 1
+ _nss_nis_endprotoent@GLIBC_PRIVATE 0 1
+ _nss_nis_endpwent@GLIBC_PRIVATE 0 1
+ _nss_nis_endrpcent@GLIBC_PRIVATE 0 1
+ _nss_nis_endservent@GLIBC_PRIVATE 0 1
+ _nss_nis_endspent@GLIBC_PRIVATE 0 1
+ _nss_nis_getaliasbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getaliasent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getetherent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getgrent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getgrgid_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getgrnam_r@GLIBC_PRIVATE 0 1
+ _nss_nis_gethostbyaddr_r@GLIBC_PRIVATE 0 1
+ _nss_nis_gethostbyname2_r@GLIBC_PRIVATE 0 1
+ _nss_nis_gethostbyname4_r@GLIBC_PRIVATE 0 1
+ _nss_nis_gethostbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nis_gethostent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_gethostton_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getnetbyaddr_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getnetbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getnetent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getnetgrent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getntohost_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getprotobyname_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getprotobynumber_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getprotoent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getpublickey@GLIBC_PRIVATE 0 1
+ _nss_nis_getpwent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getpwnam_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getpwuid_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getrpcbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getrpcbynumber_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getrpcent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getsecretkey@GLIBC_PRIVATE 0 1
+ _nss_nis_getservbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getservbyport_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getservent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getspent_r@GLIBC_PRIVATE 0 1
+ _nss_nis_getspnam_r@GLIBC_PRIVATE 0 1
+ _nss_nis_initgroups_dyn@GLIBC_PRIVATE 0 1
+ _nss_nis_netname2user@GLIBC_PRIVATE 0 1
+ _nss_nis_setaliasent@GLIBC_PRIVATE 0 1
+ _nss_nis_setetherent@GLIBC_PRIVATE 0 1
+ _nss_nis_setgrent@GLIBC_PRIVATE 0 1
+ _nss_nis_sethostent@GLIBC_PRIVATE 0 1
+ _nss_nis_setnetent@GLIBC_PRIVATE 0 1
+ _nss_nis_setnetgrent@GLIBC_PRIVATE 0 1
+ _nss_nis_setprotoent@GLIBC_PRIVATE 0 1
+ _nss_nis_setpwent@GLIBC_PRIVATE 0 1
+ _nss_nis_setrpcent@GLIBC_PRIVATE 0 1
+ _nss_nis_setservent@GLIBC_PRIVATE 0 1
+ _nss_nis_setspent@GLIBC_PRIVATE 0 1
+libnss_nisplus.so.2 libc6 #MINVER#
+| libc6 (>> 2.28), libc6 (<< 2.29)
+ GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endaliasent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endetherent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endgrent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endhostent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endnetent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endnetgrent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endprotoent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endpwent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endrpcent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endservent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_endspent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getaliasbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getaliasent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getetherent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getgrent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getgrgid_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getgrnam_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_gethostbyaddr_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_gethostbyname2_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_gethostbyname4_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_gethostbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_gethostent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_gethostton_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getnetbyaddr_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getnetbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getnetent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getnetgrent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getntohost_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getprotobyname_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getprotobynumber_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getprotoent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getpublickey@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getpwent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getpwnam_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getpwuid_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getrpcbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getrpcbynumber_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getrpcent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getsecretkey@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getservbyname_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getservent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getspent_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_getspnam_r@GLIBC_PRIVATE 0 1
+ _nss_nisplus_initgroups_dyn@GLIBC_PRIVATE 0 1
+ _nss_nisplus_netname2user@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setaliasent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setetherent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setgrent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_sethostent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setnetent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setnetgrent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setprotoent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setpwent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setrpcent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setservent@GLIBC_PRIVATE 0 1
+ _nss_nisplus_setspent@GLIBC_PRIVATE 0 1
 libpcprofile.so libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  __cyg_profile_func_enter@Base 2.3.6
  __cyg_profile_func_exit@Base 2.3.6
 libpthread.so.0 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.11@GLIBC_2.11 2.11
  GLIBC_2.12@GLIBC_2.12 2.12
  GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_2.28@GLIBC_2.28 2.28
- GLIBC_2.30@GLIBC_2.30 2.30
- GLIBC_2.31@GLIBC_2.31 2.31
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _IO_flockfile@GLIBC_2.4 2.4
@@ -3461,6 +3558,7 @@ libpthread.so.0 libc6 #MINVER#
  __libc_current_sigrtmin@GLIBC_2.4 2.4
  __libpthread_freeres@GLIBC_PRIVATE 0 1
  __lseek@GLIBC_2.4 2.4
+ __nanosleep@GLIBC_2.4 2.4
  __open64@GLIBC_2.4 2.4
  __open@GLIBC_2.4 2.4
  __pread64@GLIBC_2.4 2.4
@@ -3500,6 +3598,8 @@ libpthread.so.0 libc6 #MINVER#
  __send@GLIBC_2.4 2.4
  __shm_directory@GLIBC_PRIVATE 0 1
  __sigaction@GLIBC_2.4 2.4
+ __vfork@GLIBC_2.4 2.4
+ __wait@GLIBC_2.4 2.4
  __write@GLIBC_2.4 2.4
  _pthread_cleanup_pop@GLIBC_2.4 2.4
  _pthread_cleanup_pop_restore@GLIBC_2.4 2.4
@@ -3531,20 +3631,29 @@ libpthread.so.0 libc6 #MINVER#
  mtx_timedlock@GLIBC_2.28 2.28
  mtx_trylock@GLIBC_2.28 2.28
  mtx_unlock@GLIBC_2.28 2.28
+ nanosleep@GLIBC_2.4 2.4
  open64@GLIBC_2.4 2.4
  open@GLIBC_2.4 2.4
  pause@GLIBC_2.4 2.4
  pread64@GLIBC_2.4 2.4
  pread@GLIBC_2.4 2.4
+ pthread_attr_destroy@GLIBC_2.4 2.4
  pthread_attr_getaffinity_np@GLIBC_2.4 2.4
+ pthread_attr_getdetachstate@GLIBC_2.4 2.4
  pthread_attr_getguardsize@GLIBC_2.4 2.4
+ pthread_attr_getinheritsched@GLIBC_2.4 2.4
+ pthread_attr_getschedparam@GLIBC_2.4 2.4
  pthread_attr_getschedpolicy@GLIBC_2.4 2.4
  pthread_attr_getscope@GLIBC_2.4 2.4
  pthread_attr_getstack@GLIBC_2.4 2.4
  pthread_attr_getstackaddr@GLIBC_2.4 2.4
  pthread_attr_getstacksize@GLIBC_2.4 2.4
+ pthread_attr_init@GLIBC_2.4 2.4
  pthread_attr_setaffinity_np@GLIBC_2.4 2.4
+ pthread_attr_setdetachstate@GLIBC_2.4 2.4
  pthread_attr_setguardsize@GLIBC_2.4 2.4
+ pthread_attr_setinheritsched@GLIBC_2.4 2.4
+ pthread_attr_setschedparam@GLIBC_2.4 2.4
  pthread_attr_setschedpolicy@GLIBC_2.4 2.4
  pthread_attr_setscope@GLIBC_2.4 2.4
  pthread_attr_setstack@GLIBC_2.4 2.4
@@ -3558,9 +3667,7 @@ libpthread.so.0 libc6 #MINVER#
  pthread_barrierattr_init@GLIBC_2.4 2.4
  pthread_barrierattr_setpshared@GLIBC_2.4 2.4
  pthread_cancel@GLIBC_2.4 2.4
- pthread_clockjoin_np@GLIBC_2.31 2.31
  pthread_cond_broadcast@GLIBC_2.4 2.4
- pthread_cond_clockwait@GLIBC_2.30 2.30
  pthread_cond_destroy@GLIBC_2.4 2.4
  pthread_cond_init@GLIBC_2.4 2.4
  pthread_cond_signal@GLIBC_2.4 2.4
@@ -3574,6 +3681,7 @@ libpthread.so.0 libc6 #MINVER#
  pthread_condattr_setpshared@GLIBC_2.4 2.4
  pthread_create@GLIBC_2.4 2.4
  pthread_detach@GLIBC_2.4 2.4
+ pthread_equal@GLIBC_2.4 2.4
  pthread_exit@GLIBC_2.4 2.4
  pthread_getaffinity_np@GLIBC_2.4 2.4
  pthread_getattr_default_np@GLIBC_2.18 2.18
@@ -3588,7 +3696,6 @@ libpthread.so.0 libc6 #MINVER#
  pthread_key_delete@GLIBC_2.4 2.4
  pthread_kill@GLIBC_2.4 2.4
  pthread_kill_other_threads_np@GLIBC_2.4 2.4
- pthread_mutex_clocklock@GLIBC_2.30 2.30
  pthread_mutex_consistent@GLIBC_2.12 2.12
  pthread_mutex_consistent_np@GLIBC_2.4 2.4
  pthread_mutex_destroy@GLIBC_2.4 2.4
@@ -3616,8 +3723,6 @@ libpthread.so.0 libc6 #MINVER#
  pthread_mutexattr_setrobust_np@GLIBC_2.4 2.4
  pthread_mutexattr_settype@GLIBC_2.4 2.4
  pthread_once@GLIBC_2.4 2.4
- pthread_rwlock_clockrdlock@GLIBC_2.30 2.30
- pthread_rwlock_clockwrlock@GLIBC_2.30 2.30
  pthread_rwlock_destroy@GLIBC_2.4 2.4
  pthread_rwlock_init@GLIBC_2.4 2.4
  pthread_rwlock_rdlock@GLIBC_2.4 2.4
@@ -3633,6 +3738,7 @@ libpthread.so.0 libc6 #MINVER#
  pthread_rwlockattr_init@GLIBC_2.4 2.4
  pthread_rwlockattr_setkind_np@GLIBC_2.4 2.4
  pthread_rwlockattr_setpshared@GLIBC_2.4 2.4
+ pthread_self@GLIBC_2.4 2.4
  pthread_setaffinity_np@GLIBC_2.4 2.4
  pthread_setattr_default_np@GLIBC_2.18 2.18
  pthread_setcancelstate@GLIBC_2.4 2.4
@@ -3660,7 +3766,6 @@ libpthread.so.0 libc6 #MINVER#
  recv@GLIBC_2.4 2.4
  recvfrom@GLIBC_2.4 2.4
  recvmsg@GLIBC_2.4 2.4
- sem_clockwait@GLIBC_2.30 2.30
  sem_close@GLIBC_2.4 2.4
  sem_destroy@GLIBC_2.4 2.4
  sem_getvalue@GLIBC_2.4 2.4
@@ -3687,9 +3792,12 @@ libpthread.so.0 libc6 #MINVER#
  tss_delete@GLIBC_2.28 2.28
  tss_get@GLIBC_2.28 2.28
  tss_set@GLIBC_2.28 2.28
+ vfork@GLIBC_2.4 2.4
+ wait@GLIBC_2.4 2.4
+ waitpid@GLIBC_2.4 2.4
  write@GLIBC_2.4 2.4
 libresolv.so.2 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_2.9@GLIBC_2.9 2.9
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
@@ -3792,7 +3900,7 @@ libresolv.so.2 libc6 #MINVER#
  res_send_setqhook@GLIBC_2.4 2.4
  res_send_setrhook@GLIBC_2.4 2.4
 librt.so.1 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_2.7@GLIBC_2.7 2.7
  __mq_open_2@GLIBC_2.7 2.7
@@ -3811,6 +3919,11 @@ librt.so.1 libc6 #MINVER#
  aio_suspend@GLIBC_2.4 2.4
  aio_write64@GLIBC_2.4 2.4
  aio_write@GLIBC_2.4 2.4
+ clock_getcpuclockid@GLIBC_2.4 2.4
+ clock_getres@GLIBC_2.4 2.4
+ clock_gettime@GLIBC_2.4 2.4
+ clock_nanosleep@GLIBC_2.4 2.4
+ clock_settime@GLIBC_2.4 2.4
  lio_listio64@GLIBC_2.4 2.4
  lio_listio@GLIBC_2.4 2.4
  mq_close@GLIBC_2.4 2.4
@@ -3831,7 +3944,7 @@ librt.so.1 libc6 #MINVER#
  timer_gettime@GLIBC_2.4 2.4
  timer_settime@GLIBC_2.4 2.4
 libthread_db.so.1 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  td_init@GLIBC_2.4 2.4
  td_log@GLIBC_2.4 2.4
@@ -3874,7 +3987,7 @@ libthread_db.so.1 libc6 #MINVER#
  td_thr_tsd@GLIBC_2.4 2.4
  td_thr_validate@GLIBC_2.4 2.4
 libutil.so.1 libc6 #MINVER#
-| libc6 (>> 2.31), libc6 (<< 2.32)
+| libc6 (>> 2.28), libc6 (<< 2.29)
  GLIBC_2.4@GLIBC_2.4 2.4
  forkpty@GLIBC_2.4 2.4
  login@GLIBC_2.4 2.4

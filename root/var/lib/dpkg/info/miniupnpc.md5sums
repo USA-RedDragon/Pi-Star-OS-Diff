@@ -1,0 +1,9 @@
+ca7a61a38dd70f693e8f1c26ce84b8fa  usr/bin/external-ip
+a19e02732d71d169881df01f757748e4  usr/bin/upnpc
+7e0f48484ea460700e058b3062901675  usr/share/doc/miniupnpc/README
+cd1aa89de2cadb732fe86bd4fda05f97  usr/share/doc/miniupnpc/changelog.Debian.armhf.gz
+b125eb53f02bf20dfd0f8458669b12fc  usr/share/doc/miniupnpc/changelog.Debian.gz
+da36c65087c4f7aa09cbea001bc5b621  usr/share/doc/miniupnpc/changelog.gz
+e4f9925e59246ea1c32ab387c50f2474  usr/share/doc/miniupnpc/copyright
+a4a38288656e6aa6351fc8874d0b9802  usr/share/man/man1/external-ip.1.gz
+ab17ead14e19568fd19f31f4ab92a0b8  usr/share/man/man1/upnpc.1.gz

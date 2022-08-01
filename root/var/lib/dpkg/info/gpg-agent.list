@@ -22,6 +22,7 @@
 /usr/lib/systemd/user/gpg-agent-ssh.socket
 /usr/lib/systemd/user/gpg-agent.service
 /usr/lib/systemd/user/gpg-agent.socket
+/usr/lib/systemd/user/sockets.target.wants
 /usr/lib/systemd/user-environment-generators
 /usr/lib/systemd/user-environment-generators/90gpg-agent
 /usr/share
@@ -35,9 +36,6 @@
 /usr/share/doc/gpg-agent/examples
 /usr/share/doc/gpg-agent/examples/pwpattern.list
 /usr/share/doc/gpg-agent/examples/trustlist.txt
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/gpg-agent
 /usr/share/man
 /usr/share/man/man1
 /usr/share/man/man1/gpg-agent.1.gz
@@ -45,3 +43,7 @@
 /usr/share/man/man1/gpg-preset-passphrase.1.gz
 /usr/lib/gnupg2/gpg-preset-passphrase
 /usr/lib/gnupg2/gpg-protect-tool
+/usr/lib/systemd/user/sockets.target.wants/gpg-agent-browser.socket
+/usr/lib/systemd/user/sockets.target.wants/gpg-agent-extra.socket
+/usr/lib/systemd/user/sockets.target.wants/gpg-agent-ssh.socket
+/usr/lib/systemd/user/sockets.target.wants/gpg-agent.socket

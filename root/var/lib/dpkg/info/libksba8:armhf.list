@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libksba.so.8.13.0
+/usr/lib/arm-linux-gnueabihf/libksba.so.8.11.6
 /usr/share
 /usr/share/doc
 /usr/share/doc/libksba8

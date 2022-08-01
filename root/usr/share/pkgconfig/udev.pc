@@ -1,6 +1,5 @@
 Name: udev
 Description: udev
-Version: 247
+Version: 241
 
-udev_dir=/lib/udev
-udevdir=${udev_dir}
+udevdir=/lib/udev

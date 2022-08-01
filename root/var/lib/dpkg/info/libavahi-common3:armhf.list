@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libavahi-common.so.3.5.4
+/usr/lib/arm-linux-gnueabihf/libavahi-common.so.3.5.3
 /usr/share
 /usr/share/doc
 /usr/share/doc/libavahi-common3

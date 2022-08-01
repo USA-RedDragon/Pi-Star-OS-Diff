@@ -109,7 +109,7 @@ class SourceEntry(object):
         """ equal operator for two sources.list entries """
         return (self.disabled == other.disabled and
                 self.type == other.type and
-                self.uri.rstrip('/') == other.uri.rstrip('/') and
+                self.uri == other.uri and
                 self.dist == other.dist and
                 self.comps == other.comps)
 
@@ -153,8 +153,8 @@ class SourceEntry(object):
     def parse(self, line):
         """ parse a given sources.list (textual) line and break it up
             into the field we have """
-        self.line = line
-        line = line.strip()
+        line = self.line.strip()
+        #print line
         # check if the source is enabled/disabled
         if line == "" or line == "#":  # empty line
             self.invalid = True
@@ -280,8 +280,7 @@ class SourcesList(object):
         self.list = []
         # read sources.list
         file = apt_pkg.config.find_file("Dir::Etc::sourcelist")
-        if os.path.exists(file):
-            self.load(file)
+        self.load(file)
         # read sources.list.d
         partsdir = apt_pkg.config.find_dir("Dir::Etc::sourceparts")
         for file in glob.glob("%s/*.list" % partsdir):
@@ -298,10 +297,7 @@ class SourcesList(object):
             yield entry
 
     def __find(self, *predicates, **attrs):
-        uri = attrs.pop('uri', None)
         for source in self.list:
-            if uri and uri.rstrip('/') != source.uri.rstrip('/'):
-                continue
             if (all(getattr(source, key) == attrs[key] for key in attrs) and
                     all(predicate(source) for predicate in predicates)):
                 yield source
@@ -314,16 +310,12 @@ class SourcesList(object):
         reuse them as far as possible
         """
 
-        type = type.strip()
-        disabled = type.startswith("#")
-        if disabled:
-            type = type[1:].lstrip()
         architectures = set(architectures)
         # create a working copy of the component list so that
         # we can modify it later
         comps = orig_comps[:]
         sources = self.__find(lambda s: set(s.architectures) == architectures,
-                              disabled=disabled, invalid=False, type=type,
+                              disabled=False, invalid=False, type=type,
                               uri=uri, dist=dist)
         # check if we have this source already in the sources.list
         for source in sources:
@@ -338,38 +330,29 @@ class SourcesList(object):
         sources = self.__find(lambda s: set(s.architectures) == architectures,
                               invalid=False, type=type, uri=uri, dist=dist)
         for source in sources:
-            if source.disabled == disabled:
-                # if there is a repo with the same (disabled, type, uri, dist)
-                # just add the components
-                if set(source.comps) != set(comps):
-                    source.comps = uniq(source.comps + comps)
+            # if there is a repo with the same (type, uri, dist) just add the
+            # components
+            if source.disabled and set(source.comps) == set(comps):
+                source.disabled = False
                 return source
-            elif source.disabled and not disabled:
-                # enable any matching (type, uri, dist), but disabled repo
-                if set(source.comps) == set(comps):
-                    source.disabled = False
-                    return source
+            elif not source.disabled:
+                source.comps = uniq(source.comps + comps)
+                return source
         # there isn't any matching source, so create a new line and parse it
-        parts = [
-            "#" if disabled else "",
-            type,
-            ("[arch=%s]" % ",".join(architectures)) if architectures else "",
-            uri,
-            dist,
-        ]
-        parts.extend(comps)
-        if comment:
-            parts.append("#" + comment)
-        line = " ".join(part for part in parts if part) + "\n"
-
+        line = type
+        if architectures:
+            line += " [arch=%s]" % ",".join(architectures)
+        line += " %s %s" % (uri, dist)
+        for c in comps:
+            line = line + " " + c
+        if comment != "":
+            line = "%s #%s\n" % (line, comment)
+        line = line + "\n"
         new_entry = SourceEntry(line)
         if file is not None:
             new_entry.file = file
         self.matcher.match(new_entry)
-        if pos < 0:
-            self.list.append(new_entry)
-        else:
-            self.list.insert(pos, new_entry)
+        self.list.insert(pos, new_entry)
         return new_entry
 
     def remove(self, source_entry):

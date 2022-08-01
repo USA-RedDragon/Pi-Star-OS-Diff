@@ -1,5 +1,5 @@
-7716e3c45cf009bd68a3e0d909adb7bd  usr/lib/arm-linux-gnueabihf/libpcre2-8.so.0.10.1
+359e9a12a76e8bb24b73897a042bdbf1  usr/lib/arm-linux-gnueabihf/libpcre2-8.so.0.7.1
 fbde6fa016e43367c012e30e442e8180  usr/share/doc/libpcre2-8-0/README.Debian
-c3b7dc11a74165defeff8b49ebe3f09f  usr/share/doc/libpcre2-8-0/changelog.Debian.gz
-eaa6ccb74789f0da3f77f406c7c838e6  usr/share/doc/libpcre2-8-0/changelog.gz
+2d20cb5cec7a508e7850f9e1b65e091c  usr/share/doc/libpcre2-8-0/changelog.Debian.gz
+aaab0d24a6ec1fa37711ec4719b5241a  usr/share/doc/libpcre2-8-0/changelog.gz
 2fd254e240f8f30f95d53cb1af479b04  usr/share/doc/libpcre2-8-0/copyright

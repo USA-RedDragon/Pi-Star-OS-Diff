@@ -132,10 +132,8 @@ if [ $debconf ]; then
 	db_get dash/sh
 	if [ "$RET" = true ]; then
 		claim_binsh /bin/sh dash
-		if [ -d /usr/share/man/man1/ ]; then
-			claim_binsh /usr/share/man/man1/sh.1.gz dash.1.gz \
-				/usr/share/man/man1/sh.distrib.1.gz
-		fi
+		claim_binsh /usr/share/man/man1/sh.1.gz dash.1.gz \
+			/usr/share/man/man1/sh.distrib.1.gz
 	else
 		unclaim_binsh /bin/sh dash
 		unclaim_binsh /usr/share/man/man1/sh.1.gz dash.1.gz \
@@ -143,7 +141,7 @@ if [ $debconf ]; then
 	fi
 fi
 
-# Automatically added by dh_installmenu/13.3
+# Automatically added by dh_installmenu/12
 if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
 	update-menus
 fi

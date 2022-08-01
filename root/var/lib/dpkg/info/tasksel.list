@@ -19,9 +19,6 @@
 /usr/share/doc/tasksel/TODO
 /usr/share/doc/tasksel/changelog.gz
 /usr/share/doc/tasksel/copyright
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/tasksel
 /usr/share/locale
 /usr/share/locale/ar
 /usr/share/locale/ar/LC_MESSAGES

@@ -3,43 +3,37 @@
 _iperf()
 {
     local cur prev words cword split
-    _init_completion -s -n : || return
+    _init_completion -s || return
 
     case $prev in
-        --help | --version | --interval | --len | --port | --window | --mss | --bandwidth | \
-            --num | --time | --listenport | --parallel | --ttl | --linux-congestion | --omit | \
-            --congestion | --bytes | --blockcount | --cport | --set-mss | --flowlabel | \
-            --title | --tos | --affinity | -!(-*)[hvilpwMbntLPTZCkOSA])
+        -h|--help|-v|--version|-i|--interval|-l|--len|-p|--port|-w|--window|\
+        -M|--mss|-b|--bandwidth|-n|--num|-t|--time|-L|--listenport|-P|\
+        --parallel|-T|--ttl|-Z|--linux-congestion)
             return
             ;;
-        --format | -!(-*)f)
-            COMPREPLY=($(compgen -W 'k m g K M G' -- "$cur"))
+        -f|--format)
+            COMPREPLY=( $( compgen -W 'k m K M' -- "$cur" ) )
             return
             ;;
-        --output | --fileinput | -!(-*)[oF])
+        -o|--output|-F|--fileinput)
             _filedir
             return
             ;;
-        --bind | -!(-*)B)
+        -B|--bind)
             _available_interfaces -a
-            _ip_addresses -a
-            __ltrim_colon_completions "$cur"
+            _ip_addresses
             return
             ;;
-        --client | -!(-*)c)
+        -c|--client)
             _known_hosts_real -- "$cur"
             return
             ;;
-        --reportexclude | -!(-*)x)
-            COMPREPLY=($(compgen -W 'C D M S V' -- "$cur"))
+        -x|--reportexclude)
+            COMPREPLY=( $( compgen -W 'C D M S V' -- "$cur" ) )
             return
             ;;
-        --reportstyle | -!(-*)y)
-            COMPREPLY=($(compgen -W 'C' -- "$cur"))
-            return
-            ;;
-        --logfile)
-            _filedir log
+        -y|--reportstyle)
+            COMPREPLY=( $( compgen -W 'C' -- "$cur" ) )
             return
             ;;
     esac
@@ -48,22 +42,22 @@ _iperf()
 
     # Filter mode specific options
     local i filter=cat
-    for i in "${words[@]}"; do
+    for i in ${words[@]}; do
         case $i in
-            -s | --server)
-                filter='command sed -e /^Client.specific/,/^\(Server.specific.*\)\?$/d'
+            -s|--server)
+                filter='command sed -e /^Client.specific/,/^$/d'
                 ;;
-            -c | --client)
-                filter='command sed -e /^Server.specific/,/^\(Client.specific.*\)\?$/d'
+            -c|--client)
+                filter='command sed -e /^Server.specific/,/^$/d'
                 ;;
         esac
     done
     [[ $filter != cat ]] && filter+=' -e /--client/d -e /--server/d'
 
-    COMPREPLY=($(compgen -W \
-        '$("$1" --help 2>&1 | $filter | _parse_help -)' -- "$cur"))
-    [[ ${COMPREPLY-} == *= ]] && compopt -o nospace
+    COMPREPLY=( $( compgen -W \
+        '$( "$1" --help 2>&1 | $filter | _parse_help - )' -- "$cur" ) )
+    [[ $COMPREPLY == *= ]] && compopt -o nospace
 } &&
-    complete -F _iperf iperf iperf3
+complete -F _iperf iperf
 
 # ex: filetype=sh

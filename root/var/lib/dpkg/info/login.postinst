@@ -51,9 +51,6 @@ fi
                 chmod 644 /etc/subgid
         fi
 
-# Automatically added by dh_installdeb/12.9
-dpkg-maintscript-helper rm_conffile /etc/securetty 1:4.7-1\~ -- "$@"
-# End automatically added section
 
 
 exit 0

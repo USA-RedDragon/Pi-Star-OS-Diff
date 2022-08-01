@@ -39,12 +39,6 @@
   capability setuid,
   capability setgid,
 
-  # Ordinary permission checks sometimes involve checking whether the
-  # process has this capability, which can produce audit log messages.
-  # Silence them.
-  deny capability dac_override,
-  deny capability dac_read_search,
-
   signal peer=@{profile_name},
   signal peer=/usr/bin/man//&man_groff,
   signal peer=/usr/bin/man//&man_filter,
@@ -72,11 +66,8 @@ profile man_groff {
   /usr/bin/vgrind rm,
 
   /etc/groff/** r,
-  /etc/papersize r,
   /usr/lib/groff/site-tmac/** r,
   /usr/share/groff/** r,
-
-  /tmp/groff* rw,
 
   signal peer=/usr/bin/man,
   # @{profile_name} doesn't seem to work here.
@@ -103,9 +94,6 @@ profile man_filter {
   # there's no harm in allowing wide read access here since the worst it can
   # do is feed data to the invoking man process.
   /** r,
-
-  # Allow writing cat pages.
-  /var/cache/man/** w,
 
   signal peer=/usr/bin/man,
   # @{profile_name} doesn't seem to work here.

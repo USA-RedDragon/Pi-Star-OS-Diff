@@ -1,0 +1,25 @@
+[General]
+Callsign=M1ABC
+RptAddress=127.0.0.1
+RptPort=32010
+LocalPort=42020
+Announcements=1
+Daemon=1
+
+[Id Lookup]
+Name=/usr/local/etc/DMRIds.dat
+Time=24
+
+[Log]
+FilePath=/var/log/pi-star
+FileRoot=P25Gateway
+
+[Network]
+Port=42010
+HostsFile1=/usr/local/etc/P25Hosts.txt
+HostsFile2=/usr/local/etc/P25HostsLocal.txt
+ReloadTime=60
+ParrotAddress=127.0.0.1
+ParrotPort=42011
+Startup=10100
+Debug=0

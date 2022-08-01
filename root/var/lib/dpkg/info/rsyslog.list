@@ -1,5 +1,7 @@
 /.
 /etc
+/etc/default
+/etc/default/rsyslog
 /etc/init.d
 /etc/init.d/rsyslog
 /etc/logcheck

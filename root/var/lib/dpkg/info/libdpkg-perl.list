@@ -5,9 +5,14 @@
 /usr/share/bug/libdpkg-perl
 /usr/share/doc
 /usr/share/doc/libdpkg-perl
+/usr/share/doc/libdpkg-perl/AUTHORS
+/usr/share/doc/libdpkg-perl/README.api
+/usr/share/doc/libdpkg-perl/README.feature-removal-schedule.gz
+/usr/share/doc/libdpkg-perl/THANKS.gz
 /usr/share/doc/libdpkg-perl/changelog.Debian.gz
 /usr/share/doc/libdpkg-perl/changelog.gz
 /usr/share/doc/libdpkg-perl/copyright
+/usr/share/doc/libdpkg-perl/usertags.gz
 /usr/share/dpkg
 /usr/share/dpkg/no-pie-compile.specs
 /usr/share/dpkg/no-pie-link.specs

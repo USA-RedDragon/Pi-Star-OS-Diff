@@ -45,7 +45,7 @@ Fonts are published in source form as SFD files (Spline Font Database from
 FontForge - http://fontforge.sf.net/) and in compiled form as TTF files
 (TrueType fonts).
 
-For more information go to https://dejavu-fonts.github.io/.
+For more information go to http://dejavu.sourceforge.net/.
 
 Characters from Arev fonts, Copyright (c) 2006 by Tavmjong Bah:
 ---------------------------

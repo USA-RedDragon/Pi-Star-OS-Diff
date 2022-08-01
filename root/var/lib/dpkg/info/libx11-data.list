@@ -187,10 +187,10 @@
 /usr/share/X11/locale/ru_RU.UTF-8/Compose
 /usr/share/X11/locale/ru_RU.UTF-8/XI18N_OBJS
 /usr/share/X11/locale/ru_RU.UTF-8/XLC_LOCALE
-/usr/share/X11/locale/sr_RS.UTF-8
-/usr/share/X11/locale/sr_RS.UTF-8/Compose
-/usr/share/X11/locale/sr_RS.UTF-8/XI18N_OBJS
-/usr/share/X11/locale/sr_RS.UTF-8/XLC_LOCALE
+/usr/share/X11/locale/sr_CS.UTF-8
+/usr/share/X11/locale/sr_CS.UTF-8/Compose
+/usr/share/X11/locale/sr_CS.UTF-8/XI18N_OBJS
+/usr/share/X11/locale/sr_CS.UTF-8/XLC_LOCALE
 /usr/share/X11/locale/tatar-cyr
 /usr/share/X11/locale/tatar-cyr/Compose
 /usr/share/X11/locale/tatar-cyr/XI18N_OBJS

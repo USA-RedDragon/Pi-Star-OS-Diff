@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+listening_ip=
+for ip_or_iface in $1; do
+	listening_ip="${listening_ip} -i ${ip_or_iface}"
+done
+
+shift
+
+exec /usr/sbin/minissdpd $listening_ip $@

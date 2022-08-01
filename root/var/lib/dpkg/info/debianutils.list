@@ -2,13 +2,13 @@
 /bin
 /bin/run-parts
 /bin/tempfile
+/bin/which
 /sbin
 /sbin/installkernel
 /usr
 /usr/bin
 /usr/bin/ischroot
 /usr/bin/savelog
-/usr/bin/which
 /usr/sbin
 /usr/sbin/add-shell
 /usr/sbin/remove-shell

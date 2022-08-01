@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libuchardet.so.0.0.7
+/usr/lib/arm-linux-gnueabihf/libuchardet.so.0.0.6
 /usr/share
 /usr/share/doc
 /usr/share/doc/libuchardet0

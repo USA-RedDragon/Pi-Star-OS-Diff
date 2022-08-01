@@ -1,5 +1,10 @@
 # resolvconf support for dhclient3
 
+
+if [ ! -f "/var/lib/dhcpcd5/resolv.conf" ]; then
+	touch /var/lib/dhcpcd5/resolv.conf
+fi
+
 NL="
 "
 

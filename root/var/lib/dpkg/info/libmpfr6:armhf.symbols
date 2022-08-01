@@ -100,7 +100,6 @@ libmpfr.so.6 libmpfr6 #MINVER#
  mpfr_cmp_ui_2exp@Base 3.1.3
  mpfr_cmp_z@Base 3.1.3
  mpfr_cmpabs@Base 3.1.3
- mpfr_cmpabs_ui@Base 4.1
  mpfr_const_catalan@Base 3.1.3
  mpfr_const_catalan_internal@Base 3.1.3
  mpfr_const_euler@Base 3.1.3
@@ -139,7 +138,6 @@ libmpfr.so.6 libmpfr6 #MINVER#
  mpfr_div_z@Base 3.1.3
  mpfr_divby0_p@Base 3.1.3
  mpfr_divhigh_n@Base 3.1.3
- mpfr_dot@Base 4.1
  mpfr_dump@Base 3.1.3
  mpfr_eint@Base 3.1.3
  mpfr_eq@Base 3.1.3
@@ -208,7 +206,6 @@ libmpfr.so.6 libmpfr6 #MINVER#
  mpfr_get_q@Base 4.0.0
  mpfr_get_si@Base 3.1.3
  mpfr_get_str@Base 3.1.3
- mpfr_get_str_ndigits@Base 4.1
  mpfr_get_ui@Base 3.1.3
  mpfr_get_version@Base 3.1.3
  mpfr_get_z@Base 3.1.3
@@ -382,7 +379,6 @@ libmpfr.so.6 libmpfr6 #MINVER#
  mpfr_mulhigh_n@Base 3.1.3
  mpfr_nan_p@Base 3.1.3
  mpfr_nanflag_p@Base 3.1.3
- mpfr_nbits_ulong@Base 4.1
  mpfr_neg@Base 3.1.3
  mpfr_nextabove@Base 3.1.3
  mpfr_nextbelow@Base 3.1.3
@@ -505,7 +501,6 @@ libmpfr.so.6 libmpfr6 #MINVER#
  mpfr_tanh@Base 3.1.3
  mpfr_tmp_allocate@Base 3.1.3
  mpfr_tmp_free@Base 3.1.3
- mpfr_total_order_p@Base 4.1
  mpfr_trunc@Base 3.1.3
  mpfr_ubf_diff_exp@Base 4.0.0
  mpfr_ubf_exp_less_p@Base 4.0.0

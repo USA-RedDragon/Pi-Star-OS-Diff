@@ -1,4 +1,4 @@
-#!/usr/bin/mawk -f
+#!/usr/bin/mawk
 
 # parse a C declaration by recursive descent
 # 

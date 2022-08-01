@@ -547,7 +547,7 @@ Source: <http://www.iso.org/iso/country_codes>
 		alpha_3_code="GMB"
 		numeric_code="270"
 		name="Gambia"
-		official_name="Republic of the Gambia" />
+		official_name="Islamic Republic of the Gambia" />
 	<iso_3166_entry
 		alpha_2_code="GW"
 		alpha_3_code="GNB"
@@ -879,8 +879,8 @@ Source: <http://www.iso.org/iso/country_codes>
 		alpha_2_code="MK"
 		alpha_3_code="MKD"
 		numeric_code="807"
-		name="North Macedonia"
-		official_name="Republic of North Macedonia" />
+		name="Macedonia, Republic of"
+		official_name="The Former Yugoslav Republic of Macedonia" />
 	<iso_3166_entry
 		alpha_2_code="ML"
 		alpha_3_code="MLI"
@@ -1262,8 +1262,8 @@ Source: <http://www.iso.org/iso/country_codes>
 		alpha_2_code="SZ"
 		alpha_3_code="SWZ"
 		numeric_code="748"
-		name="Eswatini"
-		official_name="Kingdom of Eswatini" />
+		name="Swaziland"
+		official_name="Kingdom of Swaziland" />
 	<iso_3166_entry
 		alpha_2_code="SX"
 		alpha_3_code="SXM"

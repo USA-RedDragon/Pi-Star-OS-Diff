@@ -34,7 +34,7 @@ Dpkg::Control::Tests::Entry - represents a test suite entry
 
 =head1 DESCRIPTION
 
-This class represents a test suite entry.
+This object represents a test suite entry.
 
 =head1 METHODS
 

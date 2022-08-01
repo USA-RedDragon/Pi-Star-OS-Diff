@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+DEFAULT_FILE="/etc/default/minissdpd"
+
+
+case "$1" in
+install|upgrade)
+	if [ -n "$2" ] && [ -r "${DEFAULT_FILE}" ] ; then
+		if dpkg --compare-versions "$2" lt 1.5.20180223-5 ; then
+			sed -i 's/^START_DAEMON=/# START_DAEMON deprecated, use service minissdpd enable\/disable\n#START_DAEMON=/' "${DEFAULT_FILE}"
+			. "${DEFAULT_FILE}"
+		fi
+	fi
+;;
+
+abort-upgrade)
+;;
+
+*)
+echo "preinst called with unknown argument \`$1'" >&2
+exit 1
+;;
+esac
+
+
+
+exit 0

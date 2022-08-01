@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- python-mode -*-
 """Emulate iostat for NFS mount points using /proc/self/mountstats
 """
@@ -486,20 +486,20 @@ def list_nfs_mounts(givenlist, mountstats):
        return a full list if the given list is empty -
        may return an empty list if none found
     """
-    devicelist = []
+    list = []
     if len(givenlist) > 0:
         for device in givenlist:
             stats = DeviceData()
             stats.parse_stats(mountstats[device])
             if stats.is_nfs_mountpoint():
-                devicelist += [device]
+                list += [device]
     else:
         for device, descr in mountstats.items():
             stats = DeviceData()
             stats.parse_stats(descr)
             if stats.is_nfs_mountpoint():
-                devicelist += [device]
-    return devicelist
+                list += [device]
+    return list
 
 def iostat_command(name):
     """iostat-like command for NFS mount points

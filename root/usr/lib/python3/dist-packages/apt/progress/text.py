@@ -22,15 +22,29 @@ import os
 import signal
 import sys
 
-import types
-from typing import Callable, Optional, Union
-
+try:
+    import types
+    from typing import Callable, Optional, Union
+    types  # pyflakes
+    Callable  # pyflakes
+    Optional  # pyflakes
+    Union  # pyflakes
+except ImportError:
+    pass
 
 import apt_pkg
 from apt.progress import base
 
 
+io  # pyflakes
+
+
 __all__ = ['AcquireProgress', 'CdromProgress', 'OpProgress']
+
+if sys.version_info.major < 3:
+    input = raw_input  # type: ignore
+else:
+    long = int
 
 
 def _(msg):
@@ -46,7 +60,7 @@ class TextProgress(object):
     """Internal Base class for text progress classes."""
 
     def __init__(self, outfile=None):
-        # type: (Optional[io.TextIOBase]) -> None
+        # type: (io.TextIOBase) -> None
         self._file = outfile or sys.stdout
         self._width = 0
 
@@ -75,7 +89,7 @@ class OpProgress(base.OpProgress, TextProgress):
     """
 
     def __init__(self, outfile=None):
-        # type: (Optional[io.TextIOBase]) -> None
+        # type: (io.TextIOBase) -> None
         TextProgress.__init__(self, outfile)
         base.OpProgress.__init__(self)
         self.old_op = ""
@@ -102,12 +116,12 @@ class AcquireProgress(base.AcquireProgress, TextProgress):
     """AcquireProgress for the text interface."""
 
     def __init__(self, outfile=None):
-        # type: (Optional[io.TextIOBase]) -> None
+        # type: (io.TextIOBase) -> None
         TextProgress.__init__(self, outfile)
         base.AcquireProgress.__init__(self)
-        self._signal = None  # type: Union[Callable[[signal.Signals, types.FrameType], None], int, signal.Handlers, None] # noqa
+        self._signal = None  # type: Union[Callable[[signal.Signals, types.FrameType], None], int, signal.Handlers, None] # nopep8
         self._width = 80
-        self._id = 1
+        self._id = long(1)
 
     def start(self):
         # type: () -> None
@@ -120,7 +134,7 @@ class AcquireProgress(base.AcquireProgress, TextProgress):
         self._signal = signal.signal(signal.SIGWINCH, self._winch)
         # Get the window size.
         self._winch()
-        self._id = 1
+        self._id = long(1)
 
     def _winch(self, *dummy):
         # type: (object) -> None
@@ -129,7 +143,7 @@ class AcquireProgress(base.AcquireProgress, TextProgress):
             import fcntl
             import termios
             import struct
-            buf = fcntl.ioctl(self._file, termios.TIOCGWINSZ, 8 * b' ')  # noqa
+            buf = fcntl.ioctl(self._file, termios.TIOCGWINSZ, 8 * b' ')
             dummy, col, dummy, dummy = struct.unpack('hhhh', buf)
             self._width = col - 1  # 1 for the cursor
 
@@ -186,7 +200,7 @@ class AcquireProgress(base.AcquireProgress, TextProgress):
         tval = '%i%%' % percent
         end = ""
         if self.current_cps:
-            eta = int(float(self.total_bytes - self.current_bytes) /
+            eta = long(float(self.total_bytes - self.current_bytes) /
                         self.current_cps)
             end = " %sB/s %s" % (apt_pkg.size_to_str(self.current_cps),
                                  apt_pkg.time_to_str(eta))
@@ -267,7 +281,7 @@ class CdromProgress(base.CdromProgress, TextProgress):
         # type: () -> Optional[str]
         """Ask the user to provide a name for the disc."""
         base.CdromProgress.ask_cdrom_name(self)
-        self._write(_("Please provide a name for this medium, such as "
+        self._write(_("Please provide a name for this Disc, such as "
                       "'Debian 2.1r1 Disk 1'"), False)
         try:
             return str(input(":"))
@@ -285,7 +299,7 @@ class CdromProgress(base.CdromProgress, TextProgress):
         # type: () -> bool
         """Ask the user to change the CD-ROM."""
         base.CdromProgress.change_cdrom(self)
-        self._write(_("Please insert an installation medium and press enter"),
+        self._write(_("Please insert a Disc in the drive and press enter"),
                     False)
         try:
             return bool(input() == '')

@@ -6,21 +6,17 @@ _sshow()
     _init_completion || return
 
     case $prev in
-        -*i)
+        -i)
             _available_interfaces -a
-            return
-            ;;
-        -*p)
-            _filedir pcap
             return
             ;;
     esac
 
-    if [[ $cur == -* ]]; then
-        COMPREPLY=($(compgen -W '$(_parse_usage "$1")' -- "$cur"))
+    if [[ "$cur" == -* ]]; then
+        COMPREPLY=( $( compgen -W '$( _parse_usage "$1" )' -- "$cur" ) )
     fi
 
 } &&
-    complete -F _sshow sshow
+complete -F _sshow sshow
 
 # ex: filetype=sh

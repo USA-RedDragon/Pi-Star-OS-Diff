@@ -26,7 +26,19 @@ import gzip
 import os
 import sys
 
-from typing import Dict, Iterable, List, Optional, Set, Tuple, Union, cast
+try:
+    from typing import Dict, Iterable, List, Optional, Set, Tuple, Union, cast
+    Dict  # pyflakes
+    Iterable  # pyflakes
+    List  # pyflakes
+    Optional  # pyflakes
+    Set  # pyflakes
+    Tuple  # pyflakes
+    Union  # pyflakes
+except ImportError:
+    def cast(typ, obj):  # type: ignore
+        return obj
+    pass
 
 from apt_pkg import gettext as _
 from io import BytesIO
@@ -49,14 +61,14 @@ class DebPackage(object):
     debug = 0
 
     def __init__(self, filename=None, cache=None):
-        # type: (Optional[str], Optional[apt.Cache]) -> None
+        # type: (str, apt.Cache) -> None
         if cache is None:
             cache = apt.Cache()
         self._cache = cache
         self._debfile = cast(apt_inst.DebFile, None)
         self.pkgname = ""
         self.filename = None  # type: Optional[str]
-        self._sections = {}  # type: Union[Dict[str, str], apt_pkg.TagSection[str]]  # noqa
+        self._sections = {}  # type: Union[Dict[str, str], apt_pkg.TagSection]
         self._need_pkgs = []  # type: List[str]
         self._check_was_run = False
         self._failure_string = ""
@@ -68,7 +80,7 @@ class DebPackage(object):
         # type: (str) -> None
         """ open given debfile """
         self._dbg(3, "open '%s'" % filename)
-        self._need_pkgs = []
+        self._need_pkgs = []  # type: List[str]
         self._installed_conflicts = set()  # type: Set[str]
         self._failure_string = ""
         self.filename = filename
@@ -717,7 +729,7 @@ class DebPackage(object):
             print(msg, file=sys.stderr)
 
     def install(self, install_progress=None):
-        # type: (Optional[apt.progress.base.InstallProgress]) -> int
+        # type: (apt.progress.base.InstallProgress) -> int
         """Install the package."""
         if self.filename is None:
             raise apt_pkg.Error("No filename specified")
@@ -740,7 +752,7 @@ class DscSrcPackage(DebPackage):
     """A locally available source package."""
 
     def __init__(self, filename=None, cache=None):
-        # type: (Optional[str], Optional[apt.Cache]) -> None
+        # type: (str, apt.Cache) -> None
         DebPackage.__init__(self, None, cache)
         self.filename = filename  # type: Optional[str]
         self._depends = []  # type: List[List[Tuple[str, str, str]]]
@@ -794,7 +806,7 @@ class DscSrcPackage(DebPackage):
                 if 'Binary' in sec:
                     self.binaries = [b.strip() for b in
                                      sec['Binary'].split(',')]
-                for tag in sec.keys():
+                for tag in sec.keys():      # type: ignore
                     if tag in sec:
                         self._sections[tag] = sec[tag]
         finally:

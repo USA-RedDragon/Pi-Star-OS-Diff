@@ -6,14 +6,7 @@ _dhclient()
     _init_completion || return
 
     case $prev in
-        -p | -e)
-            return
-            ;;
-        -D)
-            COMPREPLY=($(compgen -W 'LL LLT' -- "$cur"))
-            return
-            ;;
-        -*f)
+        -cf|-lf|-pf|-sf)
             _filedir
             return
             ;;
@@ -23,12 +16,13 @@ _dhclient()
             ;;
     esac
 
-    if [[ $cur == -* ]]; then
-        COMPREPLY=($(compgen -W '$(_parse_usage "$1")' -- "$cur"))
+    if [[ "$cur" == -* ]]; then
+        COMPREPLY=( $( compgen -W '-p -d -q -1 -r -lf -pf -cf -sf -s -g -n -nw
+            -w' -- "$cur" ) )
     else
         _available_interfaces
     fi
 } &&
-    complete -F _dhclient dhclient
+complete -F _dhclient dhclient
 
 # ex: filetype=sh

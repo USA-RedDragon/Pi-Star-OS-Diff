@@ -22,7 +22,6 @@ libtiff.so.5 libtiff5 #MINVER#
  TIFFCreateCustomDirectory@LIBTIFF_4.0 4.0.3
  TIFFCreateDirectory@LIBTIFF_4.0 4.0.3
  TIFFCreateEXIFDirectory@LIBTIFF_4.0 4.0.3
- TIFFCreateGPSDirectory@LIBTIFF_4.0 4.1.0+git201212
  TIFFCurrentDirOffset@LIBTIFF_4.0 4.0.3
  TIFFCurrentDirectory@LIBTIFF_4.0 4.0.3
  TIFFCurrentRow@LIBTIFF_4.0 4.0.3
@@ -129,7 +128,6 @@ libtiff.so.5 libtiff5 #MINVER#
  TIFFReadEncodedStrip@LIBTIFF_4.0 4.0.3
  TIFFReadEncodedTile@LIBTIFF_4.0 4.0.3
  TIFFReadFromUserBuffer@LIBTIFF_4.0 4.0.10+git190814
- TIFFReadGPSDirectory@LIBTIFF_4.0 4.1.0+git201212
  TIFFReadRGBAImage@LIBTIFF_4.0 4.0.3
  TIFFReadRGBAImageOriented@LIBTIFF_4.0 4.0.3
  TIFFReadRGBAStrip@LIBTIFF_4.0 4.0.3
@@ -219,7 +217,6 @@ libtiff.so.5 libtiff5 #MINVER#
  _TIFFFindOrRegisterField@LIBTIFF_4.0 4.0.3
  _TIFFGetExifFields@LIBTIFF_4.0 4.0.3
  _TIFFGetFields@LIBTIFF_4.0 4.0.3
- _TIFFGetGpsFields@LIBTIFF_4.0 4.1.0+git201212
  _TIFFMergeFields@LIBTIFF_4.0 4.0.3
  _TIFFMultiply32@LIBTIFF_4.0 4.0.3
  _TIFFMultiply64@LIBTIFF_4.0 4.0.3
@@ -240,7 +237,6 @@ libtiff.so.5 libtiff5 #MINVER#
  _TIFFRewriteField@LIBTIFF_4.0 4.0.3
  _TIFFSeekOK@LIBTIFF_4.0 4.0.9
  _TIFFSetDefaultCompressionState@LIBTIFF_4.0 4.0.3
- _TIFFSetGetFieldSize@LIBTIFF_4.0 4.1.0+git201212
  _TIFFSetupFields@LIBTIFF_4.0 4.0.3
  _TIFFSwab16BitData@LIBTIFF_4.0 4.0.3
  _TIFFSwab24BitData@LIBTIFF_4.0 4.0.3

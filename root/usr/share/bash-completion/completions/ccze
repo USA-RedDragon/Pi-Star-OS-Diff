@@ -6,39 +6,38 @@ _ccze()
     _init_completion -s || return
 
     case $prev in
-        -'?' | --help | --usage | -V | --version)
+        -'?'|--help|--usage|-V|--version)
             return
             ;;
-        --argument | --color | -!(-*)[ac])
+        -a|--argument|-c|--color)
             # TODO?
             return
             ;;
-        --rcfile | -!(-*)F)
+        -F|--rcfile)
             _filedir
             return
             ;;
-        --mode | -!(-*)m)
-            COMPREPLY=($(compgen -W "curses ansi html" -- "$cur"))
+        -m|--mode)
+            COMPREPLY=( $( compgen -W "curses ansi html" -- "$cur" ) )
             return
             ;;
-        --option | -!(-*)o)
+        -o|--option)
             local -a opts=(scroll wordcolor lookups transparent cssfile)
-            COMPREPLY=($(compgen -W '${opts[@]} ${opts[@]/#/no}' -- "$cur"))
+            COMPREPLY=( $( compgen -W '${opts[@]} ${opts[@]/#/no}' -- "$cur" ) )
             return
             ;;
-        --plugin | -!(-*)p)
-            COMPREPLY=($(compgen -W '$("$1" --list-plugins | command \
-                sed -ne "s/^\([a-z0-9]\{1,\}\)[[:space:]]\{1,\}|.*/\1/p")' \
-                -- "$cur"))
+        -p|--plugin)
+            COMPREPLY=( $( compgen -W '$( "$1" --list-plugins |
+                sed -ne "s/^\([a-z0-9]\{1,\}\)[[:space:]]\{1,\}|.*/\1/p" )' \
+                -- "$cur" ) )
             return
-            ;;
     esac
 
     $split && return
 
-    COMPREPLY=($(compgen -W '$(_parse_help "$1")' -- "$cur"))
-    [[ ${COMPREPLY-} == *= ]] && compopt -o nospace
+    COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) )
+    [[ $COMPREPLY == *= ]] && compopt -o nospace
 } &&
-    complete -F _ccze ccze
+complete -F _ccze ccze
 
 # ex: filetype=sh

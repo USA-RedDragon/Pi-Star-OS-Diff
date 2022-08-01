@@ -1,11 +1,10 @@
-## Syntax highlighting for TeX files.
+## Here is a short example for TeX files.
 
 syntax tex "\.tex$"
 magic "(La)?TeX document"
+linter chktex -v0 -q -I
 comment "%"
 
-linter chktex -v0 -q -I
-
-color green "\\.|\\[A-Za-z]*"
+icolor green "\\.|\\[A-Z]*"
 color magenta "[{}]"
 color blue "(^|[^\])%.*"

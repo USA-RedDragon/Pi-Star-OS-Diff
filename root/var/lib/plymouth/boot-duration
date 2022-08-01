@@ -1,0 +1,35 @@
+0.002:plymouth-start.service
+0.124:systemd-fsck@dev-mmcblk0p1.service
+0.129:boot.mount
+0.129:ifup@wlan0.service
+0.142:systemd-tmpfiles-setup.service
+0.144:haveged.service
+0.149:systemd-update-utmp.service
+0.160:dbus.service
+0.174:lm-sensors.service
+0.177:rsyslog.service
+0.178:rpi-eeprom-update.service
+0.193:rpcbind.service
+0.210:cron.service
+0.212:rng-tools.service
+0.220:wpa_supplicant.service
+0.221:systemd-logind.service
+0.225:avahi-daemon.service
+0.226:Loading cpufreq kernel modules
+0.245:loadcpufreq.service
+0.254:CPUFreq Utilities: Setting conservative CPUFreq governor
+0.258:cpufrequtils.service
+0.363:networking.service
+0.628:hciuart.service
+0.639:bthelper@hci0.service
+0.652:bluetooth.service
+0.680:systemd-hostnamed.service
+0.883:dhcpcd.service
+0.884:unattended-upgrades.service
+0.895:systemd-user-sessions.service
+0.897:minissdpd.service
+0.903:ntp.service
+0.920:shellinabox.service
+0.923:ssh.service
+0.934:nginx.service
+0.989:rc-local.service

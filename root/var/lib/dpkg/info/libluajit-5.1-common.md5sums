@@ -1,4 +1,4 @@
-88464fd072b327dd9f87433104c2f012  usr/share/doc/libluajit-5.1-common/changelog.Debian.gz
+af500d336fe49102dafa51f127d8a759  usr/share/doc/libluajit-5.1-common/changelog.Debian.gz
 1a73d2b5e4be503eed7658f4163dec8e  usr/share/doc/libluajit-5.1-common/copyright
 e3918fefbc2baa65540d0e0c3f75a342  usr/share/luajit-2.1.0-beta3/jit/bc.lua
 e98b0947377128b3645c85425cf1651a  usr/share/luajit-2.1.0-beta3/jit/bcsave.lua
@@ -12,7 +12,7 @@ f51d8ed26d309bf6b7969c014ed8c507  usr/share/luajit-2.1.0-beta3/jit/dis_mipsel.lu
 85e462b41eadbfe58d235dc300ab169a  usr/share/luajit-2.1.0-beta3/jit/dis_ppc.lua
 33ac5e4644fd4458cfc554ab572b8778  usr/share/luajit-2.1.0-beta3/jit/dis_x64.lua
 a7deb98b43be7979f5480d3364df77c4  usr/share/luajit-2.1.0-beta3/jit/dis_x86.lua
-b942eee0f5eca703e803ed7f64549e54  usr/share/luajit-2.1.0-beta3/jit/dump.lua
+9322afa3a01d01d1c9a66cc8cedfc59d  usr/share/luajit-2.1.0-beta3/jit/dump.lua
 5309000d82f0ad200ae5cc766f88caf7  usr/share/luajit-2.1.0-beta3/jit/p.lua
 c5dda5bb4f1192b832ee40eb78503f09  usr/share/luajit-2.1.0-beta3/jit/v.lua
 404a12f2d709930814bc672fb7637f80  usr/share/luajit-2.1.0-beta3/jit/vmdef.lua

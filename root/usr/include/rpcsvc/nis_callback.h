@@ -34,9 +34,7 @@
 #include <rpc/rpc.h>
 #include <rpcsvc/nis.h>
 
-#ifdef  __cplusplus
-extern "C" {
-#endif
+__BEGIN_DECLS
 
 typedef nis_object *obj_p;
 
@@ -52,25 +50,23 @@ typedef struct cback_data cback_data;
 #define CB_VERS 1
 
 #define CBPROC_RECEIVE 1
-extern  bool_t * cbproc_receive_1 (cback_data *, CLIENT *);
-extern  bool_t * cbproc_receive_1_svc (cback_data *, struct svc_req *);
+extern  bool_t * cbproc_receive_1 (cback_data *, CLIENT *) __THROW;
+extern  bool_t * cbproc_receive_1_svc (cback_data *, struct svc_req *) __THROW;
 
 #define CBPROC_FINISH 2
-extern  void * cbproc_finish_1 (void *, CLIENT *);
-extern  void * cbproc_finish_1_svc (void *, struct svc_req *);
+extern  void * cbproc_finish_1 (void *, CLIENT *) __THROW;
+extern  void * cbproc_finish_1_svc (void *, struct svc_req *) __THROW;
 
 #define CBPROC_ERROR 3
-extern  void * cbproc_error_1 (nis_error *, CLIENT *);
-extern  void * cbproc_error_1_svc (nis_error *, struct svc_req *);
-extern int cb_prog_1_freeresult (SVCXPRT *, xdrproc_t, caddr_t);
+extern  void * cbproc_error_1 (nis_error *, CLIENT *) __THROW;
+extern  void * cbproc_error_1_svc (nis_error *, struct svc_req *) __THROW;
+extern int cb_prog_1_freeresult (SVCXPRT *, xdrproc_t, caddr_t) __THROW;
 
 /* the xdr functions */
 
-extern  bool_t xdr_obj_p (XDR *, obj_p*);
-extern  bool_t xdr_cback_data (XDR *, cback_data*);
+extern  bool_t xdr_obj_p (XDR *, obj_p*) __THROW;
+extern  bool_t xdr_cback_data (XDR *, cback_data*) __THROW;
 
-#ifdef  __cplusplus
-}
-#endif
+__END_DECLS
 
 #endif /* !_RPCVSC_NIS_CALLBACK_H */

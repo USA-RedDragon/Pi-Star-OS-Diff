@@ -1,0 +1,11 @@
+6e019f9139f18fca0bf629165618161b  usr/bin/tdbbackup.tdbtools
+17b41f3180713c63abd2a05782b9c260  usr/bin/tdbdump
+560c716be65aa0902154f7de6d0733f4  usr/bin/tdbrestore
+661a27adbb5fb71dca55eedcb94da25a  usr/bin/tdbtool
+8ac08cc1267c2eaf1f11f31f669daa15  usr/share/doc/tdb-tools/changelog.Debian.armhf.gz
+803d15b6fa1cd4e1d089a14615216c0b  usr/share/doc/tdb-tools/changelog.Debian.gz
+23f6ae1e4b0310887e926950767c749b  usr/share/doc/tdb-tools/copyright
+d723bcd486a739cdfb46959fed09cbe4  usr/share/man/man8/tdbbackup.tdbtools.8.gz
+686144cd0d5014a03b100b7c93d3420b  usr/share/man/man8/tdbdump.8.gz
+0288d1bb260522d3e5b7181552acd244  usr/share/man/man8/tdbrestore.8.gz
+48d99bac7e4414c7e8a583fcb7f49ca1  usr/share/man/man8/tdbtool.8.gz

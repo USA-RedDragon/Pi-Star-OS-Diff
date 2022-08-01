@@ -153,47 +153,29 @@ object.
 =cut
 
 sub get_vendor_object {
-    #print STDERR "entering get_vendor_object\n";
     my $vendor = shift || get_current_vendor() || 'Default';
     state %OBJECT_CACHE;
-    #print STDERR "maybe leaving get_vendor_object by exit 1\n";
     return $OBJECT_CACHE{$vendor} if exists $OBJECT_CACHE{$vendor};
-    #print STDERR "did not leave get_vendor_object by exit 1\n";
 
     my ($obj, @names);
-
-    #print STDERR "14.24b.5.18a.16.1\n";
     push @names, $vendor, lc($vendor), ucfirst($vendor), ucfirst(lc($vendor));
 
-    #print STDERR "14.24b.5.18a.16.2\n";
     foreach my $name (@names) {
-        #print STDERR $name."\n";
-        my $modulefilename = "/usr/share/perl5/Dpkg/Vendor/".$name.".pm";
-        #print STDERR $modulefilename."\n";
-        if (-e $modulefilename) {
-          #print STDERR "perl module exists\n";
-          eval qq{
+        eval qq{
             pop \@INC if \$INC[-1] eq '.';
             require Dpkg::Vendor::$name;
             \$obj = Dpkg::Vendor::$name->new();
-          };
-          unless ($@) {
+        };
+        unless ($@) {
             $OBJECT_CACHE{$vendor} = $obj;
-            #print STDERR "leaving get_vendor_object by exit 2\n";
             return $obj;
-          }
         }
     }
-    #exit(1234);
 
-    #print STDERR "14.24b.5.18a.16.3\n";
     my $info = get_vendor_info($vendor);
-    #print STDERR "14.24b.5.18a.16.4\n";
     if (defined $info and defined $info->{'Parent'}) {
-        #print STDERR "recursively calling get_vendor_object for parent distribution and returning the result\n";
         return get_vendor_object($info->{'Parent'});
     } else {
-        #print STDERR "recursively calling get_vendor_object for default distribution and returning the result\n";
         return get_vendor_object('Default');
     }
 }

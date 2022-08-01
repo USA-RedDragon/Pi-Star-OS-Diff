@@ -1,4 +1,4 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: kbd
 Upstream-Contact: kbd@lists.altlinux.org, Alexey Gladkov <gladkov.alexey@gmail.com>
 Source: http://ftp.altlinux.org/pub/people/legion/kbd/
@@ -61,7 +61,7 @@ License: GPL-any
 Files: src/setvtrgb.c
 Copyright: 2011, Alexey Gladkov <gladkov.alexey@gmail.com>,
            2011, Canonical Ltd (Seth Forshee <seth.forshee@canonical.com>
- 	                     and Dustin Kirkland <kirkland@canonical.com>)
+	                     and Dustin Kirkland <kirkland@canonical.com>)
 License: GPL-any
 
 Files: data/consolefonts/

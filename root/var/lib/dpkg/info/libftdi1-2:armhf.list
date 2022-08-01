@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libftdi1.so.2.5.0
+/usr/lib/arm-linux-gnueabihf/libftdi1.so.2.4.0
 /usr/share
 /usr/share/doc
 /usr/share/doc/libftdi1-2

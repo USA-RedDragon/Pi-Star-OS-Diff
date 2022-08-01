@@ -1,0 +1,4 @@
+#!/bin/bash
+mount -o remount,rw /
+/etc/init.d/procps restart
+/usr/local/sbin/pistar-motdgen

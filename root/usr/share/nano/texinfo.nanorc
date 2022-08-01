@@ -1,7 +1,4 @@
-## Syntax highlighting for Texinfo files.
-
-## Original author:  Benno Schulenberg
-## License:  GPL version 3 or newer
+## Here is an example for Texinfo files.
 
 syntax texinfo "\.texi$"
 header "^\\input texinfo"

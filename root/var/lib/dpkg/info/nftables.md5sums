@@ -1,7 +1,7 @@
 fa7a981617fbd9ae858a7412618ec313  lib/systemd/system/nftables.service
-459cec84ef903aa0a5c198971304746f  usr/sbin/nft
+a89bd2e227a610fdcf4fa6d43e1e2053  usr/sbin/nft
 f455533398fa2e7689165d7a2c039b20  usr/share/doc/nftables/README.Debian
-d5fb4c88eee4e79123115d665b349db9  usr/share/doc/nftables/changelog.Debian.gz
+b9f44e89c5479e98d39e635899a4fa11  usr/share/doc/nftables/changelog.Debian.gz
 b4b788b753408606bc093eed9114b39d  usr/share/doc/nftables/copyright
 eb02ea3bf21dad6c51858cee593162a8  usr/share/doc/nftables/examples/README
 593019c00dbe7ca7f9fe48ead21a5f35  usr/share/doc/nftables/examples/all-in-one.nft
@@ -28,4 +28,4 @@ c0c61c3c290f6f515068359ce10e6cf4  usr/share/doc/nftables/examples/pf.os
 65076b4ddfc7a53f728e068a0809304d  usr/share/doc/nftables/examples/sysvinit/README
 67d9527e1376331550173f562709d98c  usr/share/doc/nftables/examples/sysvinit/nftables.init
 65454cd1654da7c082b351460ef7e8cd  usr/share/doc/nftables/examples/workstation.nft
-2f95c7a595b89c57582ab8fba5aca21e  usr/share/man/man8/nft.8.gz
+455e018650c648adb9c51508588eb6b3  usr/share/man/man8/nft.8.gz

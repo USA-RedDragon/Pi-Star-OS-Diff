@@ -17,16 +17,11 @@ set -e
 case "$1" in
   configure)
     adduser --disabled-password  --quiet --system \
-      --home /run/avahi-daemon --no-create-home \
+      --home /var/run/avahi-daemon --no-create-home \
       --gecos "Avahi mDNS daemon" --group avahi
 
     # Add the netdev group unless it's already there
     addgroup --quiet --system netdev || true
-
-    s="/etc/network/if-post-down.d/avahi-daemon.dpkg-backup"
-    if dpkg --compare-versions "$2" lt 0.8.5~ && [ -L "$s" ] ; then
-      rm -f "$s"
-    fi
 
     # Ask the bus to reload the config file
     if [ -x "/etc/init.d/dbus" ]; then
@@ -41,24 +36,7 @@ case "$1" in
   ;;
 esac
 
-# Automatically added by dh_installdeb/13.3.3
-dpkg-maintscript-helper rm_conffile /etc/network/if-up.d/avahi-daemon 0.8-4\~ avahi-daemon -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/resolvconf/update-libc.d/avahi-daemon 0.8-4\~ avahi-daemon -- "$@"
-# End automatically added section
-# Automatically added by dh_installinit/13.3.3
-if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
-	if [ -x "/etc/init.d/avahi-daemon" ]; then
-		update-rc.d avahi-daemon defaults >/dev/null
-		if [ -n "$2" ]; then
-			_dh_action=restart
-		else
-			_dh_action=start
-		fi
-		invoke-rc.d --skip-systemd-native avahi-daemon $_dh_action || exit 1
-	fi
-fi
-# End automatically added section
-# Automatically added by dh_installsystemd/13.3.3
+# Automatically added by dh_systemd_enable/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	deb-systemd-helper unmask 'avahi-daemon.service' >/dev/null || true
@@ -75,7 +53,7 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installsystemd/13.3.3
+# Automatically added by dh_systemd_enable/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	deb-systemd-helper unmask 'avahi-daemon.socket' >/dev/null || true
@@ -92,16 +70,20 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installsystemd/13.3.3
+# Automatically added by dh_installdeb/12.1.1
+dpkg-maintscript-helper rm_conffile /etc/network/if-up.d/avahi-daemon 0.7-4\+deb10u1\~ avahi-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/resolvconf/update-libc.d/avahi-daemon 0.7.-4\+deb10u1\~ avahi-daemon -- "$@"
+# End automatically added section
+# Automatically added by dh_installinit/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
-	if [ -d /run/systemd/system ]; then
-		systemctl --system daemon-reload >/dev/null || true
+	if [ -x "/etc/init.d/avahi-daemon" ]; then
+		update-rc.d avahi-daemon defaults >/dev/null
 		if [ -n "$2" ]; then
 			_dh_action=restart
 		else
 			_dh_action=start
 		fi
-		deb-systemd-invoke $_dh_action 'avahi-daemon.service' 'avahi-daemon.socket' >/dev/null || true
+		invoke-rc.d avahi-daemon $_dh_action || exit 1
 	fi
 fi
 # End automatically added section

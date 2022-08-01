@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libfreetype.so.6.17.4
+/usr/lib/arm-linux-gnueabihf/libfreetype.so.6.16.1
 /usr/share
 /usr/share/doc
 /usr/share/doc/libfreetype6

@@ -3,6 +3,17 @@
 set -e
 
 if [ "$1" = configure ] ; then
+	# /run transition (see #633035)
+	if dpkg --compare-versions "$2" lt "0.2.0-7"; then
+		if [ -f /lib/init/rw/sendsigs.omit.d/rpcbind ]; then
+			mv /lib/init/rw/sendsigs.omit.d/rpcbind /run/rpcbind.pid
+			ln -s /run/rpcbind.pid /run/sendsigs.omit.d/rpcbind
+		fi
+	fi
+	if dpkg --compare-versions "$2" lt "0.2.0-8.1"; then
+		update-rc.d -f rpcbind remove
+	fi
+
 	# run daemon as non-root (see #852066)
 	adduser --force-badname --system --quiet --home /run/rpcbind --no-create-home _rpc
 	if dpkg --compare-versions "$2" lt "1.2.5-0.1~"; then
@@ -14,7 +25,7 @@ if [ "$1" = configure ] ; then
 	fi
 fi
 
-# Automatically added by dh_installtmpfiles/13.2
+# Automatically added by dh_installsystemd/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# In case this system is running systemd, we need to ensure that all
 	# necessary tmpfiles (if any) are created before starting.
@@ -23,12 +34,12 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installdeb/13.2
+# Automatically added by dh_installdeb/12.1.1
 dpkg-maintscript-helper rm_conffile /etc/init/portmap-wait.conf 1.2.5-0.1\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/init/rpcbind.conf 1.2.5-0.1\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/init/rpcbind-boot.conf 1.2.5-0.1\~ -- "$@"
 # End automatically added section
-# Automatically added by dh_installinit/13.2
+# Automatically added by dh_installinit/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	if [ -x "/etc/init.d/rpcbind" ]; then
 		update-rc.d rpcbind defaults >/dev/null
@@ -37,11 +48,11 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 		else
 			_dh_action=start
 		fi
-		invoke-rc.d --skip-systemd-native rpcbind $_dh_action || exit 1
+		invoke-rc.d rpcbind $_dh_action || exit 1
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installsystemd/13.2
+# Automatically added by dh_installsystemd/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	deb-systemd-helper unmask 'rpcbind.service' >/dev/null || true
@@ -58,7 +69,7 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installsystemd/13.2
+# Automatically added by dh_installsystemd/12.1.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	deb-systemd-helper unmask 'rpcbind.socket' >/dev/null || true
@@ -72,14 +83,6 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 		# Update the statefile to add new symlinks (if any), which need to be
 		# cleaned up on purge. Also remove old symlinks.
 		deb-systemd-helper update-state 'rpcbind.socket' >/dev/null || true
-	fi
-fi
-# End automatically added section
-# Automatically added by dh_installsystemd/13.2
-if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
-	if [ -d /run/systemd/system ]; then
-		systemctl --system daemon-reload >/dev/null || true
-		deb-systemd-invoke start 'rpcbind.service' 'rpcbind.socket' >/dev/null || true
 	fi
 fi
 # End automatically added section

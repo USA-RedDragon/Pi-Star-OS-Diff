@@ -165,8 +165,6 @@
 /usr/share/python-apt/templates/Blankon.mirrors
 /usr/share/python-apt/templates/Debian.info
 /usr/share/python-apt/templates/Debian.mirrors
-/usr/share/python-apt/templates/Kali.info
-/usr/share/python-apt/templates/Kali.mirrors
 /usr/share/python-apt/templates/Tanglu.info
 /usr/share/python-apt/templates/Tanglu.mirrors
 /usr/share/python-apt/templates/Ubuntu.info

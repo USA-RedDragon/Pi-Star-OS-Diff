@@ -4,5 +4,3 @@ Module: unix
 required	pam_unix.so
 Module: systemd
 optional	pam_systemd.so
-Module: chksshpwd
-optional	pam_chksshpwd.so

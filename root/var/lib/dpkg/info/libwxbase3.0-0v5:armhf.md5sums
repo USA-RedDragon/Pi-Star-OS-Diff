@@ -1,0 +1,8 @@
+e7ee0bd9951748b4045397822608d7bd  usr/lib/arm-linux-gnueabihf/libwx_baseu-3.0.so.0.4.0
+a9ec11bac567d3c4c71ee7deecbceeec  usr/lib/arm-linux-gnueabihf/libwx_baseu_net-3.0.so.0.4.0
+c395bf06c51341486a97b75a99009c06  usr/lib/arm-linux-gnueabihf/libwx_baseu_xml-3.0.so.0.4.0
+b4a56c8c8aba920c91b1e4667d8144e3  usr/share/doc/libwxbase3.0-0v5/README.Debian
+d93840fa97d13a77ec825152d2096e95  usr/share/doc/libwxbase3.0-0v5/changelog.Debian.gz
+762933a34647465ae21c4d07861b22ce  usr/share/doc/libwxbase3.0-0v5/changelog.gz
+36997f684dbaf997602e62a926b2e326  usr/share/doc/libwxbase3.0-0v5/copyright
+d70f6bc8cc70899a2d1b7da4d7b5bacf  usr/share/lintian/overrides/libwxbase3.0-0v5

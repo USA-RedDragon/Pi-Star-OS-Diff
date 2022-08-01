@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libtevent.so.0.10.2
+/usr/lib/arm-linux-gnueabihf/libtevent.so.0.9.37
 /usr/share
 /usr/share/doc
 /usr/share/doc/libtevent0

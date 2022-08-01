@@ -16,10 +16,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-# but only if not SUDOing and have SUDO_PS1 set; then assume smart user.
-if ! [ -n "${SUDO_USER}" -a -n "${SUDO_PS1}" ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 
 # Commented out, don't overwrite xterm -T "title" -n "icontitle" by default.
 # If this is an xterm set the title to user@host:dir
@@ -32,13 +29,13 @@ fi
 #esac
 
 # enable bash completion in interactive shells
-#if ! shopt -oq posix; then
-#  if [ -f /usr/share/bash-completion/bash_completion ]; then
-#    . /usr/share/bash-completion/bash_completion
-#  elif [ -f /etc/bash_completion ]; then
-#    . /etc/bash_completion
-#  fi
-#fi
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 # if the command-not-found package is installed, use it
 if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-not-found ]; then
@@ -56,3 +53,33 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
 		fi
 	}
 fi
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+set_bash_prompt(){
+    fs_mode=$(mount | sed -n -e "s/^\/dev\/mmcblk0p2 on \/ .*(\(r[w|o]\).*/\1/p")
+
+    if [ $(id -u) -eq 0 ];
+      then
+        PS1='\[\033[01;31m\]\u@\h${fs_mode:+($fs_mode)}\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+      else
+        PS1='\[\033[01;32m\]\u@\h${fs_mode:+($fs_mode)}\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    fi
+}
+
+# Aliases to control re-mounting
+alias rpi-ro='sudo sync ; sudo sync ; sudo sync ; sudo mount -o remount,ro / ; sudo mount -o remount,ro /boot'
+alias rpi-rw='sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot'
+
+# setup fancy prompt
+PROMPT_COMMAND=set_bash_prompt

@@ -199,19 +199,19 @@ d_fmt   "%d//%m//%Y"
 %
 % Appropriate time representation (%X)
 %
-t_fmt "%T"
+t_fmt "%l:%M:%S"
 %
 % Appropriate AM/PM time representation (%r)
 %
-t_fmt_ampm ""
+t_fmt_ampm "%X %p"
 %
 % Appropriate date and time representation (%c)
 %
-d_t_fmt    "%A, %B %e, %Y %X %Z"
+d_t_fmt    "%A, %B %e, %Y %r %Z"
 %
 % Appropriate date representation (date(1))
 %
-date_fmt    "%A, %B %e, %X %Z %Y"
+date_fmt    "%A, %B %e, %r %Z %Y"
 %
 week 7;19971130;1
 END LC_TIME

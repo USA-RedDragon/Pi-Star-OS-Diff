@@ -17,14 +17,14 @@ liblz4.so.1 liblz4-1 #MINVER#
  LZ4F_freeCDict@Base 1.8.1.2
  LZ4F_freeCompressionContext@Base 0.0~r127
  LZ4F_freeDecompressionContext@Base 0.0~r127
- LZ4F_getBlockSize@Base 1.9.1
  LZ4F_getErrorCode@Base 1.8.1.2
  LZ4F_getErrorName@Base 0.0~r127
  LZ4F_getFrameInfo@Base 0.0~r127
  LZ4F_getVersion@Base 1.7.5
- LZ4F_headerSize@Base 1.9.3
  LZ4F_isError@Base 0.0~r127
  LZ4F_resetDecompressionContext@Base 1.8.0
+ LZ4_attach_HC_dictionary@Base 1.8.2
+ LZ4_attach_dictionary@Base 1.8.2
  LZ4_compress@Base 0.0~r113
  LZ4_compressBound@Base 0.0~r114
  LZ4_compressHC2@Base 0.0~r113
@@ -41,8 +41,6 @@ liblz4.so.1 liblz4-1 #MINVER#
  LZ4_compressHC_withStateHC@Base 0.0~r113
  LZ4_compress_HC@Base 0.0~r130
  LZ4_compress_HC_continue@Base 0.0~r130
- LZ4_compress_HC_continue_destSize@Base 1.9.1
- LZ4_compress_HC_destSize@Base 1.9.1
  LZ4_compress_HC_extStateHC@Base 0.0~r130
  LZ4_compress_continue@Base 0.0~r113
  LZ4_compress_default@Base 0.0~r130
@@ -50,6 +48,7 @@ liblz4.so.1 liblz4-1 #MINVER#
  LZ4_compress_fast@Base 0.0~r130
  LZ4_compress_fast_continue@Base 0.0~r130
  LZ4_compress_fast_extState@Base 0.0~r130
+ LZ4_compress_fast_extState_fastReset@Base 1.8.2
  LZ4_compress_limitedOutput@Base 0.0~r113
  LZ4_compress_limitedOutput_continue@Base 0.0~r113
  LZ4_compress_limitedOutput_withState@Base 0.0~r113
@@ -73,13 +72,10 @@ liblz4.so.1 liblz4-1 #MINVER#
  LZ4_freeStream@Base 0.0~r122
  LZ4_freeStreamDecode@Base 0.0~r122
  LZ4_freeStreamHC@Base 0.0~r127
- LZ4_initStream@Base 1.9.1
- LZ4_initStreamHC@Base 1.9.1
  LZ4_loadDict@Base 0.0~r119
  LZ4_loadDictHC@Base 0.0~r127
  LZ4_resetStream@Base 0.0~r122
  LZ4_resetStreamHC@Base 0.0~r127
- LZ4_resetStreamHC_fast@Base 1.9.1
  LZ4_resetStreamState@Base 0.0~r113
  LZ4_resetStreamStateHC@Base 0.0~r113
  LZ4_resetStream_fast@Base 1.8.2

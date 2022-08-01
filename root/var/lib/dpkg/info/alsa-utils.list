@@ -10,6 +10,7 @@
 /lib/systemd/system/sound.target.wants
 /lib/udev
 /lib/udev/rules.d
+/lib/udev/rules.d/89-alsa-ucm.rules
 /lib/udev/rules.d/90-alsa-restore.rules
 /usr
 /usr/bin
@@ -66,6 +67,7 @@
 /usr/share/man
 /usr/share/man/man1
 /usr/share/man/man1/aconnect.1.gz
+/usr/share/man/man1/alsa-info.sh.1.gz
 /usr/share/man/man1/alsabat.1.gz
 /usr/share/man/man1/alsactl.1.gz
 /usr/share/man/man1/alsaloop.1.gz
@@ -86,8 +88,6 @@
 /usr/share/man/man1/speaker-test.1.gz
 /usr/share/man/man7
 /usr/share/man/man7/alsactl_init.7.gz
-/usr/share/man/man8
-/usr/share/man/man8/alsa-info.8.gz
 /usr/share/sounds
 /usr/share/sounds/alsa
 /usr/share/sounds/alsa/Front_Center.wav

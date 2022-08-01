@@ -8,14 +8,14 @@ _killall()
     _init_completion -s || return
 
     case $prev in
-        --context | --older-than | --younger-than | --version | -!(-*)@([Zoy]|V*))
+        -Z|--context|-o|--older-than|-y|--younger-than|-V|--version)
             return
             ;;
-        --signal | -!(-*)s)
+        -s|--signal)
             _signals
             return
             ;;
-        --user | -!(-*)u)
+        -u|--user)
             _allowed_users
             return
             ;;
@@ -24,13 +24,13 @@ _killall()
     $split && return
 
     if [[ $cur == -* ]]; then
-        COMPREPLY=($(compgen -W '$(_parse_help "$1")' -- "$cur"))
-        ((cword == 1)) && _signals -
+        COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) )
+        [[ $cword -eq 1 ]] && _signals -
         return
     fi
 
     _pnames
 } &&
-    complete -F _killall killall
+complete -F _killall killall
 
 # ex: filetype=sh

@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libidn2.so.0.3.7
+/usr/lib/arm-linux-gnueabihf/libidn2.so.0.3.4
 /usr/share
 /usr/share/doc
 /usr/share/doc/libidn2-0
@@ -67,9 +67,6 @@
 /usr/share/locale/ro
 /usr/share/locale/ro/LC_MESSAGES
 /usr/share/locale/ro/LC_MESSAGES/libidn2.mo
-/usr/share/locale/ru
-/usr/share/locale/ru/LC_MESSAGES
-/usr/share/locale/ru/LC_MESSAGES/libidn2.mo
 /usr/share/locale/sr
 /usr/share/locale/sr/LC_MESSAGES
 /usr/share/locale/sr/LC_MESSAGES/libidn2.mo

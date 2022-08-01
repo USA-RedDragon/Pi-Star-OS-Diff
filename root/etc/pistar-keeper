@@ -1,0 +1,38 @@
+[banner]
+# Pi-Star Keeper Config file, locked mode fields should contain your personal callsign
+# Unlocked fields should contain the public node details (including ircDDB password)
+# Bluetooth_MAC is the mac address of your cellphone, used to track your proximity to
+# your node.
+
+# Design concept by Andy Taylor (MW0MWZ), tested by Mark Uphil (MW0MAU), thank you
+# Mark!
+
+[enable]
+# Is the Keeper Enabled? (true|false)
+enabled = false
+
+[radio]
+# band A = 23cm, band B = 70cm, band C = 2M
+band = B
+
+[locked]
+# Your personal callsign
+call = M1ABC
+ircddb = rr.openquad.net
+
+[unlocked]
+# Your NoV node callsign
+call = MB6IAA
+ircddb = group1-irc.ircddb.net
+# Your passwod on the ICOM G2 Network
+ircddbpass = Pa55w0Rd
+
+[timer]
+# These are the hours you expect to be awake
+# the node will remain locked outside of these hours (sleep time)
+onTime = 07:00
+offTime = 22:00
+
+[keeper]
+# The MAC address of the BLUETOOTH in your phone
+bluetooth_mac = 00:00:00:00:00:00

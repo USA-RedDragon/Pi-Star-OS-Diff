@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # auth - authentication key management
 #
@@ -37,7 +37,16 @@ import tempfile
 import apt_pkg
 from apt_pkg import gettext as _
 
-from typing import List, Optional, Tuple
+if sys.version_info.major > 2:
+    unicode = str
+
+try:
+    from typing import List, Tuple, Union
+    List  # pyflakes
+    Tuple  # pyflakes
+    Union  # pyflakes
+except ImportError:
+    pass
 
 
 class AptKeyError(Exception):
@@ -66,7 +75,7 @@ class TrustedKey(object):
 
 
 def _call_apt_key_script(*args, **kwargs):
-    # type: (str, Optional[str]) -> str
+    # type: (str, Union[str, bytes]) -> str
     """Run the apt-key script with the given arguments."""
     conf = None
     cmd = [apt_pkg.config.find_file("Dir::Bin::Apt-Key", "/usr/bin/apt-key")]
@@ -91,6 +100,9 @@ def _call_apt_key_script(*args, **kwargs):
                                 stderr=subprocess.PIPE)
 
         stdin = kwargs.get("stdin", None)
+        # py2 needs this encoded, py3.3 will crash if it is
+        if sys.version_info.major < 3 and isinstance(stdin, unicode):
+            stdin = stdin.encode("utf-8")
 
         output, stderr = proc.communicate(stdin)  # type: str, str
 

@@ -1,0 +1,9 @@
+# MiniSSDPd default configuration
+
+# Set this to 1 if you want to start the daemon
+# START_DAEMON deprecated, use service minissdpd enable/disable
+#START_DAEMON=1
+
+# Set this to the IP of the interface you want the demon to run on
+MiniSSDPd_INTERFACE_ADDRESS="eth0 wlan0"
+MiniSSDPd_OTHER_OPTIONS=""

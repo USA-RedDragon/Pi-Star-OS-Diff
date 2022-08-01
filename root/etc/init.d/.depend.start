@@ -1,0 +1,19 @@
+TARGETS = samba-ad-dc minissdpd rsyslog shellinabox dhcpcd nmbd unattended-upgrades php7.0-fpm killprocs bootlogs sudo smbd rng-tools nginx dbus haveged single rmnologin ssh loadcpufreq ntp rsync cron bluetooth avahi-daemon cpufrequtils plymouth rc.local
+INTERACTIVE =
+smbd: nmbd
+rng-tools: rsyslog
+nginx: rsyslog
+dbus: rsyslog
+haveged: rsyslog
+single: killprocs
+rmnologin: sudo
+ssh: rsyslog
+loadcpufreq: rsyslog
+ntp: rsyslog
+rsync: rsyslog
+cron: rsyslog
+bluetooth: dbus
+avahi-daemon: dbus
+cpufrequtils: loadcpufreq
+plymouth: bluetooth avahi-daemon cpufrequtils smbd rng-tools nginx haveged rmnologin ssh ntp rsync cron samba-ad-dc minissdpd shellinabox dhcpcd unattended-upgrades php7.0-fpm bootlogs
+rc.local: bluetooth avahi-daemon cpufrequtils smbd rng-tools nginx haveged rmnologin ssh ntp rsync cron samba-ad-dc minissdpd shellinabox dhcpcd unattended-upgrades php7.0-fpm bootlogs

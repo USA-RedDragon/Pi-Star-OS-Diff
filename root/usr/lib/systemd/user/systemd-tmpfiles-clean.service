@@ -1,4 +1,4 @@
-#  SPDX-License-Identifier: LGPL-2.1-or-later
+#  SPDX-License-Identifier: LGPL-2.1+
 #
 #  This file is part of systemd.
 #
@@ -16,7 +16,6 @@ Before=basic.target shutdown.target
 
 [Service]
 Type=oneshot
-ExecStart=systemd-tmpfiles --user --clean
-SuccessExitStatus=DATAERR
+ExecStart=/bin/systemd-tmpfiles --user --clean
+SuccessExitStatus=65
 IOSchedulingClass=idle
-Slice=background.slice

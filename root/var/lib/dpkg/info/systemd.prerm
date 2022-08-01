@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 
 set -e
 
@@ -12,7 +12,9 @@ if [ "$1" = "remove" ] && [ -d /run/systemd/system ]; then
     exit 1
 fi
 
-# Automatically added by dh_installdeb/13.3.4
+# Automatically added by dh_installdeb/12.1.1
+dpkg-maintscript-helper rm_conffile /etc/X11/xinit/xinitrc.d/50-systemd-user.sh 228-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/systemd/bootchart.conf 230-1\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.hostname1.conf 233-3\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.locale1.conf 233-3\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.login1.conf 233-3\~ -- "$@"
@@ -22,8 +24,5 @@ dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.resolve
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.systemd1.conf 233-3\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.timedate1.conf 233-3\~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.systemd-shim.conf 239-15\~ systemd-shim -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/dhcp/dhclient-exit-hooks.d/timesyncd 245.4-2\~ -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/systemd/timesyncd.conf 245.4-2\~ -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/pam.d/systemd-user 247\~rc2-3\~ -- "$@"
 # End automatically added section
 

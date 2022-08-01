@@ -33,60 +33,6 @@ completion snippet after. The file format is as follows:
 
 =cut
 
-# This helper function tries to determine (using some poor man's
-# heuristics) whether $file (its first and only argument) is a
-# filelist containing a list of files to be installed by us, or a
-# bash-completion script, which should itself be installed.
-#
-# If we're dealing with a filelist, return 1.  Otherwise, return 0.
-sub is_filelist {
-	# The file to be checked.
-	my ($file) = @_;
-
-	open (DH_FILE, '<', $file) || error("cannot read $file: $!");
-
-	while (<DH_FILE>) {
-		# Get rid of lines containing just spaces or comments.
-		chomp;
-		s/^\s++//;
-		next if /^#/;
-		s/\s++$//;
-
-		# We always ignore/permit empty lines
-		next if $_ eq '';
-
-		# This is the heart of the script.  Here, we check for some
-		# well-known idioms on bash scripts, and try to determine if
-		# they're present in the file we're examining.  We assume that
-		# if they are, then this means the file is a bash-completion
-		# script.
-		#
-		# The regexes check:
-		#
-		# - If we're calling the bash function "complete", which is a
-		#   pretty common thing to do in bash-completion scripts, or
-		#
-		# - If we're using the $(program) way of executing a program.
-		#   We don't take into account multi-line statements.  Or
-		#
-		# - If we're calling the bash function "compgen", which is
-		#   also a pretty common thing that bash-completion scripts
-		#   do.  Or
-		#
-		# - If we see an "if...then" construction in the file.  We
-		#   take into account multi-line statements.
-		if (/\s*complete.*-[A-Za-z].*/
-			|| /\$\(.*\)/
-			|| /\s*compgen.*-[A-Za-z].*/
-			|| /\s*if.*;.*then/s) {
-			return 0;
-		}
-	}
-
-	# If we reached the end, this is not a bash-completion script.
-	return 1;
-}
-
 init();
 
 my $srcdir = '.';
@@ -106,15 +52,6 @@ PKG: foreach my $package (@{$dh{DOPACKAGES}}) {
 
 	if ($completions) {
 		install_dir($bc_dir);
-
-		# Invoke our heuristic function to try and determine
-		# if we're dealing with a filelist or with a
-		# bash-completion script.
-		if (!is_filelist($completions)) {
-			verbose_print "detected $completions as a bash-completion script";
-			install_file($completions, "$bc_dir/$package");
-			next PKG
-		}
 
 		# try parsing a list of files
 		@install = filedoublearray($completions);

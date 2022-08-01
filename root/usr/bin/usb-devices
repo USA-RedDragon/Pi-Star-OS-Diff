@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # SPDX-License-Identifier: GPL-2.0+
 #
 # Copyright (c) 2009 Greg Kroah-Hartman <greg@kroah.com>
@@ -31,9 +31,6 @@ class_decode() {
 	"0d") echo "c-sec" ;;
 	"0e") echo "video" ;;
 	"0f") echo "perhc" ;;
-	"10") echo "av   " ;;
-	"11") echo "blbrd" ;;
-	"12") echo "bridg" ;;
 	"dc") echo "diagd" ;;
 	"e0") echo "wlcon" ;;
 	"ef") echo "misc " ;;

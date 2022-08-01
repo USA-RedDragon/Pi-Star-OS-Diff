@@ -1,5 +1,4 @@
 libavahi-core.so.7 libavahi-core7 #MINVER#
-* Build-Depends-Package: libavahi-core-dev
  avahi_address_from_sockaddr@Base 0.6.24
  avahi_address_is_ipv4_in_ipv6@Base 0.6.24
  avahi_address_is_link_local@Base 0.6.26
@@ -205,16 +204,10 @@ libavahi-core.so.7 libavahi-core7 #MINVER#
  avahi_response_scheduler_suppress@Base 0.6.24
  avahi_s_address_resolver_free@Base 0.6.24
  avahi_s_address_resolver_new@Base 0.6.24
- avahi_s_address_resolver_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_address_resolver_start@Base 0.7+git20190507.4a5454f
  avahi_s_dns_server_browser_free@Base 0.6.24
  avahi_s_dns_server_browser_new@Base 0.6.24
- avahi_s_dns_server_browser_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_dns_server_browser_start@Base 0.7+git20190507.4a5454f
  avahi_s_domain_browser_free@Base 0.6.24
  avahi_s_domain_browser_new@Base 0.6.24
- avahi_s_domain_browser_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_domain_browser_start@Base 0.7+git20190507.4a5454f
  avahi_s_entry_group_change_state@Base 0.6.24
  avahi_s_entry_group_check_probed@Base 0.6.24
  avahi_s_entry_group_commit@Base 0.6.24
@@ -227,26 +220,16 @@ libavahi-core.so.7 libavahi-core7 #MINVER#
  avahi_s_entry_group_set_data@Base 0.6.24
  avahi_s_host_name_resolver_free@Base 0.6.24
  avahi_s_host_name_resolver_new@Base 0.6.24
- avahi_s_host_name_resolver_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_host_name_resolver_start@Base 0.7+git20190507.4a5454f
  avahi_s_record_browser_destroy@Base 0.6.24
  avahi_s_record_browser_free@Base 0.6.24
  avahi_s_record_browser_new@Base 0.6.24
- avahi_s_record_browser_prepare@Base 0.7+git20190507.4a5454f
  avahi_s_record_browser_restart@Base 0.6.24
- avahi_s_record_browser_start_query@Base 0.7+git20190507.4a5454f
  avahi_s_service_browser_free@Base 0.6.24
  avahi_s_service_browser_new@Base 0.6.24
- avahi_s_service_browser_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_service_browser_start@Base 0.7+git20190507.4a5454f
  avahi_s_service_resolver_free@Base 0.6.24
  avahi_s_service_resolver_new@Base 0.6.24
- avahi_s_service_resolver_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_service_resolver_start@Base 0.7+git20190507.4a5454f
  avahi_s_service_type_browser_free@Base 0.6.24
  avahi_s_service_type_browser_new@Base 0.6.24
- avahi_s_service_type_browser_prepare@Base 0.7+git20190507.4a5454f
- avahi_s_service_type_browser_start@Base 0.7+git20190507.4a5454f
  avahi_send_dns_packet_ipv4@Base 0.6.24
  avahi_send_dns_packet_ipv6@Base 0.6.24
  avahi_server_add@Base 0.6.24

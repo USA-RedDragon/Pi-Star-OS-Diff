@@ -1,8 +1,8 @@
 /.
+/lib
+/lib/arm-linux-gnueabihf
+/lib/arm-linux-gnueabihf/libslang.so.2.3.2
 /usr
-/usr/lib
-/usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libslang.so.2.3.2
 /usr/share
 /usr/share/doc
 /usr/share/doc/libslang2
@@ -16,4 +16,4 @@
 /usr/share/lintian
 /usr/share/lintian/overrides
 /usr/share/lintian/overrides/libslang2
-/usr/lib/arm-linux-gnueabihf/libslang.so.2
+/lib/arm-linux-gnueabihf/libslang.so.2

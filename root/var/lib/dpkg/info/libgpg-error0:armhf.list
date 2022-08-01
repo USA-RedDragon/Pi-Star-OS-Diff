@@ -1,7 +1,7 @@
 /.
 /lib
 /lib/arm-linux-gnueabihf
-/lib/arm-linux-gnueabihf/libgpg-error.so.0.29.0
+/lib/arm-linux-gnueabihf/libgpg-error.so.0.26.1
 /usr
 /usr/share
 /usr/share/doc

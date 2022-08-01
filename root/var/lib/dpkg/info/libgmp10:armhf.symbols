@@ -160,7 +160,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_add_n@Base 0
  __gmpn_add_n_sub_n@Base 2:5.1.1
  __gmpn_add_nc@Base 0
- __gmpn_addlsh1_n@Base 2:6.2.0
+ __gmpn_addlsh1_n@Base 0
  __gmpn_addmul_1@Base 0
  __gmpn_and_n@Base 0
  __gmpn_andn_n@Base 0
@@ -185,11 +185,12 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_cnd_sub_n@Base 2:6.0.0
  __gmpn_cnd_swap@Base 2:6.1.0
  __gmpn_com@Base 0
- __gmpn_compute_powtab@Base 2:6.2.0
  __gmpn_copyd@Base 0
  __gmpn_copyi@Base 0
  __gmpn_dc_set_str@Base 0
  __gmpn_dcpi1_bdiv_q@Base 0
+ __gmpn_dcpi1_bdiv_q_n@Base 0
+ __gmpn_dcpi1_bdiv_q_n_itch@Base 0
  __gmpn_dcpi1_bdiv_qr@Base 0
  __gmpn_dcpi1_bdiv_qr_n@Base 0
  __gmpn_dcpi1_bdiv_qr_n_itch@Base 0
@@ -197,6 +198,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_dcpi1_div_qr@Base 0
  __gmpn_dcpi1_div_qr_n@Base 0
  __gmpn_dcpi1_divappr_q@Base 0
+ __gmpn_dcpi1_divappr_q_n@Base 0
  __gmpn_div_q@Base 0
  __gmpn_div_qr_1@Base 2:6.0.0
  __gmpn_div_qr_1n_pi1@Base 2:6.0.0
@@ -216,11 +218,8 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_fft_best_k@Base 0
  __gmpn_fft_next_size@Base 0
  __gmpn_fib2_ui@Base 0
- __gmpn_fib2m@Base 2:6.2.0
  __gmpn_gcd@Base 0
- __gmpn_gcd_11@Base 2:6.2.0
  __gmpn_gcd_1@Base 0
- __gmpn_gcd_22@Base 2:6.2.0
  __gmpn_gcd_subdiv_step@Base 0
  __gmpn_gcdext@Base 0
  __gmpn_gcdext_1@Base 0
@@ -258,6 +257,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_matrix22_mul1_inverse_vector@Base 2:5.1.1
  __gmpn_matrix22_mul@Base 0
  __gmpn_matrix22_mul_itch@Base 0
+ __gmpn_matrix22_mul_strassen@Base 0
  __gmpn_mod_1@Base 0
  __gmpn_mod_1_1p@Base 0
  __gmpn_mod_1_1p_cps@Base 0
@@ -276,8 +276,10 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_mu_div_q@Base 0
  __gmpn_mu_div_q_itch@Base 0
  __gmpn_mu_div_qr@Base 0
+ __gmpn_mu_div_qr_choose_in@Base 0
  __gmpn_mu_div_qr_itch@Base 0
  __gmpn_mu_divappr_q@Base 0
+ __gmpn_mu_divappr_q_choose_in@Base 0
  __gmpn_mu_divappr_q_itch@Base 0
  __gmpn_mul@Base 0
  __gmpn_mul_1@Base 0
@@ -307,6 +309,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_preinv_mod_1@Base 0
  __gmpn_preinv_mu_div_qr@Base 0
  __gmpn_preinv_mu_div_qr_itch@Base 0
+ __gmpn_preinv_mu_divappr_q@Base 0
  __gmpn_random2@Base 0
  __gmpn_random@Base 0
  __gmpn_redc_1@Base 0
@@ -314,12 +317,11 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_redc_n@Base 0
  __gmpn_remove@Base 0
  __gmpn_rootrem@Base 0
- __gmpn_rsh1add_n@Base 2:6.2.0
- __gmpn_rsh1sub_n@Base 2:6.2.0
+ __gmpn_rsh1add_n@Base 0
+ __gmpn_rsh1sub_n@Base 0
  __gmpn_rshift@Base 0
  __gmpn_sbpi1_bdiv_q@Base 0
  __gmpn_sbpi1_bdiv_qr@Base 0
- __gmpn_sbpi1_bdiv_r@Base 2:6.2.0
  __gmpn_sbpi1_div_q@Base 0
  __gmpn_sbpi1_div_qr@Base 0
  __gmpn_sbpi1_divappr_q@Base 0
@@ -345,6 +347,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_sec_sub_1_itch@Base 2:6.0.0
  __gmpn_sec_tabselect@Base 2:6.0.0
  __gmpn_set_str@Base 0
+ __gmpn_set_str_compute_powtab@Base 0
  __gmpn_sizeinbase@Base 2:6.0.0
  __gmpn_sqr@Base 0
  __gmpn_sqr_basecase@Base 0
@@ -353,7 +356,6 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_sqrmod_bnm1@Base 0
  __gmpn_sqrmod_bnm1_next_size@Base 0
  __gmpn_sqrtrem@Base 0
- __gmpn_strongfibo@Base 2:6.2.0
  __gmpn_sub@Base 0
  __gmpn_sub_1@Base 0
  __gmpn_sub_err1_n@Base 2:5.1.1
@@ -361,7 +363,7 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpn_sub_err3_n@Base 2:5.1.1
  __gmpn_sub_n@Base 0
  __gmpn_sub_nc@Base 0
- __gmpn_sublsh1_n@Base 2:6.2.0
+ __gmpn_sublsh1_n@Base 0
  __gmpn_submul_1@Base 0
  __gmpn_tdiv_qr@Base 0
  __gmpn_toom22_mul@Base 0
@@ -532,7 +534,6 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpz_limbs_modify@Base 2:6.0.0
  __gmpz_limbs_read@Base 2:6.0.0
  __gmpz_limbs_write@Base 2:6.0.0
- __gmpz_lucas_mod@Base 2:6.2.0
  __gmpz_lucnum2_ui@Base 0
  __gmpz_lucnum_ui@Base 0
  __gmpz_mfac_uiui@Base 2:5.1.1
@@ -582,7 +583,6 @@ libgmp.so.10 libgmp10 #MINVER#
  __gmpz_sizeinbase@Base 0
  __gmpz_sqrt@Base 0
  __gmpz_sqrtrem@Base 0
- __gmpz_stronglucas@Base 2:6.2.0
  __gmpz_sub@Base 0
  __gmpz_sub_ui@Base 0
  __gmpz_submul@Base 0

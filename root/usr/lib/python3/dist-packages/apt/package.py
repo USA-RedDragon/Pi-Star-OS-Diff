@@ -28,14 +28,52 @@ import re
 import socket
 import subprocess
 import threading
+threading  # pyflakes
 
-from http.client import BadStatusLine
-from urllib.error import HTTPError
-from urllib.request import urlopen
+try:
+    from http.client import BadStatusLine
+    from urllib.error import HTTPError
+    from urllib.request import urlopen
+except ImportError:
+    from httplib import BadStatusLine  # type: ignore
+    from urllib2 import HTTPError, urlopen  # type: ignore
 
-from typing import (Any, Iterable, Iterator, List, Optional, Set,
-                    Tuple, Union, no_type_check, Mapping,
-                    Sequence)
+try:
+    from typing import (Any, Iterable, Iterator, List, Optional, Set,
+                        Tuple, Union, no_type_check, overload, Mapping,
+                        Sequence)
+    Any  # pyflakes
+    Iterable  # pyflakes
+    Iterator  # pyflakes
+    List  # pyflakes
+    Optional  # pyflakes
+    Set  # pyflakes
+    Tuple  # pyflakes
+    Union  # pyflakes
+    overload  # pyflakes
+    Sequence  # pyflakes
+except ImportError:
+    import collections
+
+    class GenericWrapper(object):
+        """Takes a non-generic type and adds __getitem__"""
+        def __init__(self, value):
+            # type: (type) -> None
+            self.value = value
+
+        def __getitem__(self, key):
+            # type: (type) -> type
+            return self.value
+
+    List = GenericWrapper(list)  # type: ignore
+    Mapping = GenericWrapper(collections.Mapping)  # type: ignore
+    Sequence = GenericWrapper(collections.Sequence)  # type: ignore
+    Any = None
+
+    def no_type_check(arg):
+        # type: (Any) -> Any
+        return arg
+    pass
 
 import apt_pkg
 import apt.progress.text
@@ -44,11 +82,16 @@ from apt.progress.base import (
     AcquireProgress,
     InstallProgress,
 )
+AcquireProgress  # pyflakes
+InstallProgress  # pyflakes
 
 from apt_pkg import gettext as _
 
 __all__ = ('BaseDependency', 'Dependency', 'Origin', 'Package', 'Record',
            'Version', 'VersionList')
+
+if sys.version_info.major >= 3:
+    unicode = str
 
 
 def _file_is_same(path, size, hashes):
@@ -379,7 +422,7 @@ class Record(Mapping[Any, Any]):
 
     def __iter__(self):
         # type: () -> Iterator[str]
-        return iter(self._rec.keys())
+        return iter(self._rec.keys())   # type: ignore
 
     def iteritems(self):
         # type: () -> Iterable[Tuple[object, str]]
@@ -388,7 +431,7 @@ class Record(Mapping[Any, Any]):
             yield key, self._rec[key]
 
     def get(self, key, default=None):
-        # type: (str, object) -> object
+        # type: (object, object) -> object
         """Return record[key] if key in record, else *default*.
 
         The parameter *default* must be either a string or None.
@@ -421,7 +464,7 @@ class Version(object):
         self.package._pcache._weakversions.add(self)
 
     def _cmp(self, other):
-        # type: (Any) -> Union[int, Any]
+        # type: (Any) -> Union[int, NotImplemented]
         """Compares against another apt.Version object or a version string.
 
         This method behaves like Python 2's cmp builtin and returns an integer
@@ -471,7 +514,7 @@ class Version(object):
         return self._cmp(other) < 0
 
     def __ne__(self, other):
-        # type: (object) -> Union[bool, Any]
+        # type: (object) -> Union[bool, NotImplemented]
         try:
             return self._cmp(other) != 0
         except TypeError:
@@ -593,7 +636,7 @@ class Version(object):
                      "Please report.") % (self.package.name)
 
         try:
-            if not isinstance(dsc, str):
+            if not isinstance(dsc, unicode):
                 # Only convert where needed (i.e. Python 2.X)
                 dsc = dsc.decode("utf-8")
         except UnicodeDecodeError as err:
@@ -967,7 +1010,7 @@ class VersionList(Sequence[Version]):
     """
 
     def __init__(self, package, slice_=None):
-        # type: (Package, Optional[slice]) -> None
+        # type: (Package, slice) -> None
         self._package = package  # apt.package.Package()
         self._versions = package._pkg.version_list  # [apt_pkg.Version(), ...]
         if slice_:
@@ -1031,7 +1074,7 @@ class VersionList(Sequence[Version]):
         # type: (str, Optional[Version]) -> Optional[Version]
         """Return the key or the default."""
         try:
-            return self[key]  # type: ignore  # FIXME: should be deterined automatically # noqa
+            return self[key]  # type: ignore  # FIXME: should be deterined automatically # nopep8
         except LookupError:
             return default
 
@@ -1162,6 +1205,12 @@ class Package(object):
         """
         return self._pkg.architecture
 
+    @property
+    def section(self):
+        # type: () -> str
+        """Return the section of the package."""
+        return self._pkg.section
+
     # depcache states
 
     @property
@@ -1251,7 +1300,7 @@ class Package(object):
         return []
 
     def get_changelog(self, uri=None, cancel_lock=None):
-        # type: (Optional[str], Optional[threading.Event]) -> str
+        # type: (str, threading.Event) -> str
         """
         Download the changelog of the package and return it as unicode
         string.
@@ -1286,7 +1335,7 @@ class Package(object):
                       "/%(src_pkg)s_%(src_ver)s/changelog"
             else:
                 res = _("The list of changes is not available")
-                if isinstance(res, str):
+                if isinstance(res, unicode):
                     return res
                 else:
                     return res.decode("utf-8")
@@ -1395,7 +1444,7 @@ class Package(object):
                 # Print an error if we failed to extract a changelog
                 if len(changelog) == 0:
                     changelog = _("The list of changes is not available")
-                    if not isinstance(changelog, str):
+                    if not isinstance(changelog, unicode):
                         changelog = changelog.decode("utf-8")
                 self._changelog = changelog
 
@@ -1409,14 +1458,14 @@ class Package(object):
                             "later.") % (src_pkg, src_ver)
                 else:
                     res = _("The list of changes is not available")
-                if isinstance(res, str):
+                if isinstance(res, unicode):
                     return res
                 else:
                     return res.decode("utf-8")
             except (IOError, BadStatusLine):
                 res = _("Failed to download the list of changes. \nPlease "
                         "check your Internet connection.")
-                if isinstance(res, str):
+                if isinstance(res, unicode):
                     return res
                 else:
                     return res.decode("utf-8")
@@ -1478,6 +1527,7 @@ class Package(object):
             fix.clear(self._pkg)
             fix.protect(self._pkg)
             fix.remove(self._pkg)
+            fix.install_protect()
             fix.resolve()
         self._pcache.cache_post_change()
 

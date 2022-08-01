@@ -16,51 +16,43 @@ You have the following pinentry variants to choose from:
     the "best" installed PIN entry program.  gpg-agent uses this by
     default.
 
-/usr/bin/pinentry-gnome
-    Graphical PIN entry program that uses GNOME's gcr prompter.  This
-    package will work on systems that use Wayland as well as X11, and
-    it is the preferred pinentry for desktop systems (package
-    pinentry-gnome).
-
 /usr/bin/pinentry-x11
     Generic name that points, via the Debian alternatives system, to
     the "best" installed PIN entry program with X11 support (that is,
-    one of the GNOME, Qt, GTK+2, or FLTK flavors).
-
-/usr/bin/pinentry-qt
-    Graphical PIN entry program that uses the Qt tool kit
-    (package pinentry-qt).
+    one of the GTK+ or Qt flavors).
 
 /usr/bin/pinentry-curses
     Text-mode PIN entry program that uses the curses tool kit (package
     pinentry-curses).
 
-/usr/bin/pinentry-tty
-    Minimal Text-mode dumb-terminal PIN entry program (package
-    pinentry-tty).
-
 /usr/bin/pinentry-gtk-2
     Graphical PIN entry program that uses the GTK+ tool kit version 2
     (package pinentry-gtk2).
 
-/usr/bin/pinentry-fltk
-    Graphical PIN entry program that uses the Fast Light Toolkit (FLTK)
-    (package pinentry-fltk).
+/usr/bin/pinentry-qt4
+    Graphical PIN entry program that uses the Qt tool kit version 4
+    (package pinentry-qt4).
 
-The graphical variants automatically fall back to the curses interface
-if no desktop environment is available.  So for example, if you
-frequently switch between text mode and KDE, and you want to use both
-Mutt and KMail with GnuPG pass-phrase agent support, then configuring
-/usr/bin/pinentry-qt would work.  (In this case, leaving your
-configuration alone would also work, if you only have pinentry-qt
-installed)
+The programs pinentry-gtk-2 and pinentry-qt4 automatically fall back
+to the curses interface if no X Window System is available.  So for
+example, if you frequently switch between text mode and KDE, and you
+want to use both Mutt and KMail with GnuPG pass-phrase agent support,
+then configuring /usr/bin/pinentry-qt4 would work.  (In this case,
+leaving it at /usr/bin/pinentry would also work, since pinentry-qt4 is
+the preferred alternative overall, but if you prefer to use, say,
+pinentry-gtk-2, then you need to set it up explicitly (or manually
+alter the alternatives system; the possibilities abound).)
 
-Note that while pinentry-curses and pinentry-tty will work in some
-cases in a non-graphical environment, they are likely to fail when
-used while sharing a tty with a terminal-intensive program like emacs.
-If a graphical pinentry isn't possible, the recommended workaround is
-to have a pinentry-tty or pinentry-curses attached to a separate,
-dedicated pseudoterminal.  (see https://dev.gnupg.org/T3217 for more
-details)
+Note that while pinentry-curses will work in some cases in a
+non-graphical environment, it is likely to fail when used while
+sharing a tty with a terminal-intensive program like emacs.  If a
+graphical pinentry isn't possible, the recommended workaround is to
+have a curses-based pinentry attached to a separate pseudoterminal.
+(see https://dev.gnupg.org/T3217 for more details)
 
- -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>, Fri,  8 May 2020 12:11:12 -0400
+Note that for the complete system to work, you also need to configure
+GnuPG to use the gpg-agent to get the pass phrases, and you need to
+configure your e-mail client to use GnuPG.  These issues are not
+covered here.
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>, Sun,  6 Aug 2017 23:52:43 -0400

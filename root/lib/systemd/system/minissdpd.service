@@ -1,0 +1,16 @@
+[Unit]
+Description=keep memory of all UPnP devices that announced themselves
+Documentation=man:minissdpd(1)
+After=network-online.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/default/minissdpd
+ExecStart=/usr/lib/minissdpd/minissdpd-systemd-wrapper ${MiniSSDPd_INTERFACE_ADDRESS} $MiniSSDPd_OTHER_OPTIONS
+PrivateTmp=yes
+LimitNOFILE=20
+LimitNPROC=5
+PIDFile=/run/minissdpd.pid
+
+[Install]
+WantedBy=multi-user.target

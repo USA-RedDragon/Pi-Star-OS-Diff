@@ -26,14 +26,32 @@ import os
 import warnings
 import weakref
 
-
-from typing import (Any, Callable, Dict, Iterator, List, Optional,
-                    Set, Tuple, Union, cast, KeysView)
+try:
+    from typing import (Any, Callable, Dict, Iterator, List, Optional,
+                        Set, Tuple, Union, cast, KeysView)
+    Any  # pyflakes
+    Callable  # pyflakes
+    Dict  # pyflakes
+    Iterator  # pyflakes
+    KeysView  # pyflakes
+    List  # pyflakes
+    Optional  # pyflakes
+    Set  # pyflakes
+    Tuple  # pyflakes
+    Union  # pyflakes
+except ImportError:
+    def cast(typ, obj):  # type: ignore
+        return obj
+    pass
 
 import apt_pkg
 from apt.package import Package, Version
 import apt.progress.text
 from apt.progress.base import AcquireProgress, InstallProgress, OpProgress
+OpProgress  # pyflakes
+InstallProgress  # pyflakes
+AcquireProgress  # pyflakes
+Version  # pyflakes
 
 
 class FetchCancelledException(IOError):
@@ -106,15 +124,15 @@ class Cache(object):
     """
 
     def __init__(self, progress=None, rootdir=None, memonly=False):
-        # type: (Optional[OpProgress], Optional[str], bool) -> None
+        # type: (OpProgress, str, bool) -> None
         self._cache = cast(apt_pkg.Cache, None)  # type: apt_pkg.Cache
         self._depcache = cast(apt_pkg.DepCache, None)  # type: apt_pkg.DepCache
-        self._records = cast(apt_pkg.PackageRecords, None)  # type: apt_pkg.PackageRecords # noqa
+        self._records = cast(apt_pkg.PackageRecords, None)  # type: apt_pkg.PackageRecords # nopep8
         self._list = cast(apt_pkg.SourceList, None)  # type: apt_pkg.SourceList
-        self._callbacks = {}  # type: Dict[str, List[Union[Callable[..., None],str]]] # noqa
-        self._callbacks2 = {}  # type: Dict[str, List[Tuple[Callable[..., Any], Tuple[Any, ...], Dict[Any,Any]]]] # noqa
-        self._weakref = weakref.WeakValueDictionary()  # type: weakref.WeakValueDictionary[str, apt.Package] # noqa
-        self._weakversions = weakref.WeakSet()  # type: weakref.WeakSet[Version] # noqa
+        self._callbacks = {}  # type: Dict[str, List[Union[Callable[..., None],str]]] # nopep8
+        self._callbacks2 = {}  # type: Dict[str, List[Tuple[Callable[..., Any], Tuple[Any, ...], Dict[Any,Any]]]] # nopep8
+        self._weakref = weakref.WeakValueDictionary()  # type: weakref.WeakValueDictionary[str, apt.Package] # nopep8
+        self._weakversions = weakref.WeakSet()  # type: weakref.WeakSet[Version] # nopep8
         self._changes_count = -1
         self._sorted_set = None  # type: Optional[List[str]]
 
@@ -167,16 +185,14 @@ class Cache(object):
         check if the required apt directories/files are there and if
         not create them
         """
-        files = [
-            "/var/lib/dpkg/status",
-            "/etc/apt/sources.list",
-        ]
-        dirs = [
-            "/var/lib/dpkg",
-            "/etc/apt/",
-            "/var/cache/apt/archives/partial",
-            "/var/lib/apt/lists/partial",
-        ]
+        files = ["/var/lib/dpkg/status",
+                 "/etc/apt/sources.list",
+                 ]
+        dirs = ["/var/lib/dpkg",
+                "/etc/apt/",
+                "/var/cache/apt/archives/partial",
+                "/var/lib/apt/lists/partial",
+                ]
         for d in dirs:
             if not os.path.exists(rootdir + d):
                 #print "creating: ", rootdir + d
@@ -197,10 +213,10 @@ class Cache(object):
 
         if name in self._callbacks2:
             for callback, args, kwds in self._callbacks2[name]:
-                callback(self, *args, **kwds)
+                    callback(self, *args, **kwds)
 
     def open(self, progress=None):
-        # type: (Optional[OpProgress]) -> None
+        # type: (OpProgress) -> None
         """ Open the package cache, after that it can be used like
             a dictionary
         """
@@ -535,7 +551,7 @@ class Cache(object):
 
     def update(self, fetch_progress=None, pulse_interval=0,
                raise_on_error=True, sources_list=None):
-        # type: (Optional[AcquireProgress], int, bool, Optional[str]) -> int
+        # type: (AcquireProgress, int, bool, str) -> int
         """Run the equivalent of apt-get update.
 
         You probably want to call open() afterwards, in order to utilise the
@@ -810,6 +826,11 @@ class ProblemResolver(object):
         """Reset the package to the default state."""
         self._resolver.clear(package._pkg)
 
+    def install_protect(self):
+        # type: () -> None
+        """mark protected packages for install or removal."""
+        self._resolver.install_protect()
+
     def protect(self, package):
         # type: (Package) -> None
         """Protect a package so it won't be removed."""
@@ -914,7 +935,7 @@ class FilteredCache(object):
     """
 
     def __init__(self, cache=None, progress=None):
-        # type: (Optional[Cache], Optional[OpProgress]) -> None
+        # type: (Cache, OpProgress) -> None
         if cache is None:
             self.cache = Cache(progress)
         else:

@@ -1,7 +1,7 @@
 /.
 /lib
 /lib/arm-linux-gnueabihf
-/lib/arm-linux-gnueabihf/libcap.so.2.44
+/lib/arm-linux-gnueabihf/libcap.so.2.25
 /usr
 /usr/share
 /usr/share/doc

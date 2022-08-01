@@ -6,25 +6,21 @@ _chpasswd()
     _init_completion -s || return
 
     case $prev in
-        --crypt | -!(-*)c)
-            COMPREPLY=($(compgen -W 'DES MD5 NONE SHA256 SHA512' \
-                -- "$cur"))
+        -c|--crypt)
+            COMPREPLY=( $( compgen -W 'DES MD5 NONE SHA256 SHA512' \
+                -- "$cur" ) )
             return
             ;;
-        --sha-rounds | -!(-*)s)
-            return
-            ;;
-        --root | -!(-*)R)
-            _filedir -d
+        -s|--sha-rounds)
             return
             ;;
     esac
 
     $split && return
 
-    COMPREPLY=($(compgen -W '$(_parse_help "$1")' -- "$cur"))
-    [[ ${COMPREPLY-} == *= ]] && compopt -o nospace
+    COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) )
+    [[ $COMPREPLY == *= ]] && compopt -o nospace
 } &&
-    complete -F _chpasswd chpasswd
+complete -F _chpasswd chpasswd
 
 # ex: filetype=sh

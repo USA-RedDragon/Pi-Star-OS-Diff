@@ -29,15 +29,6 @@
 /lib/firmware/raspberrypi/bootloader/beta/pieeprom-2021-09-27.bin
 /lib/firmware/raspberrypi/bootloader/beta/pieeprom-2021-10-04.bin
 /lib/firmware/raspberrypi/bootloader/beta/pieeprom-2021-10-05.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2021-10-27.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2021-11-22.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2021-12-02.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2022-01-20.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2022-01-25.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2022-02-04.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2022-02-16.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2022-02-28.bin
-/lib/firmware/raspberrypi/bootloader/beta/pieeprom-2022-03-10.bin
 /lib/firmware/raspberrypi/bootloader/beta/recovery.bin
 /lib/firmware/raspberrypi/bootloader/beta/vl805-000138a1.bin
 /lib/firmware/raspberrypi/bootloader/critical
@@ -45,7 +36,6 @@
 /lib/firmware/raspberrypi/bootloader/critical/pieeprom-2020-09-03.bin
 /lib/firmware/raspberrypi/bootloader/critical/pieeprom-2021-03-18.bin
 /lib/firmware/raspberrypi/bootloader/critical/pieeprom-2021-04-29.bin
-/lib/firmware/raspberrypi/bootloader/critical/pieeprom-2022-01-25.bin
 /lib/firmware/raspberrypi/bootloader/critical/recovery.bin
 /lib/firmware/raspberrypi/bootloader/critical/vl805-000137ad.bin
 /lib/firmware/raspberrypi/bootloader/critical/vl805-000138a1.bin
@@ -63,11 +53,6 @@
 /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-03-18.bin
 /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-04-29.bin
 /lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-07-06.bin
-/lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-11-22.bin
-/lib/firmware/raspberrypi/bootloader/stable/pieeprom-2021-12-02.bin
-/lib/firmware/raspberrypi/bootloader/stable/pieeprom-2022-01-25.bin
-/lib/firmware/raspberrypi/bootloader/stable/pieeprom-2022-02-08.bin
-/lib/firmware/raspberrypi/bootloader/stable/pieeprom-2022-03-10.bin
 /lib/firmware/raspberrypi/bootloader/stable/recovery.bin
 /lib/firmware/raspberrypi/bootloader/stable/vl805-000137ad.bin
 /lib/firmware/raspberrypi/bootloader/stable/vl805-000138a1.bin
@@ -77,7 +62,6 @@
 /usr
 /usr/bin
 /usr/bin/rpi-eeprom-config
-/usr/bin/rpi-eeprom-digest
 /usr/bin/rpi-eeprom-update
 /usr/share
 /usr/share/doc

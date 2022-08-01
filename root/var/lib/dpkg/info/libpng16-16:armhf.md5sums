@@ -1,9 +1,9 @@
-6a0198ca1f5e79d7aac4c49adade2257  usr/lib/arm-linux-gnueabihf/libpng16.so.16.37.0
+31363ecce064433bb3e83f0055f80c9a  usr/lib/arm-linux-gnueabihf/libpng16.so.16.36.0
 f70f5d78a9e3fa01749639ad088bee65  usr/share/doc-base/libpng16
-def44ef0ddb95585ccdf64f60bde255d  usr/share/doc/libpng16-16/ANNOUNCE
-919185b84b45976a3561336c8c8d5f5b  usr/share/doc/libpng16-16/README.gz
+d67cc6cb5cd2ea2ed520c32d752252a0  usr/share/doc/libpng16-16/ANNOUNCE
+4adac6548bcf3f7dd63bb67b00ee738d  usr/share/doc/libpng16-16/README.gz
 4a82aa11a927fdf7473d14ccdfeb819b  usr/share/doc/libpng16-16/TODO
-c73038351bb86f40b5748e269848f9f5  usr/share/doc/libpng16-16/changelog.Debian.gz
-34aebf8fe819ca925c7c7cdbc73babd1  usr/share/doc/libpng16-16/changelog.gz
-8809fbfb619a9dc84f7457d56f12fa2c  usr/share/doc/libpng16-16/copyright
-bf7eb48aa138d0efc82fe909d3dd4de2  usr/share/doc/libpng16-16/libpng-manual.txt.gz
+c071e4699806f908e60c65efe2ec44d8  usr/share/doc/libpng16-16/changelog.Debian.gz
+21d9c0ce41c646bae3f567c3d198a988  usr/share/doc/libpng16-16/changelog.gz
+5677eae6bd807b0745ac1b137e6f1f94  usr/share/doc/libpng16-16/copyright
+14e896eb4d7d944a0958e595d2305020  usr/share/doc/libpng16-16/libpng-manual.txt.gz

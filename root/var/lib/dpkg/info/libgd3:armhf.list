@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libgd.so.3.0.8
+/usr/lib/arm-linux-gnueabihf/libgd.so.3.0.5
 /usr/share
 /usr/share/doc
 /usr/share/doc/libgd3

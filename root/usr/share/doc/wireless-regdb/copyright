@@ -1,7 +1,7 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: wireless-regdb
 Upstream-Contact: Seth Forshee <seth.forshee@canonical.com>
-Source: https://git.kernel.org/pub/scm/linux/kernel/git/sforshee/wireless-regdb.git
+Source: git://git.kernel.org/pub/scm/linux/kernel/git/sforshee/wireless-regdb.git
 
 Files: *
 Copyright: 2008, Luis R. Rodriguez <mcgrof@gmail.com>

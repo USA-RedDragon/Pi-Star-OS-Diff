@@ -26,8 +26,6 @@
 /lib/firmware/mrvl/pcie8997_wlan_v4.bin
 /lib/firmware/mrvl/pcieuart8997_combo_v4.bin
 /lib/firmware/mrvl/pcieusb8997_combo_v4.bin
-/lib/firmware/mrvl/prestera
-/lib/firmware/mrvl/prestera/mvsw_prestera_fw-v2.0.img
 /lib/firmware/mrvl/sd8688.bin
 /lib/firmware/mrvl/sd8688_helper.bin
 /lib/firmware/mrvl/sd8787_uapsta.bin
@@ -35,8 +33,6 @@
 /lib/firmware/mrvl/sd8801_uapsta.bin
 /lib/firmware/mrvl/sd8887_uapsta.bin
 /lib/firmware/mrvl/sd8897_uapsta.bin
-/lib/firmware/mrvl/sdsd8977_combo_v2.bin
-/lib/firmware/mrvl/sdsd8997_combo_v4.bin
 /lib/firmware/mrvl/usb8766_uapsta.bin
 /lib/firmware/mrvl/usb8797_uapsta.bin
 /lib/firmware/mrvl/usb8801_uapsta.bin

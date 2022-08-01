@@ -20,6 +20,7 @@
 /usr/share/doc/openssl/HOWTO
 /usr/share/doc/openssl/HOWTO/certificates.txt.gz
 /usr/share/doc/openssl/HOWTO/keys.txt
+/usr/share/doc/openssl/HOWTO/proxy_certificates.txt.gz
 /usr/share/doc/openssl/NEWS.Debian.gz
 /usr/share/doc/openssl/NEWS.gz
 /usr/share/doc/openssl/README
@@ -103,7 +104,6 @@
 /usr/share/man/man7/ossl_store-file.7ssl.gz
 /usr/share/man/man7/ossl_store.7ssl.gz
 /usr/share/man/man7/passphrase-encoding.7ssl.gz
-/usr/share/man/man7/proxy-certificates.7ssl.gz
 /usr/share/man/man7/scrypt.7ssl.gz
 /usr/share/man/man7/ssl.7ssl.gz
 /usr/share/man/man7/x509.7ssl.gz

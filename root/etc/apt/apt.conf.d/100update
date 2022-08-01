@@ -1,0 +1,2 @@
+Pre-Invoke {"/bin/mount -o remount,rw /";};
+Post-Invoke {"/bin/mount -o remount,ro /";};

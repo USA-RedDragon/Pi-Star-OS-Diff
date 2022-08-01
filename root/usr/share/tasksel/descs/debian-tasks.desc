@@ -17,12 +17,6 @@ Key:
 Enhances: desktop, amharic
 Section: l10n
 
-Task: amharic-gnome-desktop
-Key: 
-  task-amharic-gnome-desktop
-Enhances: gnome-desktop, amharic-desktop
-Section: l10n
-
 Task: amharic-kde-desktop
 Key: 
   task-amharic-kde-desktop
@@ -212,12 +206,6 @@ Key:
 Enhances: desktop, chinese-s
 Section: l10n
 
-Task: chinese-s-gnome-desktop
-Key: 
-  task-chinese-s-gnome-desktop
-Enhances: gnome-desktop, chinese-s-desktop
-Section: l10n
-
 Task: chinese-s-kde-desktop
 Key: 
   task-chinese-s-kde-desktop
@@ -234,12 +222,6 @@ Task: chinese-t-desktop
 Key: 
   task-chinese-t-desktop
 Enhances: desktop, chinese-t
-Section: l10n
-
-Task: chinese-t-gnome-desktop
-Key: 
-  task-chinese-t-gnome-desktop
-Enhances: gnome-desktop, chinese-t-desktop
 Section: l10n
 
 Task: chinese-t-kde-desktop
@@ -496,14 +478,6 @@ Key:
 Section: user
 Test-default-desktop: 3 gnome
 
-Task: gnome-flashback-desktop
-Parent: desktop
-Relevance: 7
-Key: 
-  task-gnome-flashback-desktop
-Section: user
-Test-default-desktop: 3 gnome-flashback
-
 Task: greek
 Key: 
   task-greek
@@ -685,12 +659,6 @@ Key:
 Enhances: gnome-desktop, japanese-desktop
 Section: l10n
 
-Task: japanese-gnome-flashback-desktop
-Key: 
-  task-japanese-gnome-desktop
-Enhances: gnome-desktop, japanese-desktop
-Section: l10n
-
 Task: japanese-kde-desktop
 Key: 
   task-japanese-kde-desktop
@@ -703,12 +671,6 @@ Key:
 Enhances: desktop
 Section: l10n
 Test-lang: kn
-
-Task: kannada-gnome-desktop
-Key: 
-  task-kannada-gnome-desktop
-Enhances: gnome-desktop, kannada-desktop
-Section: l10n
 
 Task: kannada-kde-desktop
 Key: 
@@ -1020,6 +982,13 @@ Key:
   task-portuguese-kde-desktop
 Enhances: kde-desktop, portuguese-desktop
 Section: l10n
+
+Task: print-server
+Relevance: 4
+Key: 
+ task-print-server
+Section: server
+Test-desktop: 1
 
 Task: punjabi
 Key: 

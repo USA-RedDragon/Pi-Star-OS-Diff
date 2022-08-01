@@ -36,11 +36,11 @@ use parent qw(Dpkg::Vendor::Default);
 
 =head1 NAME
 
-Dpkg::Vendor::Debian - Debian vendor class
+Dpkg::Vendor::Debian - Debian vendor object
 
 =head1 DESCRIPTION
 
-This vendor class customizes the behaviour of dpkg scripts for Debian
+This vendor object customizes the behaviour of dpkg scripts for Debian
 specific behavior and policies.
 
 =cut
@@ -50,8 +50,10 @@ sub run_hook {
 
     if ($hook eq 'package-keyrings') {
         return ('/usr/share/keyrings/debian-keyring.gpg',
-                '/usr/share/keyrings/debian-nonupload.gpg',
                 '/usr/share/keyrings/debian-maintainers.gpg');
+    } elsif ($hook eq 'keyrings') {
+        warnings::warnif('deprecated', 'deprecated keyrings vendor hook');
+        return $self->run_hook('package-keyrings', @params);
     } elsif ($hook eq 'archive-keyrings') {
         return ('/usr/share/keyrings/debian-archive-keyring.gpg');
     } elsif ($hook eq 'archive-keyrings-historic') {
@@ -81,11 +83,6 @@ sub run_hook {
         return qw(/build/);
     } elsif ($hook eq 'build-tainted-by') {
         return $self->_build_tainted_by();
-    } elsif ($hook eq 'sanitize-environment') {
-        # Reset umask to a sane default.
-        umask 0022;
-        # Reset locale to a sane default.
-        $ENV{LC_COLLATE} = 'C.UTF-8';
     } else {
         return $self->SUPER::run_hook($hook, @params);
     }
@@ -105,7 +102,7 @@ sub _add_build_flags {
         },
         reproducible => {
             timeless => 1,
-            fixfilepath => 1,
+            fixfilepath => 0,
             fixdebugpath => 1,
         },
         sanitize => {
@@ -159,13 +156,10 @@ sub _add_build_flags {
     ## Global defaults
 
     my $default_flags;
-    my $default_d_flags;
     if ($opts_build->has('noopt')) {
         $default_flags = '-g -O0';
-        $default_d_flags = '-fdebug';
     } else {
         $default_flags = '-g -O2';
-        $default_d_flags = '-frelease';
     }
     $flags->append('CFLAGS', $default_flags);
     $flags->append('CXXFLAGS', $default_flags);
@@ -174,7 +168,6 @@ sub _add_build_flags {
     $flags->append('FFLAGS', $default_flags);
     $flags->append('FCFLAGS', $default_flags);
     $flags->append('GCJFLAGS', $default_flags);
-    $flags->append('DFLAGS', $default_d_flags);
 
     ## Area: future
 
@@ -192,21 +185,8 @@ sub _add_build_flags {
 
     # Warnings that detect actual bugs.
     if ($use_feature{qa}{bug}) {
-        # C flags
-        my @cflags = qw(
-            implicit-function-declaration
-        );
-        foreach my $warnflag (@cflags) {
-            $flags->append('CFLAGS', "-Werror=$warnflag");
-        }
-
-        # C/C++ flags
-        my @cfamilyflags = qw(
-            array-bounds
-            clobbered
-            volatile-register-var
-        );
-        foreach my $warnflag (@cfamilyflags) {
+        foreach my $warnflag (qw(array-bounds clobbered volatile-register-var
+                                 implicit-function-declaration)) {
             $flags->append('CFLAGS', "-Werror=$warnflag");
             $flags->append('CXXFLAGS', "-Werror=$warnflag");
         }
@@ -469,8 +449,8 @@ sub _build_tainted_by {
         next unless -l $pathname;
 
         my $linkname = readlink $pathname;
-        if ($linkname eq "usr$pathname" or $linkname eq "/usr$pathname") {
-            $tainted{'merged-usr-via-aliased-dirs'} = 1;
+        if ($linkname eq "usr$pathname") {
+            $tainted{'merged-usr-via-symlinks'} = 1;
             last;
         }
     }
@@ -486,7 +466,7 @@ sub _build_tainted_by {
         File::Find::find({
             wanted => sub { $tainted{"usr-local-has-$type"} = 1 if -f },
             no_chdir => 1,
-        }, grep { -d } map { "/usr/local/$_" } @{$usr_local_types{$type}});
+        }, map { "/usr/local/$_" } @{$usr_local_types{$type}});
     }
 
     my @tainted = sort keys %tainted;

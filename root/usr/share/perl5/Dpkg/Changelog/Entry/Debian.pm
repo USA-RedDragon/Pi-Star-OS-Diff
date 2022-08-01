@@ -19,8 +19,10 @@ package Dpkg::Changelog::Entry::Debian;
 use strict;
 use warnings;
 
-our $VERSION = '2.00';
+our $VERSION = '1.03';
 our @EXPORT_OK = qw(
+    $regex_header
+    $regex_trailer
     match_header
     match_trailer
     find_closes
@@ -45,18 +47,20 @@ Dpkg::Changelog::Entry::Debian - represents a Debian changelog entry
 
 =head1 DESCRIPTION
 
-This class represents a Debian changelog entry.
-It implements the generic interface Dpkg::Changelog::Entry.
-Only functions specific to this implementation are described below,
-the rest are inherited.
+This object represents a Debian changelog entry. It implements the
+generic interface Dpkg::Changelog::Entry. Only functions specific to this
+implementation are described below.
 
 =cut
 
 my $name_chars = qr/[-+0-9a-z.]/i;
 
+# XXX: Backwards compatibility, stop exporting on VERSION 2.00.
+## no critic (Variables::ProhibitPackageVars)
+
 # The matched content is the source package name ($1), the version ($2),
 # the target distributions ($3) and the options on the rest of the line ($4).
-my $regex_header = qr{
+our $regex_header = qr{
     ^
     (\w$name_chars*)                    # Package name
     \ \(([^\(\) \t]+)\)                 # Package version
@@ -69,7 +73,7 @@ my $regex_header = qr{
 # The matched content is the maintainer name ($1), its email ($2),
 # some blanks ($3) and the timestamp ($4), which is decomposed into
 # day of week ($6), date-time ($7) and this into month name ($8).
-my $regex_trailer = qr<
+our $regex_trailer = qr<
     ^
     \ \-\-                              # Trailer marker
     \ (.*)                              # Maintainer name
@@ -95,6 +99,8 @@ my %month_name = map { $_ => } qw(
     January February March April May June July
     August September October November December
 );
+
+## use critic
 
 =head1 METHODS
 
@@ -224,7 +230,7 @@ sub parse_trailer {
 	        # We have to nest the conditionals because May is the same in
 	        # full and abbreviated forms!
 	        if (exists $month_name{$8}) {
-	            push @errors, sprintf(g_('uses full \'%s\' instead of abbreviated month name \'%s\''),
+	            push @errors, sprintf(g_('uses full instead of abbreviated month name \'%s\''),
 	                                  $8, $month_name{$8});
 	        } else {
 	            push @errors, sprintf(g_('invalid abbreviated month name \'%s\''), $8);
@@ -237,6 +243,36 @@ sub parse_trailer {
 	push @errors, g_("the trailer doesn't match the expected regex");
     }
     return @errors;
+}
+
+=item $entry->check_header()
+
+Obsolete method. Use parse_header() instead.
+
+=cut
+
+sub check_header {
+    my $self = shift;
+
+    warnings::warnif('deprecated',
+                     'obsolete check_header(), use parse_header() instead');
+
+    return $self->parse_header();
+}
+
+=item $entry->check_trailer()
+
+Obsolete method. Use parse_trailer() instead.
+
+=cut
+
+sub check_trailer {
+    my $self = shift;
+
+    warnings::warnif('deprecated',
+                     'obsolete check_trailer(), use parse_trailer() instead');
+
+    return $self->parse_header();
 }
 
 =item $entry->normalize()
@@ -428,12 +464,6 @@ sub find_closes {
 =back
 
 =head1 CHANGES
-
-=head2 Version 2.00 (dpkg 1.20.0)
-
-Remove methods: $entry->check_header(), $entry->check_trailer().
-
-Hide variables: $regex_header, $regex_trailer.
 
 =head2 Version 1.03 (dpkg 1.18.8)
 

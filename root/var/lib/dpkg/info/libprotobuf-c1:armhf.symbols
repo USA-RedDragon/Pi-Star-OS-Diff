@@ -1,5 +1,4 @@
 libprotobuf-c.so.1 libprotobuf-c1 #MINVER#
-* Build-Depends-Package: libprotobuf-c-dev
  LIBPROTOBUF_C_1.0.0@LIBPROTOBUF_C_1.0.0 1.0.0
  LIBPROTOBUF_C_1.3.0@LIBPROTOBUF_C_1.3.0 1.3.1
  protobuf_c_buffer_simple_append@LIBPROTOBUF_C_1.0.0 1.0.0

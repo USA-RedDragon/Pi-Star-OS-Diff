@@ -75,9 +75,6 @@ _fdisk_module()
 				--compatibility
 				--color
 				--list
-				--list-details
-				--noauto-pt
-				--lock
 				--output
 				--type
 				--units
@@ -94,7 +91,6 @@ _fdisk_module()
 			return 0
 			;;
 	esac
-	compopt -o bashdefault -o default
 	COMPREPLY=( $(compgen -W "$(lsblk -pnro name)" -- $cur) )
 	return 0
 }

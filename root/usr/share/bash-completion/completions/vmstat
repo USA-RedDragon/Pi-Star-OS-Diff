@@ -6,22 +6,22 @@ _vmstat()
     _init_completion || return
 
     case $prev in
-        --help | --version | --partition | -!(-*)[hVcMNnwp])
+        -h|--help|-V|--version|-c|-M|-N|-n|-w|-p|--partition)
             return
             ;;
-        --unit | -!(-*)S)
-            [[ $OSTYPE == *linux* ]] &&
-                COMPREPLY=($(compgen -W 'k K m M' -- "$cur"))
+        -S|--unit)
+            [[ $OSTYPE == *linux* ]] && \
+                COMPREPLY=( $( compgen -W 'k K m M' -- "$cur" ) )
             return
             ;;
     esac
 
     if [[ $cur == -* ]]; then
-        COMPREPLY=($(compgen -W '$(_parse_help "$1")' -- "$cur"))
-        [[ ${COMPREPLY-} ]] ||
-            COMPREPLY=($(compgen -W '$(_parse_usage "$1")' -- "$cur"))
+        COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) )
+        [[ $COMPREPLY ]] || \
+            COMPREPLY=( $( compgen -W '$( _parse_usage "$1" )' -- "$cur" ) )
     fi
 } &&
-    complete -F _vmstat vmstat
+complete -F _vmstat vmstat
 
 # ex: filetype=sh

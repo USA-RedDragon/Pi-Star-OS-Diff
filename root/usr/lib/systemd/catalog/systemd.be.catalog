@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: LGPL-2.1+
 #
 # Message catalog for systemd's own messages
 # Belarusian translation
@@ -78,7 +78,7 @@ Documentation: man:core(5)
 Subject: Новая сесія № @SESSION_ID@ створана для карыстальніка @USER_ID@
 Defined-By: systemd
 Support: https://www.debian.org/support
-Documentation: sd-login(3)
+Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
 
 Новая сесія з № @SESSION_ID@ створана для карыстальніка @USER_ID@.
 
@@ -88,7 +88,7 @@ Documentation: sd-login(3)
 Subject: Сесія № @SESSION_ID@ спынена
 Defined-By: systemd
 Support: https://www.debian.org/support
-Documentation: sd-login(3)
+Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
 
 Сесія № @SESSION_ID@ спынена.
 
@@ -96,7 +96,7 @@ Documentation: sd-login(3)
 Subject: Даступна новае працоўнае месца № @SEAT_ID@
 Defined-By: systemd
 Support: https://www.debian.org/support
-Documentation: sd-login(3)
+Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
 
 Новае працоўнае месца № @SEAT_ID@ наладжана і даступна для выкарыстання.
 
@@ -104,7 +104,7 @@ Documentation: sd-login(3)
 Subject: Працоўнае месца № @SEAT_ID@ выдалена
 Defined-By: systemd
 Support: https://www.debian.org/support
-Documentation: sd-login(3)
+Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
 
 Працоўнае месца № @SEAT_ID@ выдалена і больш не даступна.
 

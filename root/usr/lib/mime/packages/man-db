@@ -19,15 +19,15 @@
 # "test -e gxditview" because it's in the "groff" package which is
 # only a Suggests of man-db and so may not be available.
 
-application/x-troff-man; /usr/bin/man -X100 -l %s; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page; priority=6
-text/troff; /usr/bin/man -X100 -l %s; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page; priority=6
-application/x-troff-man; /usr/bin/man -l %s; needsterminal; description=Man page; priority=6
-text/troff; /usr/bin/man -l %s; needsterminal; description=Man page; priority=6
+application/x-troff-man; /usr/bin/man -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page; priority=6
+text/troff; /usr/bin/man -X100 -l '%s'; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page; priority=6
+application/x-troff-man; /usr/bin/man -l '%s'; needsterminal; description=Man page; priority=6
+text/troff; /usr/bin/man -l '%s'; needsterminal; description=Man page; priority=6
 
 # "-Tascii" gives backspace overstriking, so use "col -b" to undo
 # that.  Piping to col also means "man" has a non-tty output and so
 # does not run its usual "more" etc pager, ensuring this entry is
 # non-interactive.
 #
-application/x-troff-man; /usr/bin/man -Tascii -l %s | col -b; copiousoutput; description=Man page; priority=2
-text/troff; /usr/bin/man -Tascii -l %s | col -b; copiousoutput; description=Man page; priority=2
+application/x-troff-man; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page; priority=2
+text/troff; /usr/bin/man -Tascii -l '%s' | col -b; copiousoutput; description=Man page; priority=2

@@ -44,7 +44,6 @@ if test -n "$opt"; then
   opt="-$opt"
 fi
 
-sts=0
 status_grep_global=1
 IFS='
 '

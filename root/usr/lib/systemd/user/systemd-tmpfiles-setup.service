@@ -1,4 +1,4 @@
-#  SPDX-License-Identifier: LGPL-2.1-or-later
+#  SPDX-License-Identifier: LGPL-2.1+
 #
 #  This file is part of systemd.
 #
@@ -18,8 +18,8 @@ RefuseManualStop=yes
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=systemd-tmpfiles --user --create --remove --boot
-SuccessExitStatus=DATAERR
+ExecStart=/bin/systemd-tmpfiles --user --create --remove --boot
+SuccessExitStatus=65
 
 [Install]
 WantedBy=basic.target

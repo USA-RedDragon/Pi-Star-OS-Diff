@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/bin
+/usr/bin/external-ip
+/usr/bin/upnpc
+/usr/share
+/usr/share/doc
+/usr/share/doc/miniupnpc
+/usr/share/doc/miniupnpc/README
+/usr/share/doc/miniupnpc/changelog.Debian.armhf.gz
+/usr/share/doc/miniupnpc/changelog.Debian.gz
+/usr/share/doc/miniupnpc/changelog.gz
+/usr/share/doc/miniupnpc/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/external-ip.1.gz
+/usr/share/man/man1/upnpc.1.gz

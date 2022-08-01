@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libseccomp.so.2.5.1
+/usr/lib/arm-linux-gnueabihf/libseccomp.so.2.3.3
 /usr/share
 /usr/share/doc
 /usr/share/doc/libseccomp2

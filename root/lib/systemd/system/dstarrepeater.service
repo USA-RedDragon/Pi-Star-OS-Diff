@@ -1,0 +1,13 @@
+[Unit]
+Description=D-Star Radio Servce
+After=syslog.target network.target
+
+[Service]
+Type=forking
+PIDFile=/run/dstarrepeater.pid
+ExecStart=/usr/local/sbin/dstarrepeater.service start
+ExecStop=/usr/local/sbin/dstarrepeater.service stop
+ExecReload=/usr/local/sbin/dstarrepeater.service restart
+
+[Install]
+WantedBy=multi-user.target

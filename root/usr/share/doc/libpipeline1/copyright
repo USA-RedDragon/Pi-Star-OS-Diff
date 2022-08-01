@@ -4,10 +4,10 @@ Upstream-Contact: Colin Watson <cjwatson@debian.org>
 Source: https://download.savannah.nongnu.org/releases/libpipeline/
 
 Files: *
-Copyright: 2010-2020, Colin Watson
+Copyright: 2010-2017, Colin Watson
 License: GPL-2+
 
-Files: gl/*
+Files: gnulib/*
 Copyright: 2001, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, Free Software Foundation, Inc.
 License: GPL-3+
 

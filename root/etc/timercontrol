@@ -1,0 +1,6 @@
+address=127.0.0.1
+port=10022
+password=raspberry
+delay=0
+windowX=0
+windowY=0

@@ -13,7 +13,7 @@ Description-ast.UTF-8: Escueye software a instalar:
 Description-be.UTF-8: Абярыце праграмы, якія трэба ўсталяваць:
  Зараз усталявана толькі ядро сістэмы. Каб удасканаліць сістэму адпаведна Вашым патрэбам, можна абраць адзін ці некалькі прадвызначаных набораў праграм.
 Description-bg.UTF-8: Изберете софтуер за инсталиране:
- В момента са инсталирани само жизненоважните програми на Дебиан. За да настроите системата към Вашите нужди, можете да изберете измежду един или повече от следните предварително зададени набори от софтуер.
+ В момента са инсталирани само най-жизненоважните програми на Debian. За да нагласите системата към Вашите нужди, можете да изберете измежду един или повече от следните предварително зададени набори от софтуер.
 Description-bn.UTF-8: ইনস্টল করার জন্য সফটওয়্যার বেছে নিন:
  এই মুহূর্তে, ডেবিয়ানের মূল অংশটুকুই কেবল ইনস্টল করা আছে। সিস্টেমকে আপনার পছন্দমত সাজানোর জন্য পূর্বনির্ধারিত এই সফটওয়্যার সংগ্রহগুলো থেকে আপনি এক বা একাধিক সংগ্রহ ইনস্টল করতে পারেন।
 Description-bs.UTF-8: Odaberite software za instalaciju:
@@ -56,8 +56,8 @@ Description-he.UTF-8: בחר תוכנה להתקנה:
  ברגע זה, רק הליבה של המערכת מותקנת. כדי לכוונן את המערכת לצרכים שלך, תוכל לבחור להתקין אחד או יותר מאוספי התוכנה שהוגדרו מראש.
 Description-hi.UTF-8: संस्थापित करने के लिए सॉफ्टवेयर चुनें:
  इस समय तंत्र का केवल क्रोड़ ही संस्थापित है. सिस्टम को अपनी आवश्यकतानुसार बनाने के लिए आप निम्नलिखित पूर्व परिभाषित सॉफ्टवेयर संकलनों में से एक या अधिक को संस्थापित करने के लिए चुन सकते हैं.
-Description-hr.UTF-8: Odaberite programe za instalaciju:
- Trenutno je instaliran samo osnovni sustav. Kako bi prilagodili instalaciju svojim potrebama, možete odabrati instalaciju sljedećih predodređenih skupina programa.
+Description-hr.UTF-8: Izaberite programe za instalaciju:
+ Trenutno je instaliran samo osnovni sustav. Kako bi prilagodili instalaciju svojim potrebama, možete birati među sljedećim predodređenim skupinama programa.
 Description-hu.UTF-8: Telepíthető szoftverek:
  A Debian alaprendszer telepítés kész. Most jön az egyéni igényeknek megfelelő kialakítás. Ez az alábbi nagy szoftver összeállítások telepítésével is elkezdhető.
 Description-id.UTF-8: Pilih perangkat lunak yang ingin diinstal:
@@ -133,7 +133,7 @@ Description-ta.UTF-8: நிறுவ வேண்டிய மென்பொ�
 Description-te.UTF-8: ప్రతిష్టాపించుటకు సాఫ్ట్ వేర్ (software) ఎన్నుకోండి:
  ప్రస్తుతం వ్యవస్థ (సిస్టం [system]) పునాది (కోర్ [core]) మాత్రం ప్రతిష్టింపబడినది. వ్యవస్థను మీకు అనుగుణంగా మార్చుకొనుటకు మీరు ఈ క్రింది సాఫ్ట్ వేర్ (software) ప్యాకేజీల (packages) సంగ్రహము (collection) లో ఒకటి లేదా మరిన్ని ఎన్నుకొని ప్రతిష్టాపించుకొవచ్చు.
 Description-tg.UTF-8: Интихоби нармафзор барои насб:
- Дар айни ҳол, танҳо низоми асосӣ насб карда шудааст. Барои мувофиқат кардани низом ба ниёзҳои худ, шумо метавонед як ё якчанд маҷмӯаи нармафзори пешмуайяншударо интихоб карда, насб намоед.
+ Дар айни ҳол, танҳо системаи асосӣ насб карда шудааст. Барои мувофиқат кардани низом ба ниёзҳои худ, шумо метавонед як ё якчанд маҷмӯаи нармафзори пешмуайяншударо интихоб карда, насб намоед.
 Description-th.UTF-8: เลือกซอฟต์แวร์ที่จะติดตั้ง:
  ขณะนี้ โปรแกรมได้ติดตั้งเฉพาะแกนของระบบเท่านั้น เพื่อที่จะปรับแต่งระบบให้เข้ากับความต้องการของคุณ คุณสามารถเลือกติดตั้งชุดซอฟต์แวร์ที่ได้รวบรวมเตรียมไว้ดังต่อไปนี้ตั้งแต่หนึ่งชุดขึ้นไป
 Description-tl.UTF-8: Pumili ng software na iluluklok:
@@ -210,8 +210,8 @@ Description-he.UTF-8: בחר תוכנה להתקנה:
  תוכל לבחור להתקין אחד או יותר מאוספי התוכנה שהוגדרו מראש.
 Description-hi.UTF-8: संस्थापित करने के लिए सॉफ्टवेयर चुनें:
  आप पूर्व परिभाषित निम्नलिखित सॉफ्टवेयर संकलनों में से एक या अधिक को संस्थापित करने के लिए चुन सकते हैं.
-Description-hr.UTF-8: Odaberite programe za instalaciju:
- Možete odabrati jednu ili više sljedećih predodređenih skupina programa.
+Description-hr.UTF-8: Izaberite programe za instalaciju:
+ Možete izabrati jednu ili više sljedećih preodređenih skupina programa.
 Description-hu.UTF-8: Telepíthető szoftverek:
  A következő, előre összeválogatott szoftver gyűjtemények telepíthetők.
 Description-id.UTF-8: Pilih perangkat lunak yang ingin diinstal:
@@ -309,25 +309,21 @@ Description-zh_TW.UTF-8: 選擇所要安裝的軟體：
 
 Template: tasksel/desktop
 Type: multiselect
-Choices: gnome, kde, xfce, lxde, gnome-flashback, cinnamon, mate, lxqt
+Choices: gnome, kde, xfce, lxde, cinnamon, mate, lxqt
 Description: This can be preseeded to override the default desktop.
 Description-be.UTF-8: Каб замяніць стандартны працоўны стол, можна выкарыстаць preseed.
-Description-bg.UTF-8: Графичната среда по подразбиране може да бъде предварително указана с preseed.
 Description-cs.UTF-8: Tímto je možno přebít volbu výchozího desktopového prostředí.
 Description-da.UTF-8: Dette kan forhåndskonfigureres for at overskrive standardskrivebordet.
 Description-de.UTF-8: Die Standardauswahl kann per Voreinstellung geändert werden, um eine andere Desktopumgebung auszuwählen.
-Description-es.UTF-8: Esto puede ser preconfigurado para anular el escritorio por omisión.
 Description-fr.UTF-8: Cela peut être préconfiguré pour sélectionner le bureau par défaut.
-Description-hr.UTF-8: Pretpostavljeno radno okruženje možete promijeniti putem preeseed postavke.
+Description-hr.UTF-8: Pretpostavljeno desktop okruženje možete promijeniti putem preeseed postavke.
 Description-ko.UTF-8: 이 설정에 대해 미리 설정 기능을 이용해 기본 데스크톱을 바꿀 수 있습니다.
 Description-nb.UTF-8: Dette kan forhåndsutfulles for å overstyre forvalgt skrivebordsomgivelse.
 Description-nl.UTF-8: Dit kan via een antwoordbestand voorgeconfigureerd worden om de standaard werkomgeving te vervangen.
 Description-no.UTF-8: Dette kan forhåndsutfulles for å overstyre forvalgt skrivebordsomgivelse.
-Description-pt.UTF-8: Pode ser feito preseed para ultrapassar o desktop predefinido.
 Description-pt_BR.UTF-8: Isso pode ser pré configurado para sobrepor a área de trabalho padrão.
 Description-ro.UTF-8: Acest pas se poate preconfigura pentru a schimba interfața grafică implicită.
 Description-ru.UTF-8: Это можно автоматизировать для замены рабочего стола по умолчанию.
-Description-tg.UTF-8: Ин метавонад барои рӯиҳамнависии мизи кории пешфарз ба таври худкор татбиқ карда шавад.
 
 Template: tasksel/title
 Type: title
@@ -357,7 +353,7 @@ Description-gl.UTF-8: Selección de software
 Description-gu.UTF-8: સોફ્ટવેર પસંદગી
 Description-he.UTF-8: בחירת תוכנה
 Description-hi.UTF-8: सॉफ्टवेयर संकलन
-Description-hr.UTF-8: Odabir programa
+Description-hr.UTF-8: Izbor programa
 Description-hu.UTF-8: Szoftver választás
 Description-id.UTF-8: Pemilihan perangkat lunak
 Description-is.UTF-8: Val hugbúnaðar

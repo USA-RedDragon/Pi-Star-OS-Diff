@@ -1,0 +1,30 @@
+[YSF Network]
+Callsign=M1ABC
+Suffix=RPT
+GatewayAddress=127.0.0.1
+GatewayPort=4200
+LocalAddress=127.0.0.1
+LocalPort=3200
+Daemon=1
+
+[DMR Network]
+Id=1234567
+RptAddress=127.0.0.1
+RptPort=62034
+LocalAddress=127.0.0.1
+LocalPort=62033
+Debug=0
+
+[DMR Id Lookup]
+File=/usr/local/etc/DMRIds.dat
+Time=24
+
+[Log]
+DisplayLevel=0
+FileLevel=0
+FilePath=/var/log/pi-star
+FileRoot=DMR2YSF
+
+[Enabled]
+Enabled=0
+

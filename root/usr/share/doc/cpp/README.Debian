@@ -34,7 +34,7 @@ How are the default compilers selected?
 ---------------------------------------
 
 Starting in Debian 3.0, there is now a gcc-defaults package set. This
-creates the actual packages for gcc, gnat, g++, gobjc,
+creates the actual packages for gcc, gnat, g++, gobjc, chill, gcj, gij,
 gdc and gpc.  These packages will depend on the corresponding default
 compiler for that architecture. For Debian 5.0 for example, "gcc"
 depends on "gcc-5", which means that the "gcc-5" package will
@@ -50,14 +50,16 @@ similar.
 The default compiler versions for Debian GNU/Linux on armhf are
 (minor version numbers omitted):
 
-	cpp		: cpp-10
-	gcc		: gcc-10
-	g++		: g++-10
-	gfortran	: gfortran-10
-	gccgo		: gccgo-10
-	gobjc		: gobjc-10
-	gobjc++		: gobjc++-10
-	gdc		: gdc-10
+	cpp		: cpp-8
+	gcc		: gcc-8
+	g++		: g++-8
+	gfortran	: gfortran-8
+	gcj		: gcj-6
+	gij		: gij-6
+	gccgo		: gccgo-8
+	gobjc		: gobjc-8
+	gobjc++		: gobjc++-8
+	gdc		: gdc-8
 
 Most of the documentation for GCC including the manual pages is
 licensed under the GFDL and therefore not included in the main section.

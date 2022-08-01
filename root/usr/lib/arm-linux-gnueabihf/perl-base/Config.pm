@@ -3,14 +3,14 @@
 
 # for a description of the variables, please have a look at the
 # Glossary file, as written in the Porting folder, or use the url:
-# https://github.com/Perl/perl5/blob/blead/Porting/Glossary
+# http://perl5.git.perl.org/perl.git/blob/HEAD:/Porting/Glossary
 
 package Config;
 use strict;
 use warnings;
 our ( %Config, $VERSION );
 
-$VERSION = "5.032001";
+$VERSION = "5.028001";
 
 # Skip @Config::EXPORT because it only contains %Config, which we special
 # case below as it's not a function. @Config::EXPORT won't change in the
@@ -56,11 +56,12 @@ sub import {
     return;
 }
 
-die "$0: Perl lib version (5.32.1) doesn't match executable '$^X' version ($])"
+die "$0: Perl lib version (5.28.1) doesn't match executable '$^X' version ($])"
     unless $^V;
 
-$^V eq 5.32.1
-    or die sprintf "%s: Perl lib version (5.32.1) doesn't match executable '$^X' version (%vd)", $0, $^V;
+$^V eq 5.28.1
+    or die sprintf "%s: Perl lib version (5.28.1) doesn't match executable '$^X' version (%vd)", $0, $^V;
+
 
 sub FETCH {
     my($self, $key) = @_;
@@ -83,7 +84,7 @@ sub AUTOLOAD {
 
 # tie returns the object, so the value returned to require will be true.
 tie %Config, 'Config', {
-    archlibexp => '/usr/lib/arm-linux-gnueabihf/perl/5.32',
+    archlibexp => '/usr/lib/arm-linux-gnueabihf/perl/5.28',
     archname => 'arm-linux-gnueabihf-thread-multi-64int',
     cc => 'arm-linux-gnueabihf-gcc',
     d_readlink => 'define',
@@ -92,19 +93,19 @@ tie %Config, 'Config', {
     dlsrc => 'dl_dlopen.xs',
     dont_use_nlink => undef,
     exe_ext => '',
-    inc_version_list => '5.32.0 5.32.0/arm-linux-gnueabihf-thread-multi-64int',
+    inc_version_list => '5.28.0 5.28.0/arm-linux-gnueabihf-thread-multi-64int',
     intsize => '4',
     ldlibpthname => 'LD_LIBRARY_PATH',
-    libpth => '/usr/local/lib /usr/include/arm-linux-gnueabihf /usr/lib /lib/arm-linux-gnueabihf /lib /usr/lib/arm-linux-gnueabihf',
+    libpth => '/usr/local/lib /usr/lib/gcc/arm-linux-gnueabihf/8/include-fixed /usr/include/arm-linux-gnueabihf /usr/lib /lib/arm-linux-gnueabihf /lib /usr/lib/arm-linux-gnueabihf',
     osname => 'linux',
-    osvers => '4.19.0',
+    osvers => '4.9.0',
     path_sep => ':',
-    privlibexp => '/usr/share/perl/5.32',
+    privlibexp => '/usr/share/perl/5.28',
     scriptdir => '/usr/bin',
-    sitearchexp => '/usr/local/lib/arm-linux-gnueabihf/perl/5.32.1',
-    sitelibexp => '/usr/local/share/perl/5.32.1',
+    sitearchexp => '/usr/local/lib/arm-linux-gnueabihf/perl/5.28.1',
+    sitelibexp => '/usr/local/share/perl/5.28.1',
     so => 'so',
     useithreads => 'define',
     usevendorprefix => 'define',
-    version => '5.32.1',
+    version => '5.28.1',
 };

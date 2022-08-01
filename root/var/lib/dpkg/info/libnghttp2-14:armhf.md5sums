@@ -1,6 +1,6 @@
-d39024dd5854a24da6044d704a9a424c  usr/lib/arm-linux-gnueabihf/libnghttp2.so.14.20.1
-9438a8194038b1606b6dd71f7e942fb3  usr/share/doc/libnghttp2-14/AUTHORS
-6063867d5e93d8d00441230b56fb38df  usr/share/doc/libnghttp2-14/README.rst.gz
-42a2b2f28fc2a3888d67a315a96ef07a  usr/share/doc/libnghttp2-14/changelog.Debian.gz
-cde99e2df336a9134e1037d231bfc81f  usr/share/doc/libnghttp2-14/changelog.gz
-bfa6df12c5cd5d85722ee6120f08e736  usr/share/doc/libnghttp2-14/copyright
+b653a72336387bf7b36d40f6f7ee15fc  usr/lib/arm-linux-gnueabihf/libnghttp2.so.14.17.1
+23fc75cc28add97fe500c492867e4aae  usr/share/doc/libnghttp2-14/AUTHORS
+59f4c5c6d9908be295013d9538b3b05d  usr/share/doc/libnghttp2-14/README.rst.gz
+8ebf950e9f24ff4909241cd13a40e762  usr/share/doc/libnghttp2-14/changelog.Debian.gz
+1cfee9cc8489e9dd65186361bc467735  usr/share/doc/libnghttp2-14/changelog.gz
+a1c3d5342cf319ca5bd1acac317e8148  usr/share/doc/libnghttp2-14/copyright

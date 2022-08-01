@@ -34,7 +34,7 @@ FAKEROOT_PREFIX=/usr
 FAKEROOT_BINDIR=/usr/bin
 
 USEABSLIBPATH=0
-FAKEROOT_LIB=libfakeroot-tcp.so
+LIB=libfakeroot-tcp.so
 PATHS=/usr/lib/arm-linux-gnueabihf/libfakeroot:${FAKEROOT_PREFIX}/lib64/libfakeroot:${FAKEROOT_PREFIX}/lib32/libfakeroot
 FAKED=${FAKEROOT_BINDIR}/faked-tcp
 
@@ -64,7 +64,7 @@ while test "X$1" != "X--"; do
   case "$1" in
     -l|--lib)
        shift
-       FAKEROOT_LIB=`eval echo "$1"`
+       LIB=`eval echo "$1"`
        PATHS=
        ;;
     -f|--faked)
@@ -94,7 +94,7 @@ while test "X$1" != "X--"; do
        FAKEROOT_FD_BASE="$1"
        ;;
     -v|--version)
-       echo "fakeroot version 1.25.3"
+       echo "fakeroot version 1.23"
        exit 0
        ;;
     -h|--help)
@@ -112,23 +112,23 @@ if [ -n "$PATHS" ]
 then
     for dir in `echo $PATHS | sed 's/:/ /g'`
     do
-	if test -r "$dir/$FAKEROOT_LIB"
+	if test -r "$dir/$LIB"
 	then
 	    libfound=yes
-	    ABSLIB="$dir/$FAKEROOT_LIB"
+	    ABSLIB="$dir/$LIB"
 	fi
     done
 else
-    if test -r "$FAKEROOT_LIB"
+    if test -r "$LIB"
     then
 	libfound=yes
-	ABSLIB="$FAKEROOT_LIB"
+	ABSLIB="$LIB"
     fi
 fi
 
 if test $libfound = no
 then
-    fatal "preload library \`$FAKEROOT_LIB' not found, aborting."
+    fatal "preload library \`$LIB' not found, aborting."
 fi
 
 if test -n "$FAKEROOTKEY"
@@ -145,8 +145,8 @@ PID=`echo $KEY_PID|cut -d: -f2`
 if [ "$WAITINTRAP" -eq 0 ]; then
   trap "kill -s HUP $PID" EXIT INT
 else
-  trap 'FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS" LD_PRELOAD="$FAKEROOT_LIB" /bin/ls -l / >/dev/null 2>&1; while kill -s HUP $PID 2>/dev/null; do sleep 0.1; done' EXIT INT
-  #trap 'FAKEROOTKEY=$FAKEROOTKEY LD_PRELOAD="$FAKEROOT_LIB" /bin/ls -l / >/dev/null 2>&1; while kill -s HUP $PID 2>/dev/null; do sleep 0.1; done' EXIT INT
+  trap 'FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS" LD_PRELOAD="$LIB" /bin/ls -l / >/dev/null 2>&1; while kill -s HUP $PID 2>/dev/null; do sleep 0.1; done' EXIT INT
+  #trap 'FAKEROOTKEY=$FAKEROOTKEY LD_PRELOAD="$LIB" /bin/ls -l / >/dev/null 2>&1; while kill -s HUP $PID 2>/dev/null; do sleep 0.1; done' EXIT INT
 fi
 
 if test -z "$FAKEROOTKEY" || test -z "$PID"; then
@@ -154,7 +154,7 @@ if test -z "$FAKEROOTKEY" || test -z "$PID"; then
 fi
 
 if test $USEABSLIBPATH -ne 0 ; then
-  FAKEROOT_LIB=$ABSLIB
+  LIB=$ABSLIB
 fi
 # Keep other library paths
 if test -n "$LD_LIBRARY_PATH"; then
@@ -162,18 +162,18 @@ if test -n "$LD_LIBRARY_PATH"; then
 fi
 # ...and preloaded libs
 if test -n "$LD_PRELOAD"; then
-  FAKEROOT_LIB="$FAKEROOT_LIB:$LD_PRELOAD"
+  LIB="$LIB:$LD_PRELOAD"
 fi
 
 export FAKEROOT_FD_BASE
 
 if test -z "$*"; then
-  FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS"  LD_PRELOAD="$FAKEROOT_LIB" ${SHELL:-/bin/sh}
-  #FAKEROOTKEY=$FAKEROOTKEY  LD_PRELOAD="$FAKEROOT_LIB" ${SHELL:-/bin/sh}
+  FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS"  LD_PRELOAD="$LIB" ${SHELL:-/bin/sh}
+  #FAKEROOTKEY=$FAKEROOTKEY  LD_PRELOAD="$LIB" ${SHELL:-/bin/sh}
   RESULT=$?
 else
-  FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS"  LD_PRELOAD="$FAKEROOT_LIB" "$@"
-  #FAKEROOTKEY=$FAKEROOTKEY  LD_PRELOAD="$FAKEROOT_LIB" "$@"
+  FAKEROOTKEY=$FAKEROOTKEY LD_LIBRARY_PATH="$PATHS"  LD_PRELOAD="$LIB" "$@"
+  #FAKEROOTKEY=$FAKEROOTKEY  LD_PRELOAD="$LIB" "$@"
   RESULT=$?
 fi
 

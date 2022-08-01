@@ -17,23 +17,15 @@ Files: debian/*
 Copyright: © 1996-2010 Joey Schulze <joey@infodrom.org>
            © 1997-2001 Nicolás Lichtmaier <nick@debian.org>
            © 2011-2015 Simon Paillard <spaillard@debian.org>
-           © 2015-2020 Dr. Tobias Quathamer <toddy@debian.org>
+           © 2015-2018 Dr. Tobias Quathamer <toddy@debian.org>
 License: GPL-2+
 
-Files: man7/bpf-helpers.7
-Copyright: All BPF authors and contributors from 2014 to present.
-License: verbatim
-
-Files: man3/CIRCLEQ_EMPTY.3 man3/CIRCLEQ_ENTRY.3 man3/CIRCLEQ_FIRST.3
-       man3/CIRCLEQ_FOREACH.3 man3/CIRCLEQ_FOREACH_REVERSE.3
-       man3/CIRCLEQ_HEAD.3 man3/CIRCLEQ_HEAD_INITIALIZER.3
-       man3/CIRCLEQ_INIT.3 man3/CIRCLEQ_INSERT_AFTER.3
-       man3/CIRCLEQ_INSERT_BEFORE.3 man3/CIRCLEQ_INSERT_HEAD.3
-       man3/CIRCLEQ_INSERT_TAIL.3 man3/CIRCLEQ_LAST.3
-       man3/CIRCLEQ_LOOP_NEXT.3 man3/CIRCLEQ_LOOP_PREV.3 man3/CIRCLEQ_NEXT.3
-       man3/CIRCLEQ_PREV.3 man3/CIRCLEQ_REMOVE.3 man3/LIST_EMPTY.3
-       man3/LIST_ENTRY.3 man3/LIST_FIRST.3 man3/LIST_FOREACH.3
-       man3/LIST_HEAD.3 man3/LIST_HEAD_INITIALIZER.3 man3/LIST_INIT.3
+Files: man3/CIRCLEQ_ENTRY.3 man3/CIRCLEQ_HEAD.3 man3/CIRCLEQ_INIT.3
+       man3/CIRCLEQ_INSERT_AFTER.3 man3/CIRCLEQ_INSERT_BEFORE.3
+       man3/CIRCLEQ_INSERT_HEAD.3 man3/CIRCLEQ_INSERT_TAIL.3
+       man3/CIRCLEQ_REMOVE.3 man3/LIST_EMPTY.3 man3/LIST_ENTRY.3
+       man3/LIST_FIRST.3 man3/LIST_FOREACH.3 man3/LIST_HEAD.3
+       man3/LIST_HEAD_INITIALIZER.3 man3/LIST_INIT.3
        man3/LIST_INSERT_AFTER.3 man3/LIST_INSERT_BEFORE.3
        man3/LIST_INSERT_HEAD.3 man3/LIST_NEXT.3 man3/LIST_REMOVE.3
        man3/SLIST_EMPTY.3 man3/SLIST_ENTRY.3 man3/SLIST_FIRST.3
@@ -52,24 +44,21 @@ Files: man3/CIRCLEQ_EMPTY.3 man3/CIRCLEQ_ENTRY.3 man3/CIRCLEQ_FIRST.3
        man3/TAILQ_INSERT_AFTER.3 man3/TAILQ_INSERT_BEFORE.3
        man3/TAILQ_INSERT_HEAD.3 man3/TAILQ_INSERT_TAIL.3 man3/TAILQ_LAST.3
        man3/TAILQ_NEXT.3 man3/TAILQ_PREV.3 man3/TAILQ_REMOVE.3
-       man3/TAILQ_SWAP.3 man3/circleq.3 man3/forkpty.3 man3/getloadavg.3
-       man3/list.3 man3/login_tty.3 man3/openpty.3 man3/queue.3 man3/slist.3
-       man3/stailq.3 man3/tailq.3 man7/operator.7 man7/precedence.7
-       man7/queue.7 man7/symlink.7
+       man3/TAILQ_SWAP.3 man3/forkpty.3 man3/getloadavg.3 man3/login_tty.3
+       man3/openpty.3 man3/queue.3 man7/operator.7 man7/symlink.7
 Copyright: (C) 2008, 2014 Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 1989, 1990, 1993
            (c) 1989, 1991, 1993
            (c) 1992, 1993, 1994
            (c) 1993
-           (c) 2020 by Alejandro Colomar <colomar.6.4.3@gmail.com>
            (c) OpenBSD Group
 License: BSD-3-clause
 
 Files: man2/accept.2 man2/accept4.2 man2/ftruncate.2 man2/ftruncate64.2
        man2/getpeername.2 man2/getpgid.2 man2/getpgrp.2 man2/getpriority.2
-       man2/getsockname.2 man2/getsockopt.2 man2/ioctl.2 man2/listen.2
-       man2/lseek.2 man2/readlink.2 man2/readlinkat.2 man2/recv.2
-       man2/recvfrom.2 man2/recvmsg.2 man2/send.2 man2/sendmsg.2
+       man2/getsockname.2 man2/getsockopt.2 man2/ioctl.2 man2/killpg.2
+       man2/listen.2 man2/lseek.2 man2/readlink.2 man2/readlinkat.2
+       man2/recv.2 man2/recvfrom.2 man2/recvmsg.2 man2/send.2 man2/sendmsg.2
        man2/sendto.2 man2/setpgid.2 man2/setpgrp.2 man2/setpriority.2
        man2/setregid.2 man2/setregid32.2 man2/setreuid.2 man2/setreuid32.2
        man2/setsockopt.2 man2/shutdown.2 man2/socket.2 man2/socketpair.2
@@ -124,7 +113,7 @@ Files: man2/accept.2 man2/accept4.2 man2/ftruncate.2 man2/ftruncate64.2
        man3/xdr_wrapstring.3 man3/xdrmem_create.3 man3/xdrrec_create.3
        man3/xdrrec_endofrecord.3 man3/xdrrec_eof.3 man3/xdrrec_skiprecord.3
        man3/xdrstdio_create.3 man3/xprt_register.3 man3/xprt_unregister.3
-       man5/rpc.5 man7/hostname.7
+       man5/rpc.5 man7/hostname.7 man7/mdoc.7 man7/mdoc.samples.7
 Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2006, 2014 Michael Kerrisk
            (C) 2007, Michael Kerrisk <mtk.manpages@gmail.com>
@@ -143,16 +132,15 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (c) 1990, 1991 The Regents of the University of California.
            (c) 1990, 1993
            (c) 1991 The Regents of the University of California.
+           (c) 1991, 1993
            (c) 1993
            (c) 2011, Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2020 Arkadiusz Drabczyk <arkadiusz@drabczyk.org>
            1991 The Regents of the University of California.
 License: BSD-4-clause
 
 Files: man2/bind.2 man2/connect.2
 Copyright: (c) 1983 The Regents of the University of California.
            1993 Rickard E. Faith (faith@cs.unc.edu)
-           2005-2007, Michael Kerrisk <mtk.manpages@gmail.com>
 License: BSD-4-clause and verbatim
 
 Files: man3/backtrace.3 man3/backtrace_symbols.3 man3/backtrace_symbols_fd.3
@@ -170,15 +158,14 @@ Copyright: (C) 2006 Justin Pryzby <pryzbyj@justinpryzby.com>
            (c) 1999 Jeroen Ruigrok van der Werven
 License: Expat
 
-Files: man2/fallocate.2 man2/setns.2 man4/cciss.4 man4/hpsa.4
-       man4/smartpqi.4 man5/gai.conf.5 man5/nss.5 man7/cpuset.7
+Files: man2/fallocate.2 man2/ioctl_list.2 man2/setns.2 man4/cciss.4
+       man4/hpsa.4 man4/smartpqi.4 man5/gai.conf.5 man5/nss.5 man7/cpuset.7
 Copyright: (C) 2006 Red Hat, Inc. All rights reserved.
            (C) 2011, 2012, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2011, Eric Biederman <ebiederm@xmission.com>
            (C) 2011, Hewlett-Packard Development Company, L.P.
            (C) 2016, PMC-Sierra, Inc.
-           (C) 2016-2018, Microsemi Corporation
-           (C) 2019, Microchip Technology Inc. and its subsidiaries
+           (C) 2016-2017, Microsemi Corporation
            (c) 2007 Silicon Graphics, Inc. All Rights Reserved
            (c) 2008 Silicon Graphics, Inc.
 License: GPL-2
@@ -187,47 +174,47 @@ Files: man1/getent.1 man1/iconv.1 man1/ldd.1 man1/localedef.1
        man1/memusage.1 man1/memusagestat.1 man1/mtrace.1 man1/time.1
        man2/__clone2.2 man2/_syscall.2 man2/acct.2 man2/add_key.2
        man2/adjtimex.2 man2/afs_syscall.2 man2/bdflush.2 man2/break.2
-       man2/brk.2 man2/cacheflush.2 man2/capget.2 man2/capset.2
-       man2/clock_adjtime.2 man2/clone.2 man2/clone2.2 man2/clone3.2
-       man2/create_module.2 man2/epoll_create.2 man2/epoll_create1.2
-       man2/epoll_ctl.2 man2/epoll_pwait.2 man2/epoll_wait.2 man2/eventfd.2
-       man2/eventfd2.2 man2/fattach.2 man2/fdetach.2 man2/fgetxattr.2
-       man2/flistxattr.2 man2/fremovexattr.2 man2/fsetxattr.2
-       man2/get_kernel_syms.2 man2/get_thread_area.2 man2/getmsg.2
-       man2/getpmsg.2 man2/getsid.2 man2/getxattr.2 man2/gtty.2 man2/inb.2
-       man2/inb_p.2 man2/inl.2 man2/inl_p.2 man2/inotify_add_watch.2
-       man2/inotify_init.2 man2/inotify_init1.2 man2/inotify_rm_watch.2
-       man2/insb.2 man2/insl.2 man2/insw.2 man2/inw.2 man2/inw_p.2
-       man2/io_cancel.2 man2/io_destroy.2 man2/io_getevents.2
-       man2/io_setup.2 man2/io_submit.2 man2/ioctl_console.2
-       man2/ioctl_ficlone.2 man2/ioctl_ficlonerange.2
-       man2/ioctl_fideduperange.2 man2/ioctl_fslabel.2 man2/ioctl_getfsmap.2
-       man2/ioctl_tty.2 man2/ioperm.2 man2/ioprio_get.2 man2/ioprio_set.2
-       man2/ipc.2 man2/isastream.2 man2/lgetxattr.2 man2/listxattr.2
-       man2/llistxattr.2 man2/lock.2 man2/lremovexattr.2 man2/lsetxattr.2
-       man2/madvise1.2 man2/memfd_create.2 man2/mkdir.2 man2/mkdirat.2
-       man2/mknod.2 man2/mknodat.2 man2/mlock.2 man2/mlock2.2
-       man2/mlockall.2 man2/modify_ldt.2 man2/mpx.2 man2/mremap.2
-       man2/munlock.2 man2/munlockall.2 man2/nanosleep.2 man2/outb.2
-       man2/outb_p.2 man2/outl.2 man2/outl_p.2 man2/outsb.2 man2/outsl.2
-       man2/outsw.2 man2/outw.2 man2/outw_p.2 man2/perf_event_open.2
-       man2/phys.2 man2/prof.2 man2/ptrace.2 man2/putmsg.2 man2/putpmsg.2
-       man2/query_module.2 man2/removexattr.2 man2/request_key.2
-       man2/s390_pci_mmio_read.2 man2/s390_pci_mmio_write.2
-       man2/s390_runtime_instr.2 man2/s390_sthyi.2 man2/sbrk.2
-       man2/sched_get_priority_max.2 man2/sched_get_priority_min.2
-       man2/sched_getaffinity.2 man2/sched_getparam.2
-       man2/sched_rr_get_interval.2 man2/sched_setaffinity.2
-       man2/sched_setparam.2 man2/sched_yield.2 man2/security.2
-       man2/set_thread_area.2 man2/setsid.2 man2/setxattr.2 man2/signalfd.2
-       man2/signalfd4.2 man2/socketcall.2 man2/spu_create.2 man2/spu_run.2
-       man2/stty.2 man2/timerfd_create.2 man2/timerfd_gettime.2
-       man2/timerfd_settime.2 man2/tuxcall.2 man2/unimplemented.2
-       man2/unshare.2 man2/vserver.2 man3/DES_FAILED.3 man3/MB_CUR_MAX.3
-       man3/MB_LEN_MAX.3 man3/__after_morecore_hook.3 man3/__free_hook.3
-       man3/__malloc_hook.3 man3/__malloc_initialize_hook.3
-       man3/__memalign_hook.3 man3/__realloc_hook.3 man3/__setfpucw.3
-       man3/a64l.3 man3/addseverity.3 man3/aio_cancel.3 man3/aio_error.3
+       man2/brk.2 man2/cacheflush.2 man2/capget.2 man2/capset.2 man2/clone.2
+       man2/clone2.2 man2/create_module.2 man2/epoll_create.2
+       man2/epoll_create1.2 man2/epoll_ctl.2 man2/epoll_pwait.2
+       man2/epoll_wait.2 man2/eventfd.2 man2/eventfd2.2 man2/fattach.2
+       man2/fdetach.2 man2/fgetxattr.2 man2/flistxattr.2 man2/fremovexattr.2
+       man2/fsetxattr.2 man2/get_kernel_syms.2 man2/get_thread_area.2
+       man2/getmsg.2 man2/getpmsg.2 man2/getsid.2 man2/getxattr.2
+       man2/gtty.2 man2/inb.2 man2/inb_p.2 man2/inl.2 man2/inl_p.2
+       man2/inotify_add_watch.2 man2/inotify_init.2 man2/inotify_init1.2
+       man2/inotify_rm_watch.2 man2/insb.2 man2/insl.2 man2/insw.2
+       man2/inw.2 man2/inw_p.2 man2/io_cancel.2 man2/io_destroy.2
+       man2/io_getevents.2 man2/io_setup.2 man2/io_submit.2
+       man2/ioctl_console.2 man2/ioctl_ficlone.2 man2/ioctl_ficlonerange.2
+       man2/ioctl_fideduperange.2 man2/ioctl_getfsmap.2 man2/ioctl_tty.2
+       man2/ioperm.2 man2/ioprio_get.2 man2/ioprio_set.2 man2/ipc.2
+       man2/isastream.2 man2/lgetxattr.2 man2/listxattr.2 man2/llistxattr.2
+       man2/lock.2 man2/lremovexattr.2 man2/lsetxattr.2 man2/madvise1.2
+       man2/memfd_create.2 man2/mkdir.2 man2/mkdirat.2 man2/mknod.2
+       man2/mknodat.2 man2/mlock.2 man2/mlock2.2 man2/mlockall.2
+       man2/modify_ldt.2 man2/mpx.2 man2/mremap.2 man2/munlock.2
+       man2/munlockall.2 man2/nanosleep.2 man2/outb.2 man2/outb_p.2
+       man2/outl.2 man2/outl_p.2 man2/outsb.2 man2/outsl.2 man2/outsw.2
+       man2/outw.2 man2/outw_p.2 man2/perf_event_open.2 man2/phys.2
+       man2/pivot_root.2 man2/prof.2 man2/ptrace.2 man2/putmsg.2
+       man2/putpmsg.2 man2/query_module.2 man2/removexattr.2
+       man2/request_key.2 man2/s390_pci_mmio_read.2
+       man2/s390_pci_mmio_write.2 man2/s390_runtime_instr.2
+       man2/s390_sthyi.2 man2/sbrk.2 man2/sched_get_priority_max.2
+       man2/sched_get_priority_min.2 man2/sched_getaffinity.2
+       man2/sched_getparam.2 man2/sched_rr_get_interval.2
+       man2/sched_setaffinity.2 man2/sched_setparam.2 man2/sched_yield.2
+       man2/security.2 man2/set_thread_area.2 man2/setsid.2 man2/setxattr.2
+       man2/signalfd.2 man2/signalfd4.2 man2/socketcall.2 man2/spu_create.2
+       man2/spu_run.2 man2/stty.2 man2/timerfd_create.2
+       man2/timerfd_gettime.2 man2/timerfd_settime.2 man2/tuxcall.2
+       man2/unimplemented.2 man2/unshare.2 man2/vserver.2 man3/DES_FAILED.3
+       man3/MB_CUR_MAX.3 man3/MB_LEN_MAX.3 man3/__after_morecore_hook.3
+       man3/__free_hook.3 man3/__malloc_hook.3
+       man3/__malloc_initialize_hook.3 man3/__memalign_hook.3
+       man3/__realloc_hook.3 man3/__setfpucw.3 man3/a64l.3
+       man3/addseverity.3 man3/aio_cancel.3 man3/aio_error.3
        man3/aio_fsync.3 man3/aio_read.3 man3/aio_return.3 man3/aio_suspend.3
        man3/aio_write.3 man3/argz.3 man3/argz_add.3 man3/argz_add_sep.3
        man3/argz_append.3 man3/argz_count.3 man3/argz_create.3
@@ -335,7 +322,7 @@ Files: man1/getent.1 man1/iconv.1 man1/ldd.1 man1/localedef.1
        man4/mem.4 man4/null.4 man4/port.4 man4/ram.4 man4/random.4
        man4/rtc.4 man4/sk98lin.4 man4/tty.4 man4/ttyS.4 man4/tty_ioctl.4
        man4/urandom.4 man4/vcs.4 man4/vcsa.4 man4/veth.4 man4/wavelan.4
-       man4/zero.4 man5/charmap.5 man5/filesystems.5 man5/fs.5
+       man4/zero.4 man5/attr.5 man5/charmap.5 man5/filesystems.5 man5/fs.5
        man5/ftpusers.5 man5/group.5 man5/host.conf.5 man5/hosts.5
        man5/hosts.equiv.5 man5/intro.5 man5/issue.5 man5/locale.5
        man5/motd.5 man5/networks.5 man5/nologin.5 man5/nscd.conf.5
@@ -359,14 +346,13 @@ Files: man1/getent.1 man1/iconv.1 man1/ldd.1 man1/localedef.1
        man7/iso_8859_13.7 man7/iso_8859_14.7 man7/iso_8859_15.7
        man7/iso_8859_16.7 man7/iso_8859_2.7 man7/iso_8859_3.7
        man7/iso_8859_4.7 man7/iso_8859_5.7 man7/iso_8859_6.7
-       man7/iso_8859_7.7 man7/iso_8859_8.7 man7/iso_8859_9.7
-       man7/kernel_lockdown.7 man7/keyrings.7 man7/koi8-r.7 man7/koi8-u.7
-       man7/latin1.7 man7/latin10.7 man7/latin2.7 man7/latin3.7
-       man7/latin4.7 man7/latin5.7 man7/latin6.7 man7/latin7.7 man7/latin8.7
-       man7/latin9.7 man7/netlink.7 man7/persistent-keyring.7
-       man7/posixoptions.7 man7/process-keyring.7 man7/sched.7
-       man7/session-keyring.7 man7/sock_diag.7 man7/spufs.7 man7/standards.7
-       man7/thread-keyring.7 man7/tis-620.7 man7/unicode.7
+       man7/iso_8859_7.7 man7/iso_8859_8.7 man7/iso_8859_9.7 man7/keyrings.7
+       man7/koi8-r.7 man7/koi8-u.7 man7/latin1.7 man7/latin10.7
+       man7/latin2.7 man7/latin3.7 man7/latin4.7 man7/latin5.7 man7/latin6.7
+       man7/latin7.7 man7/latin8.7 man7/latin9.7 man7/netlink.7
+       man7/persistent-keyring.7 man7/posixoptions.7 man7/process-keyring.7
+       man7/sched.7 man7/session-keyring.7 man7/sock_diag.7 man7/spufs.7
+       man7/standards.7 man7/thread-keyring.7 man7/tis-620.7 man7/unicode.7
        man7/user-keyring.7 man7/user-session-keyring.7 man7/utf-8.7
        man7/utf8.7 man7/xattr.7 man8/iconvconfig.8 man8/intro.8
        man8/ldconfig.8 man8/nscd.8
@@ -379,6 +365,7 @@ Copyright: (C) 1992 Drew Eckhardt;
            (C) 1996 Andries Brouwer (aeb@cwi.nl)
            (C) 1996 Free Software Foundation, Inc.
            (C) 1999 Mike Coleman (mkc@acm.org)
+           (C) 2000 by Werner Almesberger
            (C) 2000, 2002, 2007  Andreas Gruenbacher <agruen@suse.de>
            (C) 2001 Richard Braakman
            (C) 2001, 2002, 2004, 2007 Silicon Graphics, Inc.
@@ -420,7 +407,6 @@ Copyright: (C) 1992 Drew Eckhardt;
            (C) 2016 Michael Kerrisk <mtk.man-pages@gmail.com>
            (C) 2016 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2017 Goldwyn Rodrigues <rgoldwyn@suse.de>
-           (C) 2017 Red Hat, Inc. All Rights Reserved.
            (C) Andreas Gruenbacher, February 2001
            (C) Linux Foundation, 2008, written by Michael Kerrisk
            (C) Markus Kuhn, 1995, 2001
@@ -437,7 +423,6 @@ Copyright: (C) 1992 Drew Eckhardt;
            (c) 1993 Michael Haardt (michael@moria.de)
            (c) 1993 Michael Haardt (michael@moria.de),
            (c) 1993 Michael Haardt <michael@moria.de>
-           (c) 1993 Michael Haardt, (michael@moria.de)
            (c) 1994 Michael Haardt (michael@moria.de), 1994-06-04
            (c) 1994, 1995 Waldorf GMBH
            (c) 1995 James R. Van Zandt <jrv@vanzandt.mv.com>
@@ -471,7 +456,6 @@ Copyright: (C) 1992 Drew Eckhardt;
            (c) 2003 Andries Brouwer (aeb@cwi.nl)
            (c) 2003 Andries Brouwer (aeb@cwi.nl) and
            (c) 2006, Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2006-2015, Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2011, Denys Vlasenko <vda.linux@googlemail.com>
            (c) 2011, Mark R. Bannister <cambridge@users.sourceforge.net>
            (c) 2012 Eric W. Biederman <ebiederm@xmission.com>
@@ -490,8 +474,6 @@ Copyright: (C) 1992 Drew Eckhardt;
            (c) 2016 Pavel Emelyanov <xemul@virtuozzo.com>
            (c) 2016, Oracle.  All rights reserved.
            (c) 2017, Oracle.  All rights reserved.
-           (c) 2018, Red Hat, Inc.  All rights reserved.
-           (c) 2018, Sean Young <sean@mess.org>
            (c) Andries Brouwer <aeb@cwi.nl>
            (c) Bruno Haible <haible@clisp.cons.org>
            (c) IBM Corp. 2012
@@ -499,7 +481,7 @@ Copyright: (C) 1992 Drew Eckhardt;
            (c) International Business Machines Corp., 2006
            (c) International Business Machines orp., 2006
            (c) Michael Haardt (michael@cantor.informatik.rwth-aachen.de),
-           (c) Michael Kerrisk, 2001, 2002, 2005, 2013, 2019
+           (c) Michael Kerrisk, 2001, 2002, 2005, 2013
            1993 Ulrich Drepper (drepper@karlsruhe.gmd.de)
            1993-1995 Daniel Quinlan (quinlan@yggdrasil.com)
            1995 Mark D. Roth (roth@uiuc.edu)
@@ -530,16 +512,12 @@ Copyright: (C) 1992 Drew Eckhardt;
            2003 walter harms (walter.harms@informatik.uni-oldenburg.de)
            2003, 2015 Michael Kerrisk <mtk.manpages@gmail.com>
            2005, 2012, 2016 Michael Kerrisk <mtk.manpages@gmail.com>
-           2006, 2008, Michael Kerrisk <tmk.manpages@gmail.com>
-           2007, 2012, 2014, 2018 Michael Kerrisk <tk.manpages@gmail.com>
-           2008, 2009, 2012 Michael Kerrisk <tk.manpages@gmail.com>
            2008, Linux Foundation, written by Michael Kerrisk
            2009    Lefteris Dimitroulakis (edimitro@tee.gr)
            2009   Lefteris Dimitroulakis (edimitro@tee.gr)
            2009  Lefteris Dimitroulakis (edimitro@tee.gr)
            2009  Lefteris Dimitroulakis <edimitro at tee.gr>
            2009 Lefteris Dimitroulakis <edimitro at tee.gr>
-           2009, 2014, 2016, 2018, 2019 Michael Kerrisk <tk.manpages@gmail.com>
            2014 (C) Marko Myllynen <myllynen@redhat.com>
            2014 Michael Kerrisk <mtk.manpages@gmail.com>
            2015 Michael Kerrisk <mtk.manpages@gmail.com>
@@ -578,7 +556,7 @@ Files: man2/nfsservctl.2 man3/getnameinfo.3 man3/grantpt.3 man3/ptsname.3
        man3/unlockpt.3 man5/tzfile.5 man7/vdso.7 man8/ld-linux.8
        man8/ld-linux.so.8 man8/ld.so.8 man8/tzselect.8 man8/zdump.8
        man8/zic.8
-Copyright: (C) 2007-9, 2013, 2016 Michael Kerrisk <mtk.manpages@gmail.com>
+Copyright: (could not be detected automatically)
 License: public-domain
 
 Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
@@ -590,72 +568,72 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man2/clock_nanosleep.2 man2/clock_settime.2 man2/close.2
        man2/copy_file_range.2 man2/creat.2 man2/delete_module.2 man2/dup.2
        man2/dup2.2 man2/dup3.2 man2/execve.2 man2/execveat.2 man2/exit.2
-       man2/exit_group.2 man2/faccessat.2 man2/faccessat2.2 man2/fadvise64.2
+       man2/exit_group.2 man2/faccessat.2 man2/fadvise64.2
        man2/fadvise64_64.2 man2/fanotify_init.2 man2/fanotify_mark.2
        man2/fchdir.2 man2/fchmod.2 man2/fchmodat.2 man2/fchown.2
        man2/fchown32.2 man2/fchownat.2 man2/fcntl.2 man2/fcntl64.2
        man2/fdatasync.2 man2/finit_module.2 man2/flock.2 man2/fork.2
        man2/free_hugepages.2 man2/fstat.2 man2/fstat64.2 man2/fstatat.2
-       man2/fstatat64.2 man2/fstatfs.2 man2/fstatfs64.2 man2/fsync.2
-       man2/futimesat.2 man2/get_mempolicy.2 man2/get_robust_list.2
-       man2/getcpu.2 man2/getcwd.2 man2/getdents.2 man2/getdents64.2
-       man2/getdomainname.2 man2/getegid.2 man2/getegid32.2 man2/geteuid.2
+       man2/fstatat64.2 man2/fstatfs.2 man2/fstatfs64.2 man2/fstatvfs.2
+       man2/fsync.2 man2/futimesat.2 man2/get_mempolicy.2
+       man2/get_robust_list.2 man2/getcontext.2 man2/getcpu.2 man2/getcwd.2
+       man2/getdents.2 man2/getdents64.2 man2/getdomainname.2
+       man2/getdtablesize.2 man2/getegid.2 man2/getegid32.2 man2/geteuid.2
        man2/geteuid32.2 man2/getgid.2 man2/getgid32.2 man2/getgroups.2
-       man2/getgroups32.2 man2/gethostname.2 man2/getpagesize.2
-       man2/getpid.2 man2/getppid.2 man2/getrandom.2 man2/getresgid.2
-       man2/getresgid32.2 man2/getresuid.2 man2/getresuid32.2
-       man2/getrlimit.2 man2/getrusage.2 man2/gettid.2 man2/gettimeofday.2
-       man2/getuid.2 man2/getuid32.2 man2/getunwind.2 man2/idle.2
-       man2/init_module.2 man2/intro.2 man2/ioctl_fat.2 man2/ioctl_iflags.2
-       man2/ioctl_ns.2 man2/ioctl_userfaultfd.2 man2/iopl.2 man2/kcmp.2
-       man2/kexec_file_load.2 man2/kexec_load.2 man2/keyctl.2 man2/kill.2
-       man2/lchown.2 man2/lchown32.2 man2/link.2 man2/linkat.2 man2/llseek.2
-       man2/lookup_dcookie.2 man2/lstat.2 man2/lstat64.2 man2/madvise.2
-       man2/mbind.2 man2/membarrier.2 man2/migrate_pages.2 man2/mincore.2
-       man2/mmap.2 man2/mmap2.2 man2/mount.2 man2/move_pages.2
-       man2/mprotect.2 man2/mq_getsetattr.2 man2/mq_notify.2 man2/mq_open.2
-       man2/mq_timedreceive.2 man2/mq_timedsend.2 man2/mq_unlink.2
-       man2/msgctl.2 man2/msgget.2 man2/msgop.2 man2/msgrcv.2 man2/msgsnd.2
-       man2/msync.2 man2/munmap.2 man2/name_to_handle_at.2 man2/newfstatat.2
-       man2/nice.2 man2/oldfstat.2 man2/oldlstat.2 man2/oldolduname.2
-       man2/oldstat.2 man2/olduname.2 man2/open.2 man2/open_by_handle_at.2
-       man2/openat.2 man2/openat2.2 man2/pause.2 man2/perfmonctl.2
-       man2/personality.2 man2/pidfd_getfd.2 man2/pidfd_open.2
-       man2/pidfd_send_signal.2 man2/pipe.2 man2/pipe2.2 man2/pivot_root.2
-       man2/pkey_alloc.2 man2/pkey_free.2 man2/pkey_mprotect.2 man2/poll.2
-       man2/posix_fadvise.2 man2/ppoll.2 man2/prctl.2 man2/pread.2
-       man2/pread64.2 man2/preadv.2 man2/preadv2.2 man2/prlimit.2
-       man2/prlimit64.2 man2/process_vm_readv.2 man2/process_vm_writev.2
-       man2/pselect.2 man2/pselect6.2 man2/pwrite.2 man2/pwrite64.2
-       man2/pwritev.2 man2/pwritev2.2 man2/quotactl.2 man2/read.2
-       man2/readahead.2 man2/readdir.2 man2/readv.2 man2/reboot.2
-       man2/recvmmsg.2 man2/remap_file_pages.2 man2/rename.2 man2/renameat.2
-       man2/renameat2.2 man2/restart_syscall.2 man2/rmdir.2
+       man2/getgroups32.2 man2/gethostid.2 man2/gethostname.2
+       man2/getpagesize.2 man2/getpid.2 man2/getppid.2 man2/getrandom.2
+       man2/getresgid.2 man2/getresgid32.2 man2/getresuid.2
+       man2/getresuid32.2 man2/getrlimit.2 man2/getrusage.2 man2/gettid.2
+       man2/gettimeofday.2 man2/getuid.2 man2/getuid32.2 man2/getunwind.2
+       man2/idle.2 man2/init_module.2 man2/intro.2 man2/ioctl_fat.2
+       man2/ioctl_iflags.2 man2/ioctl_ns.2 man2/ioctl_userfaultfd.2
+       man2/iopl.2 man2/kcmp.2 man2/kexec_file_load.2 man2/kexec_load.2
+       man2/keyctl.2 man2/kill.2 man2/lchown.2 man2/lchown32.2 man2/link.2
+       man2/linkat.2 man2/llseek.2 man2/lookup_dcookie.2 man2/lstat.2
+       man2/lstat64.2 man2/madvise.2 man2/mbind.2 man2/membarrier.2
+       man2/migrate_pages.2 man2/mincore.2 man2/mmap.2 man2/mmap2.2
+       man2/mount.2 man2/move_pages.2 man2/mprotect.2 man2/mq_getsetattr.2
+       man2/mq_notify.2 man2/mq_open.2 man2/mq_timedreceive.2
+       man2/mq_timedsend.2 man2/mq_unlink.2 man2/msgctl.2 man2/msgget.2
+       man2/msgop.2 man2/msgrcv.2 man2/msgsnd.2 man2/msync.2 man2/munmap.2
+       man2/name_to_handle_at.2 man2/newfstatat.2 man2/nice.2
+       man2/oldfstat.2 man2/oldlstat.2 man2/oldolduname.2 man2/oldstat.2
+       man2/olduname.2 man2/open.2 man2/open_by_handle_at.2 man2/openat.2
+       man2/pause.2 man2/perfmonctl.2 man2/personality.2 man2/pipe.2
+       man2/pipe2.2 man2/pkey_alloc.2 man2/pkey_free.2 man2/pkey_mprotect.2
+       man2/poll.2 man2/posix_fadvise.2 man2/ppoll.2 man2/prctl.2
+       man2/pread.2 man2/pread64.2 man2/preadv.2 man2/preadv2.2
+       man2/prlimit.2 man2/prlimit64.2 man2/process_vm_readv.2
+       man2/process_vm_writev.2 man2/pselect.2 man2/pselect6.2 man2/pwrite.2
+       man2/pwrite64.2 man2/pwritev.2 man2/pwritev2.2 man2/quotactl.2
+       man2/read.2 man2/readahead.2 man2/readdir.2 man2/readv.2
+       man2/reboot.2 man2/recvmmsg.2 man2/remap_file_pages.2 man2/rename.2
+       man2/renameat.2 man2/renameat2.2 man2/restart_syscall.2 man2/rmdir.2
        man2/rt_sigaction.2 man2/rt_sigpending.2 man2/rt_sigprocmask.2
        man2/rt_sigqueueinfo.2 man2/rt_sigreturn.2 man2/rt_sigsuspend.2
-       man2/rt_sigtimedwait.2 man2/rt_tgsigqueueinfo.2
-       man2/s390_guarded_storage.2 man2/sched_getattr.2
+       man2/rt_sigtimedwait.2 man2/rt_tgsigqueueinfo.2 man2/sched_getattr.2
        man2/sched_getscheduler.2 man2/sched_setattr.2
        man2/sched_setscheduler.2 man2/seccomp.2 man2/select.2
        man2/select_tut.2 man2/semctl.2 man2/semget.2 man2/semop.2
        man2/semtimedop.2 man2/sendfile.2 man2/sendfile64.2 man2/sendmmsg.2
        man2/set_mempolicy.2 man2/set_robust_list.2 man2/set_tid_address.2
-       man2/setdomainname.2 man2/setegid.2 man2/seteuid.2 man2/setfsgid.2
-       man2/setfsgid32.2 man2/setfsuid.2 man2/setfsuid32.2 man2/setgid.2
-       man2/setgid32.2 man2/setgroups.2 man2/setgroups32.2
-       man2/sethostname.2 man2/setresgid.2 man2/setresgid32.2
-       man2/setresuid.2 man2/setresuid32.2 man2/setrlimit.2
-       man2/settimeofday.2 man2/setuid.2 man2/setuid32.2 man2/setup.2
-       man2/sgetmask.2 man2/shmat.2 man2/shmctl.2 man2/shmdt.2 man2/shmget.2
-       man2/shmop.2 man2/sigaction.2 man2/sigaltstack.2 man2/signal.2
-       man2/sigpending.2 man2/sigprocmask.2 man2/sigreturn.2
-       man2/sigsuspend.2 man2/sigtimedwait.2 man2/sigwaitinfo.2
-       man2/splice.2 man2/ssetmask.2 man2/stat.2 man2/stat64.2 man2/statfs.2
-       man2/statfs64.2 man2/statx.2 man2/stime.2 man2/subpage_prot.2
-       man2/swapoff.2 man2/swapon.2 man2/symlink.2 man2/symlinkat.2
-       man2/sync.2 man2/sync_file_range.2 man2/sync_file_range2.2
-       man2/syncfs.2 man2/syscalls.2 man2/sysctl.2 man2/sysfs.2
-       man2/sysinfo.2 man2/syslog.2 man2/tee.2 man2/tgkill.2 man2/time.2
+       man2/setcontext.2 man2/setdomainname.2 man2/setegid.2 man2/seteuid.2
+       man2/setfsgid.2 man2/setfsgid32.2 man2/setfsuid.2 man2/setfsuid32.2
+       man2/setgid.2 man2/setgid32.2 man2/setgroups.2 man2/setgroups32.2
+       man2/sethostid.2 man2/sethostname.2 man2/setresgid.2
+       man2/setresgid32.2 man2/setresuid.2 man2/setresuid32.2
+       man2/setrlimit.2 man2/settimeofday.2 man2/setuid.2 man2/setuid32.2
+       man2/setup.2 man2/sgetmask.2 man2/shmat.2 man2/shmctl.2 man2/shmdt.2
+       man2/shmget.2 man2/shmop.2 man2/sigaction.2 man2/sigaltstack.2
+       man2/signal.2 man2/sigpending.2 man2/sigprocmask.2 man2/sigqueue.2
+       man2/sigreturn.2 man2/sigsuspend.2 man2/sigtimedwait.2
+       man2/sigwaitinfo.2 man2/splice.2 man2/ssetmask.2 man2/stat.2
+       man2/stat64.2 man2/statfs.2 man2/statfs64.2 man2/statvfs.2
+       man2/statx.2 man2/stime.2 man2/subpage_prot.2 man2/swapoff.2
+       man2/swapon.2 man2/symlink.2 man2/symlinkat.2 man2/sync.2
+       man2/sync_file_range.2 man2/sync_file_range2.2 man2/syncfs.2
+       man2/syscalls.2 man2/sysctl.2 man2/sysfs.2 man2/sysinfo.2
+       man2/syslog.2 man2/tee.2 man2/tgkill.2 man2/time.2
        man2/timer_create.2 man2/timer_delete.2 man2/timer_getoverrun.2
        man2/timer_gettime.2 man2/timer_settime.2 man2/times.2 man2/tkill.2
        man2/ugetrlimit.2 man2/umask.2 man2/umount.2 man2/umount2.2
@@ -672,9 +650,9 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man3/CPU_ISSET_S.3 man3/CPU_OR.3 man3/CPU_OR_S.3 man3/CPU_SET.3
        man3/CPU_SET_S.3 man3/CPU_XOR.3 man3/CPU_XOR_S.3 man3/CPU_ZERO.3
        man3/CPU_ZERO_S.3 man3/FD_CLR.3 man3/FD_ISSET.3 man3/FD_SET.3
-       man3/FD_ZERO.3 man3/FILE.3 man3/HUGE_VAL.3 man3/HUGE_VALF.3
-       man3/HUGE_VALL.3 man3/INFINITY.3 man3/NAN.3 man3/__fbufsize.3
-       man3/__flbf.3 man3/__fpending.3 man3/__fpurge.3 man3/__freadable.3
+       man3/FD_ZERO.3 man3/HUGE_VAL.3 man3/HUGE_VALF.3 man3/HUGE_VALL.3
+       man3/INFINITY.3 man3/NAN.3 man3/__fbufsize.3 man3/__flbf.3
+       man3/__fpending.3 man3/__fpurge.3 man3/__freadable.3
        man3/__freading.3 man3/__fsetlocking.3 man3/__fwritable.3
        man3/__fwriting.3 man3/__ppc_get_timebase.3
        man3/__ppc_get_timebase_freq.3 man3/__ppc_mdoio.3 man3/__ppc_mdoom.3
@@ -683,74 +661,74 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man3/__ppc_set_ppr_very_low.3 man3/__ppc_yield.3 man3/_flushlbf.3
        man3/abort.3 man3/abs.3 man3/acos.3 man3/acosf.3 man3/acosh.3
        man3/acoshf.3 man3/acoshl.3 man3/acosl.3 man3/addmntent.3
-       man3/adjtime.3 man3/aio_init.3 man3/aiocb.3 man3/aligned_alloc.3
-       man3/asctime.3 man3/asctime_r.3 man3/asin.3 man3/asinf.3 man3/asinh.3
-       man3/asinhf.3 man3/asinhl.3 man3/asinl.3 man3/asprintf.3
-       man3/assert.3 man3/assert_perror.3 man3/atan.3 man3/atan2.3
-       man3/atan2f.3 man3/atan2l.3 man3/atanf.3 man3/atanh.3 man3/atanhf.3
-       man3/atanhl.3 man3/atanl.3 man3/atexit.3 man3/atof.3 man3/atoi.3
-       man3/atol.3 man3/atoll.3 man3/atoq.3 man3/basename.3 man3/bcmp.3
-       man3/bcopy.3 man3/be16toh.3 man3/be32toh.3 man3/be64toh.3
-       man3/bindresvport.3 man3/bsd_signal.3 man3/bsearch.3 man3/bstring.3
-       man3/bswap.3 man3/bswap_16.3 man3/bswap_32.3 man3/bswap_64.3
-       man3/byteorder.3 man3/bzero.3 man3/calloc.3
-       man3/canonicalize_file_name.3 man3/catclose.3 man3/catgets.3
-       man3/catopen.3 man3/cbrt.3 man3/cbrtf.3 man3/cbrtl.3 man3/ceil.3
-       man3/ceilf.3 man3/ceill.3 man3/clearenv.3 man3/clearerr_unlocked.3
-       man3/clock.3 man3/clock_getcpuclockid.3 man3/clock_t.3
-       man3/clockid_t.3 man3/closedir.3 man3/closelog.3 man3/cmsg.3
+       man3/adjtime.3 man3/aio_init.3 man3/aligned_alloc.3 man3/asctime.3
+       man3/asctime_r.3 man3/asin.3 man3/asinf.3 man3/asinh.3 man3/asinhf.3
+       man3/asinhl.3 man3/asinl.3 man3/asprintf.3 man3/assert.3
+       man3/assert_perror.3 man3/atan.3 man3/atan2.3 man3/atan2f.3
+       man3/atan2l.3 man3/atanf.3 man3/atanh.3 man3/atanhf.3 man3/atanhl.3
+       man3/atanl.3 man3/atexit.3 man3/atof.3 man3/atoi.3 man3/atol.3
+       man3/atoll.3 man3/atoq.3 man3/basename.3 man3/bcmp.3 man3/bcopy.3
+       man3/be16toh.3 man3/be32toh.3 man3/be64toh.3 man3/bindresvport.3
+       man3/bsd_signal.3 man3/bsearch.3 man3/bstring.3 man3/bswap.3
+       man3/bswap_16.3 man3/bswap_32.3 man3/bswap_64.3 man3/byteorder.3
+       man3/bzero.3 man3/calloc.3 man3/canonicalize_file_name.3
+       man3/catclose.3 man3/catgets.3 man3/catopen.3 man3/cbrt.3
+       man3/cbrtf.3 man3/cbrtl.3 man3/ceil.3 man3/ceilf.3 man3/ceill.3
+       man3/clearenv.3 man3/clearerr_unlocked.3 man3/clock.3
+       man3/clock_getcpuclockid.3 man3/clock_getres.3 man3/clock_gettime.3
+       man3/clock_settime.3 man3/closedir.3 man3/closelog.3 man3/cmsg.3
        man3/confstr.3 man3/copysign.3 man3/copysignf.3 man3/copysignl.3
        man3/cos.3 man3/cosf.3 man3/cosh.3 man3/coshf.3 man3/coshl.3
        man3/cosl.3 man3/ctermid.3 man3/ctime.3 man3/ctime_r.3 man3/cuserid.3
-       man3/daylight.3 man3/dev_t.3 man3/difftime.3 man3/dirfd.3
-       man3/dirname.3 man3/div.3 man3/div_t.3 man3/dl_iterate_phdr.3
-       man3/dladdr.3 man3/dladdr1.3 man3/dlinfo.3 man3/dn_comp.3
-       man3/dn_expand.3 man3/double_t.3 man3/drand48.3 man3/drand48_r.3
-       man3/drem.3 man3/dremf.3 man3/dreml.3 man3/duplocale.3 man3/dysize.3
-       man3/eaccess.3 man3/ecvt.3 man3/ecvt_r.3 man3/edata.3 man3/end.3
-       man3/endfsent.3 man3/endgrent.3 man3/endhostent.3 man3/endian.3
-       man3/endmntent.3 man3/endnetent.3 man3/endprotoent.3 man3/endpwent.3
-       man3/endservent.3 man3/endusershell.3 man3/erand48.3 man3/erand48_r.3
-       man3/erf.3 man3/erfc.3 man3/erfcf.3 man3/erfcl.3 man3/erff.3
-       man3/erfl.3 man3/etext.3 man3/ether_aton.3 man3/ether_aton_r.3
+       man3/daylight.3 man3/difftime.3 man3/dirfd.3 man3/dirname.3
+       man3/div.3 man3/dl_iterate_phdr.3 man3/dladdr.3 man3/dladdr1.3
+       man3/dlinfo.3 man3/dn_comp.3 man3/dn_expand.3 man3/drand48.3
+       man3/drand48_r.3 man3/drem.3 man3/dremf.3 man3/dreml.3
+       man3/duplocale.3 man3/dysize.3 man3/eaccess.3 man3/ecvt.3
+       man3/ecvt_r.3 man3/edata.3 man3/end.3 man3/endfsent.3 man3/endgrent.3
+       man3/endhostent.3 man3/endian.3 man3/endmntent.3 man3/endnetent.3
+       man3/endprotoent.3 man3/endpwent.3 man3/endservent.3
+       man3/endusershell.3 man3/erand48.3 man3/erand48_r.3 man3/erf.3
+       man3/erfc.3 man3/erfcf.3 man3/erfcl.3 man3/erff.3 man3/erfl.3
+       man3/etext.3 man3/ether_aton.3 man3/ether_aton_r.3
        man3/ether_hostton.3 man3/ether_line.3 man3/ether_ntoa.3
        man3/ether_ntoa_r.3 man3/ether_ntohost.3 man3/euidaccess.3
        man3/exit.3 man3/exp.3 man3/exp10.3 man3/exp10f.3 man3/exp10l.3
        man3/exp2.3 man3/exp2f.3 man3/exp2l.3 man3/expf.3 man3/expl.3
        man3/explicit_bzero.3 man3/expm1.3 man3/expm1f.3 man3/expm1l.3
        man3/fabs.3 man3/fabsf.3 man3/fabsl.3 man3/fcloseall.3 man3/fcvt.3
-       man3/fcvt_r.3 man3/fdopendir.3 man3/fenv_t.3 man3/feof_unlocked.3
-       man3/ferror_unlocked.3 man3/fexcept_t.3 man3/fexecve.3
-       man3/fflush_unlocked.3 man3/ffs.3 man3/ffsl.3 man3/ffsll.3
-       man3/fgetc.3 man3/fgetc_unlocked.3 man3/fgetgrent.3 man3/fgetpwent.3
-       man3/fgets.3 man3/fgets_unlocked.3 man3/fgetwc_unlocked.3
-       man3/fgetws_unlocked.3 man3/fileno_unlocked.3 man3/finite.3
-       man3/finitef.3 man3/finitel.3 man3/float_t.3 man3/flockfile.3
-       man3/floor.3 man3/floorf.3 man3/floorl.3 man3/fmod.3 man3/fmodf.3
-       man3/fmodl.3 man3/fnmatch.3 man3/fopencookie.3 man3/fpathconf.3
-       man3/fpurge.3 man3/fputc.3 man3/fputc_unlocked.3 man3/fputs.3
-       man3/fputs_unlocked.3 man3/fputwc_unlocked.3 man3/fputws_unlocked.3
-       man3/fread_unlocked.3 man3/free.3 man3/freeaddrinfo.3
-       man3/freehostent.3 man3/freeifaddrs.3 man3/freelocale.3 man3/frexp.3
-       man3/frexpf.3 man3/frexpl.3 man3/fseeko.3 man3/fstatvfs.3
-       man3/ftello.3 man3/ftok.3 man3/ftrylockfile.3 man3/funlockfile.3
-       man3/futimens.3 man3/futimes.3 man3/fwrite_unlocked.3
-       man3/gai_cancel.3 man3/gai_error.3 man3/gai_strerror.3
-       man3/gai_suspend.3 man3/gcvt.3 man3/get_avphys_pages.3
-       man3/get_current_dir_name.3 man3/get_nprocs.3 man3/get_nprocs_conf.3
-       man3/get_phys_pages.3 man3/getaddrinfo.3 man3/getaddrinfo_a.3
-       man3/getauxval.3 man3/getc.3 man3/getc_unlocked.3 man3/getchar.3
-       man3/getchar_unlocked.3 man3/getcontext.3 man3/getcwd.3
-       man3/getdate.3 man3/getdate_err.3 man3/getdate_r.3 man3/getdelim.3
-       man3/getdirentries.3 man3/getdtablesize.3 man3/getentropy.3
-       man3/getenv.3 man3/getfsent.3 man3/getfsfile.3 man3/getfsspec.3
-       man3/getgrent.3 man3/getgrgid.3 man3/getgrgid_r.3 man3/getgrnam.3
-       man3/getgrnam_r.3 man3/getgrouplist.3 man3/gethostbyaddr.3
-       man3/gethostbyaddr_r.3 man3/gethostbyname.3 man3/gethostbyname2.3
-       man3/gethostbyname2_r.3 man3/gethostbyname_r.3 man3/gethostent.3
-       man3/gethostent_r.3 man3/gethostid.3 man3/getifaddrs.3
-       man3/getipnodebyaddr.3 man3/getipnodebyname.3 man3/getline.3
-       man3/getlogin.3 man3/getlogin_r.3 man3/getmntent.3 man3/getmntent_r.3
+       man3/fcvt_r.3 man3/fdopendir.3 man3/feof_unlocked.3
+       man3/ferror_unlocked.3 man3/fexecve.3 man3/fflush_unlocked.3
+       man3/ffs.3 man3/ffsl.3 man3/ffsll.3 man3/fgetc.3
+       man3/fgetc_unlocked.3 man3/fgetgrent.3 man3/fgetpwent.3 man3/fgets.3
+       man3/fgets_unlocked.3 man3/fgetwc_unlocked.3 man3/fgetws_unlocked.3
+       man3/fileno_unlocked.3 man3/finite.3 man3/finitef.3 man3/finitel.3
+       man3/flockfile.3 man3/floor.3 man3/floorf.3 man3/floorl.3 man3/fmod.3
+       man3/fmodf.3 man3/fmodl.3 man3/fnmatch.3 man3/fopencookie.3
+       man3/fpathconf.3 man3/fpurge.3 man3/fputc.3 man3/fputc_unlocked.3
+       man3/fputs.3 man3/fputs_unlocked.3 man3/fputwc_unlocked.3
+       man3/fputws_unlocked.3 man3/fread_unlocked.3 man3/free.3
+       man3/freeaddrinfo.3 man3/freehostent.3 man3/freeifaddrs.3
+       man3/freelocale.3 man3/frexp.3 man3/frexpf.3 man3/frexpl.3
+       man3/fseeko.3 man3/fstatvfs.3 man3/ftello.3 man3/ftok.3
+       man3/ftrylockfile.3 man3/funlockfile.3 man3/futimens.3 man3/futimes.3
+       man3/fwrite_unlocked.3 man3/gai_cancel.3 man3/gai_error.3
+       man3/gai_strerror.3 man3/gai_suspend.3 man3/gcvt.3
+       man3/get_avphys_pages.3 man3/get_current_dir_name.3 man3/get_nprocs.3
+       man3/get_nprocs_conf.3 man3/get_phys_pages.3 man3/getaddrinfo.3
+       man3/getaddrinfo_a.3 man3/getauxval.3 man3/getc.3
+       man3/getc_unlocked.3 man3/getchar.3 man3/getchar_unlocked.3
+       man3/getcontext.3 man3/getcwd.3 man3/getdate.3 man3/getdate_err.3
+       man3/getdate_r.3 man3/getdelim.3 man3/getdirentries.3
+       man3/getdtablesize.3 man3/getentropy.3 man3/getenv.3 man3/getfsent.3
+       man3/getfsfile.3 man3/getfsspec.3 man3/getgrent.3 man3/getgrgid.3
+       man3/getgrgid_r.3 man3/getgrnam.3 man3/getgrnam_r.3
+       man3/getgrouplist.3 man3/gethostbyaddr.3 man3/gethostbyaddr_r.3
+       man3/gethostbyname.3 man3/gethostbyname2.3 man3/gethostbyname2_r.3
+       man3/gethostbyname_r.3 man3/gethostent.3 man3/gethostent_r.3
+       man3/gethostid.3 man3/getifaddrs.3 man3/getipnodebyaddr.3
+       man3/getipnodebyname.3 man3/getline.3 man3/getlogin.3
+       man3/getlogin_r.3 man3/getmntent.3 man3/getmntent_r.3
        man3/getnetbyaddr.3 man3/getnetbyaddr_r.3 man3/getnetbyname.3
        man3/getnetbyname_r.3 man3/getnetent.3 man3/getnetent_r.3
        man3/getopt.3 man3/getopt_long.3 man3/getopt_long_only.3
@@ -763,66 +741,63 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man3/getservbyport_r.3 man3/getservent.3 man3/getservent_r.3
        man3/getumask.3 man3/getusershell.3 man3/getutmp.3 man3/getutmpx.3
        man3/getw.3 man3/getwc_unlocked.3 man3/getwchar_unlocked.3
-       man3/getwd.3 man3/gid_t.3 man3/glob.3 man3/globfree.3 man3/gmtime.3
+       man3/getwd.3 man3/glob.3 man3/globfree.3 man3/gmtime.3
        man3/gmtime_r.3 man3/gnu_dev_major.3 man3/gnu_dev_makedev.3
        man3/gnu_dev_minor.3 man3/gnu_get_libc_release.3
        man3/gnu_get_libc_version.3 man3/group_member.3 man3/gsignal.3
        man3/h_errno.3 man3/hasmntopt.3 man3/herror.3 man3/hstrerror.3
        man3/htobe16.3 man3/htobe32.3 man3/htobe64.3 man3/htole16.3
        man3/htole32.3 man3/htole64.3 man3/htonl.3 man3/htons.3 man3/hypot.3
-       man3/hypotf.3 man3/hypotl.3 man3/id_t.3 man3/if_freenameindex.3
+       man3/hypotf.3 man3/hypotl.3 man3/if_freenameindex.3
        man3/if_indextoname.3 man3/if_nameindex.3 man3/if_nametoindex.3
        man3/ilogb.3 man3/ilogbf.3 man3/ilogbl.3 man3/imaxabs.3
-       man3/imaxdiv.3 man3/imaxdiv_t.3 man3/index.3 man3/inet.3
-       man3/inet_addr.3 man3/inet_aton.3 man3/inet_lnaof.3
-       man3/inet_makeaddr.3 man3/inet_net_ntop.3 man3/inet_net_pton.3
-       man3/inet_netof.3 man3/inet_network.3 man3/inet_ntoa.3
-       man3/inet_ntop.3 man3/inet_pton.3 man3/initgroups.3 man3/initstate.3
-       man3/initstate_r.3 man3/insque.3 man3/int16_t.3 man3/int32_t.3
-       man3/int64_t.3 man3/int8_t.3 man3/intN_t.3 man3/intmax_t.3
-       man3/intptr_t.3 man3/intro.3 man3/isalnum.3 man3/isalnum_l.3
-       man3/isalpha.3 man3/isalpha_l.3 man3/isascii.3 man3/isascii_l.3
-       man3/isatty.3 man3/isblank.3 man3/isblank_l.3 man3/iscntrl.3
-       man3/iscntrl_l.3 man3/isdigit.3 man3/isdigit_l.3 man3/isfdtype.3
-       man3/isgraph.3 man3/isgraph_l.3 man3/isinff.3 man3/isinfl.3
-       man3/islower.3 man3/islower_l.3 man3/isnanf.3 man3/isnanl.3
-       man3/isprint.3 man3/isprint_l.3 man3/ispunct.3 man3/ispunct_l.3
-       man3/isspace.3 man3/isspace_l.3 man3/isupper.3 man3/isupper_l.3
-       man3/isxdigit.3 man3/isxdigit_l.3 man3/j0.3 man3/j0f.3 man3/j0l.3
-       man3/j1.3 man3/j1f.3 man3/j1l.3 man3/jn.3 man3/jnf.3 man3/jnl.3
-       man3/jrand48.3 man3/jrand48_r.3 man3/klogctl.3 man3/labs.3
-       man3/lcong48.3 man3/lcong48_r.3 man3/lconv.3 man3/ldexp.3
-       man3/ldexpf.3 man3/ldexpl.3 man3/ldiv.3 man3/ldiv_t.3 man3/le16toh.3
-       man3/le32toh.3 man3/le64toh.3 man3/lfind.3 man3/llabs.3 man3/lldiv.3
-       man3/lldiv_t.3 man3/llrint.3 man3/llrintf.3 man3/llrintl.3
-       man3/llround.3 man3/llroundf.3 man3/llroundl.3 man3/localeconv.3
-       man3/localtime.3 man3/localtime_r.3 man3/log.3 man3/log10.3
-       man3/log10f.3 man3/log10l.3 man3/log1p.3 man3/log1pf.3 man3/log1pl.3
-       man3/log2.3 man3/log2f.3 man3/log2l.3 man3/logb.3 man3/logbf.3
-       man3/logbl.3 man3/logf.3 man3/logl.3 man3/lrand48.3 man3/lrand48_r.3
-       man3/lrint.3 man3/lrintf.3 man3/lrintl.3 man3/lround.3 man3/lroundf.3
-       man3/lroundl.3 man3/lsearch.3 man3/lseek64.3 man3/lutimes.3
-       man3/major.3 man3/makecontext.3 man3/makedev.3 man3/mallinfo.3
-       man3/malloc.3 man3/malloc_get_state.3 man3/malloc_info.3
-       man3/malloc_set_state.3 man3/malloc_stats.3 man3/malloc_trim.3
-       man3/malloc_usable_size.3 man3/mallopt.3 man3/matherr.3 man3/mcheck.3
-       man3/mcheck_check_all.3 man3/mcheck_pedantic.3 man3/memalign.3
-       man3/memccpy.3 man3/memchr.3 man3/memcmp.3 man3/memcpy.3
-       man3/memfrob.3 man3/memmem.3 man3/memmove.3 man3/memrchr.3
-       man3/memset.3 man3/minor.3 man3/mkdtemp.3 man3/mkfifo.3
-       man3/mkfifoat.3 man3/mkostemp.3 man3/mkostemps.3 man3/mkstemp.3
-       man3/mkstemps.3 man3/mktemp.3 man3/mktime.3 man3/mmap64.3 man3/modf.3
-       man3/modff.3 man3/modfl.3 man3/mprobe.3 man3/mq_close.3
-       man3/mq_getattr.3 man3/mq_notify.3 man3/mq_open.3 man3/mq_receive.3
-       man3/mq_send.3 man3/mq_setattr.3 man3/mq_timedreceive.3
-       man3/mq_timedsend.3 man3/mq_unlink.3 man3/mrand48.3 man3/mrand48_r.3
-       man3/mtrace.3 man3/muntrace.3 man3/nearbyint.3 man3/nearbyintf.3
-       man3/nearbyintl.3 man3/newlocale.3 man3/nextdown.3 man3/nextdownf.3
-       man3/nextdownl.3 man3/nextup.3 man3/nextupf.3 man3/nextupl.3
-       man3/nrand48.3 man3/nrand48_r.3 man3/ntohl.3 man3/ntohs.3
-       man3/ntp_gettime.3 man3/ntp_gettimex.3 man3/off_t.3 man3/on_exit.3
-       man3/opendir.3 man3/openlog.3 man3/optarg.3 man3/opterr.3
-       man3/optind.3 man3/optopt.3 man3/pathconf.3 man3/pid_t.3
+       man3/imaxdiv.3 man3/index.3 man3/inet.3 man3/inet_addr.3
+       man3/inet_aton.3 man3/inet_lnaof.3 man3/inet_makeaddr.3
+       man3/inet_net_ntop.3 man3/inet_net_pton.3 man3/inet_netof.3
+       man3/inet_network.3 man3/inet_ntoa.3 man3/inet_ntop.3
+       man3/inet_pton.3 man3/initgroups.3 man3/initstate.3
+       man3/initstate_r.3 man3/insque.3 man3/intro.3 man3/isalnum.3
+       man3/isalnum_l.3 man3/isalpha.3 man3/isalpha_l.3 man3/isascii.3
+       man3/isascii_l.3 man3/isatty.3 man3/isblank.3 man3/isblank_l.3
+       man3/iscntrl.3 man3/iscntrl_l.3 man3/isdigit.3 man3/isdigit_l.3
+       man3/isfdtype.3 man3/isgraph.3 man3/isgraph_l.3 man3/isinff.3
+       man3/isinfl.3 man3/islower.3 man3/islower_l.3 man3/isnanf.3
+       man3/isnanl.3 man3/isprint.3 man3/isprint_l.3 man3/ispunct.3
+       man3/ispunct_l.3 man3/isspace.3 man3/isspace_l.3 man3/isupper.3
+       man3/isupper_l.3 man3/isxdigit.3 man3/isxdigit_l.3 man3/j0.3
+       man3/j0f.3 man3/j0l.3 man3/j1.3 man3/j1f.3 man3/j1l.3 man3/jn.3
+       man3/jnf.3 man3/jnl.3 man3/jrand48.3 man3/jrand48_r.3 man3/klogctl.3
+       man3/labs.3 man3/lcong48.3 man3/lcong48_r.3 man3/ldexp.3
+       man3/ldexpf.3 man3/ldexpl.3 man3/ldiv.3 man3/le16toh.3 man3/le32toh.3
+       man3/le64toh.3 man3/lfind.3 man3/llabs.3 man3/lldiv.3 man3/llrint.3
+       man3/llrintf.3 man3/llrintl.3 man3/llround.3 man3/llroundf.3
+       man3/llroundl.3 man3/localeconv.3 man3/localtime.3 man3/localtime_r.3
+       man3/log.3 man3/log10.3 man3/log10f.3 man3/log10l.3 man3/log1p.3
+       man3/log1pf.3 man3/log1pl.3 man3/log2.3 man3/log2f.3 man3/log2l.3
+       man3/logb.3 man3/logbf.3 man3/logbl.3 man3/logf.3 man3/logl.3
+       man3/lrand48.3 man3/lrand48_r.3 man3/lrint.3 man3/lrintf.3
+       man3/lrintl.3 man3/lround.3 man3/lroundf.3 man3/lroundl.3
+       man3/lsearch.3 man3/lseek64.3 man3/lutimes.3 man3/major.3
+       man3/makecontext.3 man3/makedev.3 man3/mallinfo.3 man3/malloc.3
+       man3/malloc_get_state.3 man3/malloc_info.3 man3/malloc_set_state.3
+       man3/malloc_stats.3 man3/malloc_trim.3 man3/malloc_usable_size.3
+       man3/mallopt.3 man3/matherr.3 man3/mcheck.3 man3/mcheck_check_all.3
+       man3/mcheck_pedantic.3 man3/memalign.3 man3/memccpy.3 man3/memchr.3
+       man3/memcmp.3 man3/memcpy.3 man3/memfrob.3 man3/memmem.3
+       man3/memmove.3 man3/memrchr.3 man3/memset.3 man3/minor.3
+       man3/mkdtemp.3 man3/mkfifo.3 man3/mkfifoat.3 man3/mkostemp.3
+       man3/mkostemps.3 man3/mkstemp.3 man3/mkstemps.3 man3/mktemp.3
+       man3/mktime.3 man3/mmap64.3 man3/modf.3 man3/modff.3 man3/modfl.3
+       man3/mprobe.3 man3/mq_close.3 man3/mq_getattr.3 man3/mq_notify.3
+       man3/mq_open.3 man3/mq_receive.3 man3/mq_send.3 man3/mq_setattr.3
+       man3/mq_timedreceive.3 man3/mq_timedsend.3 man3/mq_unlink.3
+       man3/mrand48.3 man3/mrand48_r.3 man3/mtrace.3 man3/muntrace.3
+       man3/nearbyint.3 man3/nearbyintf.3 man3/nearbyintl.3 man3/newlocale.3
+       man3/nextdown.3 man3/nextdownf.3 man3/nextdownl.3 man3/nextup.3
+       man3/nextupf.3 man3/nextupl.3 man3/nrand48.3 man3/nrand48_r.3
+       man3/ntohl.3 man3/ntohs.3 man3/ntp_gettime.3 man3/ntp_gettimex.3
+       man3/on_exit.3 man3/opendir.3 man3/openlog.3 man3/optarg.3
+       man3/opterr.3 man3/optind.3 man3/optopt.3 man3/pathconf.3
        man3/posix_fallocate.3 man3/posix_memalign.3 man3/posix_openpt.3
        man3/posix_spawn.3 man3/posix_spawnp.3 man3/pow.3 man3/pow10.3
        man3/pow10f.3 man3/pow10l.3 man3/powf.3 man3/powl.3 man3/profil.3
@@ -831,13 +806,12 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man3/pthread_attr_getdetachstate.3 man3/pthread_attr_getguardsize.3
        man3/pthread_attr_getinheritsched.3 man3/pthread_attr_getschedparam.3
        man3/pthread_attr_getschedpolicy.3 man3/pthread_attr_getscope.3
-       man3/pthread_attr_getsigmask_np.3 man3/pthread_attr_getstack.3
-       man3/pthread_attr_getstackaddr.3 man3/pthread_attr_getstacksize.3
-       man3/pthread_attr_init.3 man3/pthread_attr_setaffinity_np.3
-       man3/pthread_attr_setdetachstate.3 man3/pthread_attr_setguardsize.3
-       man3/pthread_attr_setinheritsched.3 man3/pthread_attr_setschedparam.3
-       man3/pthread_attr_setschedpolicy.3 man3/pthread_attr_setscope.3
-       man3/pthread_attr_setsigmask_np.3 man3/pthread_attr_setstack.3
+       man3/pthread_attr_getstack.3 man3/pthread_attr_getstackaddr.3
+       man3/pthread_attr_getstacksize.3 man3/pthread_attr_init.3
+       man3/pthread_attr_setaffinity_np.3 man3/pthread_attr_setdetachstate.3
+       man3/pthread_attr_setguardsize.3 man3/pthread_attr_setinheritsched.3
+       man3/pthread_attr_setschedparam.3 man3/pthread_attr_setschedpolicy.3
+       man3/pthread_attr_setscope.3 man3/pthread_attr_setstack.3
        man3/pthread_attr_setstackaddr.3 man3/pthread_attr_setstacksize.3
        man3/pthread_cancel.3 man3/pthread_cleanup_pop.3
        man3/pthread_cleanup_pop_restore_np.3 man3/pthread_cleanup_push.3
@@ -866,19 +840,17 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man3/pthread_spin_lock.3 man3/pthread_spin_trylock.3
        man3/pthread_spin_unlock.3 man3/pthread_testcancel.3
        man3/pthread_timedjoin_np.3 man3/pthread_tryjoin_np.3
-       man3/pthread_yield.3 man3/ptrdiff_t.3 man3/putc.3
-       man3/putc_unlocked.3 man3/putchar.3 man3/putchar_unlocked.3
-       man3/putenv.3 man3/putpwent.3 man3/puts.3 man3/putw.3
-       man3/putwc_unlocked.3 man3/putwchar_unlocked.3 man3/pvalloc.3
-       man3/qecvt.3 man3/qecvt_r.3 man3/qfcvt.3 man3/qfcvt_r.3 man3/qgcvt.3
-       man3/qsort.3 man3/qsort_r.3 man3/raise.3 man3/rand.3 man3/rand_r.3
-       man3/random.3 man3/random_r.3 man3/rawmemchr.3 man3/re_comp.3
-       man3/re_exec.3 man3/readdir.3 man3/readdir_r.3 man3/realloc.3
-       man3/reallocarray.3 man3/realpath.3 man3/regcomp.3 man3/regerror.3
-       man3/regex.3 man3/regex_t.3 man3/regexec.3 man3/regfree.3
-       man3/regmatch_t.3 man3/regoff_t.3 man3/remainder.3 man3/remainderf.3
-       man3/remainderl.3 man3/remove.3 man3/remque.3 man3/res_init.3
-       man3/res_mkquery.3 man3/res_nclose.3 man3/res_ninit.3
+       man3/pthread_yield.3 man3/putc.3 man3/putc_unlocked.3 man3/putchar.3
+       man3/putchar_unlocked.3 man3/putenv.3 man3/putpwent.3 man3/puts.3
+       man3/putw.3 man3/putwc_unlocked.3 man3/putwchar_unlocked.3
+       man3/pvalloc.3 man3/qecvt.3 man3/qecvt_r.3 man3/qfcvt.3
+       man3/qfcvt_r.3 man3/qgcvt.3 man3/qsort.3 man3/qsort_r.3 man3/raise.3
+       man3/rand.3 man3/rand_r.3 man3/random.3 man3/random_r.3
+       man3/rawmemchr.3 man3/re_comp.3 man3/re_exec.3 man3/readdir.3
+       man3/readdir_r.3 man3/realloc.3 man3/realpath.3 man3/regcomp.3
+       man3/regerror.3 man3/regex.3 man3/regexec.3 man3/regfree.3
+       man3/remainder.3 man3/remainderf.3 man3/remainderl.3 man3/remove.3
+       man3/remque.3 man3/res_init.3 man3/res_mkquery.3 man3/res_ninit.3
        man3/res_nmkquery.3 man3/res_nquery.3 man3/res_nquerydomain.3
        man3/res_nsearch.3 man3/res_nsend.3 man3/res_query.3
        man3/res_querydomain.3 man3/res_search.3 man3/res_send.3
@@ -896,70 +868,62 @@ Files: man1/intro.1 man1/locale.1 man1/pldd.1 man1/sprof.1 man2/_Exit.2
        man3/setmntent.3 man3/setnetent.3 man3/setprotoent.3 man3/setpwent.3
        man3/setservent.3 man3/setstate.3 man3/setstate_r.3
        man3/setusershell.3 man3/shm_open.3 man3/shm_unlink.3
-       man3/sigabbrev_np.3 man3/sigaddset.3 man3/sigandset.3 man3/sigblock.3
-       man3/sigdelset.3 man3/sigdescr_np.3 man3/sigemptyset.3
-       man3/sigfillset.3 man3/siggetmask.3 man3/sighold.3 man3/sigignore.3
-       man3/siginfo_t.3 man3/siginterrupt.3 man3/sigisemptyset.3
+       man3/sigaddset.3 man3/sigandset.3 man3/sigblock.3 man3/sigdelset.3
+       man3/sigemptyset.3 man3/sigfillset.3 man3/siggetmask.3 man3/sighold.3
+       man3/sigignore.3 man3/siginterrupt.3 man3/sigisemptyset.3
        man3/sigismember.3 man3/sigmask.3 man3/sigorset.3 man3/sigpause.3
-       man3/sigqueue.3 man3/sigrelse.3 man3/sigset.3 man3/sigset_t.3
-       man3/sigsetmask.3 man3/sigsetops.3 man3/sigstack.3 man3/sigval.3
-       man3/sigvec.3 man3/sigwait.3 man3/sin.3 man3/sinf.3 man3/sinh.3
-       man3/sinhf.3 man3/sinhl.3 man3/sinl.3 man3/size_t.3 man3/sleep.3
-       man3/sockatmark.3 man3/sqrt.3 man3/sqrtf.3 man3/sqrtl.3 man3/srand.3
-       man3/srand48.3 man3/srand48_r.3 man3/srandom.3 man3/srandom_r.3
-       man3/ssignal.3 man3/ssize_t.3 man3/statvfs.3 man3/stdio_ext.3
-       man3/stpcpy.3 man3/strcasecmp.3 man3/strcasestr.3 man3/strcat.3
-       man3/strchr.3 man3/strchrnul.3 man3/strcmp.3 man3/strcoll.3
-       man3/strcpy.3 man3/strcspn.3 man3/strdup.3 man3/strdupa.3
-       man3/strerror.3 man3/strerror_l.3 man3/strerror_r.3
-       man3/strerrordesc_np.3 man3/strerrorname_np.3 man3/strfromd.3
-       man3/strfromf.3 man3/strfroml.3 man3/strfry.3 man3/strftime.3
-       man3/string.3 man3/strlen.3 man3/strncasecmp.3 man3/strncat.3
-       man3/strncmp.3 man3/strncpy.3 man3/strndup.3 man3/strndupa.3
-       man3/strpbrk.3 man3/strptime.3 man3/strrchr.3 man3/strsep.3
-       man3/strsignal.3 man3/strspn.3 man3/strstr.3 man3/strtok.3
-       man3/strtok_r.3 man3/strtol.3 man3/strtoll.3 man3/strtoq.3
-       man3/strtoul.3 man3/strtoull.3 man3/strtouq.3 man3/strverscmp.3
-       man3/strxfrm.3 man3/suseconds_t.3 man3/swab.3 man3/swapcontext.3
-       man3/sys_siglist.3 man3/sysconf.3 man3/syslog.3 man3/system.3
-       man3/sysv_signal.3 man3/tan.3 man3/tanf.3 man3/tanh.3 man3/tanhf.3
-       man3/tanhl.3 man3/tanl.3 man3/tcgetpgrp.3 man3/tcgetsid.3
-       man3/tcsetpgrp.3 man3/tdelete.3 man3/tdestroy.3 man3/telldir.3
-       man3/tempnam.3 man3/tfind.3 man3/time_t.3 man3/timegm.3
-       man3/timelocal.3 man3/timer_t.3 man3/timeradd.3 man3/timerclear.3
-       man3/timercmp.3 man3/timerisset.3 man3/timersub.3 man3/timespec.3
-       man3/timeval.3 man3/timezone.3 man3/tmpfile.3 man3/tmpnam.3
-       man3/tmpnam_r.3 man3/toascii.3 man3/tolower.3 man3/tolower_l.3
-       man3/toupper.3 man3/toupper_l.3 man3/trunc.3 man3/truncf.3
-       man3/truncl.3 man3/tsearch.3 man3/ttyslot.3 man3/twalk.3
-       man3/twalk_r.3 man3/tzname.3 man3/tzset.3 man3/uid_t.3
-       man3/uint16_t.3 man3/uint32_t.3 man3/uint64_t.3 man3/uint8_t.3
-       man3/uintN_t.3 man3/uintmax_t.3 man3/uintptr_t.3 man3/ulimit.3
-       man3/undocumented.3 man3/ungetc.3 man3/unlocked_stdio.3
-       man3/unsetenv.3 man3/uselocale.3 man3/usleep.3 man3/va_list.3
-       man3/valloc.3 man3/vasprintf.3 man3/vlimit.3 man3/void.3
-       man3/vsyslog.3 man3/vtimes.3 man3/y0.3 man3/y0f.3 man3/y0l.3
-       man3/y1.3 man3/y1f.3 man3/y1l.3 man3/yn.3 man3/ynf.3 man3/ynl.3
-       man4/cpuid.4 man4/full.4 man4/fuse.4 man4/initrd.4 man4/mouse.4
-       man4/msr.4 man4/sd.4 man4/st.4 man5/acct.5 man5/core.5
-       man5/services.5 man5/slabinfo.5 man5/sysfs.5 man5/tmpfs.5
-       man7/address_families.7 man7/aio.7 man7/arp.7 man7/capabilities.7
-       man7/cgroup_namespaces.7 man7/cgroups.7 man7/credentials.7 man7/ddp.7
-       man7/fanotify.7 man7/feature_test_macros.7 man7/fifo.7 man7/glibc.7
-       man7/hier.7 man7/icmp.7 man7/inode.7 man7/inotify.7 man7/ip.7
-       man7/ipc_namespaces.7 man7/ipv6.7 man7/libc.7 man7/locale.7
-       man7/man-pages.7 man7/man.7 man7/math_error.7 man7/mount_namespaces.7
-       man7/mq_overview.7 man7/namespaces.7 man7/netdevice.7
-       man7/network_namespaces.7 man7/nptl.7 man7/numa.7 man7/packet.7
-       man7/path_resolution.7 man7/pid_namespaces.7 man7/pipe.7 man7/pkeys.7
-       man7/pthreads.7 man7/pty.7 man7/random.7 man7/raw.7 man7/rtld-audit.7
+       man3/sigqueue.3 man3/sigrelse.3 man3/sigset.3 man3/sigsetmask.3
+       man3/sigsetops.3 man3/sigstack.3 man3/sigvec.3 man3/sigwait.3
+       man3/sin.3 man3/sinf.3 man3/sinh.3 man3/sinhf.3 man3/sinhl.3
+       man3/sinl.3 man3/sleep.3 man3/sockatmark.3 man3/sqrt.3 man3/sqrtf.3
+       man3/sqrtl.3 man3/srand.3 man3/srand48.3 man3/srand48_r.3
+       man3/srandom.3 man3/srandom_r.3 man3/ssignal.3 man3/statvfs.3
+       man3/stdio_ext.3 man3/stpcpy.3 man3/strcasecmp.3 man3/strcasestr.3
+       man3/strcat.3 man3/strchr.3 man3/strchrnul.3 man3/strcmp.3
+       man3/strcoll.3 man3/strcpy.3 man3/strcspn.3 man3/strdup.3
+       man3/strdupa.3 man3/strerror.3 man3/strerror_l.3 man3/strerror_r.3
+       man3/strfromd.3 man3/strfromf.3 man3/strfroml.3 man3/strfry.3
+       man3/strftime.3 man3/string.3 man3/strlen.3 man3/strncasecmp.3
+       man3/strncat.3 man3/strncmp.3 man3/strncpy.3 man3/strndup.3
+       man3/strndupa.3 man3/strpbrk.3 man3/strptime.3 man3/strrchr.3
+       man3/strsep.3 man3/strsignal.3 man3/strspn.3 man3/strstr.3
+       man3/strtok.3 man3/strtok_r.3 man3/strtol.3 man3/strtoll.3
+       man3/strtoq.3 man3/strtoul.3 man3/strtoull.3 man3/strtouq.3
+       man3/strverscmp.3 man3/strxfrm.3 man3/swab.3 man3/swapcontext.3
+       man3/sysconf.3 man3/syslog.3 man3/system.3 man3/sysv_signal.3
+       man3/tan.3 man3/tanf.3 man3/tanh.3 man3/tanhf.3 man3/tanhl.3
+       man3/tanl.3 man3/tcgetpgrp.3 man3/tcgetsid.3 man3/tcsetpgrp.3
+       man3/tdelete.3 man3/tdestroy.3 man3/telldir.3 man3/tempnam.3
+       man3/tfind.3 man3/timegm.3 man3/timelocal.3 man3/timeradd.3
+       man3/timerclear.3 man3/timercmp.3 man3/timerisset.3 man3/timersub.3
+       man3/timezone.3 man3/tmpfile.3 man3/tmpnam.3 man3/tmpnam_r.3
+       man3/toascii.3 man3/tolower.3 man3/tolower_l.3 man3/toupper.3
+       man3/toupper_l.3 man3/trunc.3 man3/truncf.3 man3/truncl.3
+       man3/tsearch.3 man3/ttyslot.3 man3/twalk.3 man3/tzname.3 man3/tzset.3
+       man3/ulimit.3 man3/undocumented.3 man3/ungetc.3 man3/unlocked_stdio.3
+       man3/unsetenv.3 man3/uselocale.3 man3/usleep.3 man3/valloc.3
+       man3/vasprintf.3 man3/vlimit.3 man3/vsyslog.3 man3/vtimes.3 man3/y0.3
+       man3/y0f.3 man3/y0l.3 man3/y1.3 man3/y1f.3 man3/y1l.3 man3/yn.3
+       man3/ynf.3 man3/ynl.3 man4/cpuid.4 man4/full.4 man4/fuse.4
+       man4/initrd.4 man4/mouse.4 man4/msr.4 man4/sd.4 man4/st.4 man5/acct.5
+       man5/core.5 man5/ipc.5 man5/numa_maps.5 man5/services.5
+       man5/slabinfo.5 man5/sysfs.5 man5/tmpfs.5 man7/aio.7 man7/arp.7
+       man7/capabilities.7 man7/cgroup_namespaces.7 man7/cgroups.7
+       man7/credentials.7 man7/ddp.7 man7/fanotify.7
+       man7/feature_test_macros.7 man7/fifo.7 man7/glibc.7 man7/hier.7
+       man7/icmp.7 man7/inode.7 man7/inotify.7 man7/ip.7 man7/ipv6.7
+       man7/libc.7 man7/locale.7 man7/man-pages.7 man7/man.7
+       man7/math_error.7 man7/mount_namespaces.7 man7/mq_overview.7
+       man7/namespaces.7 man7/netdevice.7 man7/network_namespaces.7
+       man7/nptl.7 man7/numa.7 man7/packet.7 man7/path_resolution.7
+       man7/pid_namespaces.7 man7/pipe.7 man7/pkeys.7 man7/pthreads.7
+       man7/pty.7 man7/random.7 man7/raw.7 man7/rtld-audit.7
        man7/rtnetlink.7 man7/sem_overview.7 man7/shm_overview.7
        man7/sigevent.7 man7/signal-safety.7 man7/signal.7 man7/socket.7
-       man7/suffixes.7 man7/svipc.7 man7/system_data_types.7 man7/sysvipc.7
-       man7/tcp.7 man7/termio.7 man7/time.7 man7/time_namespaces.7
+       man7/suffixes.7 man7/svipc.7 man7/tcp.7 man7/termio.7 man7/time.7
        man7/udp.7 man7/udplite.7 man7/units.7 man7/unix.7 man7/uri.7
-       man7/url.7 man7/urn.7 man7/user_namespaces.7 man7/uts_namespaces.7
-       man7/vsock.7 man7/x25.7 man8/sln.8
+       man7/url.7 man7/urn.7 man7/user_namespaces.7 man7/vsock.7 man7/x25.7
+       man8/sln.8
 Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 1992 Drew Eckhardt;
            (C) 1993 David Metcalfe (david@prism.demon.co.uk)
@@ -1002,10 +966,10 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2002 Andries Brouwer (aeb@cwi.nl)
            (C) 2002 Andries Brouwer <aeb@cwi.nl>
            (C) 2002 Ian Redfern
+           (C) 2002 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2002, 2005 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2002, 2005, 2016 Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2002, 2006, 2008, 2012, 2013, 2015 Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2002, 2020 Michael Kerrisk <mtk.manpages@gmail.com>
+           (C) 2002, 2006, 2008, 2012, 2013 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2002, Michael Kerrisk
            (C) 2002-2010, 2014 Michael Kerrisk;
            (C) 2003 Andi Kleen
@@ -1022,7 +986,7 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2005, 2008, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2005, 2010, 2014, 2015, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2005, 2013 Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2005, 2014, 2020 Michael Kerrisk <mtk.manpages@gmail.com>
+           (C) 2005, 2014 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2006 Andi Kleen <ak@muc.de>.
            (C) 2006 Jens Axboe
            (C) 2006 Michael Kerrisk
@@ -1035,12 +999,11 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2006, 2014 Michael Kerrisk
            (C) 2006, 2014 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2006, 2014 Michael Kerrisk.
-           (C) 2006, 2019 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2006, Michael Kerrisk
+           (C) 2006, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2007 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2007, 2010 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2007, 2012 Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2007, 2015, 2020, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2007, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2008 Greg Banks
            (C) 2008 Linux Foundation, written by Michael Kerrisk
@@ -1059,8 +1022,6 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2008-2014, Michael Kerrisk <mtk.manpages@gmail.com>,
            (C) 2009 Petr Baudis <pasky@suse.cz>
            (C) 2009, Linux Foundation, written by Michael Kerrisk
-           (C) 2009-2015 Michael Kerrisk, <mtk.manpages.gmail.com>
-           (C) 2010 Andi Kleen <andi@firstfloor.org>
            (C) 2010 Intel Corporation, Author: Andi Kleen
            (C) 2010, 2014, 2015, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2010, 2015, 2017 Michael Kerrisk <mtk.manpages@gmail.com>
@@ -1068,7 +1029,6 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2011 Christopher Yeoh <cyeoh@au1.ibm.com>
            (C) 2011 by Andi Kleen <andi@firstfloor.org>
            (C) 2012 Chandan Apsangi <chandan.jc@gmail.com>
-           (C) 2012 Cyrill Gorcunov <gorcunov@openvz.org>
            (C) 2012 Michael Kerrisk <mtk.man-pages@gmail.com>
            (C) 2012 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2012 Mike Frysinger <vapier@gentoo.org>
@@ -1078,7 +1038,6 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2012, Cyrill Gorcunov <gorcunov@openvz.org>
            (C) 2013 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2013,  Heinrich Schuchardt <xypron.glpk@gmx.de>
-           (C) 2013, 2019, Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2013, Heinrich Schuchardt <xypron.glpk@gmx.de>
            (C) 2014 Dave Hansen / Intel
            (C) 2014 David Herrmann
@@ -1109,12 +1068,7 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (C) 2017 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) 2017 Tyler Hicks <tyhicks@canonical.com>
            (C) 2017, Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2018 Eugene Syromyatnikov <evgsyr@gmail.com>
            (C) 2018, Stefan Hajnoczi <stefanha@redhat.com>
-           (C) 2019 Aleksa Sarai <cyphar@cyphar.com>
-           (C) 2019 Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2019, Michael Kerrisk <mtk.manpages@gmail.com>
-           (C) 2020 Michael Kerrisk <mtk.manpages@gmail.com>
            (C) The Internet Society (1998).  All Rights Reserved.
            (C), 1994, Graeme W. Wilford (Wilf).
            (C), 1994, Graeme W. Wilford. (Wilf.)
@@ -1145,7 +1099,7 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (c) 2002 Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2002 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2002, 2004, 2005, 2008, 2010 Michael Kerrisk
-           (c) 2002, 2006, 2020 by Michael Kerrisk <mtk.manpages@gmail.com>
+           (c) 2002, 2006 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2002, 2011 Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2003 Andries Brouwer (aeb@cwi.nl), Aug 24, 2003
            (c) 2003 Nick Clifford (zaf@nrc.co.nz), Jan 25, 2003
@@ -1197,7 +1151,6 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (c) 2012, Petr Benas
            (c) 2013 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2013, 2014 by Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2013, 2016, 2017 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2014 Google, Inc., written by David Drysdale
            (c) 2014 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2015 William Woodruff (william@tuffbizz.com)
@@ -1205,25 +1158,15 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            (c) 2015, 2016 IBM Corporation.
            (c) 2015, IBM Corporation.
            (c) 2015, Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2016 Eugene Syromyatnikov <evgsyr@gmail.com>
            (c) 2016 Julia Computing Inc, Keno Fischer
            (c) 2016 Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2016 by Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2016, 2019 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2016, IBM Corporation.
            (c) 2017 David Howells <dhowells@redhat.com>
            (c) 2017 Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2017 by Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2017, Michael Kerrisk <mtk.manpages@gmail.com>
            (c) 2017, Yubin Ruan <ablacktshirt@gmail.com>
-           (c) 2018 Konrad Rzeszutek Wilk <konrad.wilk@oracle.com>
-           (c) 2018 Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2018 by Eugene Syromyatnikov <evgsyr@gmail.com>,
-           (c) 2019 by Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2020 Dave Martin <Dave.Martin@arm.com>
-           (c) 2020 Michael Kerrisk <mtk.manpages@gmail.com>
-           (c) 2020 by Alejandro Colomar <colomar.6.4.3@gmail.com>
-           (c) 2020 by Michael Kerrisk <mtk.manpages@gmail.com>
            1991, 1992 Free Software Foundation
            1992 Rickard E. Faith (faith@cs.unc.edu)
            1992-1999 Rickard E. Faith and David A. Wheeler
@@ -1261,10 +1204,8 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            2004 Andries Brouwer (aeb@cwi.nl)
            2004 Andries Brouwer <aeb@cwi.nl>.
            2004, 2005 Michael Kerrisk <mtk.manpages@gmail.com>
-           2006 Michael Kerrisk <mtk.manpages@ganil.com>
            2006 Michael Kerrisk <mtk.manpages@gmail.com>
            2006, 2012, 2017 Michael Kerrisk <mtk.manpages@gmail.com>
-           2006-2008, Michael Kerrisk <mtk.manpages@gmail.com>
            2007 (C) Michael Kerrisk <mtk.manpages@gmail.com>
            2007 Lee Schermerhorn, Hewlett Packard
            2007 Michael Kerrisk <mtk.manpages@gmail.com>
@@ -1279,12 +1220,9 @@ Copyright: (C) 1991, 1992  Linus Torvalds
            2013, Michael Kerrisk <mtk.manpages@gmail.com>
            2014 Michael Kerrisk <mtk.manpages@gmail.com>
            2014, Vivek Goyal <vgoyal@redhat.com>
-           2015 Bill Pemberton <wfp5p@worldbroken.com>
            2015 Michael Kerrisk <mtk.manpages@gmail.com>
            2015-2017 Mathieu Desnoyers <mathieu.desnoyers@efficios.com>
-           2020 Michael Kerrisk <mtk.manpages@gmail.com>
            Guillem Jover <guillem@hadrons.org>
-           i2007, 2012, 2018, Michael Kerrisk <mtk.manpages@gmail.com>
 License: verbatim
 
 License: BSD-3-clause

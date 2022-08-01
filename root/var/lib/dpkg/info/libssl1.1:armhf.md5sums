@@ -1,8 +1,9 @@
-65b3aac120fce57938e467c4992e298b  usr/lib/arm-linux-gnueabihf/engines-1.1/afalg.so
-137d4984f9738ff8dbf9e2aac1a8336a  usr/lib/arm-linux-gnueabihf/engines-1.1/padlock.so
-a3016b6e86b1099bb30b34158cfdc796  usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1
-cbaefb7aa0a10e31bf85fb63562dd55d  usr/lib/arm-linux-gnueabihf/libssl.so.1.1
+ac25f4e2d087305a4fb9b11171f15c12  usr/lib/arm-linux-gnueabihf/engines-1.1/afalg.so
+e7dade32719cb2db5932e0d0e0a24393  usr/lib/arm-linux-gnueabihf/engines-1.1/capi.so
+e158ecbd2c4be1f5c1bb6eb1eff309ee  usr/lib/arm-linux-gnueabihf/engines-1.1/padlock.so
+56589ba871147a9105fedf1e0f133762  usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1
+8f1c6966d0f54d8501f0d6eccb247b59  usr/lib/arm-linux-gnueabihf/libssl.so.1.1
 36d84ee05886a95b19e981c1f67b7eb0  usr/share/doc/libssl1.1/NEWS.Debian.gz
-d0d5934d370701acfddbd04c15e8bcaa  usr/share/doc/libssl1.1/changelog.Debian.gz
-ad1490d3fb7a30eb9a8215487c72cc43  usr/share/doc/libssl1.1/changelog.gz
+38c5c93ac86032e47d349e784fb44554  usr/share/doc/libssl1.1/changelog.Debian.gz
+0af38ad9a9762ad90a6bf9d4d908e7ff  usr/share/doc/libssl1.1/changelog.gz
 6ca25957fe201dc234ff25bc24f98e0a  usr/share/doc/libssl1.1/copyright

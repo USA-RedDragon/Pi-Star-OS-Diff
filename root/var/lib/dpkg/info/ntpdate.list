@@ -1,0 +1,9 @@
+/etc
+/etc/default
+/etc/default/ntpdate
+/etc/dhcp
+/etc/dhcp/dhclient-exit-hooks.d
+/etc/dhcp/dhclient-exit-hooks.d/ntpdate
+/etc/logcheck
+/etc/logcheck/ignore.d.server
+/etc/logcheck/ignore.d.server/ntpdate

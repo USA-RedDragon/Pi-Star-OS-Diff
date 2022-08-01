@@ -1,11 +1,8 @@
 libsamplerate.so.0 libsamplerate0 #MINVER#
-* Build-Depends-Package: libsamplerate0-dev
  libsamplerate.so.0.0@libsamplerate.so.0.0 0.1.7
  libsamplerate.so.0.1@libsamplerate.so.0.1 0.1.7
- libsamplerate.so.0.2@libsamplerate.so.0.2 0.2.0
  src_callback_new@libsamplerate.so.0.1 0.1.7
  src_callback_read@libsamplerate.so.0.1 0.1.7
- src_clone@libsamplerate.so.0.2 0.2.0
  src_delete@libsamplerate.so.0.0 0.1.7
  src_error@libsamplerate.so.0.0 0.1.7
  src_float_to_int_array@libsamplerate.so.0.1 0.1.7

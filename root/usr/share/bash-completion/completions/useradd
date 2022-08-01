@@ -9,28 +9,27 @@ _useradd()
     #       with -u/--uid
 
     case $prev in
-        --comment | --help | --expiredate | --inactive | --key | --password | --uid | \
-            --selinux-user | -!(-*)[chefKpuZ])
+        -c|--comment|-h|--help|-e|--expiredate|-f|--inactive|-K|--key|\
+        -p|--password|-u|--uid|-Z|--selinux-user)
             return
             ;;
-        --base-dir | --home-dir | --skel | --root | -!(-*)[bdkR])
+        -b|--base-dir|-d|--home-dir|-k|--skel|-R|--root)
             _filedir -d
             return
             ;;
-        --gid | -!(-*)g)
+        -g|--gid)
             _gids
-            COMPREPLY=($(compgen -W '${COMPREPLY[@]} $(compgen -g)' \
-                -- "$cur"))
+            COMPREPLY=( $( compgen -W '${COMPREPLY[@]} $( compgen -g )' \
+                -- "$cur" ) )
             return
             ;;
-        --groups | -!(-*)G)
-            local prefix=
-            [[ $cur == *,* ]] && prefix="${cur%,*},"
-            COMPREPLY=($(compgen -g -- "${cur##*,}"))
-            ((${#COMPREPLY[@]} == 1)) && COMPREPLY=(${COMPREPLY/#/$prefix})
+        -G|--groups)
+            local prefix=; [[ $cur == *,* ]] && prefix="${cur%,*},"
+            COMPREPLY=( $( compgen -g -- "${cur##*,}" ) )
+            [[ ${#COMPREPLY[@]} -eq 1 ]] && COMPREPLY=( ${COMPREPLY/#/$prefix} )
             return
             ;;
-        --shell | -!(-*)s)
+        -s|--shell)
             _shells
             return
             ;;
@@ -38,9 +37,9 @@ _useradd()
 
     $split && return
 
-    [[ $cur == -* ]] &&
-        COMPREPLY=($(compgen -W '$(_parse_help "$1")' -- "$cur"))
+    [[ "$cur" == -* ]] && \
+        COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) )
 } &&
-    complete -F _useradd useradd
+complete -F _useradd useradd
 
 # ex: filetype=sh

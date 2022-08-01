@@ -5,6 +5,7 @@
 /etc/login.defs
 /etc/pam.d
 /etc/pam.d/login
+/etc/securetty
 /usr
 /usr/bin
 /usr/bin/faillog
@@ -16,6 +17,9 @@
 /usr/share/doc
 /usr/share/doc/login
 /usr/share/doc/login/NEWS.Debian.gz
+/usr/share/doc/login/NEWS.gz
+/usr/share/doc/login/README
+/usr/share/doc/login/TODO.gz
 /usr/share/doc/login/changelog.Debian.gz
 /usr/share/doc/login/changelog.gz
 /usr/share/doc/login/copyright
@@ -179,6 +183,7 @@
 /usr/share/man/hu/man1
 /usr/share/man/hu/man1/login.1.gz
 /usr/share/man/hu/man1/newgrp.1.gz
+/usr/share/man/hu/man1/sg.1.gz
 /usr/share/man/hu/man8
 /usr/share/man/hu/man8/lastlog.8.gz
 /usr/share/man/id
@@ -200,6 +205,7 @@
 /usr/share/man/ja/man1
 /usr/share/man/ja/man1/login.1.gz
 /usr/share/man/ja/man1/newgrp.1.gz
+/usr/share/man/ja/man1/sg.1.gz
 /usr/share/man/ja/man5
 /usr/share/man/ja/man5/faillog.5.gz
 /usr/share/man/ja/man5/login.defs.5.gz
@@ -270,5 +276,3 @@
 /usr/share/man/zh_TW/man1
 /usr/share/man/zh_TW/man1/newgrp.1.gz
 /usr/bin/sg
-/usr/share/man/hu/man1/sg.1.gz
-/usr/share/man/ja/man1/sg.1.gz

@@ -6,24 +6,27 @@ _badblocks()
     _init_completion || return
 
     case $prev in
-        -*[bcedpt])
+        -b|-c|-e|-d|-p|-t)
             return
             ;;
-        -*[io])
+        -i|-o)
             _filedir
             return
             ;;
     esac
 
-    if [[ $cur == -* ]]; then
+    if [[ "$cur" == -* ]]; then
+        COMPREPLY=( $( compgen -W '$( _parse_usage "$1" )' -- "$cur" ) )
         # Filter out -w (dangerous) and -X (internal use)
-        COMPREPLY=($(compgen -X -[wX] -W '$(_parse_usage "$1")' -- "$cur"))
+        for i in ${!COMPREPLY[@]}; do
+            [[ ${COMPREPLY[i]} == -[wX] ]] && unset 'COMPREPLY[i]'
+        done
         return
     fi
 
     cur=${cur:=/dev/}
     _filedir
 } &&
-    complete -F _badblocks badblocks
+complete -F _badblocks badblocks
 
 # ex: filetype=sh

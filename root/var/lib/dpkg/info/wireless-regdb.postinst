@@ -1,14 +1,12 @@
 #!/bin/sh
 
-set -e
-
 if [ "$1" = "configure" ]; then
-    update-alternatives --install \
-	/lib/firmware/regulatory.db regulatory.db /lib/firmware/regulatory.db-debian 100 \
-	--slave /lib/firmware/regulatory.db.p7s regulatory.db.p7s /lib/firmware/regulatory.db.p7s-debian
-    update-alternatives --install \
-	/lib/firmware/regulatory.db regulatory.db /lib/firmware/regulatory.db-upstream 50 \
-	--slave /lib/firmware/regulatory.db.p7s regulatory.db.p7s /lib/firmware/regulatory.db.p7s-upstream
+    { egrep -s -l '^[[:space:]]*REGDOMAIN=EU\b' /etc/default/crda ;
+      egrep -s -l '^[[:space:]]*options[[:space:]]+cfg80211\b.*\bieee80211_regdom=EU\b' /etc/modprobe.conf /etc/modprobe.d/*.conf; } | \
+    while read conf; do
+	echo >&2 "W: $conf selects the 'EU' wireless regulatory domain, which no longer exists."
+	echo >&2 "W: It should be changed to select a specific country (ISO 3166 alpha-2 code)."
+    done
 fi
 
 

@@ -1,5 +1,9 @@
-/usr/lib/systemd/catalog systemd/noawait
+/etc/php/7.0/fpm/conf.d php7.0-fpm/noawait
+/etc/php/7.0/cli/conf.d php7.0-cli/noawait
 /usr/share/info install-info/noawait
+/usr/lib/mime/packages mime-support/noawait
+/usr/share/applications mime-support/noawait
+/usr/share/mime/packages shared-mime-info/noawait
 /usr/man man-db/noawait
 /usr/share/man man-db/noawait
 /usr/local/man man-db/noawait
@@ -7,10 +11,15 @@
 /usr/X11R6/man man-db/noawait
 /opt/man man-db/noawait
 /etc/rsyslog.d rsyslog/noawait
-/lib/udev/hwdb.d udev/noawait
+/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders libgdk-pixbuf2.0-0:armhf/noawait
+/usr/lib/arm-linux-gnueabihf/gdk-pixbuf-2.0/2.10.0/loaders libgdk-pixbuf2.0-0:armhf/noawait
+/usr/share/zoneinfo/leap-seconds.list ntp/noawait
 /usr/lib/arm-linux-gnueabihf/gio/modules libglib2.0-0:armhf/noawait
 /usr/lib/gio/modules libglib2.0-0:armhf/noawait
 /usr/share/glib-2.0/schemas libglib2.0-0:armhf
 /etc/dbus-1/system.d dbus/noawait
 /usr/share/dbus-1/system.d dbus/noawait
 /usr/share/dbus-1/system-services dbus/noawait
+/usr/lib/systemd/catalog systemd/noawait
+/etc/init.d systemd/noawait
+/lib/udev/hwdb.d udev/noawait

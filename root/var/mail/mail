@@ -1,0 +1,438 @@
+From root@pi-star Sat Aug 06 09:08:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:08:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVweH-0001RD-M4
+	for root@pi-star; Sat, 06 Aug 2016 09:08:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> service pistar-upnp start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVweH-0001RD-M4@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:08:01 +0100
+
+/bin/sh: 1: service: not found
+
+From root@pi-star Sat Aug 06 09:09:02 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:09:02 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwfF-0001Sp-Va
+	for root@pi-star; Sat, 06 Aug 2016 09:09:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwfF-0001Sp-Va@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:09:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:10:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:10:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwgD-0001VP-OW
+	for root@pi-star; Sat, 06 Aug 2016 09:10:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwgD-0001VP-OW@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:10:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:11:02 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:11:02 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwhC-0001W6-17
+	for root@pi-star; Sat, 06 Aug 2016 09:11:02 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwhC-0001W6-17@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:11:02 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:12:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:12:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwi9-0001Zg-9s
+	for root@pi-star; Sat, 06 Aug 2016 09:12:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwi9-0001Zg-9s@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:12:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:13:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:13:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwj7-0001aU-Ik
+	for root@pi-star; Sat, 06 Aug 2016 09:13:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwj7-0001aU-Ik@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:13:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:14:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:14:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwk5-0001bQ-Qs
+	for root@pi-star; Sat, 06 Aug 2016 09:14:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwk5-0001bQ-Qs@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:14:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:15:02 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:15:02 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwl4-0001d6-2k
+	for root@pi-star; Sat, 06 Aug 2016 09:15:02 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwl4-0001d6-2k@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:15:02 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:16:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:16:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwm1-0001dn-Av
+	for root@pi-star; Sat, 06 Aug 2016 09:16:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwm1-0001dn-Av@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:16:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:21:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:21:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwqr-0001i4-IF
+	for root@pi-star; Sat, 06 Aug 2016 09:21:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwqr-0001i4-IF@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:21:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:22:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:22:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwrp-0001iW-R1
+	for root@pi-star; Sat, 06 Aug 2016 09:22:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwrp-0001iW-R1@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:22:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:23:02 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:23:02 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwso-0001iz-3M
+	for root@pi-star; Sat, 06 Aug 2016 09:23:02 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwso-0001iz-3M@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:23:02 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:24:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:24:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwtl-0001jc-Cu
+	for root@pi-star; Sat, 06 Aug 2016 09:24:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwtl-0001jc-Cu@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:24:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:25:01 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:25:01 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwuj-0001mx-LS
+	for root@pi-star; Sat, 06 Aug 2016 09:25:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwuj-0001mx-LS@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:25:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Sat Aug 06 09:26:02 2016
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Sat, 06 Aug 2016 09:26:02 +0100
+Received: from root by vps0.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1bVwvh-0001oR-U6
+	for root@pi-star; Sat, 06 Aug 2016 09:26:01 +0100
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star> /usr/local/sbin/pistar-upnp.service start
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1bVwvh-0001oR-U6@vps0.cymruhosting.co.uk>
+Date: Sat, 06 Aug 2016 09:26:01 +0100
+
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+chown: missing operand after ‘root:mmdvm’
+Try 'chown --help' for more information.
+chmod: missing operand after ‘775’
+Try 'chmod --help' for more information.
+
+From root@pi-star Mon Feb 12 04:09:02 2018
+Return-path: <root@pi-star>
+Envelope-to: root@pi-star
+Delivery-date: Mon, 12 Feb 2018 04:09:02 +0000
+Received: from root by vps2.cymruhosting.co.uk with local (Exim 4.84_2)
+	(envelope-from <root@pi-star>)
+	id 1el5QM-0002ZP-FU
+	for root@pi-star; Mon, 12 Feb 2018 04:09:02 +0000
+From: root@pi-star (Cron Daemon)
+To: root@pi-star
+Subject: Cron <root@pi-star-dstar>   [ -x /usr/lib/php5/sessionclean ] && /usr/lib/php5/sessionclean
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Cron-Env: <SHELL=/bin/sh>
+X-Cron-Env: <HOME=/root>
+X-Cron-Env: <PATH=/usr/bin:/bin>
+X-Cron-Env: <LOGNAME=root>
+Message-Id: <E1el5QM-0002ZP-FU@vps2.cymruhosting.co.uk>
+Date: Mon, 12 Feb 2018 04:09:02 +0000
+
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20131226/memcached.so' - /usr/lib/php5/20131226/memcached.so: cannot open shared object file: No such file or directory in Unknown on line 0
+

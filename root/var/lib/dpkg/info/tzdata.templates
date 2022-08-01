@@ -1,30 +1,30 @@
 Template: tzdata/Areas
 Type: select
-Choices: Africa, America, Antarctica, Australia, Arctic, Asia, Atlantic, Europe, Indian, Pacific, US, Etc
-Choices-ca.UTF-8: Àfrica, Amèrica, Antàrtida, Austràlia, Àrtic, Àsia, Atlàntic, Europa, Índic, Pacífic, US, Etc
-Choices-cs.UTF-8: Afrika, Amerika, Antarktida, Austrálie, Arktida, Asie, Atlantik, Evropa, Indický oceán, Pacifik, US, Jiná
-Choices-da.UTF-8: Afrika, Amerika, Antarktis, Australien, Arktis, Asien, Atlanterhavstid, Europa, Indisk, Stillehavstid, US, Etc
-Choices-de.UTF-8: Afrika, Amerika, Antarktis, Australien, Arktis, Asien, Atlantik, Europa, Indien, Pazifik, US, Usw.
-Choices-en.UTF-8: Africa, America, Antarctica, Australia, Arctic Ocean, Asia, Atlantic Ocean, Europe, Indian Ocean, Pacific Ocean, US, None of the above
-Choices-es.UTF-8: África, América, Antártida, Australia, Ártico, Asia, Atlántico, Europa, India, Pacífico, EEUU, Etc
-Choices-eu.UTF-8: Afrika, Amerika, Antartikoa, Australia, Artikoa, Asia, Atlantikoa, Europa, India, Pazifikoa, AEB, Etab
-Choices-fr.UTF-8: Afrique, Amérique, Antarctique, Australie, Arctique, Asie, Atlantique, Europe, Océan Indien, Pacifique, US, Autre
-Choices-gl.UTF-8: África, América, Antártida, Australia, Ártico, Asia, Atlántico, Europa, Índico, Pacífico, EEUU, Etc
-Choices-gu.UTF-8: આફ્રિકા, અમેરિકા, એન્ટાર્ટિકા, ઓસ્ટ્રેલિયા, આર્કટિક, એશિયા, એટલાન્ટિક, યુરોપ, ભારતીય, પેસેફિક, યુ.એસ., વગેરે
-Choices-he.UTF-8: אפריקה, אמריקה, אנטרקטיקה, אוסטרליה, החוג הארקטי, אסיה, אטלנטי, אירופה, הודי, פסיפיק (האוקיינוס השקט), ארה"ב, עוד
-Choices-hu.UTF-8: Afrika, Amerika, Déli-sark, Ausztrália, Északi-sark, Ázsia, Atlanti, Európa, Indiai, Csendes-óceáni, Egyesült Államok, Egyebek
-Choices-id.UTF-8: Afrika, Amerika, Antartika, Australia, Arktik, Asia, Atlantik, Eropa, India, Pasifik, US, ETC
-Choices-it.UTF-8: Africa, America, Antartide, Austrialia, Artide, Asia, Atlantico, Europa, Indiano, Pacifico, Stati Uniti, Altre
-Choices-ja.UTF-8: アフリカ, アメリカ, 南極大陸, オーストラリア, 北極, アジア, 大西洋側, ヨーロッパ, インド地方, 太平洋側, US, その他
-Choices-nl.UTF-8: Afrika, Amerika, Antarctica, Australië, Noordpoolgebied, Azië, Atlantische Oceaan, Europa, Indische Oceaan, Grote Oceaan, VS, Anders
-Choices-pl.UTF-8: Afryka, Ameryka, Antarktyda, Australia, Arktyka, Azja, Atlantyk, Europa, Ocean Indyjski, Pacyfik, USA, (wg stref GMT)
-Choices-pt.UTF-8: África, América, Antárctida, Austrália, Árctico, Ásia, Atlântico, Europa, Índico, Pacífico, US, Etc
-Choices-pt_BR.UTF-8: África, América, Antárctica, Austrália, Ártico, Asia, Atlântico, Europa, Índia, Pacífico, EUA, etc
-Choices-ru.UTF-8: Африка, Америка, Антарктида, Австралия, Арктика, Азия, Атлантика, Европа, Индийский регион, Тихоокеанский регион, США, Другой
-Choices-sk.UTF-8: Afrika, Amerika, Antarktída, Austrália, Arktída, Ázia, Atlantický oceán, Európa, Indický oceán, Tichomorie, USA, ďalšie
-Choices-sv.UTF-8: Afrika, Amerika, Antarktis, Australien, Norra Ishavet, Asien, Atlanten, Europa, Indiska Oceanen, Stilla Havet, US, Etc
-Choices-th.UTF-8: แอฟริกา, อเมริกา, แอนตาร์กติกา, ออสเตรเลีย, อาร์กติก, เอเชีย, แอตแลนติก, ยุโรป, มหาสมุทรอินเดีย, แปซิฟิก, US, อื่นๆ
-Choices-tr.UTF-8: Afrika, Amerika, Antarktika, Avustralya, Kuzey Kutbu, Asya, Atlantik, Avrupa, Hindistan, Pasifik, US, Diğer
+Choices: Africa, America, Antarctica, Australia, Arctic, Asia, Atlantic, Europe, Indian, Pacific, SystemV, US, Etc
+Choices-ca.UTF-8: Àfrica, Amèrica, Antàrtida, Austràlia, Àrtic, Àsia, Atlàntic, Europa, Índic, Pacífic, SystemV, US, Etc
+Choices-cs.UTF-8: Afrika, Amerika, Antarktida, Austrálie, Arktida, Asie, Atlantik, Evropa, Indický oceán, Pacifik, SystemV, US, Jiná
+Choices-da.UTF-8: Afrika, Amerika, Antarktis, Australien, Arktis, Asien, Atlanterhavstid, Europa, Indisk, Stillehavstid, SystemV, US, Etc
+Choices-de.UTF-8: Afrika, Amerika, Antarktis, Australien, Arktis, Asien, Atlantik, Europa, Indien, Pazifik, SystemV, US, Usw.
+Choices-en.UTF-8: Africa, America, Antarctica, Australia, Arctic Ocean, Asia, Atlantic Ocean, Europe, Indian Ocean, Pacific Ocean, System V timezones, US, None of the above
+Choices-es.UTF-8: África, América, Antártida, Australia, Ártico, Asia, Atlántico, Europa, India, Pacífico, SystemV, EEUU, Etc
+Choices-eu.UTF-8: Afrika, Amerika, Antartikoa, Australia, Artikoa, Asia, Atlantikoa, Europa, India, Pazifikoa, SystemV, AEB, Etab
+Choices-fr.UTF-8: Afrique, Amérique, Antarctique, Australie, Arctique, Asie, Atlantique, Europe, Océan Indien, Pacifique, Système V, US, Autre
+Choices-gl.UTF-8: África, América, Antártida, Australia, Ártico, Asia, Atlántico, Europa, Índico, Pacífico, SystemV, EEUU, Etc
+Choices-gu.UTF-8: આફ્રિકા, અમેરિકા, એન્ટાર્ટિકા, ઓસ્ટ્રેલિયા, આર્કટિક, એશિયા, એટલાન્ટિક, યુરોપ, ભારતીય, પેસેફિક, સિસ્ટમV, યુ.એસ., વગેરે
+Choices-he.UTF-8: אפריקה, אמריקה, אנטרקטיקה, אוסטרליה, החוג הארקטי, אסיה, אטלנטי, אירופה, הודי, פסיפיק (האוקיינוס השקט), SystemV, ארה"ב, עוד
+Choices-hu.UTF-8: Afrika, Amerika, Déli-sark, Ausztrália, Északi-sark, Ázsia, Atlanti, Európa, Indiai, Csendes-óceáni, SystemV, Egyesült Államok, Egyebek
+Choices-id.UTF-8: Afrika, Amerika, Antartika, Australia, Arktik, Asia, Atlantik, Eropa, India, Pasifik, Sistem V, US, ETC
+Choices-it.UTF-8: Africa, America, Antartide, Austrialia, Artide, Asia, Atlantico, Europa, Indiano, Pacifico, SystemV, Stati Uniti, Altre
+Choices-ja.UTF-8: アフリカ, アメリカ, 南極大陸, オーストラリア, 北極, アジア, 大西洋側, ヨーロッパ, インド地方, 太平洋側, SystemV, US, その他
+Choices-nl.UTF-8: Afrika, Amerika, Antarctica, Australië, Noordpoolgebied, Azië, Atlantische Oceaan, Europa, Indische Oceaan, Grote Oceaan, SystemV tijdzones, VS, Anders
+Choices-pl.UTF-8: Afryka, Ameryka, Antarktyda, Australia, Arktyka, Azja, Atlantyk, Europa, Ocean Indyjski, Pacyfik, (wg stref System V), USA, (wg stref GMT)
+Choices-pt.UTF-8: África, América, Antárctida, Austrália, Árctico, Ásia, Atlântico, Europa, Índico, Pacífico, SystemV, US, Etc
+Choices-pt_BR.UTF-8: África, América, Antárctica, Austrália, Ártico, Asia, Atlântico, Europa, Índia, Pacífico, SystemV, EUA, etc
+Choices-ru.UTF-8: Африка, Америка, Антарктида, Австралия, Арктика, Азия, Атлантика, Европа, Индийский регион, Тихоокеанский регион, В соответствии с SystemV, США, Другой
+Choices-sk.UTF-8: Afrika, Amerika, Antarktída, Austrália, Arktída, Ázia, Atlantický oceán, Európa, Indický oceán, Tichomorie, Konvencie SystemV, USA, ďalšie
+Choices-sv.UTF-8: Afrika, Amerika, Antarktis, Australien, Norra Ishavet, Asien, Atlanten, Europa, Indiska Oceanen, Stilla Havet, SystemV-tidszoner, US, Etc
+Choices-th.UTF-8: แอฟริกา, อเมริกา, แอนตาร์กติกา, ออสเตรเลีย, อาร์กติก, เอเชีย, แอตแลนติก, ยุโรป, มหาสมุทรอินเดีย, แปซิฟิก, SystemV, US, อื่นๆ
+Choices-tr.UTF-8: Afrika, Amerika, Antarktika, Avustralya, Kuzey Kutbu, Asya, Atlantik, Avrupa, Hindistan, Pasifik, SystemV, US, Diğer
 Description: Geographic area:
  Please select the geographic area in which you live. Subsequent
  configuration questions will narrow this down by presenting a list of
@@ -531,7 +531,7 @@ Choices-en.UTF-8: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtobe, Ashgabat, Atyrau, 
 Choices-es.UTF-8: Aden, Almaty, Ammán, Anadyr, Aktau, Aqtobe, Asjabad, Atyrau, Bagdad, Bahréin, Bakú, Bangkok, Barnaul, Beirut, Bishkek, Brunéi, Chita, Choibalsan, Chongqing, Colombo, Damasco, Dhaka, Dili, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebrón, Ciudad Ho Chi Minh, Hong Kong, Hovd, Irkutsk, Estambul, Yakarta, Jayapura, Jerusalén, Kabul, Kamchatka, Karachi, Kashgar, Katmandú, Khandyga, Calcuta, Krasnoyarsk, Kuala Lumpur, Kuching, Kuwait, Macao, Magadan, Makassar, Manila, Muscat, Nicosia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pyongyang, Qatar, Qostanay, Qyzylorda, Rangún, Riad, Sajalín, Samarcanda, Seúl, Shangai, Singapur, Srednekolymsk, Taipei, Taskent, Tiflis, Teherán, Tel Aviv, Timbu, Tokio, Tomsk, Makassar, Ulán Bator, Ürümqi, Ust-Nera, Vientián, Vladivostok, Yakutsk, Yangon, Ekaterimburgo, Ereván
 Choices-eu.UTF-8: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtobe, Ashgabat, Atyrau, Baghdad, Bahrain, Baku, Bangkok, Barnaul, Beirut, Bishkek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damasco, Dhaka, Dili, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebron, Ho Chi Minh, Hong Kong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jerusalem, Kabul, Kamchatka, Karachi, Kashgar, Katmandu, Khandyga, Kolkata, Krasnoyarsk, Kuala Lumpur, Kuching, Kuwait, Macao, Magadan, Makassar, Manila, Muscat, Nicosia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pyongyang, Qatar, Qostanay, Qyzylorda, Rangoon, Riyadh, Sakhalin, Samarkand, Seul, Shanghai, Singapur, Srednekolymsk, Taipei, Tashkent, Tbilisi, Teheran, Tel Aviv, Thimphu, Tokio, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vientiane, Vladivostok, Yakutsk, Yangon, Yekaterinburg, Yerevan
 Choices-fi.UTF-8: Aden, Almaty, Amman, Anadyr, Aktau, Aqtöbe, Ašgabat, Atyrau, Bagdad, Bahrain, Baku, Bangkok, Barnaul, Beirut, Biškek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damaskos, Dhaka, Dili, Dubai, Dušanbe, Famagusta, Gaza, Harbin, Hebron, Hồ Chí Minh, Hongkong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jerusalem, Kabul, Kamtšatka, Karachi, Kashgar, Katmandu, Khandyga, Kalkutta, Krasnojarsk, Kuala Lumpur, Kuching, Kuwait, Macao, Magadan, Makassar, Manila, Masqat, Nikosia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pjongjang, Qatar, Qostanay, Qyzylorda, Yangôn, Riad, Sahalin, Samarkand, Soul, Shanghai, Singapore, Srednekolymsk, Taipei, Taškent, Tbilisi, Teheran, Tel Aviv, Thimphu, Tokio, Tomsk, Makassar, Ulaanbaatar, Ürümqi, Ust-Nera, Vientiane, Vladivostok, Jakutsk, Yangon, Jekaterinburg, Jerevan
-Choices-fr.UTF-8: Aden, Alma-Ata, Amman, Anadyr, Aqtau, Aqtobe, Ashkhabad, Atyraou, Bagdad, Bahreïn, Bakou, Bangkok, Barnaul, Beyrouth, Bishkek, Bruneï, Tchita, Choibalsan, Chongqing, Colombo, Damas, Dhaka, Dili, Dubaï, Douchanbé, Famagouste, Gaza, Harbin, Hébron, Hô-Chi-Minh-Ville , Hong-Kong, Hovd, Irkoutsk, Istanbul, Djakarta, Jayapura, Jérusalem, Kaboul, Kamtchatka, Karachi, Kashgar, Katmandou, Khandyga, Calcutta, Krasnoïarsk, Kuala Lumpur, Kuching, Koweït, Macao, Magadan, Macasar, Manille, Muscat, Nicosie, Novokouznetsk, Novosibirsk, Omsk, Oural, Phnom Penh, Pontianak, Pyongyang, Qatar, Kostanaï, Kzyl-Orda, Rangoun, Riyad, Sakhaline, Samarcande, Séoul, Shanghaï, Singapour, Srednekolymsk, Taipei, Tachkent, Tbilissi, Téhéran, Tel-Aviv, Timphu, Tokyo, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vientiane, Vladivostok, Yakoutsk, Rangoun, Ekaterinenbourg, Erevan
+Choices-fr.UTF-8: Aden, Alma-Ata, Amman, Anadyr, Aqtau, Aqtobe, Ashkhabad, Atyraou, Bagdad, Bahreïn, Bakou, Bangkok, Barnaul, Beyrouth, Bishkek, Bruneï, Tchita, Choibalsan, Chongqing, Colombo, Damas, Dhaka, Dili, Dubaï, Douchanbé, Famagouste, Gaza, Harbin, Hébron, Hô-Chi-Minh-Ville , Hong-Kong, Hovd, Irkoutsk, Istanbul, Djakarta, Jayapura, Jérusalem, Kaboul, Kamtchatka, Karachi, Kashgar, Katmandou, Khandyga, Calcutta, Krasnoïarsk, Kuala Lumpur, Kuching, Koweït, Macao, Magadan, Macasar, Manille, Muscat, Nicosie, Novokouznetsk, Novosibirsk, Omsk, Oural, Phnom Penh, Pontianak, Pyongyang, Qatar, Qostanay, Kzyl-Orda, Rangoun, Riyad, Sakhaline, Samarcande, Séoul, Shanghaï, Singapour, Srednekolymsk, Taipei, Tachkent, Tbilissi, Téhéran, Tel-Aviv, Timphu, Tokyo, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vientiane, Vladivostok, Yakoutsk, Rangoun, Ekaterinenbourg, Erevan
 Choices-gl.UTF-8: Adén, Almati, Amán, Anadyr, Atyrau, Aqtobe, Ashgabat, Atyrau, Bagdad, Bahrein, Baku, Bangkok, Barnaul, Beirut, Bishkek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damasco, Dhaka, Dili, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebrón, Ho Chi Minh, Hong Kong, Hovd, Irkutsk, Estambul, Xacarta, Xaiapura, Xerusalén, Kabul, Kamchatka, Karachi, Kashgar, Katmandú, Khandyga, Kolkata, Krasnoyarsk, Kuala Lumpur, Kuching, Kuwait, Macau, Magadan, Makassar, Manila, Muscat, Nicosia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pyongyang, Qatar, Qostanay, Qyzylorda, Rangún, O Riad, Sakhalin, Samarcanda, Seul, Shanghai, Singapur, Srednekolymsk, Taipei, Tashkent, Tiflis, Teherán, Tel Aviv, Thimphu, Tokyo, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vientiane, Vladivostok, Yakutsk, Yangon, Yekaterinburg, Yerevan
 Choices-gu.UTF-8: એડન, અલ્માતી, અમ્માન, એનાડીર, એક્ટાવુ, એક્ટોબે, અશ્ગાબાત, Atyrau, બગદાદ, બાહેરિન, બાકુ, બેંગકોક, Barnaul, બૈરુત, બિશ્કેક, બ્રુનેઇ, Chita, ચોઇબાલ્સાન, ચોંગકિંગ, કોલંબો, દમાસ્કસ, ઢાકા, દિલ્હી, દુબઇ, દુશાન્બે, Famagusta, ગાઝા, હાર્બિન, હેબ્રોન, હો ચી મીન્હ, હોંગ કોંગ, હોવડ, ઈર્કુત્સક, ઇન્તંબુલ, જાકાર્તા, જયાપુરા, જેરુસલેમ, કાબુલ, કામચાટ્કા, કરાચી, કાશ્ગર, કાટમંડુ, Khandyga, કોલકાતા, ક્રાસનોયાર્સ્ક, કુઆલા લુમ્પુર, કુચિંગ, કુવૈત, મકાઉ, મગાદાન, માકાસ્સાર, મનિલા, મસ્કત, નિકોસિઆ, નોવોકુઝનેટ્સ્ક, નોવોસીબિર્સ્ક, ઓમસ્ક, ઓરલ, ફનોમ પેન્હ, પોન્તીઆનાક, ફનોન્ગયાંગ, કતાર, Qostanay, કવીઝીલોર્ડા, રંગૂન, રીયાધ, સખાલિન, સમરકંદ, સિઓલ, શાન્ઘાઇ, સિંગાપોર, Srednekolymsk, તાઇપેઇ, તાશ્કંદ, ત્બિલિસિ, તેહરાન, તેલ અવિવ, થિમ્ફુ, ટોક્યો, Tomsk, ઉઝુન્ગ પાન્ડાન્ગ, ઉલનબટોર, ઉરુમ્કી, Ust-Nera, વિયેતિન, વ્લાડીવોસ્ટોક, યાકુત્સક, Yangon, યેકાતીરાનબર્ગ, યેરેવાન
 Choices-he.UTF-8: עדן, אלמטי, עמאן, אנדיר, Aqtau, Aqtobe, אשגאבט, Atyrau, בגדד, בחריין, באקו, בנגקוק, Barnaul, ביירות, בישקק, ברוניי, Chita, צ'ויבלסאן, צ'ונגצ'ינג, קולומבו, דמשק, דאקה, דילי, דובאי, דושנבה, Famagusta, עזה, חרבין, חברון, הו צ'י מין, הונג קונג, חובד, אירקוטסק, איסטנבול, ג'קרטה, Jayapura, ירושלים, קאבול, חצי האי קמצ'טקה, קראצ'י, קאשגאר, קטמנדו, חאנדיגה, קולקטה, קרסנויארסק, קואלה לומפור, קוצ'ינג, כווית, מקאו, מגדן, מקאסאר, מנילה, מאסקט, ניקוסיה, Novokuznetsk, נובוסיבירסק, אומסק, אורל, פנום פן, Pontianak, פיונגיאנג, קאטר, Qostanay, Qyzylorda, ראנגון, ריאד, סחלין, סמרקנד, סיאול, שנגחאי, סינגפור, Srednekolymsk, טאיפיי, טשקנט, טביליסי, טהרן, תל אביב, טהימפהו, טוקיו, Tomsk, אוז'ונג פנדגנג, אולן בטור, אורומצ'י, אוסט-נארה, ויינטיאן, ולדיווסטוק, יקוצק, Yangon, יקטרינבורג, ירוואן
@@ -545,7 +545,7 @@ Choices-lt.UTF-8: Adenas, Almata, Amanas, Anadyrė, Aktau, Aktiubinskas, Ašchab
 Choices-ml.UTF-8: ഏദന്‍, അല്മാട്ടി, അമ്മാന്‍, അനാഡിര്‍, അക്ടവു, അക്ടൊബെ, അഷ്കാര്ഡബത്, Atyrau, ബഗ്ദാദ്, ബഹറൈന്‍, ബാകു, ബാങ്കോക്ക്, Barnaul, ബെയ്റൂട്ട്, ബിഷ്കെക്ക്, ബ്രൂണൈ, Chita, ചൊയിബല്‍സാന്‍, ചോങ്ക്വിങ്, കൊളംബോ, ഡമാസ്കസ്, ദാക്ക, ദിലി, ദുബായ്, ദുഷാന്‍ബേ, Famagusta, ഗാസ, ഹാര്‍ബിന്‍, Hebron, ഹോ_ചി_മിന്‍, ഹോങ്_കോങ്, ഹോവ്ഡ്, ഇര്‍കുത്സ്ക്, ഇസ്താംബുള്‍, ജക്കാര്‍ത്ത, ജയപുര, ജറുസലേം, കാബൂള്‍, കംചത്കാ, കറാച്ചി, കാഷ്ഗാര്‍, കാഠ്മണ്ടു, Khandyga, കൊല്‍ക്കത്ത, ക്രസ്നോയര്‍സ്ക്, ക്വാല_ലംമ്പൂര്‍, കുച്ചിങ്, കുവൈത്ത്, മകാവോ, മഗദാന്‍, മകസ്സര്‍, മനില, മസ്കറ്റ്, നികോഷ്യ, Novokuznetsk, നൊവോസിബിര്‍സ്ക്, ഒമ്സ്ക്, ഒരള്‍, നോം_പെന്‍, പോണ്ടിയാനക്, പ്യോങ്യാങ്, ഖത്തര്‍, Qostanay, ക്വിസിലോര്‍ഡ, റംഗൂണ്‍, റിയാദ്, സഖാലിന്‍, സമര്‍ഖണ്ട്, സിയോള്‍, ഷാങ്ഹായ്, സിഗപ്പൂര്‍, Srednekolymsk, തായ്പേയ്, താഷ്കെന്റ്, തിബിലിസി, ടെഹ്റാന്‍, ടെല്‍_അവീവ്, തിംഫു, ടോക്കിയോ, Tomsk, ഉജങ്_പാണ്ടങ്, ഉലാന്‍ബാത്തര്‍, ഉറുംക്വി, Ust-Nera, വിയെന്റിയാന്‍, വ്ലാഡിവോസ്ടോക്, യാകുട്സ്ക്, Yangon, യെകാറ്റെറിന്‍ബര്‍ഗ്, യെരെവന്‍
 Choices-nl.UTF-8: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtobe, Ashgabat, Atıraw, Bagdad, Bahrein, Bakoe, Bangkok, Barnaoel, Beiroet, Bishkek, Brunei, Tsjita, Choibalsan, Chongqing, Colombo, Damascus, Dhaka, Dili, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebron, Ho Chi Minhstad, Hong Kong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jerusalem, Kabul, Kamchatka, Karachi, Kashgar, Kathmandu, Khandyga, Kolkata, Krasnoyarsk, Kuala Lumpur, Kuching, Koeweit, Macau, Magadan, Makassar, Manila, Muscat, Nicosia, Novokoeznetsk, Novosibirsk, Omsk, Oral, Phnom-Penh, Pontianak, Pyongyang, Qatar, Qostanay, Qyzylorda, Rangoon, Riyadh, Sakhalin, Samarkand, Seoul, Shanghai, Singapore, Srednekolymsk, Taipei, Tashkent, Tbilisi, Teheran, Tel Aviv, Thimphu, Tokio, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Oest-Nera, Vientiane, Vladivostok, Jakoeten, Yangon, Jekaterinenburg, Yerevan
 Choices-pl.UTF-8: Aden, Ałma-Ata, Amman, Anadyr, Aktau, Aktobe, Aszchabad, Atyrau, Bagdad, Bahrajn, Baku, Bangkok, Barnaul, Bejrut, Biszkek, Brunei, Chita, Czojbalsan, Chongqing, Kolombo, Damaszek, Dhaka, Dili, Dubaj, Duszanbe, Famagusta, Gaza, Harbin, Hebron, Ho Chi Minh, Hongkong, Hovd, Irkuck, Stambuł, Dżakarta, Jayapura, Jerozolima, Kabul, Kamczatka, Karaczi, Kaszgar, Katmandu, Khandyga, Kalkuta, Krasnojarsk, Kuala Lumpur, Kuching, Kuwejt, Makau, Magadan, Makasar, Manila, Maskat, Nikozja, Nowokuźnieck, Nowosybirsk, Omsk, Uralsk, Phnom Penh, Pontianak, Pjongjang, Katar, Qostanay, Kyzyłorda, Rangun, Rijad, Sachalin, Samarkanda, Seul, Szanghaj, Singapur, Srednekolymsk, Tajpej, Taszkent, Tbilisi, Teheran, Tel Awiw-Jafa, Thimphu, Tokio, Tomsk, Makasar (d. Ujung Pandang), Ułan Bator, Urumczi, Ust-Nera, Wientian, Władywostok, Jakuck, Yangon, Jekaterynburg, Erywań
-Choices-pt.UTF-8: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtöbe, Ashgabat, Atyrau, Bagdade, Barein, Baku, Banguecoque, Barnaul, Beirute, Bishkek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damasco, Dhaka, Díli, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebron, Ho Chi Minh, Hong Kong, Hovd, Irkutsk, Istambul, Jacarta, Jayapura, Jerusalém, Cabul, Kamchatka, Carachi, Kashgar, Catmandu, Khandyga, Calcutá, Krasnoyarsk, Kuala Lumpur, Kuching, Kuwait, Macau, Magadan, Macassar, Manila, Muscate, Nicósia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pyongyang, Quatar, Qostanay, Qyzylorda, Rangoon, Riade, Sacalina, Samarcanda, Seul, Xangai, Singapura, Srednekolymsk, Taipé, Tashkent, Tbilisi, Teerão, Tel Aviv, Thimphu, Tóquio, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vienciana, Vladivostok, Yakutsk, Rangum, Ecaterimburgo, Erevan
+Choices-pt.UTF-8: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtöbe, Ashgabat, Atyrau, Bagdade, Barein, Baku, Banguecoque, Barnaul, Beirute, Bishkek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damasco, Dhaka, Díli, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebron, Ho Chi Minh, Hong Kong, Hovd, Irkutsk, Istambul, Jacarta, Jayapura, Jerusalém, Cabul, Kamchatka, Carachi, Kashgar, Catmandu, Khandyga, Calcutá, Krasnoyarsk, Kuala Lumpur, Kuching, Kuwait, Macau, Magadan, Macassar, Manila, Muscate, Nicósia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pyongyang, Quatar, Qostanay, Qyzylorda, Rangoon, Riade, Sacalina, Samarcanda, Seul, Xangai, Singapura, Srednekolymsk, Taipé, Tashkent, Tbilisi, Teerão, Tel Aviv, Thimphu, Tóquio, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vienciana, Vladivostok, Yakutsk, Yangon, Ecaterimburgo, Erevan
 Choices-pt_BR.UTF-8: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtobe, Ashgabat, Atyrau, Baghdad, Barém, Baku, Bangkok, Barnaul, Beirut, Bishkek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damascus, Dhaka, Dili, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebron, Ho_Chi_Minh, Hong_Kong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jerusalém, Kabul, Kamchatka, Karachi, Kashgar, Kathmandu, Khandyga, Kolkata, Krasnoyarsk, Kuala_Lumpur, Kuching, Kuwait, Macau, Magadan, Makassar, Manila, Muscat, Nicosia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom_Penh, Pontianak, Pyongyang, Qatar, Qostanay, Qyzylorda, Rangoon, Riyadh, Sakhalin, Samarkand, Seul, Xangai, Cingapura, Srednekolymsk, Taipei, Tashkent, Tbilisi, Teerã, Tel_Aviv, Thimphu, Tóquio, Tomsk, Ujung_Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vientiane, Vladivostok, Yakutsk, Yangon, Yekaterinburg, Yerevan
 Choices-ru.UTF-8: Аден, Алма-Ата, Амман, Анадырь, Актау, Актюбинск, Ашхабад, Атырау, Багдад, Бахрейн, Баку, Бангкок, Барнаул, Бейрут, Бишкек, Бруней, Чита, Чойбалсан, Чунцин, Коломбо, Дамаск, Дакка, Дили, Дубай, Душанбе, Фамагуста, Газа, Харбин, Хеврон, Хошимин, Гонконг, Ховд, Иркутск, Стамбул, Джакарта, Джаяпура, Иерусалим, Кабул, Камчатка, Карачи, Кашгар, Катманду, Хандыга, Калькутта, Красноярск, Куала-Лумпур, Кучинг, Кувейт, Аомынь (Макао), Магадан, Макассар, Манила, Маскат, Никосия, Новокузнецк, Новосибирск, Омск, Уральск, Пномпень, Понтианак, Пхеньян, Катар, Костанай, Кзыл-Орда, Янгон, Эр-Рияд, Сахалин, Самарканд, Сеул, Шанхай, Сингапур, Среднеколымск, Тайбэй, Ташкент, Тбилиси, Тегеран, Тель-Авив, Тхимпху, Токио, Томск, Уюнг-Панданг, Улан-Батор, Урумчи, Усть-Нера, Вьентьян, Владивосток, Якутск, Янгон, Екатеринбург, Ереван
 Choices-sk.UTF-8: Aden, Almaty, Ammán, Anadyr, Aqtau, Aqtobe, Ashgabat, Atyrau, Bagdad, Bahrajn, Baku, Bangkok, Barnaul, Bejrút, Biškek, Brunej, Chita, Choibalsan, Čunking, Kolombo, Damask, Dháka, Dili, Dubaj, Dušanbe, Famagusta, Gaza, Charbin, Hebron, Hočiminovo Mesto, Hongkong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jeruzalem, Kábul, Kamčatka, Karáči, Kašgar, Káthmandu, Khandyga, Kalkata, Krasnojarsk, Kuala Lumpur, Kuching, Kuvajt, Macao, Magadan, Makassar, Manila, Maskat, Nikózia, Novokuzneck, Novosibirsk, Omsk, Oral, Phnom Pénh, Pontianak, Pchjongjang, Katar, Qostanay, Qyzylorda, Rangún, Rijád, Sachalin, Samarkand, Soul, Šanghaj, Singapur, Srednekolymsk, Tchaj-pej, Taškent, Tbilisi, Teherán, Tel Aviv, Thimphu, Tokio, Tomsk, Makasarský prieliv, Ulanbátar, Urumči, Ust-Nera, Vientian, Vladivostok, Jakutsk, Yangon, Jekaterinburg, Jerevan
@@ -721,7 +721,7 @@ Choices-lt.UTF-8: Amsterdamas, Andora, Astrakhan, Atėnai, Belfastas, Belgradas,
 Choices-ml.UTF-8: ആസ്റ്റര്‍ഡാം, അണ്ടോറ, Astrakhan, ഏഥന്‍സ്, ബെല്‍ഫാസ്റ്റ്, ബെല്‍ഗ്രേഡ്, ബെര്‍ലിന്‍, ബ്രാട്ടിസ്ലാവ, ബ്രസ്സല്‍സ്, ബുക്കാറസ്റ്റ്, ബുഡാപെസ്റ്റ്, Busingen, ചിസിനാവു, കോപ്പന്‍ഹേഗന്‍, ഡബ്ലിന്‍, ജിബ്രാള്‍ട്ടര്‍, ഗുവണ്‍സി, ഹെല്‍സിങ്കി, ഐസില്‍_ഓഫ്_മാന്‍, ഇസ്താംബുള്‍, ജെര്‍സി, കലിനിന്‍ഗ്രാഡ്, കീവ്, Kirov, ലിസ്ബണ്‍, ലജുബ്ല്യാന, ലണ്ടന്‍, ലക്സംബര്‍ഗ്, മാഡ്രിഡ്, മാള്‍ട്ട, മരിയേഹാന്‍, മിന്‍സ്ക്, മൊണാക്കോ, മോസ്കോ, നികോഷ്യ, ഓസ്ലോ, പാരീസ്, പോഡ്ഗൊറിക്ക, പ്രാഗ്, റിഗ, റോം, സമാറ, സാന്‍_മരീനോ, സരജാവോ, Saratov, സിംഫെറോപോള്‍, സ്കോപ്യേ, സോഫിയ, സ്റ്റോക്ഹോം, ടാളിന്‍, ടിരാന്‍, ടിരാസ്പോള്‍, Ulyanovsk, ഉഴ്ഗോരോദ്, വാഡുസ്, വത്തിക്കാന്‍, വിയന്ന, വില്‍നിയസ്, വോള്‍ഗോഗ്രാഡ്, വാഴ്സോ, സഗ്രേബ്, സപ്പോറോഴി, സൂറിച്ച്
 Choices-nl.UTF-8: Amsterdam, Andorra, Astrachan, Athene, Belfast, Belgrado, Berlijn, Bratislava, Brussel, Boekarest, Boedapest, Büsingen, Chisinau, Kopenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Eiland Man, Istanbul, Jersey, Kaliningrad, Kiev, Kirov, Lissabon, Ljubljana, Londen, Luxemburg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moskou, Nicosia, Oslo, Parijs, Podgorica, Praag, Riga, Rome, Samara, San Marino, Sarajevo, Saratov, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirana, Tiraspol, Oeljanovsk, Uzhgorod, Vaduz, Vaticaanstad, Wenen, Vilnius, Volgograd, Warschau, Zagreb, Zaporozhye, Zurich
 Choices-pl.UTF-8: Amsterdam, Andora, Astrakhan, Ateny, Belfast, Belgrad, Berlin, Bratysława, Bruksela, Bukareszt, Budapeszt, Busingen, Kiszyniów, Kopenhaga, Dublin, Gibraltar, Guernsey, Helsinki, Wyspa Man, Stambuł, Jersey, Kaliningrad, Kijów, Kirov, Lizbona, Lublana, Londyn, Luksemburg, Madryt, Malta, Maarianhamina, Mińsk, Monako, Moskwa, Nikozja, Oslo, Paryż, Podgorica, Praga, Ryga, Rzym, Samara, San Marino, Sarajewo, Saratov, Symferopol, Skopje, Sofia, Sztokholm, Tallinn, Tirana, Tyraspol, Ulyanovsk, Użhorod, Vaduz, Watykan, Wiedeń, Wilno, Wołgograd, Warszawa, Zagrzeb, Zaporoże, Zurych
-Choices-pt.UTF-8: Amsterdão, Andorra, Astracã, Atenas, Belfast, Belgrado, Berlim, Bratislávia, Bruxelas, Bucareste, Budapeste, Busingen, Chisinau, Copenhaga, Dublin, Gibraltar, Guernsey, Helsínquia, Ilha de Man, Istambul, Jersey, Kaliningrado, Kiev, Kirov, Lisboa, Ljubljana, Londres, Luxemburgo, Madrid, Malta, Mariehamn, Minsk, Mónaco, Moscovo, Nicósia, Oslo, Paris, Podgorica, Praga, Riga, Roma, Samara, San Marino, Sarajevo, Saratov, Simferopol, Skopje, Sofia, Estocolmo, Tallinn, Tirane, Tiraspol, Ulianovsk, Uzhgorod, Vaduz, Vaticano, Viena, Vilnius, Volgograd, Varsóvia, Zagreb, Zaporozhye, Zurique
+Choices-pt.UTF-8: Amsterdão, Andorra, Astrakhan, Atenas, Belfast, Belgrado, Berlim, Bratislávia, Bruxelas, Bucareste, Budapeste, Busingen, Chisinau, Copenhaga, Dublin, Gibraltar, Guernsey, Helsínquia, Ilha de Man, Istambul, Jersey, Kaliningrado, Kiev, Kirov, Lisboa, Ljubljana, Londres, Luxemburgo, Madrid, Malta, Mariehamn, Minsk, Mónaco, Moscovo, Nicósia, Oslo, Paris, Podgorica, Praga, Riga, Roma, Samara, San Marino, Sarajevo, Saratov, Simferopol, Skopje, Sofia, Estocolmo, Tallinn, Tirane, Tiraspol, Ulyanovsk, Uzhgorod, Vaduz, Vaticano, Viena, Vilnius, Volgograd, Varsóvia, Zagreb, Zaporozhye, Zurique
 Choices-pt_BR.UTF-8: Amsterdam, Andorra, Astrakhan, Atenas, Belfast, Belgrado, Berlin, Bratislava, Brussels, Bucareste, Budapeste, Busingen, Chisinau, Copenhague, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istanbul, Jersey, Kaliningrado, Kiev, Kirov, Lisboa, Ljubljana, Londres, Luxemburgo, Madrid, Malta, Mariehamn, Minsk, Mônaco, Moscou, Nicosia, Oslo, Paris, Podgorica, Praga, Riga, Rome, Samara, San_Marino, Sarajevo, Saratov, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirane, Tiraspol, Ulyanovsk, Uzhgorod, Vaduz, Vaticano, Viena, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
 Choices-ru.UTF-8: Амстердам, Андорра, Астрахань, Афины, Белфаст, Белград, Берлин, Братислава, Брюссель, Бухарест, Будапешт, Бюзинген, Кишинёв, Копенгаген, Дублин, Гибралтар, Гернси, Хельсинки, Остров Мэн, Стамбул, Джерси, Калининград, Киев, Киров, Лиссабон, Любляна, Лондон, Люксембург, Мадрид, Мальта, Мариехамн, Минск, Монако, Москва, Никосия, Осло, Париж, Подгорица, Прага, Рига, Рим, Самара, Сан-Марино, Сараево, Саратов, Симферополь, Скопье, София, Стокгольм, Таллин, Тирана, Тирасполь, Ульяновск, Ужгород, Вадуц, Ватикан, Вена, Вильнюс, Волгоград, Варшава, Загреб, Запорожье, Цюрих
 Choices-sk.UTF-8: Amsterdam, Andorra, Astrakhan, Atény, Belfast, Belehrad, Berlín, Bratislava, Brusel, Bukurešť, Budapešť, Busingen, Kišiňov, Kodaň, Dublin, Gibraltár, Guernsey, Helsinki, Man, Istanbul, Jersey, Kaliningrad, Kyjev, Kirov, Lisabon, Ľubľana, Londýn, Luxemburg, Madrid, Malta, Mariehamn, Minsk, Monako, Moskva, Nikózia, Oslo, Paríž, Podgorica, Praha, Riga, Rím, Samara, San Maríno, Sarajevo, Saratov, Simferopol, Skopje, Sofia, Štokholm, Tallinn, Tirana, Tiraspol, Ulyanovsk, Užhorod, Vaduz, Vatikán, Viedeň, Vilnius, Volgograd, Varšava, Záhreb, Záporožie, Zürich
@@ -957,6 +957,80 @@ Description-th.UTF-8: เขตเวลา:
  โปรดระบุเมืองหรือภูมิภาคที่ตรงกับเขตเวลาของคุณ
 Description-tr.UTF-8: Saat dilimi:
  Lütfen saat diliminize karşılık gelen şehir ya da bölgeyi seçin.
+
+Template: tzdata/Zones/SystemV
+Type: select
+Choices: AST4, AST4ADT, CST6, CST6CDT, EST5, EST5EDT, HST10, MST7, MST7MDT, PST8, PST8PDT, YST9, YST9YDT
+Description: Time zone:
+ Please select the city or region corresponding to your time zone.
+Description-be.UTF-8: Часавы пояс:
+ Please select the city or region corresponding to your time zone.
+Description-bg.UTF-8: Часови пояс:
+ Please select the city or region corresponding to your time zone.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu la ciutat o regió corresponent al vostre fus horari.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím město nebo oblast odpovídající vašemu časovému pásmu.
+Description-da.UTF-8: Tidszone:
+ Vælg venligst den by eller region der svarer til din tidszone.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Stadt oder Region aus, die zu Ihrer Zeitzone passt.
+Description-en.UTF-8: Time zone:
+ Please select the city or region corresponding to your time zone.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la ciudad o región correspondiente a su zona horaria.
+Description-eu.UTF-8: Ordu zonaldea:
+ Hautatu zure ordu-zonari dagokion herri edo estatua.
+Description-fi.UTF-8: Aikavyöhyke:
+ Please select the city or region corresponding to your time zone.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir la ville ou la région correspondant à votre fuseau horaire.
+Description-gl.UTF-8: Fuso horario:
+ Escolla a cidade ou rexión que corresoponda ao seu fuso horario.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સમય વિસ્તારને અનુરુપ શહેર અથવા વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את העיר או האזור שמתאימים לאזור הזמן שלך.
+Description-hr.UTF-8: Vremenska zona:
+ Please select the city or region corresponding to your time zone.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a városnak/régiónak megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih kota atau daerah waktu yang bersesuaian dengan daerah waktu Anda.
+Description-it.UTF-8: Fuso orario:
+ Selezionare la città o la regione corrispondente al proprio fuso orario.
+Description-ja.UTF-8: 時間帯:
+ あなたの時間帯に一致する都市または地域を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Please select the city or region corresponding to your time zone.
+Description-lt.UTF-8: Lako zona:
+ Please select the city or region corresponding to your time zone.
+Description-ml.UTF-8: സമയ മേഘല:
+ Please select the city or region corresponding to your time zone.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de stad of regio die overeenkomt met uw tijdzone?
+Description-pl.UTF-8: Strefa czasowa:
+ Proszę wybrać miasto lub region odpowiadający właściwej strefie czasowej.
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha a cidade ou região correspondente ao seu fuso horário.
+Description-pt_BR.UTF-8: Fuso horário:
+ Por favor, selecione a cidade ou região correspondente ao seu fuso horário.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите город или область, соответствующие вашему часовому поясу.
+Description-sk.UTF-8: Časové pásmo:
+ Prosím, vyberte mesto alebo oblasť zodpovedajúce vášmu časovému pásmu.
+Description-sq.UTF-8: Zona kohore:
+ Please select the city or region corresponding to your time zone.
+Description-sv.UTF-8: Tidszon:
+ Välj den stad eller region som motsvarar din tidszon.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเมืองหรือภูมิภาคที่ตรงกับเขตเวลาของคุณ
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen saat diliminize karşılık gelen şehir ya da bölgeyi seçin.
+Description-vi.UTF-8: Múi giờ :
+ Please select the city or region corresponding to your time zone.
+Description-wo.UTF-8: Goxu waxtu:
+ Please select the city or region corresponding to your time zone.
 
 Template: tzdata/Zones/US
 Type: select

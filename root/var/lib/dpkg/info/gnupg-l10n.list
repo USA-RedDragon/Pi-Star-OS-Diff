@@ -33,12 +33,8 @@
 /usr/share/gnupg/help.sk.txt
 /usr/share/gnupg/help.sv.txt
 /usr/share/gnupg/help.tr.txt
-/usr/share/gnupg/help.txt
 /usr/share/gnupg/help.zh_CN.txt
 /usr/share/gnupg/help.zh_TW.txt
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/gnupg-l10n
 /usr/share/locale
 /usr/share/locale/ca
 /usr/share/locale/ca/LC_MESSAGES

@@ -1,5 +1,5 @@
-6ef9957cf6c0703a34e58e03e1d1cc6d  usr/lib/tasksel/tests/default-desktop
-91a8655dcee674b8b69334a1f1711d8a  usr/lib/tasksel/tests/desktop
+b5e0db2a8227d42d8650b9cb0210df46  usr/lib/tasksel/tests/default-desktop
+d217045a47e6987575dce9e0b0e41968  usr/lib/tasksel/tests/desktop
 62d7ccf19c6539f3f40a004416c9fb4e  usr/lib/tasksel/tests/laptop
 5720cd8cbabca493aa65e3a5fad17faa  usr/lib/tasksel/tests/server
 db8b4500153b0b2ecd53aca6be7fb02f  usr/share/locale/ar/LC_MESSAGES/debian-tasks.mo
@@ -57,4 +57,4 @@ ecc532b338ccb6bb2ea6df1c7a41eb9c  usr/share/locale/vi/LC_MESSAGES/debian-tasks.m
 3503fe384f2247aca22e7328eef2b9af  usr/share/locale/wo/LC_MESSAGES/debian-tasks.mo
 d0d0e9c536e35c0cd7bb9a818003b0ca  usr/share/locale/zh_CN/LC_MESSAGES/debian-tasks.mo
 dd432c8a6df7c5255efe559b1e2aa95b  usr/share/locale/zh_TW/LC_MESSAGES/debian-tasks.mo
-1395957c2f5f53650832e49c578dddf7  usr/share/tasksel/descs/debian-tasks.desc
+5f2b13f42d20ef6eb9c42515049bcf5e  usr/share/tasksel/descs/debian-tasks.desc

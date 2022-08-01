@@ -5,13 +5,13 @@
 
 # if no gettext it will fallback to gettext on /usr/share/sensible-utils/bin
 # see #728612
-PATH="$PATH:/usr/sbin:/usr/share/sensible-utils/bin"
+PATH=$PATH:/usr/sbin:/usr/share/sensible-utils/bin
 
 # EASIEST editor
 EASIEST="/bin/nano"
 
 # Ensure that $HOME/.selected_editor is writeable
-touch "$HOME/.selected_editor" || exit 1
+touch $HOME/.selected_editor || exit 1
 
 sorted_list_of_editors() {
                update-alternatives --query editor | while read emptyline; do

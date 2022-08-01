@@ -57,6 +57,7 @@ libtirpc.so.3 libtirpc3 #MINVER#
  bindresvport@TIRPC_0.3.0 1.0.2
  bindresvport_sa@TIRPC_0.3.0 1.0.2
  callrpc@TIRPC_0.3.0 1.0.2
+ cbc_crypt@TIRPC_0.3.0 1.0.2
  clnt_broadcast@TIRPC_0.3.0 1.0.2
  clnt_create@TIRPC_0.3.0 1.0.2
  clnt_create_timed@TIRPC_0.3.0 1.0.2
@@ -79,6 +80,7 @@ libtirpc.so.3 libtirpc3 #MINVER#
  clntudp_bufcreate@TIRPC_0.3.0 1.0.2
  clntudp_create@TIRPC_0.3.0 1.0.2
  clntunix_create@TIRPC_0.3.0 1.0.2
+ ecb_crypt@TIRPC_0.3.0 1.0.2
  endnetconfig@TIRPC_0.3.0 1.0.2
  endnetpath@TIRPC_0.3.0 1.0.2
  freenetconfigent@TIRPC_0.3.0 1.0.2
@@ -193,6 +195,8 @@ libtirpc.so.3 libtirpc3 #MINVER#
  user2netname@TIRPC_0.3.2 1.0.2
  xdr_accepted_reply@TIRPC_0.3.0 1.0.2
  xdr_array@TIRPC_0.3.0 1.0.2
+ xdr_authdes_cred@TIRPC_0.3.0 1.0.2
+ xdr_authdes_verf@TIRPC_0.3.0 1.0.2
  xdr_authunix_parms@TIRPC_0.3.0 1.0.2
  xdr_bool@TIRPC_0.3.0 1.0.2
  xdr_bytes@TIRPC_0.3.0 1.0.2

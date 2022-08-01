@@ -1,7 +1,7 @@
 /.
 /lib
 /lib/arm-linux-gnueabihf
-/lib/arm-linux-gnueabihf/liblzma.so.5.2.5
+/lib/arm-linux-gnueabihf/liblzma.so.5.2.4
 /usr
 /usr/share
 /usr/share/doc

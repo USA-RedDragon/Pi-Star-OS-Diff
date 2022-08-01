@@ -279,13 +279,13 @@ while [ $# -gt 0 ]; do
 	if [ -f "$newname.0" ]; then
 		if [ -z "$COMPRESS" ]; then
 			newfile="$newname.1"
-			mv -f -- "$newname.0" "$newfile"
+			mv -- "$newname.0" "$newfile"
 		else
 			newfile="$newname.1$DOT_Z"
 #			$COMPRESS $COMPRESS_OPTS < $newname.0 > $newfile
 #			rm -f $newname.0
 			$COMPRESS $COMPRESS_OPTS "$newname.0"
-			mv -f -- "$newname.0$DOT_Z" "$newfile"
+			mv -- "$newname.0$DOT_Z" "$newfile"
 		fi
 		fixfile "$newfile"
 	fi
@@ -329,14 +329,14 @@ while [ $# -gt 0 ]; do
 	if [ -f "$filename" ]; then
 		if [ -n "$filenew" ]; then
 			if ln -f -- "$filename" "$newfilename"; then
-				mv -f -- "$filename.new" "$filename"
+				mv -- "$filename.new" "$filename"
 			else
 				echo "Error hardlinking $filename to $newfilename" >&2
 				exitcode=8
 				continue
 			fi
 		else
-			mv -f -- "$filename" "$newfilename"
+			mv -- "$filename" "$newfilename"
 		fi
 	fi
 	[ ! -f "$newfilename" ] && touch -- "$newfilename"

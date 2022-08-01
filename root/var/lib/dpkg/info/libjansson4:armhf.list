@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libjansson.so.4.13.0
+/usr/lib/arm-linux-gnueabihf/libjansson.so.4.11.1
 /usr/share
 /usr/share/doc
 /usr/share/doc/libjansson4
@@ -11,5 +11,5 @@
 /usr/share/doc/libjansson4/changelog.gz
 /usr/share/doc/libjansson4/copyright
 /usr/share/doc/libjansson4/examples
-/usr/share/doc/libjansson4/examples/json_process.c
+/usr/share/doc/libjansson4/examples/json_process.c.gz
 /usr/lib/arm-linux-gnueabihf/libjansson.so.4

@@ -26,3 +26,4 @@ else
     rm -rf /dev
 fi
 ln -s "${rootmnt}/dev" /dev
+

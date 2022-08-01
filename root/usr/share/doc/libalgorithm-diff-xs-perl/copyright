@@ -23,7 +23,7 @@ License: Artistic or GPL-1+
 Files: debian/*
 Copyright: 2009, Jonathan Yu <jawnsy@cpan.org>
  2011, Steve McIntyre <steve.mcintyre@linaro.org>
- 2011-2019, gregor herrmann <gregoa@debian.org>
+ 2011, gregor herrmann <gregoa@debian.org>
 License: Artistic or GPL-1+
 
 License: Artistic

@@ -1,5 +1,4 @@
 libgpgme.so.11 libgpgme11 #MINVER#
-* Build-Depends-Package: libgpgme-dev
  GPGME_1.0@GPGME_1.0 1.1.2
  GPGME_1.1@GPGME_1.1 1.1.2
  gpgme_addrspec_from_uid@GPGME_1.1 1.7.1

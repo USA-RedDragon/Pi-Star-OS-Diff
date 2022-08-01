@@ -2,7 +2,7 @@
 
 # Prevent recursive loops, where these values are set to this script
 p="$(which sensible-pager)"
-[ -n "$PAGER" ] && [ "$(which $PAGER || true)" = "$p" ] && PAGER=
+[ "$(which $PAGER || true)" = "$p" ] && PAGER=
 
 ${PAGER:-pager} "$@"
 ret="$?"

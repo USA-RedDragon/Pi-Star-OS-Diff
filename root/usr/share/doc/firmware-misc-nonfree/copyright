@@ -5,7 +5,7 @@ Source: https://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git
 
 Files: 3com/typhoon.bin
 Copyright: 1999-2004, 3Com Corporation
-License: BSD-3-clause-3Com
+License: BSD (3Com)
  All Rights Reserved.
  .
  Redistribution and use in source and binary forms of the 3c990img.h
@@ -40,7 +40,7 @@ License: BSD-3-clause-3Com
 Files: advansys/*
 Copyright: 1995-2000, Advanced System Products, Inc.
            2000-2001, ConnectCom Solutions, Inc.
-License: permissive-Advansys
+License: Permissive (Advansys)
  All Rights Reserved.
  .
  Redistribution and use in source and binary forms, with or without
@@ -52,7 +52,7 @@ Files: agere_ap_fw.bin, agere_sta_fw.bin
 Copyright: 1994-1995, AT&T
            1996-2000, Lucent Technologies
            2001-2004, Agere Systems Inc.
-License: BSD-3-clause-Agere
+License: BSD (Agere)
  This software is provided subject to the following terms and conditions,
  which you should read carefully before using the software.  Using this
  software indicates your acceptance of these terms and conditions.  If you do
@@ -93,7 +93,7 @@ License: BSD-3-clause-Agere
 
 Files: as102_data?_st.hex
 Copyright: 2010, Abilis Systems Sarl
-License: binary-redist-Abilis
+License: Binary redistribution (Abilis)
  Permission to use, copy, modify, and/or distribute this software for
  any purpose with or without fee is hereby granted, provided that the
  above copyright notice and this permission notice appear in all
@@ -108,151 +108,9 @@ License: binary-redist-Abilis
  TORTUOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  PERFORMANCE OF THIS SOFTWARE.
 
-Files: brcm/BCM-0bb4-0306.hcd
-Copyright: 2018, Cypress Semiconductor Corporation
-License: binary-redist-Cypress
- CYPRESS WIRELESS CONNECTIVITY DEVICES
- DRIVER END USER LICENSE AGREEMENT (SOURCE AND BINARY DISTRIBUTION)
- .
- PLEASE READ THIS END USER LICENSE AGREEMENT ("Agreement") CAREFULLY BEFORE
- DOWNLOADING, INSTALLING, OR USING THIS SOFTWARE, ANY ACCOMPANYING
- DOCUMENTATION, OR ANY UPDATES PROVIDED BY CYPRESS ("Software").  BY
- DOWNLOADING, INSTALLING, OR USING THE SOFTWARE, YOU ARE AGREEING TO BE BOUND
- BY THIS AGREEMENT.  IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS
- AGREEMENT, PROMPTLY RETURN AND DO NOT USE THE SOFTWARE.  IF YOU HAVE
- PURCHASED THE SOFTWARE, YOUR RIGHT TO RETURN THE SOFTWARE EXPIRES 30 DAYS
- AFTER YOUR PURCHASE AND APPLIES ONLY TO THE ORIGINAL PURCHASER.
- .
- Software Provided in Binary Code Form.  This paragraph applies to any Software
- provided in binary code form.  Subject to the terms and conditions of this
- Agreement, Cypress Semiconductor Corporation ("Cypress") grants you a
- non-exclusive, non-transferable license under its copyright rights in the
- Software to reproduce and distribute the Software in object code form only,
- solely for use in connection with Cypress integrated circuit products
- ("Purpose").
- .
- Software Provided in Source Code Form.  This paragraph applies to any Software
- provided in source code form ("Cypress Source Code").  Subject to the terms and
- conditions of this Agreement, Cypress grants you a non-exclusive,
- non-transferable license under its copyright rights in the Cypress Source Code
- to reproduce, modify, compile, and distribute the Cypress Source Code (whether
- in source code form or as compiled into binary code form) solely for the
- Purpose.  Cypress retains ownership of the Cypress Source Code and any compiled
- version thereof.  Subject to Cypress' ownership of the underlying Cypress
- Source Code, you retain ownership of any modifications you make to the
- Cypress Source Code.  You agree not to remove any Cypress copyright or other
- notices from the Cypress Source Code and any modifications thereof.  Any
- reproduction, modification, translation, compilation, or representation of
- the Cypress Source Code except as permitted in this paragraph is prohibited
- without the express written permission of Cypress.
- .
- Free and Open Source Software.  Portions of the Software may be licensed under
- free and/or open source licenses such as the GNU General Public License
- ("FOSS").  FOSS is subject to the applicable license agreement and not this
- Agreement.  If you are entitled to receive the source code from Cypress for any
- FOSS included with the Software, either the source code will  be included with
- the Software or you may obtain the source code at no charge from
- <http://www.cypress.com/go/opensource>.  The applicable license terms will
- accompany each source code package.  To review the license terms applicable to
- any FOSS for which Cypress is not required to provide you with source code,
- please see the Software's installation directory on your computer.
- .
- Proprietary Rights.  The Software, including all intellectual property rights
- therein, is and will remain the sole and exclusive property of Cypress or its
- suppliers.  Except as otherwise expressly provided in this Agreement, you may
- not: (i) modify, adapt, or create derivative works based upon the Software;
- (ii) copy the Software; (iii) except and only to the extent explicitly
- permitted by applicable law despite this limitation, decompile, translate,
- reverse engineer, disassemble or otherwise reduce the Software to
- human-readable form; or (iv) use the Software other than for the Purpose.
- .
- No Support.  Cypress may, but is not required to, provide technical support for
- the Software.
- .
- Term and Termination.  This Agreement is effective until terminated.  This
- Agreement and Your license rights will terminate immediately without notice
- from Cypress if you fail to comply with any provision of this Agreement.  Upon
- termination, you must destroy all copies of Software in your possession or
- control.  Termination of this Agreement will not affect any licenses validly
- granted as of the termination date to any end users of the Software.  The
- following paragraphs shall survive any termination of this Agreement: "Free and
- Open Source Software," "Proprietary Rights," "Compliance With Law,"
- "Disclaimer," "Limitation of Liability," and "General."
- .
- Compliance With Law.  Each party agrees to comply with all applicable laws,
- rules and regulations in connection with its activities under this Agreement.
- Without limiting the foregoing, the Software may be subject to export control
- laws and regulations of the United States and other countries.  You agree to
- comply strictly with all such laws and regulations and acknowledge that you
- have the responsibility to obtain licenses to export, re-export, or import
- the Software.
- .
- Disclaimer.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CYPRESS MAKES
- NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH REGARD TO THE SOFTWARE,
- INCLUDING, BUT NOT LIMITED TO, INFRINGEMENT AND THE IMPLIED WARRANTIES OF
- MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Cypress reserves the
- right to make changes to the Software without notice. Cypress does not assume
- any liability arising out of the application or use of Software or any
- product or circuit described in the Software. Cypress does not authorize its
- products for use as critical components in life-support systems where a
- malfunction or failure may reasonably be expected to result in significant
- injury to the user. The inclusion of Cypress' product in a life-support
- system or application implies that the manufacturer of such system or
- application assumes all risk of such use and in doing so indemnifies Cypress
- against all charges.
- .
- Limitation of Liability.  IN NO EVENT WILL CYPRESS OR ITS SUPPLIERS,
- RESELLERS, OR DISTRIBUTORS BE LIABLE FOR ANY LOST REVENUE, PROFIT, OR DATA,
- OR FOR SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL, OR PUNITIVE DAMAGES
- HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE
- USE OF OR INABILITY TO USE THE SOFTWARE EVEN IF CYPRESS OR ITS SUPPLIERS,
- RESELLERS, OR DISTRIBUTORS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
- DAMAGES.  IN NO EVENT SHALL CYPRESS' OR ITS SUPPLIERS' RESELLERS', OR
- DISTRIBUTORS' TOTAL LIABILITY TO YOU, WHETHER IN CONTRACT, TORT (INCLUDING
- NEGLIGENCE), OR OTHERWISE, EXCEED THE PRICE PAID BY YOU FOR THE SOFTWARE.
- THE FOREGOING LIMITATIONS SHALL APPLY EVEN IF THE ABOVE-STATED WARRANTY FAILS
- OF ITS ESSENTIAL PURPOSE.  BECAUSE SOME STATES OR JURISDICTIONS DO NOT ALLOW
- LIMITATION OR EXCLUSION OF CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE
- LIMITATION MAY NOT APPLY TO YOU.
- .
- Restricted Rights.  The Software under this Agreement is commercial computer
- software as that term is described in 48 C.F.R. 252.227-7014(a)(1).  If
- acquired by or on behalf of a civilian agency, the U.S. Government acquires
- this commercial computer software and/or commercial computer software
- documentation subject to the terms of this Agreement as specified in 48
- C.F.R. 12.212 (Computer Software) and 12.211 (Technical Data) of the Federal
- Acquisition Regulations ("FAR") and its successors.  If acquired by or on
- behalf of any agency within the Department of Defense ("DOD"), the U.S.
- Government acquires this commercial computer software and/or commercial
- computer software documentation subject to the terms of this Agreement as
- specified in 48 C.F.R. 227.7202-3 of the DOD FAR Supplement ("DFAR") and its
- successors.
- .
- General.  This Agreement will bind and inure to the benefit of each party's
- successors and assigns, provided that you may not assign or transfer this
- Agreement, in whole or in part, without Cypress' written consent.  This
- Agreement shall be governed by and construed in accordance with the laws of
- the State of California, United States of America, as if performed wholly
- within the state and without giving effect to the principles of conflict of
- law.  The parties consent to personal and exclusive jurisdiction of and venue
- in, the state and federal courts within Santa Clara County, California;
- provided however, that nothing in this Agreement will limit Cypress' right to
- bring legal action in any venue in order to protect or enforce its
- intellectual property rights.  No failure of either party to exercise or
- enforce any of its rights under this Agreement will act as a waiver of such
- rights.  If any portion hereof is found to be void or unenforceable, the
- remaining provisions of this Agreement shall remain in full force and
- effect.  This Agreement is the complete and exclusive agreement between the
- parties with respect to the subject matter hereof, superseding and replacing
- any and all prior agreements, communications, and understandings (both
- written and oral) regarding such subject matter.  Any notice to Cypress will
- be deemed effective when actually received and must be sent to Cypress
- Semiconductor Corporation, ATTN: Chief Legal Officer, 198 Champion Court, San
- Jose, CA 95134 USA.
-
 Files: ctefx.bin, ctspeq.bin
 Copyright: 2012, Creative Technology Ltd
-License: binary-redist-Creative
+License: Binary redistribution (Creative)
  All rights reserved.
  .
  Redistribution.  Redistribution and use in binary form, without
@@ -302,14 +160,14 @@ License: binary-redist-Creative
 
 Files: cxgb3/ael*.bin
 Copyright: 2007-2009, NetLogic Microsystems, Inc.
-License: binary-redist-NetLogic
+License: Binary redistribution
  Permission is hereby granted for the distribution of this firmware
  data in hexadecimal or equivalent format, provided this copyright
  notice is accompanying it.
 
 Files: cxgb3/t3*.bin
 Copyright: 2003-2009, Chelsio, Inc.
-License: BSD-2-clause
+License: BSD 2-clause
  All rights reserved.
  .
  Redistribution and use in source and binary forms, with or
@@ -336,7 +194,7 @@ License: BSD-2-clause
 
 Files: cxgb4/*.bin, cxgb4/*.cld
 Copyright: 2011-2013, Chelsio Communications
-License: binary-redist-Chelsio
+License: Binary redistribution (Chelsio)
  All rights reserved.
  .
  Redistribution and use in binary form, without modification, are
@@ -366,7 +224,7 @@ License: binary-redist-Chelsio
 
 Files: dabusb/*
 Copyright: 1999, BayCom GmbH
-License: permissive-BayCom
+License: Permissive (BayCom)
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that redistributions of source
  code retain the above copyright notice and this comment without
@@ -374,7 +232,7 @@ License: permissive-BayCom
 
 Files: dvb-fe-xc*
 Copyright: 2009, Xceive Corporation <info@xceive.com>
-License: binary-redist-Xceive
+License: Binary redistribution (Xceive)
  Permission to use, copy, modify, and/or distribute this software, only
  for use with Xceive ICs, for any purpose with or without fee is hereby
  granted, provided that the above copyright notice and this permission
@@ -390,7 +248,7 @@ License: binary-redist-Xceive
 
 Files: dvb-usb-dib0700-1.20.fw
 Copyright: 2009, DiBcom
-License: binary-redist-DiBcom
+License: Binary redistribution (DiBcom)
  Permission to use, copy, modify, and/or distribute this software for
  any purpose with or without fee is hereby granted, provided that the
  above copyright notice and this permission notice appear in all
@@ -407,7 +265,7 @@ License: binary-redist-DiBcom
 
 Files: dvb-usb-it9135*
 Copyright: 2014, ITE Tech. Inc.
-License: binary-redist-ITEtech
+License: Binary redistribution (ITEtech)
  Permission to use, copy, modify, and/or distribute this software for
  any purpose with or without fee is hereby granted, provided that the
  above copyright notice and this permission notice appear in all
@@ -424,7 +282,7 @@ License: binary-redist-ITEtech
 
 Files: dvb-usb-terratec-h5-drxk.fw
 Copyright: Terratec
-License: binary-redist-Terratec
+License: Binary redistribution (Terratec)
  TERRATEC grants permission to use and redistribute these firmware
  files for use with TERRATEC devices, but not as part of the Linux
  kernel or in any other form which would require these files themselves
@@ -436,7 +294,7 @@ License: binary-redist-Terratec
 
 Files: e100/*
 Copyright: 1999-2001, Intel Corporation
-License: BSD-3-clause-Intel
+License: BSD (Intel)
  All rights reserved.
  .
  Redistribution and use in source and binary forms, with or without
@@ -466,7 +324,7 @@ License: BSD-3-clause-Intel
 
 Files: ene-ub6250/*
 Copyright: 2011, ENE Technology Inc.
-License: binary-redist-ENE
+License: Binary redistribution (ENE)
  Permission to use, copy, modify, and/or distribute this software for any
  purpose with or without fee is hereby granted, provided that the above
  copyright notice and this permission notice appear in all copies.
@@ -482,7 +340,7 @@ License: binary-redist-ENE
 
 Files: f2255usb.bin, go7007/s2250-?.fw
 Copyright: Sensoray
-License: binary-redist-Sensoray
+License: Redistributable (Sensoray)
  Sensoray grants permission to use and redistribute these firmware
  files for use with Sensoray devices, but not as a part of the Linux
  kernel or in any other form which would require these files themselves
@@ -493,7 +351,7 @@ License: binary-redist-Sensoray
 
 Files: go7007/*
 Copyright: Micronas
-License: binary-redist-Micronas
+License: Redistributable (Micronas)
  The firmware files included in the firmware/ directory may be freely
  redistributed only in conjunction with this document [LICENCE.go7007];
  but modification, tampering and reverse engineering are prohibited.
@@ -506,7 +364,7 @@ License: binary-redist-Micronas
 
 Files: hfi1_*
 Copyright: 2015, Intel Corporation
-License: binary-redist-Intel-narrower-patent
+License: Binary redistribution (Intel, narrower patent license)
  All rights reserved.
  .
  Redistribution.
@@ -546,11 +404,11 @@ License: binary-redist-Intel-narrower-patent
 
 Files: i915/* debian/config/misc-nonfree/i915/*
 Copyright: 2015, Intel Corporation
-License: binary-redist-Intel
+License: Binary redistribution (Intel)
 
 Files: imx/sdma/*
 Copyright: 2017, NXP
-License: binary-redist-NXP
+License: Binary redistribution (NXP)
  All rights reserved.
  .
  Redistribution. Reproduction and redistribution in binary form, without
@@ -600,7 +458,7 @@ License: binary-redist-NXP
 
 Files: kaweth/*
 Copyright: 1999, Kawasaki LSI.
-License: BSD-4-clause-Kawasaki-LSI
+License: BSD 4-clause (Kawasaki LSI)
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
  are met:
@@ -630,7 +488,7 @@ License: BSD-4-clause-Kawasaki-LSI
 
 Files: matrox/*
 Copyright: 1999, Matrox Graphics Inc.
-License: binary-redist-Matrox
+License: Binary redistribution (Matrox)
  All Rights Reserved.
  .
  Permission is hereby granted, free of charge, to any person obtaining a
@@ -653,7 +511,7 @@ License: binary-redist-Matrox
 
 Files: moxa/*.fw
 Copyright: Moxa Inc.
-License: binary-redist-Moxa
+License: Binary redistribution (Moxa)
  The software accompanying this license statement (the “Software”)
  is the property of Moxa Inc. (the “Moxa”), and is protected by
  United States and International Copyright Laws and International
@@ -673,7 +531,7 @@ License: binary-redist-Moxa
 
 Files: mt76*.bin
 Copyright: 2013, Ralink, A MediaTek Company
-License: binary-redist-MediaTek
+License: Binary redistribution (MediaTek)
  All rights reserved.
  .
  Redistribution.  Redistribution and use in binary form, without
@@ -715,12 +573,12 @@ License: binary-redist-MediaTek
 
 Files: mts_*.fw
 Copyright: 2005, Multi-Tech Systems, Inc.
-License: binary-redist-MTS
+License: Binary redistribution (MTS)
  All firmware components are redistributable in binary form.
 
 Files: nvidia/*
-Copyright: 2014-2020, NVIDIA Corporation
-License: binary-redist-Nvidia
+Copyright: 2014-2017, NVIDIA Corporation
+License: License For Customer Use of NVIDIA Software
  IMPORTANT NOTICE -- READ CAREFULLY: This License For Customer Use of
  NVIDIA Software ("LICENSE") is the agreement which governs use of
  the software of NVIDIA Corporation and its subsidiaries ("NVIDIA")
@@ -851,11 +709,11 @@ License: binary-redist-Nvidia
 
 Files: qat_*.bin
 Copyright: 2014, Intel Corporation.
-License: binary-redist-Intel
+License: Binary redistribution (Intel)
 
 Files: rockchip/dptx.bin
 Copyright: 2016, Fuzhou Rockchip Electronics Co.Ltd
-License: binary-redist-Rockchip
+License: Binary redistribution (Rockchip)
  All rights reserved.
  .
  Redistribution.  Redistribution and use in binary form, without
@@ -899,7 +757,7 @@ License: binary-redist-Rockchip
 
 Files: rp2.fw
 Copyright: 2013, Comtrol Corporation
-License: binary-redist-Comtrol
+License: Binary redistribution (Comtrol)
  Comtrol grants permission to use and redistribute these firmware
  files for use with Comtrol devices, but not as part of the Linux
  kernel or in any other form which would require these files themselves
@@ -911,7 +769,7 @@ License: binary-redist-Comtrol
 
 Files: rt*.bin
 Copyright: 2007, Ralink Technology Corporation
-License: binary-redist-Ralink
+License: Binary redistribution (Ralink)
  All rights reserved.
  .
  Redistribution.  Redistribution and use in binary form, without
@@ -953,20 +811,21 @@ License: binary-redist-Ralink
 
 Files: tehuti/bdx.bin
 Copyright: 2007, Tehuti Networks Ltd.
-License: binary-redist-firmware
-
-License: binary-redist-firmware
+License: Binary redistribution
  Permission is hereby granted for the distribution of this firmware
  data in hexadecimal or equivalent format, provided this copyright
  notice is accompanying it.
 
 Files: tigon/tg3*.bin
 Copyright: 2000-2003, Broadcom Corporation.
-License: binary-redist-firmware
+License: Binary redistribution
+ Permission is hereby granted for the distribution of this firmware
+ data in hexadecimal or equivalent format, provided this copyright
+ notice is accompanying it.
 
 Files: ueagle-atm/*
 Copyright: 2006, Ikanos Communications, Inc.
-License: BSD-3-clause-Ikanos
+License: BSD (Ikanos)
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following
  conditions are met:
@@ -1002,7 +861,7 @@ License: BSD-3-clause-Ikanos
  EITHER SOLELY OR IN COMBINATION WITH THIS SOFTWARE.
 
 Files: v4l-cx*.fw
-License: binary-redist-Conexant
+License: Binary redistribution (Conexant)
  Conexant grants permission to use and redistribute these firmware
  files for use with Conexant devices, but not as a part of the Linux
  kernel or in any other form which would require these files themselves
@@ -1011,7 +870,7 @@ License: binary-redist-Conexant
  useful, but WITHOUT ANY WARRANTY; without even the implied warranty
  of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-License: binary-redist-Intel
+License: Binary redistribution (Intel)
  All rights reserved.
  .
  Redistribution.  Redistribution and use in binary form, without

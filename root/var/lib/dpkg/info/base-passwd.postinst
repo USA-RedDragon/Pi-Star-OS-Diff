@@ -81,7 +81,7 @@ EOF
 	fi
 fi
 
-tmp=`mktemp`
+tmp=`tempfile`
 if ! update-passwd --dry-run > $tmp ; then
 	if [ -f /usr/share/debconf/confmodule ] ; then
 		db_version 2.0

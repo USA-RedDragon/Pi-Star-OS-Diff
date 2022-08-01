@@ -1,0 +1,5 @@
+/etc
+/etc/ppp
+/etc/ppp/peers
+/etc/ppp/peers/wvdial
+/etc/ppp/peers/wvdial-pipe

@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libpcre2-8.so.0.10.1
+/usr/lib/arm-linux-gnueabihf/libpcre2-8.so.0.7.1
 /usr/share
 /usr/share/doc
 /usr/share/doc/libpcre2-8-0

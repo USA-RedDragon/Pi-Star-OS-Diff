@@ -4,12 +4,10 @@
 /etc/default/crda
 /lib
 /lib/crda
-/lib/crda/crda
 /lib/crda/libreg.so
 /lib/crda/pubkeys
 /lib/crda/pubkeys/benh@debian.org.key.pub.pem
 /lib/crda/pubkeys/linville.key.pub.pem
-/lib/crda/pubkeys/romain.perier@gmail.com.key.pub.pem
 /lib/crda/pubkeys/sforshee.key.pub.pem
 /lib/crda/setregdomain
 /lib/udev
@@ -17,6 +15,7 @@
 /lib/udev/rules.d/60-crda.rules
 /lib/udev/rules.d/85-regulatory.rules
 /sbin
+/sbin/crda
 /sbin/regdbdump
 /usr
 /usr/include

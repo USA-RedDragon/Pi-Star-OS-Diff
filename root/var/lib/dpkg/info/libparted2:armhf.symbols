@@ -1,7 +1,6 @@
 libparted.so.2 libparted2 #MINVER#
 * Build-Depends-Package: libparted-dev
  __efi_crc32@Base 3.1
- __pt_limit_lookup@Base 3.1
  __xargmatch_internal@Base 3.1
  _affs0_type@Base 3.1
  _affs1_type@Base 3.1
@@ -62,7 +61,6 @@ libparted.so.2 libparted2 #MINVER#
  close_stream@Base 3.1
  dir_len@Base 3.1
  dir_name@Base 3.1
- dup_cloexec@Base 3.1
  emit_bug_reporting_address@Base 3.1
  exit_failure@Base 3.1
  fat16_type@Base 3.1
@@ -77,21 +75,9 @@ libparted.so.2 libparted2 #MINVER#
  fat_probe_fat32@Base 3.1
  freea@Base 3.1
  gen_tempname@Base 3.1
- gen_tempname_len@Base 3.1
  get_quoting_style@Base 3.1
- get_stat_atime@Base 3.1
- get_stat_atime_ns@Base 3.1
- get_stat_birthtime@Base 3.1
- get_stat_birthtime_ns@Base 3.1
- get_stat_ctime@Base 3.1
- get_stat_ctime_ns@Base 3.1
- get_stat_mtime@Base 3.1
- get_stat_mtime_ns@Base 3.1
- getprogname@Base 3.1
  glthread_once_singlethreaded@Base 3.1
  glthread_recursive_lock_init_multithreaded@Base 3.1
- glthread_rwlock_init_for_glibc@Base 3.1
- hard_locale@Base 3.1
  hfs_and_wrapper_probe@Base 3.1
  hfs_block@Base 3.1
  hfs_block_count@Base 3.1
@@ -108,7 +94,6 @@ libparted.so.2 libparted2 #MINVER#
  mmalloca@Base 3.1
  nilfs2_probe@Base 3.1
  ntfs_probe@Base 3.1
- parse_gnu_standard_options_only@Base 3.1
  parse_long_options@Base 3.1
  ped_alignment_align_down@Base 3.1
  ped_alignment_align_nearest@Base 3.1
@@ -243,8 +228,6 @@ libparted.so.2 libparted2 #MINVER#
  ped_file_system_btrfs_init@Base 3.1-1~
  ped_file_system_ext2_done@Base 3.1
  ped_file_system_ext2_init@Base 3.1
- ped_file_system_f2fs_done@Base 3.4
- ped_file_system_f2fs_init@Base 3.4
  ped_file_system_fat_done@Base 3.1
  ped_file_system_fat_init@Base 3.1
  ped_file_system_hfs_done@Base 3.1
@@ -265,8 +248,6 @@ libparted.so.2 libparted2 #MINVER#
  ped_file_system_type_get_next@Base 3.1
  ped_file_system_type_register@Base 3.1
  ped_file_system_type_unregister@Base 3.1
- ped_file_system_udf_done@Base 3.3
- ped_file_system_udf_init@Base 3.3
  ped_file_system_ufs_done@Base 3.1
  ped_file_system_ufs_init@Base 3.1
  ped_file_system_xfs_done@Base 3.1
@@ -365,41 +346,18 @@ libparted.so.2 libparted2 #MINVER#
  quotearg_n_custom_mem@Base 3.1
  quotearg_n_mem@Base 3.1
  quotearg_n_style@Base 3.1
- quotearg_n_style_colon@Base 3.1
  quotearg_n_style_mem@Base 3.1
  quotearg_style@Base 3.1
  quotearg_style_mem@Base 3.1
  quoting_style_args@Base 3.1
  quoting_style_vals@Base 3.1
- rpl_fcntl@Base 3.1
- rpl_mbrtowc@Base 3.1
- rpl_re_compile_fastmap@Base 3.1
- rpl_re_compile_pattern@Base 3.1
- rpl_re_match@Base 3.1
- rpl_re_match_2@Base 3.1
- rpl_re_search@Base 3.1
- rpl_re_search_2@Base 3.1
- rpl_re_set_registers@Base 3.1
- rpl_re_set_syntax@Base 3.1
- rpl_re_syntax_options@Base 3.1
- rpl_regcomp@Base 3.1
- rpl_regerror@Base 3.1
- rpl_regexec@Base 3.1
- rpl_regfree@Base 3.1
  safe_read@Base 3.1
  set_char_quoting@Base 3.1
- set_cloexec_flag@Base 3.1
  set_custom_quoting@Base 3.1
  set_program_name@Base 3.1
  set_quoting_flags@Base 3.1
  set_quoting_style@Base 3.1
- setlocale_null@Base 3.1
- setlocale_null_r@Base 3.1
- stat_time_normalize@Base 3.1
  strip_trailing_slashes@Base 3.1
- try_tempname@Base 3.1
- try_tempname_len@Base 3.1
- udf_probe@Base 3.1
  version_etc@Base 3.1
  version_etc_ar@Base 3.1
  version_etc_arn@Base 3.1
@@ -418,6 +376,7 @@ libparted.so.2 libparted2 #MINVER#
  xstrdup@Base 3.1
  xstrndup@Base 3.1
  xstrtol@Base 3.1
+ xstrtol_fatal@Base 3.1
  xstrtoll@Base 3.1
  xstrtoul@Base 3.1
  xstrtoull@Base 3.1

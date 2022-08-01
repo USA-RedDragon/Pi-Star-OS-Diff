@@ -1,5 +1,5 @@
 30ba0f755dfdf5e8a335be15958ad5e0  usr/share/doc/fontconfig-config/NEWS.Debian.gz
-26237f7645cab17741e8eabbdae6efd0  usr/share/doc/fontconfig-config/changelog.Debian.gz
+aacae2295e1aa88f68acef77d00e7e3f  usr/share/doc/fontconfig-config/changelog.Debian.gz
 377f19037c491f765dc5dbdcac9d174b  usr/share/doc/fontconfig-config/changelog.gz
 4648df9e8d6215ae7dd16ce863b16967  usr/share/doc/fontconfig-config/copyright
 b64114e5af24e4cdfc5bd5023f280287  usr/share/fontconfig/conf.avail/10-autohint.conf
@@ -37,5 +37,5 @@ d01fe25b8869985f337a7d90704cefe6  usr/share/fontconfig/conf.avail/69-unifont.con
 91c414090c7d8bfe557785fe845cb6bd  usr/share/fontconfig/conf.avail/70-yes-bitmaps.conf
 ddad25ea4458fffa36d7a1f2f53bc5e9  usr/share/fontconfig/conf.avail/80-delicious.conf
 e79defb0b94fe9d0a9af39c83e48b9dc  usr/share/fontconfig/conf.avail/90-synthetic.conf
-021dd3c8d9c06636bd1ec9890c3c2953  usr/share/man/man5/fonts-conf.5.gz
+6f0d85bf2e9937b1c9ba6a702558e0ac  usr/share/man/man5/fonts-conf.5.gz
 a6ff7adbf5557786416eb0c25ffd64bb  usr/share/xml/fontconfig/fonts.dtd

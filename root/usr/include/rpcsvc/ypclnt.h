@@ -1,4 +1,4 @@
-/* Copyright (C) 1996-2014 Free Software Foundation, Inc.
+/* Copyright (C) 1996-2018 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
    Contributed by Thorsten Kukuk <kukuk@suse.de>, 1996.
 
@@ -19,6 +19,8 @@
 
 #ifndef	__RPCSVC_YPCLNT_H__
 #define	__RPCSVC_YPCLNT_H__
+
+#include <features.h>
 
 /* Some defines */
 #define YPERR_SUCCESS	0		/* There is no error */
@@ -45,9 +47,7 @@
 #define	YPOP_DELETE	3		/* Delete this entry */
 #define	YPOP_STORE	4		/* Add, or change */
 
-#ifdef  __cplusplus
-extern "C" {
-#endif
+__BEGIN_DECLS
 
 /* struct ypall_callback * is the arg which must be passed to yp_all.  */
 struct ypall_callback
@@ -58,34 +58,28 @@ struct ypall_callback
   };
 
 /* External NIS client function references.  */
-extern int yp_bind (const char *);
-extern void yp_unbind (const char *);
-extern int yp_get_default_domain (char **);
+extern int yp_bind (const char *) __THROW;
+extern void yp_unbind (const char *) __THROW;
+extern int yp_get_default_domain (char **) __THROW;
 extern int yp_match (const char *, const char *, const char *,
-		     const int, char **, int *);
+		     const int, char **, int *) __THROW;
 extern int yp_first (const char *, const char *, char **,
-		     int *, char **, int *);
+		     int *, char **, int *) __THROW;
 extern int yp_next (const char *, const char *, const char *,
-		    const int, char **, int *, char **, int *);
-extern int yp_master (const char *, const char *, char **);
-extern int yp_order (const char *, const char *, unsigned int *);
+		    const int, char **, int *, char **, int *) __THROW;
+extern int yp_master (const char *, const char *, char **) __THROW;
+extern int yp_order (const char *, const char *, unsigned int *) __THROW;
 extern int yp_all (const char *, const char *,
-		   const struct ypall_callback *);
-extern const char *yperr_string (const int);
-extern const char *ypbinderr_string (const int);
-extern int ypprot_err (const int);
+		   const struct ypall_callback *) __THROW;
+extern const char *yperr_string (const int) __THROW;
+extern const char *ypbinderr_string (const int) __THROW;
+extern int ypprot_err (const int) __THROW;
 extern int yp_update (char *, char *, unsigned int,  char *,
-		      int, char *, int);
-
-#if 0
-extern int yp_maplist (const char *, struct ypmaplist **);
-#endif
+		      int, char *, int) __THROW;
 
 /* This functions exists only under BSD and Linux systems.  */
-extern int __yp_check (char **);
+extern int __yp_check (char **) __THROW;
 
-#ifdef  __cplusplus
-}
-#endif
+__END_DECLS
 
 #endif	/* __RPCSVC_YPCLNT_H__ */

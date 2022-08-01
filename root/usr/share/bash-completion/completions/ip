@@ -2,9 +2,9 @@
 
 _iproute2_etc()
 {
-    COMPREPLY+=($(compgen -W \
-        "$(awk '!/#/ { print $2 }' /etc/iproute2/$1 2>/dev/null)" \
-        -- "$cur"))
+    COMPREPLY+=( $( compgen -W \
+        "$( awk '!/#/ { print $2 }' /etc/iproute2/$1 2>/dev/null )" \
+        -- "$cur" ) )
 }
 
 _ip()
@@ -13,99 +13,101 @@ _ip()
     _init_completion || return
 
     case $prev in
-        -V | -Version | -rc | -rcvbuf)
+        -V|-Version|-rc|-rcvbuf)
             return
             ;;
-        -f | -family)
-            COMPREPLY=($(compgen -W 'inet inet6 ipx dnet link' -- "$cur"))
+        -f|-family)
+            COMPREPLY=( $( compgen -W 'inet inet6 ipx dnet link' -- "$cur" ) )
             return
             ;;
-        -b | -batch)
+        -b|-batch)
             _filedir
             return
             ;;
         -force)
-            COMPREPLY=($(compgen -W '-batch' -- "$cur"))
+            COMPREPLY=( $( compgen -W '-batch' -- "$cur" ) )
             return
             ;;
     esac
 
-    local subcword cmd subcmd=""
-    for ((subcword = 1; subcword < ${#words[@]} - 1; subcword++)); do
+    local subcword cmd subcmd
+    for (( subcword=1; subcword < ${#words[@]}-1; subcword++ )); do
         [[ ${words[subcword]} == -b?(atch) ]] && return
-        [[ -v cmd ]] && subcmd=${words[subcword]} && break
+        [[ -n $cmd ]] && subcmd=${words[subcword]} && break
         [[ ${words[subcword]} != -* && \
-        ${words[subcword - 1]} != -@(f?(amily)|rc?(vbuf)) ]] &&
+                ${words[subcword-1]} != -@(f?(amily)|rc?(vbuf)) ]] && \
             cmd=${words[subcword]}
     done
 
-    if [[ ! -v cmd ]]; then
+    if [[ -z $cmd ]]; then
         case $cur in
             -*)
                 local c="-Version -statistics -details -resolve -family
                     -oneline -timestamp -batch -rcvbuf"
-                ((cword == 1)) && c+=" -force"
-                COMPREPLY=($(compgen -W "$c" -- "$cur"))
+                [[ $cword -eq 1 ]] && c+=" -force"
+                COMPREPLY=( $( compgen -W "$c" -- "$cur" ) )
+                return
                 ;;
             *)
-                COMPREPLY=($(compgen -W "help $($1 help 2>&1 | command sed -e \
+                COMPREPLY=( $( compgen -W "help $( ip help 2>&1 | command sed -e \
                     '/OBJECT := /,/}/!d' -e \
                     's/.*{//' -e \
                     's/}.*//' -e \
-                    's/|//g')" -- "$cur"))
+                    's/|//g' )" -- "$cur" ) )
+                return
                 ;;
         esac
-        return
     fi
 
     [[ $subcmd == help ]] && return
 
     case $cmd in
-        l | link)
+        l|link)
             case $subcmd in
                 add)
                     # TODO
                     ;;
                 delete)
-                    case $((cword - subcword)) in
+                    case $(($cword-$subcword)) in
                         1)
                             _available_interfaces
                             ;;
                         2)
-                            COMPREPLY=($(compgen -W 'type' -- "$cur"))
+                            COMPREPLY=( $( compgen -W 'type' -- "$cur" ) )
                             ;;
                         3)
-                            [[ $prev == type ]] &&
-                                COMPREPLY=($(compgen -W 'vlan veth vcan dummy
-                                    ifb macvlan can' -- "$cur"))
+                            [[ $prev == type ]] && \
+                                COMPREPLY=( $( compgen -W 'vlan veth vcan dummy
+                                    ifb macvlan can' -- "$cur" ) )
                             ;;
                     esac
                     ;;
                 set)
-                    if ((cword - subcword == 1)); then
+                    if [[ $cword-$subcword -eq 1 ]]; then
                         _available_interfaces
                     else
                         case $prev in
-                            arp | dynamic | multicast | allmulticast | promisc | \
-                                trailers)
-                                COMPREPLY=($(compgen -W 'on off' -- "$cur"))
+                            arp|dynamic|multicast|allmulticast|promisc|\
+                            trailers)
+                                COMPREPLY=( $( compgen -W 'on off' \
+                                    -- "$cur" ) )
                                 ;;
-                            txqueuelen | name | address | broadcast | mtu | netns | alias) ;;
-
+                            txqueuelen|name|address|broadcast|mtu|netns|alias)
+                                ;;
                             *)
                                 local c="arp dynamic multicast allmulticast
                                     promisc trailers txqueuelen name address
                                     broadcast mtu netns alias"
                                 [[ $prev != @(up|down) ]] && c+=" up down"
-                                COMPREPLY=($(compgen -W "$c" -- "$cur"))
+                                COMPREPLY=( $( compgen -W "$c" -- "$cur" ) )
                                 ;;
                         esac
                     fi
                     ;;
                 show)
-                    if ((cword == subcword + 1)); then
+                    if [[ $cword -eq $subcword+1 ]]; then
                         _available_interfaces
-                        COMPREPLY+=($(compgen -W 'dev group up' -- "$cur"))
+                        COMPREPLY+=( $( compgen -W 'dev group up' -- "$cur" ) )
                     elif [[ $prev == dev ]]; then
                         _available_interfaces
                     elif [[ $prev == group ]]; then
@@ -113,16 +115,16 @@ _ip()
                     fi
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add delete set show' \
-                            -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help add delete set show' \
+                        -- "$cur" ) )
                     ;;
             esac
             ;;
 
-        a | addr | address)
+        a|addr|address)
             case $subcmd in
-                add | change | replace)
+                add|change|replace)
                     if [[ $prev == dev ]]; then
                         _available_interfaces
                     elif [[ $prev == scope ]]; then
@@ -140,12 +142,12 @@ _ip()
                         : # TODO
                     fi
                     ;;
-                show | flush)
-                    if ((cword == subcword + 1)); then
+                show|flush)
+                    if [[ $cword -eq $subcword+1 ]]; then
                         _available_interfaces
-                        COMPREPLY+=($(compgen -W 'dev scope to label dynamic
+                        COMPREPLY+=( $( compgen -W 'dev scope to label dynamic
                             permanent tentative deprecated dadfailed temporary
-                            primary secondary up' -- "$cur"))
+                            primary secondary up' -- "$cur" ) )
                     elif [[ $prev == dev ]]; then
                         _available_interfaces
                     elif [[ $prev == scope ]]; then
@@ -153,16 +155,16 @@ _ip()
                     fi
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add change replace del
-                            show flush' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help add change replace del
+                            show flush' -- "$cur" ) )
                     ;;
             esac
             ;;
 
         addrlabel)
             case $subcmd in
-                list | add | del | flush)
+                list|add|del|flush)
                     if [[ $prev == dev ]]; then
                         _available_interfaces
                     else
@@ -170,16 +172,16 @@ _ip()
                     fi
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help list add del flush' \
-                            -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help list add del flush' \
+                        -- "$cur" ) )
                     ;;
             esac
             ;;
 
-        r | route)
+        route)
             case $subcmd in
-                list | flush)
+                list|flush)
                     if [[ $prev == proto ]]; then
                         _iproute2_etc rt_protos
                     else
@@ -189,79 +191,44 @@ _ip()
                 get)
                     # TODO
                     ;;
-                a | add | d | del | change | append | r | replace | monitor)
-                    if [[ $prev == via ]]; then
-                        COMPREPLY=($(compgen -W "$($1 r | command sed -ne \
-                            's/.*via \([0-9.]*\).*/\1/p')" -- "$cur"))
-                    elif [[ $prev == "$subcmd" ]]; then
-                        COMPREPLY=($(compgen -W "table default \
-                            $($1 r | cut -d ' ' -f 1)" -- "$cur"))
-                    elif [[ $prev == dev ]]; then
-                        _available_interfaces -a
-                    elif [[ $prev == table ]]; then
-                        COMPREPLY=($(compgen -W 'local main default' -- "$cur"))
-                    else
-                        COMPREPLY=($(compgen -W 'via dev weight' -- "$cur"))
-                    fi
+                add|del|change|append|replace|monitor)
+                    # TODO
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help list flush get add del
-                            change append replace monitor' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help list flush get add del
+                            change append replace monitor' -- "$cur" ) )
                     ;;
             esac
             ;;
 
         rule)
             case $subcmd in
-                add | del | list | lst)
-                    case $prev in
-                        from | to | tos | dsfield | fwmark | uidrange | ipproto | sport | \
-                            dport | priority | protocol | suppress_prefixlength | \
-                            suppress_ifgroup | realms | nat | goto) ;;
-
-                        iif | oif)
-                            _available_interfaces -a
-                            ;;
-                        table | lookup)
-                            COMPREPLY=($(compgen -W 'local main default' -- "$cur"))
-                            ;;
-                        *)
-                            COMPREPLY=($(compgen -W 'from to tos dsfield fwmark
-                                uidrange ipproto sport dport priority table lookup
-                                protocol suppress_prefixlength suppress_ifgroup realms
-                                nat goto iif oif not' -- "$cur"))
-                            ;;
-                    esac
+                add|del)
+                    # TODO
                     ;;
-                flush | save)
-                    if [[ $prev == protocol ]]; then
-                        :
-                    else
-                        COMPREPLY=($(compgen -W 'protocol' -- "$cur"))
-                    fi
+                flush|show|list|lst)
                     ;;
-                restore | show) ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add del list flush save
-                            restore show' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help list add del flush' \
+                        -- "$cur" ) )
                     ;;
             esac
             ;;
 
         neigh)
             case $subcmd in
-                add | del | change | replace)
+                add|del|change|replace)
                     # TODO
                     ;;
-                show | flush)
+                show|flush)
                     # TODO
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add del change replace
-                            show flush' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help add del change replace
+                            show flush' -- "$cur" ) )
                     ;;
             esac
             ;;
@@ -275,45 +242,45 @@ _ip()
                     # TODO
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help change show' \
-                            -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help change show' \
+                        -- "$cur" ) )
                     ;;
             esac
             ;;
 
         tunnel)
             case $subcmd in
-                show) ;;
-
-                add | change | del | prl | 6rd)
+                show)
+                    ;;
+                add|change|del|prl|6rd)
                     # TODO
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add change del show prl
-                            6rd' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help add change del show prl
+                            6rd' -- "$cur" ) )
                     ;;
             esac
             ;;
 
         maddr)
             case $subcmd in
-                add | del)
+                add|del)
                     # TODO
                     ;;
                 show)
                     if [[ $cword -eq $subcword+1 || $prev == dev ]]; then
                         _available_interfaces
-                        [[ $prev != dev ]] &&
-                            COMPREPLY=($(compgen -W '${COMPREPLY[@]} dev' \
-                                -- "$cur"))
+                        [[ $prev != dev ]] && \
+                            COMPREPLY=( $( compgen -W '${COMPREPLY[@]} dev' \
+                            -- "$cur" ) )
                     fi
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add del show' \
-                            -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help add del show' \
+                        -- "$cur" ) )
                     ;;
             esac
             ;;
@@ -324,8 +291,8 @@ _ip()
                     # TODO
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help show' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help show' -- "$cur" ) )
                     ;;
             esac
             ;;
@@ -334,45 +301,26 @@ _ip()
             case $subcmd in
                 all) ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help all' -- "$cur"))
-                    ;;
-            esac
-            ;;
-
-        netns)
-            case $subcmd in
-                list | monitor) ;;
-
-                add | identify | list-id)
-                    # TODO
-                    ;;
-                delete | exec | pids | set)
-                    [[ $prev == "$subcmd" ]] &&
-                        COMPREPLY=($(compgen -W "$($1 netns list)" -- "$cur"))
-                    ;;
-                *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'help add delete exec
-                            identify list list-id monitor pids set' -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'help all' -- "$cur" ) )
                     ;;
             esac
             ;;
 
         xfrm)
             case $subcmd in
-                state | policy | monitor)
+                state|policy|monitor)
                     # TODO
                     ;;
                 *)
-                    ((cword == subcword)) &&
-                        COMPREPLY=($(compgen -W 'state policy monitor' \
-                            -- "$cur"))
+                    [[ $cword -eq $subcword ]] && \
+                        COMPREPLY=( $( compgen -W 'state policy monitor' \
+                        -- "$cur" ) )
                     ;;
             esac
             ;;
     esac
 } &&
-    complete -F _ip ip
+complete -F _ip ip
 
 # ex: filetype=sh

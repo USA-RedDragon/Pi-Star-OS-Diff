@@ -2,7 +2,7 @@
 
 # Prevent recursive loops, where these values are set to this script
 p="$(which sensible-browser)"
-[ -n "$BROWSER" ] && [ "$(which $BROWSER || true)" = "$p" ] && BROWSER=
+[ "$(which $BROWSER || true)" = "$p" ] && BROWSER=
 
 if test -n "$BROWSER"; then
     ${BROWSER} "$@"

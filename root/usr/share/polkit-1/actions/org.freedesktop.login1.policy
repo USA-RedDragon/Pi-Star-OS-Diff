@@ -3,7 +3,7 @@
         "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 
 <!--
-  SPDX-License-Identifier: LGPL-2.1-or-later
+  SPDX-License-Identifier: LGPL-2.1+
 
   This file is part of systemd.
 
@@ -113,17 +113,6 @@
                 </defaults>
         </action>
 
-        <action id="org.freedesktop.login1.inhibit-handle-reboot-key">
-                <description gettext-domain="systemd">Allow applications to inhibit system handling of the reboot key</description>
-                <message gettext-domain="systemd">Authentication is required for an application to inhibit system handling of the reboot key.</message>
-                <defaults>
-                        <allow_any>no</allow_any>
-                        <allow_inactive>yes</allow_inactive>
-                        <allow_active>yes</allow_active>
-                </defaults>
-                <annotate key="org.freedesktop.policykit.imply">org.freedesktop.login1.inhibit-handle-suspend-key org.freedesktop.login1.inhibit-handle-hibernate-key org.freedesktop.login1.inhibit-handle-lid-switch</annotate>
-        </action>
-
         <action id="org.freedesktop.login1.set-self-linger">
                 <description gettext-domain="systemd">Allow non-logged-in user to run programs</description>
                 <message gettext-domain="systemd">Explicit request is required to run programs as a non-logged-in user.</message>
@@ -146,7 +135,7 @@
 
         <action id="org.freedesktop.login1.attach-device">
                 <description gettext-domain="systemd">Allow attaching devices to seats</description>
-                <message gettext-domain="systemd">Authentication is required to attach a device to a seat.</message>
+                <message gettext-domain="systemd">Authentication is required for attaching a device to a seat.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -157,7 +146,7 @@
 
         <action id="org.freedesktop.login1.flush-devices">
                 <description gettext-domain="systemd">Flush device to seat attachments</description>
-                <message gettext-domain="systemd">Authentication is required to reset how devices are attached to seats.</message>
+                <message gettext-domain="systemd">Authentication is required for resetting how devices are attached to seats.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -167,7 +156,7 @@
 
         <action id="org.freedesktop.login1.power-off">
                 <description gettext-domain="systemd">Power off the system</description>
-                <message gettext-domain="systemd">Authentication is required to power off the system.</message>
+                <message gettext-domain="systemd">Authentication is required for powering off the system.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -178,7 +167,7 @@
 
         <action id="org.freedesktop.login1.power-off-multiple-sessions">
                 <description gettext-domain="systemd">Power off the system while other users are logged in</description>
-                <message gettext-domain="systemd">Authentication is required to power off the system while other users are logged in.</message>
+                <message gettext-domain="systemd">Authentication is required for powering off the system while other users are logged in.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -188,8 +177,8 @@
         </action>
 
         <action id="org.freedesktop.login1.power-off-ignore-inhibit">
-                <description gettext-domain="systemd">Power off the system while an application is inhibiting this</description>
-                <message gettext-domain="systemd">Authentication is required to power off the system while an application is inhibiting this.</message>
+                <description gettext-domain="systemd">Power off the system while an application asked to inhibit it</description>
+                <message gettext-domain="systemd">Authentication is required for powering off the system while an application asked to inhibit it.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -200,7 +189,7 @@
 
         <action id="org.freedesktop.login1.reboot">
                 <description gettext-domain="systemd">Reboot the system</description>
-                <message gettext-domain="systemd">Authentication is required to reboot the system.</message>
+                <message gettext-domain="systemd">Authentication is required for rebooting the system.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -211,7 +200,7 @@
 
         <action id="org.freedesktop.login1.reboot-multiple-sessions">
                 <description gettext-domain="systemd">Reboot the system while other users are logged in</description>
-                <message gettext-domain="systemd">Authentication is required to reboot the system while other users are logged in.</message>
+                <message gettext-domain="systemd">Authentication is required for rebooting the system while other users are logged in.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -221,8 +210,8 @@
         </action>
 
         <action id="org.freedesktop.login1.reboot-ignore-inhibit">
-                <description gettext-domain="systemd">Reboot the system while an application is inhibiting this</description>
-                <message gettext-domain="systemd">Authentication is required to reboot the system while an application is inhibiting this.</message>
+                <description gettext-domain="systemd">Reboot the system while an application asked to inhibit it</description>
+                <message gettext-domain="systemd">Authentication is required for rebooting the system while an application asked to inhibit it.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -233,7 +222,7 @@
 
         <action id="org.freedesktop.login1.halt">
                 <description gettext-domain="systemd">Halt the system</description>
-                <message gettext-domain="systemd">Authentication is required to halt the system.</message>
+                <message gettext-domain="systemd">Authentication is required for halting the system.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -244,7 +233,7 @@
 
         <action id="org.freedesktop.login1.halt-multiple-sessions">
                 <description gettext-domain="systemd">Halt the system while other users are logged in</description>
-                <message gettext-domain="systemd">Authentication is required to halt the system while other users are logged in.</message>
+                <message gettext-domain="systemd">Authentication is required for halting the system while other users are logged in.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -254,8 +243,8 @@
         </action>
 
         <action id="org.freedesktop.login1.halt-ignore-inhibit">
-                <description gettext-domain="systemd">Halt the system while an application is inhibiting this</description>
-                <message gettext-domain="systemd">Authentication is required to halt the system while an application is inhibiting this.</message>
+                <description gettext-domain="systemd">Halt the system while an application asked to inhibit it</description>
+                <message gettext-domain="systemd">Authentication is required for halting the system while an application asked to inhibit it.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -266,7 +255,7 @@
 
         <action id="org.freedesktop.login1.suspend">
                 <description gettext-domain="systemd">Suspend the system</description>
-                <message gettext-domain="systemd">Authentication is required to suspend the system.</message>
+                <message gettext-domain="systemd">Authentication is required for suspending the system.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -276,7 +265,7 @@
 
         <action id="org.freedesktop.login1.suspend-multiple-sessions">
                 <description gettext-domain="systemd">Suspend the system while other users are logged in</description>
-                <message gettext-domain="systemd">Authentication is required to suspend the system while other users are logged in.</message>
+                <message gettext-domain="systemd">Authentication is required for suspending the system while other users are logged in.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -286,8 +275,8 @@
         </action>
 
         <action id="org.freedesktop.login1.suspend-ignore-inhibit">
-                <description gettext-domain="systemd">Suspend the system while an application is inhibiting this</description>
-                <message gettext-domain="systemd">Authentication is required to suspend the system while an application is inhibiting this.</message>
+                <description gettext-domain="systemd">Suspend the system while an application asked to inhibit it</description>
+                <message gettext-domain="systemd">Authentication is required for suspending the system while an application asked to inhibit it.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -298,7 +287,7 @@
 
         <action id="org.freedesktop.login1.hibernate">
                 <description gettext-domain="systemd">Hibernate the system</description>
-                <message gettext-domain="systemd">Authentication is required to hibernate the system.</message>
+                <message gettext-domain="systemd">Authentication is required for hibernating the system.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -308,7 +297,7 @@
 
         <action id="org.freedesktop.login1.hibernate-multiple-sessions">
                 <description gettext-domain="systemd">Hibernate the system while other users are logged in</description>
-                <message gettext-domain="systemd">Authentication is required to hibernate the system while other users are logged in.</message>
+                <message gettext-domain="systemd">Authentication is required for hibernating the system while other users are logged in.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -318,8 +307,8 @@
         </action>
 
         <action id="org.freedesktop.login1.hibernate-ignore-inhibit">
-                <description gettext-domain="systemd">Hibernate the system while an application is inhibiting this</description>
-                <message gettext-domain="systemd">Authentication is required to hibernate the system while an application is inhibiting this.</message>
+                <description gettext-domain="systemd">Hibernate the system while an application asked to inhibit it</description>
+                <message gettext-domain="systemd">Authentication is required for hibernating the system while an application asked to inhibit it.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -330,7 +319,7 @@
 
         <action id="org.freedesktop.login1.manage">
                 <description gettext-domain="systemd">Manage active sessions, users and seats</description>
-                <message gettext-domain="systemd">Authentication is required to manage active sessions, users and seats.</message>
+                <message gettext-domain="systemd">Authentication is required for managing active sessions, users and seats.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -348,42 +337,9 @@
                 </defaults>
         </action>
 
-        <action id="org.freedesktop.login1.set-reboot-parameter">
-                <description gettext-domain="systemd">Set the reboot "reason" in the kernel</description>
-                <message gettext-domain="systemd">Authentication is required to set the reboot "reason" in the kernel.</message>
-                <defaults>
-                        <allow_any>auth_admin_keep</allow_any>
-                        <allow_inactive>auth_admin_keep</allow_inactive>
-                        <allow_active>yes</allow_active>
-                </defaults>
-                <annotate key="org.freedesktop.policykit.imply">org.freedesktop.login1.reboot</annotate>
-        </action>
-
         <action id="org.freedesktop.login1.set-reboot-to-firmware-setup">
-                <description gettext-domain="systemd">Indicate to the firmware to boot to setup interface</description>
+                <description gettext-domain="systemd">Allow indication to the firmware to boot to setup interface</description>
                 <message gettext-domain="systemd">Authentication is required to indicate to the firmware to boot to setup interface.</message>
-                <defaults>
-                        <allow_any>auth_admin_keep</allow_any>
-                        <allow_inactive>auth_admin_keep</allow_inactive>
-                        <allow_active>yes</allow_active>
-                </defaults>
-                <annotate key="org.freedesktop.policykit.imply">org.freedesktop.login1.reboot</annotate>
-        </action>
-
-        <action id="org.freedesktop.login1.set-reboot-to-boot-loader-menu">
-                <description gettext-domain="systemd">Indicate to the boot loader to boot to the boot loader menu</description>
-                <message gettext-domain="systemd">Authentication is required to indicate to the boot loader to boot to the boot loader menu.</message>
-                <defaults>
-                        <allow_any>auth_admin_keep</allow_any>
-                        <allow_inactive>auth_admin_keep</allow_inactive>
-                        <allow_active>yes</allow_active>
-                </defaults>
-                <annotate key="org.freedesktop.policykit.imply">org.freedesktop.login1.reboot</annotate>
-        </action>
-
-        <action id="org.freedesktop.login1.set-reboot-to-boot-loader-entry">
-                <description gettext-domain="systemd">Indicate to the boot loader to boot a specific entry</description>
-                <message gettext-domain="systemd">Authentication is required to indicate to the boot loader to boot into a specific boot loader entry.</message>
                 <defaults>
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
@@ -399,16 +355,6 @@
                         <allow_any>auth_admin_keep</allow_any>
                         <allow_inactive>auth_admin_keep</allow_inactive>
                         <allow_active>auth_admin_keep</allow_active>
-                </defaults>
-        </action>
-
-        <action id="org.freedesktop.login1.chvt">
-                <description gettext-domain="systemd">Change Session</description>
-                <message gettext-domain="systemd">Authentication is required to change the virtual terminal.</message>
-                <defaults>
-                        <allow_any>auth_admin_keep</allow_any>
-                        <allow_inactive>yes</allow_inactive>
-                        <allow_active>yes</allow_active>
                 </defaults>
         </action>
 

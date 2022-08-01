@@ -1,5 +1,4 @@
 libavahi-common.so.3 libavahi-common3 #MINVER#
-* Build-Depends-Package: libavahi-common-dev
  avahi_address_cmp@Base 0.6.16
  avahi_address_parse@Base 0.6.16
  avahi_address_snprint@Base 0.6.16

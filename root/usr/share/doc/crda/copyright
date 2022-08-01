@@ -1,21 +1,22 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: crda
 Upstream-Contact: Luis R. Rodriguez <mcgrof@do-not-panic.com>
 Source: https://git.kernel.org/pub/scm/linux/kernel/git/mcgrof/crda.git
 Comment:
  The URL of the Corresponding Source for all versions of this package
- is <https://snapshot.debian.org/package/crda/>.  The Separate Works
+ is <http://snapshot.debian.org/packaga/crda/>.  The Separate Works
  used to build each version of the package are specified according to
  <https://www.debian.org/doc/debian-policy/ch-relationships.html#s-sourcebinarydeps>.
- .
- The current repository for Copyleft-Next is
- <https://github.com/copyleft-next/copyleft-next>.
 
 Files: *
-Copyright: 2008, 2013, Luis R. Rodriguez <mcgrof@do-not-panic.com>
+Copyright: 2013, Luis R. Rodriguez <mcgrof@do-not-panic.com>
+License: copyleft-next-0.3.0
+
+Files: *
+Copyright: 2008, Luis R. Rodriguez <mcgrof@do-not-panic.com>
            2008, Johannes Berg <johannes@sipsolutions.net>
            2008, Michael Green <Michael.Green@Atheros.com>
-License: copyleft-next-0.3.0
+License: ISC
 
 Files: nl80211.h
 Copyright: 2006-2010 Johannes Berg <johannes@sipsolutions.net>

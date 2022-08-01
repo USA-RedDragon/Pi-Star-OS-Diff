@@ -1,5 +1,4 @@
 libxml2.so.2 libxml2 #MINVER#
-* Build-Depends-Package: libxml2-dev
  LIBXML2_2.4.30@LIBXML2_2.4.30 2.7.4
  LIBXML2_2.5.0@LIBXML2_2.5.0 2.7.4
  LIBXML2_2.5.2@LIBXML2_2.5.2 2.7.4
@@ -41,7 +40,6 @@ libxml2.so.2 libxml2 #MINVER#
  LIBXML2_2.8.0@LIBXML2_2.8.0 2.8.0
  LIBXML2_2.9.0@LIBXML2_2.9.0 2.9.0
  LIBXML2_2.9.1@LIBXML2_2.9.1 2.9.1
- LIBXML2_2.9.8@LIBXML2_2.9.8 2.9.8
  UTF8ToHtml@LIBXML2_2.4.30 2.7.4
  UTF8Toisolat1@LIBXML2_2.4.30 2.7.4
  __docbDefaultSAXHandler@Base 2.6.27
@@ -97,13 +95,16 @@ libxml2.so.2 libxml2 #MINVER#
  characters@LIBXML2_2.4.30 2.7.4
  checkNamespace@LIBXML2_2.4.30 2.7.4
  comment@LIBXML2_2.4.30 2.7.4
+ compute_minrun@Base 2.9.0
  docbDefaultSAXHandler@LIBXML2_2.4.30 2.7.4
  docbDefaultSAXHandlerInit@LIBXML2_2.4.30 2.7.4
  elementDecl@LIBXML2_2.4.30 2.7.4
+ emptyExp@LIBXML2_2.6.21 2.7.4
  endDocument@LIBXML2_2.4.30 2.7.4
  endElement@LIBXML2_2.4.30 2.7.4
  entityDecl@LIBXML2_2.4.30 2.7.4
  externalSubset@LIBXML2_2.4.30 2.7.4
+ forbiddenExp@LIBXML2_2.6.21 2.7.4
  getColumnNumber@LIBXML2_2.4.30 2.7.4
  getEntity@LIBXML2_2.4.30 2.7.4
  getLineNumber@LIBXML2_2.4.30 2.7.4
@@ -475,6 +476,25 @@ libxml2.so.2 libxml2 #MINVER#
  xmlEncodeSpecialChars@LIBXML2_2.4.30 2.7.4
  xmlErrMemory@LIBXML2_2.6.0 2.7.4
  xmlEscapeFormatString@Base 2.9.4
+ xmlExpCtxtNbCons@LIBXML2_2.6.21 2.7.4
+ xmlExpCtxtNbNodes@LIBXML2_2.6.21 2.7.4
+ xmlExpDump@LIBXML2_2.6.21 2.7.4
+ xmlExpExpDerive@LIBXML2_2.6.21 2.7.4
+ xmlExpFree@LIBXML2_2.6.21 2.7.4
+ xmlExpFreeCtxt@LIBXML2_2.6.21 2.7.4
+ xmlExpGetLanguage@LIBXML2_2.6.21 2.7.4
+ xmlExpGetStart@LIBXML2_2.6.21 2.7.4
+ xmlExpIsNillable@LIBXML2_2.6.21 2.7.4
+ xmlExpMaxToken@LIBXML2_2.6.21 2.7.4
+ xmlExpNewAtom@LIBXML2_2.6.21 2.7.4
+ xmlExpNewCtxt@LIBXML2_2.6.21 2.7.4
+ xmlExpNewOr@LIBXML2_2.6.21 2.7.4
+ xmlExpNewRange@LIBXML2_2.6.21 2.7.4
+ xmlExpNewSeq@LIBXML2_2.6.21 2.7.4
+ xmlExpParse@LIBXML2_2.6.21 2.7.4
+ xmlExpRef@LIBXML2_2.6.21 2.7.4
+ xmlExpStringDerive@LIBXML2_2.6.21 2.7.4
+ xmlExpSubsume@LIBXML2_2.6.21 2.7.4
  xmlFileClose@LIBXML2_2.4.30 2.7.4
  xmlFileMatch@LIBXML2_2.4.30 2.7.4
  xmlFileOpen@LIBXML2_2.4.30 2.7.4
@@ -561,7 +581,6 @@ libxml2.so.2 libxml2 #MINVER#
  xmlHashCopy@LIBXML2_2.4.30 2.7.4
  xmlHashCreate@LIBXML2_2.4.30 2.7.4
  xmlHashCreateDict@LIBXML2_2.6.18 2.7.4
- xmlHashDefaultDeallocator@LIBXML2_2.9.8 2.9.8
  xmlHashFree@LIBXML2_2.4.30 2.7.4
  xmlHashLookup2@LIBXML2_2.4.30 2.7.4
  xmlHashLookup3@LIBXML2_2.4.30 2.7.4
@@ -602,7 +621,6 @@ libxml2.so.2 libxml2 #MINVER#
  xmlInitializeDict@LIBXML2_2.8.0 2.8.0
  xmlInitializeGlobalState@LIBXML2_2.4.30 2.7.4
  xmlInitializePredefinedEntities@LIBXML2_2.4.30 2.7.4
- xmlInputReadCallbackNop@Base 2.9.8
  xmlIsBaseChar@LIBXML2_2.4.30 2.7.4
  xmlIsBaseCharGroup@LIBXML2_2.6.0 2.7.4
  xmlIsBlank@LIBXML2_2.4.30 2.7.4
@@ -804,6 +822,7 @@ libxml2.so.2 libxml2 #MINVER#
  xmlNodeSetLang@LIBXML2_2.4.30 2.7.4
  xmlNodeSetName@LIBXML2_2.4.30 2.7.4
  xmlNodeSetSpacePreserve@LIBXML2_2.4.30 2.7.4
+ xmlNop@Base 2.9.1
  xmlNormalizeURIPath@LIBXML2_2.4.30 2.7.4
  xmlNormalizeWindowsPath@LIBXML2_2.4.30 2.7.4
  xmlNsListDumpOutput@Base 2.6.27

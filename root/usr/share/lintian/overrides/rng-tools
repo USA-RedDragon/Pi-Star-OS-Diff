@@ -1,2 +1,2 @@
-# one-off and this makes it easier to understand for me
-rng-tools: unusual-control-interpreter
+rng-tools: description-synopsis-starts-with-a-capital-letter
+rng-tools: command-with-path-in-maintainer-script

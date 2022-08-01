@@ -1,5 +1,4 @@
 libftdi1.so.2 libftdi1-2 #MINVER#
-* Build-Depends-Package: libftdi1-dev
  FTDI_SNAPSHOT_VERSION@Base 1.2
  FTDI_VERSION_STRING@Base 1.2
  convert_baudrate_UT_export@Base 1.2
@@ -46,11 +45,7 @@ libftdi1.so.2 libftdi1-2 #MINVER#
  ftdi_setdtr@Base 1.2
  ftdi_setdtr_rts@Base 1.2
  ftdi_setflowctrl@Base 1.2
- ftdi_setflowctrl_xonxoff@Base 1.5
  ftdi_setrts@Base 1.2
- ftdi_tciflush@Base 1.5
- ftdi_tcioflush@Base 1.5
- ftdi_tcoflush@Base 1.5
  ftdi_transfer_data_cancel@Base 1.3
  ftdi_transfer_data_done@Base 1.2
  ftdi_usb_close@Base 1.2

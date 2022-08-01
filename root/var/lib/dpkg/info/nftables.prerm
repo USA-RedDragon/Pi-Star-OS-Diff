@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-# Automatically added by dh_installdeb/13.3.4
+# Automatically added by dh_installdeb/13.2~bpo10+1
 dpkg-maintscript-helper rm_conffile /etc/nftables/bridge-filter 0.5\+snapshot20151106-1 nftables -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/nftables/inet-filter 0.5\+snapshot20151106-1 nftables -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/nftables/ipv4-filter 0.5\+snapshot20151106-1 nftables -- "$@"

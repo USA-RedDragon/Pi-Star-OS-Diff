@@ -25,4 +25,6 @@
 /usr/share/python3/py3versions.py
 /usr/bin/py3versions
 /usr/bin/python3
+/usr/bin/python3m
 /usr/share/man/man1/python3.1.gz
+/usr/share/man/man1/python3m.1.gz

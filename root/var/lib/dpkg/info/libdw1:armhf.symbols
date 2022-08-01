@@ -23,7 +23,6 @@ libdw.so.1 libdw1 #MINVER#
  ELFUTILS_0.171@ELFUTILS_0.171 0.171
  ELFUTILS_0.173@ELFUTILS_0.173 0.173
  ELFUTILS_0.175@ELFUTILS_0.175 0.175
- ELFUTILS_0.177@ELFUTILS_0.177 0.177
  ELFUTILS_0@ELFUTILS_0 0.126
  dwarf_abbrevhaschildren@ELFUTILS_0.122 0.126
  dwarf_addrdie@ELFUTILS_0.122 0.126
@@ -160,8 +159,6 @@ libdw.so.1 libdw1 #MINVER#
  dwarf_whatform@ELFUTILS_0.122 0.126
  dwelf_dwarf_gnu_debugaltlink@ELFUTILS_0.159 0.159
  dwelf_elf_begin@ELFUTILS_0.175 0.175
- dwelf_elf_begin@ELFUTILS_0.177 0.177
- dwelf_elf_e_machine_string@ELFUTILS_0.177 0.177
  dwelf_elf_gnu_build_id@ELFUTILS_0.159 0.159
  dwelf_elf_gnu_debuglink@ELFUTILS_0.159 0.159
  dwelf_scn_gnu_compressed_size@ELFUTILS_0.165 0.165

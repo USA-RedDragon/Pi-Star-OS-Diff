@@ -1,4 +1,4 @@
-4ee78b4512b430313f471584c76de2d8  lib/arm-linux-gnueabihf/libcap.so.2.44
-d075cc3deb7b345e6b0649077bd8f83a  usr/share/doc/libcap2/changelog.Debian.gz
-7a60e96cffd7432d5fb38b3d4e6f690c  usr/share/doc/libcap2/changelog.gz
-a6cc470bc77b47de05bc656d4b68cdee  usr/share/doc/libcap2/copyright
+bf9babb7091e48307526f0ef9a5a45d3  lib/arm-linux-gnueabihf/libcap.so.2.25
+8d38ef3aa0b760ca48d6807080e9864e  usr/share/doc/libcap2/changelog.Debian.gz
+1361c12988f83e2ac6a6d11811c989e3  usr/share/doc/libcap2/changelog.gz
+d7535c2225b9483a678e58aae2d35c2f  usr/share/doc/libcap2/copyright

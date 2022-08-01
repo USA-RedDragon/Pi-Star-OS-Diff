@@ -1,7 +1,5 @@
 /.
 /etc
-/etc/default
-/etc/default/rpcbind
 /etc/init.d
 /etc/init.d/rpcbind
 /etc/insserv.conf.d
@@ -25,7 +23,6 @@
 /usr/share/doc/rpcbind
 /usr/share/doc/rpcbind/NEWS.Debian.gz
 /usr/share/doc/rpcbind/README.Debian
-/usr/share/doc/rpcbind/changelog.Debian.armhf.gz
 /usr/share/doc/rpcbind/changelog.Debian.gz
 /usr/share/doc/rpcbind/changelog.gz
 /usr/share/doc/rpcbind/copyright

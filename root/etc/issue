@@ -1,2 +1,17 @@
-Raspbian GNU/Linux 11 \n \l
+[0;31m				 _____ _      _____ _             
+				| ___ (_)    /  ___| |            
+				| |_/ /_ ____\\ `--.| |_ __ _ _ __ 
+				|  __/| |____|`--. \\ __/ _` | '__|
+				| |   | |    /\\__/ / || (_| | |   
+				 \\|   |_|    \\____/ \\__\\__,_|_| 
+
+[0;31m Welcome to Pi-Star, built by Andy Taylor (MW0MWZ) to help making DV simple since 2014!
+[0;0mTo setup Pi-Star for the first time, make sure it is connected to your network by network
+ cable, or connect to the "Pi-Star-Setup" Access Point from your computer/phone/tablet.
+
+        The Pi-Star Dashboard can be found at one of the following locations:
+[1;37m	http://\n/	http://\n.local/	http://\4/
+
+[0;0m  If you have a Raspberry Pi with on-board WiFi, you can connect to either the \n
+   or Pi-Star-Setup access point, [1;37mhttp://192.168.50.1/ [0;0mwill always find your Pi-Star.[0;0m
 

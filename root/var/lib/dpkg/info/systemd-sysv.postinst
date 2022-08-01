@@ -1,5 +1,4 @@
 #!/bin/sh
-
 set -e
 
 # update grub on first install, so that the alternative init system boot

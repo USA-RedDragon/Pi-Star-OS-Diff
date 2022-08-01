@@ -2,7 +2,7 @@
 /usr
 /usr/lib
 /usr/lib/arm-linux-gnueabihf
-/usr/lib/arm-linux-gnueabihf/libnghttp2.so.14.20.1
+/usr/lib/arm-linux-gnueabihf/libnghttp2.so.14.17.1
 /usr/share
 /usr/share/doc
 /usr/share/doc/libnghttp2-14
