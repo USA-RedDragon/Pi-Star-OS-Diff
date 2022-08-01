@@ -1,0 +1,12 @@
+auto
+/lib/firmware/brcm/brcmfmac43436-sdio.bin
+brcmfmac43436-sdio.txt
+/lib/firmware/brcm/brcmfmac43436-sdio.txt
+
+/lib/firmware/brcm/brcmfmac43436f-sdio.bin
+50
+/lib/firmware/brcm/brcmfmac43436f-sdio.txt
+/lib/firmware/brcm/brcmfmac43436s-sdio.bin
+10
+/lib/firmware/brcm/brcmfmac43436s-sdio.txt
+

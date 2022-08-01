@@ -1,0 +1,14 @@
+af6eb5ee8991b7f03b884cce8dd9e276  usr/lib/arm-linux-gnueabihf/libsamba-util.so.0.0.1
+942d38964832d772cf9dd5594e98b1fb  usr/lib/arm-linux-gnueabihf/libwbclient.so.0.15
+83d563cb6e2e98689a7884ebfaf6ed14  usr/lib/arm-linux-gnueabihf/samba/libgenrand.so.0
+89701e46df6c917a2ded52697039f083  usr/lib/arm-linux-gnueabihf/samba/libiov-buf.so.0
+4cd00e0f0f991975b9460fbfb0ce1a81  usr/lib/arm-linux-gnueabihf/samba/libreplace.so.0
+4f3aa0b9c922fcf58c9090d1382e3a4a  usr/lib/arm-linux-gnueabihf/samba/libsamba-debug.so.0
+38e490b93d418a050c3f6c5090b0b0ef  usr/lib/arm-linux-gnueabihf/samba/libsocket-blocking.so.0
+8ec89401aefffdf061d418203b141074  usr/lib/arm-linux-gnueabihf/samba/libsys-rw.so.0
+9106f9a05cd56bf0e27fa392962109e4  usr/lib/arm-linux-gnueabihf/samba/libtime-basic.so.0
+75f5a3beea3653b1faabd1c9fd885e6d  usr/lib/arm-linux-gnueabihf/samba/libwinbind-client.so.0
+2160b044fb8cb04b728cdf2ca9329f9d  usr/share/doc/libwbclient0/NEWS.Debian.gz
+e06787797e614c06fec6e83f4e04a64c  usr/share/doc/libwbclient0/changelog.Debian.gz
+47264992e60111962c4687cbb38c3dbc  usr/share/doc/libwbclient0/copyright
+114c278c36978c5d19fac7e30677162d  usr/share/lintian/overrides/libwbclient0
